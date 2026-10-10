@@ -15,35 +15,16 @@
   "categories": ["medical", "health", "productivity", "business"],
   "prefer_related_applications": false,
   "icons": [
-    {
-      "src": "logo.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "logo.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "logo.png",
-      "sizes": "any",
-      "type": "image/png"
-    }
+    { "src": "icon-72.png",  "sizes": "72x72",   "type": "image/png", "purpose": "any" },
+    { "src": "icon-96.png",  "sizes": "96x96",   "type": "image/png", "purpose": "any" },
+    { "src": "icon-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" },
+    { "src": "icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any" },
+    { "src": "icon-152.png", "sizes": "152x152", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-384.png", "sizes": "384x384", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
     {
@@ -51,37 +32,43 @@
       "short_name": "مريض جديد",
       "description": "إضافة مريض جديد بسرعة",
       "url": "./?action=new-patient",
-      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
+      "icons": [
+        { "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }
+      ]
     },
     {
       "name": "قائمة المرضى",
       "short_name": "المرضى",
       "description": "عرض قائمة المرضى",
       "url": "./?page=patients",
-      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
+      "icons": [
+        { "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }
+      ]
     },
     {
       "name": "التقارير",
       "short_name": "التقارير",
       "description": "عرض التقارير والإحصائيات",
       "url": "./?page=reports",
-      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
+      "icons": [
+        { "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }
+      ]
     }
   ],
   "screenshots": [
     {
-      "src": "logo.png",
+      "src": "screenshot-1.png",
       "sizes": "1080x1920",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "الشاشة الرئيسية"
+      "label": "الشاشة الرئيسية — KodNaqi Diagnostics"
     },
     {
-      "src": "logo.png",
+      "src": "screenshot-2.png",
       "sizes": "1080x1920",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "إدارة المرضى"
+      "label": "إدارة المعمل الطبي"
     }
   ],
   "launch_handler": {

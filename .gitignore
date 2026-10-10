@@ -37,3 +37,5 @@ node_modules/
 *.keystore
 *.bak*
 logo.300x300.png
+logo.original.png
+logo.300x300.png
