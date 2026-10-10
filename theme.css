@@ -1123,3 +1123,47 @@ html[data-theme="dark"] .btn-outline-primary {
   color: var(--kn-accent) !important;
   border-color: var(--kn-accent) !important;
 }
+
+/* ═══════════════════════════════════════════════════
+   🌙 إصلاح زر الوضع الليلي — لا يغطي الوقت
+   ═══════════════════════════════════════════════════ */
+.kn-theme-toggle {
+  position: fixed;
+  top: auto !important;
+  left: auto !important;
+  bottom: 90px !important;
+  left: 12px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50%;
+  border: none;
+  background: var(--kn-surface);
+  color: var(--kn-primary);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  z-index: 9997;
+}
+
+.kn-theme-toggle:active {
+  transform: scale(0.9);
+}
+
+body.dark-mode .kn-theme-toggle {
+  background: var(--kn-surface);
+  color: var(--kn-accent);
+}
+
+/* على الموبايل — فوق الشريط السفلي */
+@media (max-width: 575.98px) {
+  .kn-theme-toggle {
+    bottom: 95px !important;
+    left: 10px !important;
+    width: 42px !important;
+    height: 42px !important;
+  }
+}

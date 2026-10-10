@@ -449,9 +449,20 @@
   // فحص تلقائي عند التحميل
   document.addEventListener('DOMContentLoaded', function() {
     setTimeout(async function() {
-      // وضع المطوّر — تجاهل كل شيء
+      // ═══ وضع المطوّر — أظهر شارة فقط ═══
       if (localStorage.getItem('kodnaqi_dev_mode') === 'true') {
-        console.log('🧑‍💻 Dev mode active — skipping all checks');
+        console.log('🧑‍💻 Dev mode active');
+        const devBadge = document.createElement('div');
+        devBadge.style.cssText = 'position:fixed;bottom:80px;left:12px;z-index:9998;font-size:0.7rem;padding:4px 10px;border-radius:20px;font-weight:700;cursor:pointer;background:#6c757d;color:white;box-shadow:0 2px 8px rgba(0,0,0,0.15);';
+        devBadge.innerHTML = '🧑‍💻 مطوّر';
+        devBadge.title = 'اضغط لإلغاء وضع المطوّر';
+        devBadge.onclick = function() {
+          if (confirm('إلغاء وضع المطوّر؟\n\nستحتاج لإدخال ترخيص.')) {
+            localStorage.removeItem('kodnaqi_dev_mode');
+            location.reload();
+          }
+        };
+        document.body.appendChild(devBadge);
         return;
       }
 
