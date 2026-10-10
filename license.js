@@ -74,16 +74,25 @@
   }
 
   // ═══ توليد المفتاح (مع كود الجهاز) ═══
-  function generateKey(type, deviceCode) {
+  function generateKey(type, deviceCode, yearMonth) {
     if (!deviceCode) deviceCode = 'XXXXXX';
     deviceCode = deviceCode.replace(/-/g, '').toUpperCase();
     if (deviceCode.length !== 6) {
       throw new Error('كود الجهاز يجب أن يكون 6 أحرف');
     }
     
-    const rand = randomChars(4);
-    const sig = hmac(type + deviceCode + rand).slice(0, 4);
-    return 'KOD-' + type + '-' + deviceCode + '-' + rand + '-' + sig;
+    // إذا لم يُحدَّد تاريخ، استخدم الشهر الحالي
+    if (!yearMonth) {
+      const now = new Date();
+      yearMonth = String(now.getFullYear()).slice(-2) + String(now.getMonth() + 1).padStart(2, '0');
+    }
+    yearMonth = yearMonth.replace(/[^0-9]/g, '');
+    if (yearMonth.length !== 4) {
+      throw new Error('التاريخ يجب أن يكون 4 أرقام (YYMM)');
+    }
+    
+    const sig = hmac(type + deviceCode + yearMonth).slice(0, 4);
+    return 'KOD-' + type + '-' + deviceCode + '-' + yearMonth + '-' + sig;
   }
 
   // ═══ التحقق من المفتاح ═══
@@ -97,15 +106,20 @@
     
     const type = parts[1];
     const deviceCode = parts[2];    // 6 أحرف
-    const rand = parts[3];           // 4 أحرف
+    const yearMonth = parts[3];      // 4 أرقام (YYMM)
     const sig = parts[4];            // 4 أحرف
     
-    if (deviceCode.length !== 6 || rand.length !== 4 || sig.length !== 4) {
+    if (deviceCode.length !== 6 || yearMonth.length !== 4 || sig.length !== 4) {
+      return { valid: false, reason: 'format' };
+    }
+    
+    // التحقق أن التاريخ أرقام فقط
+    if (!/^\d{4}$/.test(yearMonth)) {
       return { valid: false, reason: 'format' };
     }
     
     // 1. التحقق من التوقيع
-    const expectedSig = hmac(type + deviceCode + rand).slice(0, 4);
+    const expectedSig = hmac(type + deviceCode + yearMonth).slice(0, 4);
     if (sig !== expectedSig) {
       return { valid: false, reason: 'signature' };
     }
@@ -123,7 +137,24 @@
       }
     }
     
-    return { valid: true, type: type, key: key.toUpperCase(), deviceCode: deviceCode };
+    // 3. استخراج تاريخ الإصدار
+    const issueYear = 2000 + parseInt(yearMonth.slice(0, 2));
+    const issueMonthNum = parseInt(yearMonth.slice(2, 4)) - 1;
+    
+    if (issueMonthNum < 0 || issueMonthNum > 11) {
+      return { valid: false, reason: 'format' };
+    }
+    
+    const issueDate = new Date(issueYear, issueMonthNum, 1).getTime();
+    
+    return { 
+      valid: true, 
+      type: type, 
+      key: key.toUpperCase(), 
+      deviceCode: deviceCode,
+      yearMonth: yearMonth,
+      issueDate: issueDate
+    };
   }
 
   function getTrialStart() {
@@ -233,14 +264,16 @@
       return { success: true, type: 'T', isTrial: true };
     }
 
-    // مفتاح كامل (F) أو مؤسسي (E) → يُربط ببصمة الجهاز
+    // مفتاح كامل (F) أو مؤسسي (E) → يُربط ببصمة الجهاز مع تاريخ المفتاح
     if (window.KodNaqiSecurity) {
       const payload = await window.KodNaqiSecurity.createLicensePayload(
-        key, check.type, ''
+        key, check.type, '', check.issueDate
       );
+      // احفظ تاريخ الإصدار أيضاً
+      payload.issuedAt = check.issueDate;
       localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
-      localStorage.setItem('kodnaqi_device_key', payload.deviceId);
-      console.log('[License] Bound to device:', payload.deviceId.substring(0, 15) + '...');
+      localStorage.setItem('kodnaqi_device_key', payload.deviceKey || payload.deviceId);
+      console.log('[License] Bound to device, expires:', new Date(payload.expiresAt).toLocaleDateString('ar-EG'));
     } else {
       // Fallback إذا لم يُحمَّل security.js
       console.warn('[License] Security layer not loaded — using fallback');
@@ -432,10 +465,28 @@
     document.body.appendChild(lock);
   }
 
+
+  // ═══ مساعدات التاريخ ═══
+  function getCurrentYearMonth() {
+    const now = new Date();
+    return String(now.getFullYear()).slice(-2) + String(now.getMonth() + 1).padStart(2, '0');
+  }
+
+  function formatYearMonth(yyMM) {
+    if (!yyMM || yyMM.length !== 4) return '—';
+    const year = 2000 + parseInt(yyMM.slice(0, 2));
+    const monthNames = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
+                        'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+    const month = parseInt(yyMM.slice(2, 4)) - 1;
+    return monthNames[month] + ' ' + year;
+  }
+
   // API عام
   window.KodNaqiLicense = {
     getMyDeviceCode: getMyDeviceCode,
     formatDeviceCode: formatDeviceCode,
+    getCurrentYearMonth: getCurrentYearMonth,
+    formatYearMonth: formatYearMonth,
     verify: verifyKey,
     generate: generateKey,
     status: getStatus,

@@ -80,17 +80,20 @@
   // ═══════════════════════════════════════════════════
   // 3. إنشاء payload للمفتاح (موقّع + مربوط بالجهاز)
   // ═══════════════════════════════════════════════════
-  async function createLicensePayload(key, type, labName) {
+  async function createLicensePayload(key, type, labName, issueDate) {
     const fingerprint = await getDeviceFingerprint();
     const now = Date.now();
+    const startDate = issueDate || now;
 
     const payload = {
       key: key.toUpperCase(),
       type: type,
       labName: labName || '',
       deviceId: fingerprint,
+      deviceKey: fingerprint,
       activated: now,
-      expiresAt: now + (365 * 24 * 60 * 60 * 1000)  // 365 يومًا
+      issuedAt: startDate,
+      expiresAt: startDate + (365 * 24 * 60 * 60 * 1000)  // 365 يومًا من تاريخ الإصدار
     };
 
     payload.signature = await signData({
