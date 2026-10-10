@@ -1,0 +1,38 @@
+# ملفات النسخ الاحتياطية
+*.bak
+*.bak2
+*.bak3
+*.bak4
+
+# مجلدات النسخ الاحتياطية
+.backup_before_copyright/
+.backup_business/
+.backup_fix2/
+.backup_terminology/
+.backup_*/
+
+# ملفات المالك (لا تُرفع للعموم)
+admin.html
+admin-*.html
+customers.html
+
+# ملفات نظام التشغيل
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ملفات المحرر
+.vscode/
+.idea/
+*.swp
+reset.html
+package.json
+package-lock.json
+node_modules/
+.env
+.env.local
+.git-credentials
+*.pem
+*.key
+*.keystore
+*.bak*

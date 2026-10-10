@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار بصمة الجهاز</title>
+<link href="./lib/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="./lib/cairo.css" rel="stylesheet">
+<style>
+  body { font-family: 'Cairo', sans-serif; padding: 20px; background: #f5f5f5; }
+  .card { max-width: 500px; margin: auto; background: white; border-radius: 15px; padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+  h1 { color: #0d3b66; text-align: center; }
+  .fp-box { background: #f8f9fa; border: 2px dashed #0d3b66; border-radius: 10px; padding: 15px; margin: 15px 0; font-family: monospace; word-break: break-all; font-size: 0.9rem; }
+  .loading { text-align: center; color: #666; padding: 20px; }
+  .success { background: #d4edda; border-color: #28a745; }
+  .info-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+  .info-row:last-child { border-bottom: none; }
+  .label { color: #666; }
+  .value { color: #0d3b66; font-weight: 700; }
+  .copy-btn { width: 100%; padding: 12px; background: #0d3b66; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; margin-top: 10px; }
+  .copy-btn:active { background: #082844; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>🔍 بصمة هذا الجهاز</h1>
+  <div id="loading" class="loading">⏳ جاري حساب البصمة...</div>
+
+  <div id="result" style="display:none;">
+    <div class="fp-box success" id="fpBox"></div>
+    <button class="copy-btn" onclick="copyFingerprint()">📋 نسخ البصمة</button>
+
+    <hr style="margin: 20px 0;">
+
+    <h3 style="color: #0d3b66; font-size: 1.1rem;">معلومات الجهاز:</h3>
+    <div id="details"></div>
+
+    <hr style="margin: 20px 0;">
+
+    <h3 style="color: #0d3b66; font-size: 1.1rem;">بصمة قديمة محفوظة:</h3>
+    <div id="storedFp" class="info-row" style="flex-direction: column; align-items: flex-start;">
+      <span class="label">لا توجد بصمة محفوظة</span>
+    </div>
+  </div>
+</div>
+
+<script src="./lib/thumbmark.min.js"></script>
+<script src="./security.js"></script>
+<script>
+async function main() {
+  try {
+    // 1. حساب البصمة
+    const fp = await KodNaqiSecurity.getDeviceFingerprint();
+    document.getElementById('fpBox').textContent = fp;
+
+    // 2. معلومات إضافية
+    const info = await KodNaqiSecurity.getDeviceInfo();
+    document.getElementById('details').innerHTML = `
+      <div class="info-row"><span class="label">الطريقة:</span><span class="value">${info.method}</span></div>
+      <div class="info-row"><span class="label">طول البصمة:</span><span class="value">${fp.length} حرف</span></div>
+      <div class="info-row"><span class="label">المتصفح:</span><span class="value">${navigator.userAgent.split(' ').slice(-2).join(' ')}</span></div>
+      <div class="info-row"><span class="label">الشاشة:</span><span class="value">${screen.width}×${screen.height}</span></div>
+      <div class="info-row"><span class="label">اللغة:</span><span class="value">${navigator.language}</span></div>
+      <div class="info-row"><span class="label">النوى:</span><span class="value">${navigator.hardwareConcurrency || '?'}</span></div>
+    `;
+
+    // 3. البصمة المحفوظة (إن وُجدت)
+    const stored = localStorage.getItem('kodnaqi_device_key');
+    if (stored) {
+      document.getElementById('storedFp').innerHTML = `
+        <span class="label" style="margin-bottom: 5px;">البصمة المحفوظة من الترخيص:</span>
+        <code style="word-break: break-all; font-size: 0.85rem;">${stored}</code>
+        <div style="margin-top: 8px; color: ${stored === fp ? '#28a745' : '#dc3545'}; font-weight: 700;">
+          ${stored === fp ? '✅ مطابقة' : '❌ غير مطابقة'}
+        </div>
+      `;
+    }
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('result').style.display = 'block';
+
+  } catch (e) {
+    document.getElementById('loading').innerHTML = '❌ خطأ: ' + e.message;
+  }
+}
+
+function copyFingerprint() {
+  const fp = document.getElementById('fpBox').textContent;
+  navigator.clipboard.writeText(fp).then(() => {
+    alert('✅ تم النسخ:\n\n' + fp);
+  }).catch(() => {
+    prompt('انسخ البصمة يدويًا:', fp);
+  });
+}
+
+main();
+</script>
+</body>
+</html>

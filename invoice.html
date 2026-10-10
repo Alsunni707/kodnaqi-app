@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فاتورة — KodNaqi Diagnostics</title>
+<link href="./lib/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="./lib/cairo.css" rel="stylesheet">
+<link href="./lib/bootstrap-icons.css" rel="stylesheet">
+<link href="./brand.css" rel="stylesheet">
+<link href="./theme.css" rel="stylesheet">
+<style>
+  .info-grid { display: flex; justify-content: space-between; gap: 30px; margin: 25px 0; }
+  .info-grid > div { flex: 1; background: var(--kn-surface-alt); padding: 18px 20px; border-radius: 10px; border-right: 3px solid var(--kn-gold); }
+  .info-grid h6 { color: var(--kn-navy); font-weight: 800; margin-bottom: 12px; font-size: 0.95rem; }
+  .info-grid .field-line { padding: 5px 0; font-size: 0.88rem; border-bottom: 1px dashed #e4e6eb; }
+  .info-grid .field-line:last-child { border-bottom: none; }
+  table.items { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  table.items th { background: var(--kn-navy); color: white; padding: 14px; text-align: right; font-weight: 700; }
+  table.items td { padding: 14px; border-bottom: 1px solid #eef2f5; }
+  .totals { margin-top: 20px; }
+  .totals table { width: 55%; margin-right: auto; }
+  .totals td { padding: 9px 14px; }
+  .totals .grand-total { background: var(--kn-navy); color: white; font-weight: 800; font-size: 1.15rem; border-radius: 5px; }
+  .payment-box { background: var(--kn-surface-alt); padding: 22px 25px; border-radius: 10px; margin-top: 25px; border-right: 4px solid var(--kn-gold); }
+  .payment-box h6 { color: var(--kn-navy); font-weight: 800; margin-bottom: 15px; }
+  .payment-box .row-line { padding: 7px 0; border-bottom: 1px dashed #e4e6eb; }
+  .payment-box .row-line:last-child { border-bottom: none; }
+  .stamp-box { text-align: center; margin-top: 40px; padding-top: 25px; border-top: 2px solid var(--kn-gold); }
+</style>
+</head>
+<body>
+<div class="doc">
+<div class="doc-content">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div class="brand-block">
+      <img src="./logo.png" alt="KodNaqi" class="brand-logo">
+      <div class="brand-text">
+        <h1>KodNaqi</h1>
+        <p>Diagnostics</p>
+      </div>
+    </div>
+    <div class="doc-meta">
+      <div style="font-size: 1.3rem; font-weight: 900; color: var(--kn-navy); letter-spacing: 2px;">فاتورة</div>
+      <div dir="ltr" style="font-size: 1rem; font-weight: 800; color: #c0392b;">#KOD-2026-0001</div>
+      <div style="margin-top: 5px;">التاريخ: ____ / ____ / 2026</div>
+    </div>
+  </div>
+
+  <!-- INFO GRID -->
+  <div class="info-grid">
+    <div>
+      <h6>🏢 من (البائع)</h6>
+      <div class="field-line"><strong>الاسم:</strong> السني خالد محمد أحمد السني</div>
+      <div class="field-line"><strong>المنتج:</strong> KodNaqi PWA</div>
+      <div class="field-line"><strong>البريد:</strong> <bdi dir="ltr">kodnaqi@gmail.com</bdi></div>
+      <div class="field-line"><strong>الهاتف:</strong> <bdi dir="ltr">+249 111 729 111</bdi></div>
+    </div>
+    <div>
+      <h6>👤 إلى (العميل)</h6>
+      <div class="field-line"><strong>اسم المعمل:</strong> ________________</div>
+      <div class="field-line"><strong>المدير:</strong> ________________</div>
+      <div class="field-line"><strong>الهاتف:</strong> ________________</div>
+      <div class="field-line"><strong>العنوان:</strong> ________________</div>
+    </div>
+  </div>
+
+  <!-- ITEMS -->
+  <table class="items">
+    <thead>
+      <tr>
+        <th style="width: 50%;">البند</th>
+        <th style="width: 12%;">الكمية</th>
+        <th style="width: 18%;">السعر</th>
+        <th style="width: 20%;">الإجمالي</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>ترخيص KodNaqi PWA</strong><br><small class="text-muted">الباقة: ☐ أساسية ☐ قياسية ☐ متقدمة</small></td>
+        <td>1</td>
+        <td>__________</td>
+        <td>__________</td>
+      </tr>
+      <tr>
+        <td>تدريب أولي (ساعتان)</td>
+        <td>1</td>
+        <td>مجانًا</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>خدمات إضافية (إن وُجدت)</td>
+        <td>—</td>
+        <td>—</td>
+        <td>__________</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- TOTALS -->
+  <div class="totals">
+    <table>
+      <tr><td>المجموع الفرعي:</td><td class="text-end">__________ ج.س</td></tr>
+      <tr><td>خصم:</td><td class="text-end">__________ ج.س</td></tr>
+      <tr class="grand-total"><td>الإجمالي:</td><td class="text-end">__________ ج.س</td></tr>
+      <tr><td class="text-muted">دفعة مقدمة (50%):</td><td class="text-end text-muted">__________ ج.س</td></tr>
+      <tr><td class="text-muted">المتبقي:</td><td class="text-end text-muted">__________ ج.س</td></tr>
+    </table>
+  </div>
+
+  <!-- PAYMENT -->
+  <div class="payment-box">
+    <h6>💳 بيانات الدفع</h6>
+    <div class="row-line"><strong>🏦 بنك الخرطوم</strong> — رقم الحساب: <bdi dir="ltr">4046346</bdi></div>
+    <div class="row-line"><strong>🏦 بنك فيصل الإسلامي</strong> — رقم الحساب: <bdi dir="ltr">51627855</bdi></div>
+    <div class="row-line"><strong>📱 محفظة mCash (ماي كاشي)</strong> — <bdi dir="ltr">300045779</bdi></div>
+    <div class="row-line"><strong>اسم الحساب:</strong> السني خالد محمد أحمد السني</div>
+    <div class="row-line"><strong>الهاتف / واتساب:</strong> <bdi dir="ltr">+249 111 729 111</bdi></div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="payment-box" style="border-right-color: var(--kn-navy);">
+    <h6>📋 ملاحظات</h6>
+    <p class="mb-0">هذه الفاتورة صادرة عن بيع ترخيص استخدام برنامج KodNaqi PWA. الترخيص غير قابل للاسترداد بعد التفعيل. مدة الدعم تبدأ من تاريخ التفعيل.</p>
+  </div>
+
+  <!-- STAMP -->
+  <div class="stamp-box">
+    <div style="font-size: 0.9rem; color: var(--kn-muted);">
+      شكرًا لثقتكم بـ <strong style="color: var(--kn-navy);">KodNaqi PWA</strong>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <div>
+      <div class="copyright">KodNaqi Diagnostics © 2026</div>
+      <div>Alsunni Khalid Mohammed Ahmed Alsunni</div>
+    </div>
+    <div class="contact-line">
+      <div>📧 <bdi dir="ltr">kodnaqi@gmail.com</bdi></div>
+      <div>📱 <bdi dir="ltr">+249 111 729 111</bdi></div>
+    </div>
+  </div>
+
+</div>
+</div>
+<script src="theme.js"></script>
+</body>
+</html>

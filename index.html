@@ -1,0 +1,839 @@
+<!--
+  KodNaqi PWA — نظام إدارة المعامل الطبية التشخيصية
+  Copyright © 2026 Alsunni Khalid Mohammed Ahmed Alsunni
+  All Rights Reserved. جميع الحقوق محفوظة.
+  Contact: <bdi dir="ltr" data-brand="email">kodnaqi@gmail.com</bdi>
+-->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b3d91">
+<meta name="mobile-web-app-capable" content="yes">
+<title>KodNaqi Diagnostics</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="lib/bootstrap.rtl.min.css">
+<link rel="stylesheet" href="lib/bootstrap-icons.css">
+<link rel="stylesheet" href="lib/cairo.css">
+<style>
+:root {
+  --kn-dark: #0b3d91;
+  --kn-light: #0d6efd;
+}
+* { -webkit-tap-highlight-color: transparent; }
+body {
+  background: linear-gradient(135deg, #f4f6f9, #e8eef7);
+  font-family: 'Cairo', system-ui, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 70px;
+}
+.navbar {
+  background: linear-gradient(90deg, var(--kn-dark), var(--kn-light));
+  box-shadow: 0 2px 12px rgba(11,61,145,.25);
+}
+.navbar-brand img { height: 38px; width: 38px; border-radius: 50%; background: #fff; padding: 2px; }
+.card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+.stat-value { font-weight: 800; color: var(--kn-dark); }
+.btn-primary { background: linear-gradient(135deg, var(--kn-dark), var(--kn-light)); border: none; }
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 -2px 12px rgba(0,0,0,.08);
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  z-index: 1000;
+  border-top: 1px solid #eef2f7;
+}
+.bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #6c757d;
+  font-size: 10px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  transition: all .2s;
+}
+.bottom-nav a i { font-size: 22px; margin-bottom: 2px; }
+.bottom-nav a.active { color: var(--kn-dark); background: #eef2f7; }
+.loading-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+.spinner {
+  width: 50px; height: 50px;
+  border: 4px solid #eef2f7;
+  border-top-color: var(--kn-dark);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.page { display: none; animation: fadeIn .3s; }
+.page.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; } }
+.hidden { display: none !important; }
+/* حقول التاريخ والأرقام - منع عكس الحروف */
+
+
+/* الأرقام العربية في RTL */
+.num-ltr {
+  direction: ltr !important;
+  unicode-bidi: embed;
+}
+
+@media (max-width: 480px) {
+  .container-fluid { padding: 10px !important; }
+  h3 { font-size: 1.2rem; }
+}
+
+  
+
+
+  /* حقول التاريخ - إخفاء placeholder + LTR */
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"] {
+    direction: ltr !important;
+    unicode-bidi: embed !important;
+    text-align: right !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+  }
+  
+  /* إخفاء placeholder لما ما في قيمة */
+  input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-text,
+  input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-month-field,
+  input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-day-field,
+  input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-year-field {
+    color: transparent;
+  }
+  
+  /* الأرقام */
+  input[type="date"]::-webkit-datetime-edit-text,
+  input[type="date"]::-webkit-datetime-edit-month-field,
+  input[type="date"]::-webkit-datetime-edit-day-field,
+  input[type="date"]::-webkit-datetime-edit-year-field {
+    direction: ltr !important;
+    text-align: right;
+    color: #000;
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    order: -1;
+    margin-left: 0;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+</style>
+<link href="./theme.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loading-overlay" id="loadingOverlay">
+  <img src="logo.png" alt="KodNaqi" style="width:80px;height:80px;margin-bottom:20px" onerror="this.style.display='none'" data-brand="logo">
+  <div class="spinner"></div>
+  <div style="margin-top:15px;color:#666;font-size:14px">جاري التحميل...</div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="showPage('dashboard');return false">
+      <img src="logo.png" alt="KodNaqi" onerror="this.style.display='none'" data-brand="logo">
+      <div style="line-height:1">
+        <div style="font-weight:800;font-size:15px"><span data-brand="name-short">KodNaqi</span></div>
+        <div style="font-size:9px;letter-spacing:1px;opacity:.8">DIAGNOSTICS</div>
+      </div>
+    </a>
+    <span class="text-white small" id="currentTime"></span>
+  </div>
+</nav>
+
+<!-- Pages Container -->
+<div class="container-fluid py-3">
+
+  <!-- Dashboard -->
+  <div class="page active" id="page-dashboard">
+    <h3 class="mb-3"><i class="bi bi-speedometer2"></i> لوحة التحكم</h3>
+    <div class="row g-3">
+      <div class="col-6">
+        <div class="card p-3 text-center">
+          <div class="text-muted small">إجمالي المرضى</div>
+          <div class="stat-value fs-3" id="statPatients">0</div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card p-3 text-center">
+          <div class="text-muted small">زيارات اليوم</div>
+          <div class="stat-value fs-3" id="statTodayVisits">0</div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card p-3 text-center">
+          <div class="text-muted small">إجمالي الزيارات</div>
+          <div class="stat-value fs-3" id="statTotalVisits">0</div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card p-3 text-center">
+          <div class="text-muted small">عدد التحاليل</div>
+          <div class="stat-value fs-3" id="statTests">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card p-3 mt-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-lightning-charge"></i> إجراءات سريعة</h6>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary text-start" onclick="showPage('patients')">
+          <i class="bi bi-person-plus"></i> إضافة مريض جديد
+        </button>
+        <button class="btn btn-outline-secondary text-start" onclick="showPage('tests')">
+          <i class="bi bi-clipboard2-pulse"></i> قائمة التحاليل
+        </button>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-header bg-white fw-bold"><i class="bi bi-clock-history"></i> أحدث المرضى</div>
+      <div id="recentPatients" class="list-group list-group-flush"></div>
+    </div>
+  </div>
+
+  <!-- Patients -->
+  <div class="page" id="page-patients">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3><i class="bi bi-people"></i> المرضى</h3>
+      <button class="btn btn-primary btn-sm" onclick="showAddPatient()">
+        <i class="bi bi-plus-circle"></i> جديد
+      </button>
+    </div>
+
+    <div class="card p-3 mb-3">
+      <input type="search" id="patientSearch" class="form-control" placeholder="🔍 بحث بالاسم أو الهاتف أو الرقم التسلسلي" oninput="renderPatients()">
+    </div>
+
+    <div id="patientsList"></div>
+  </div>
+
+  <!-- Tests -->
+  <div class="page" id="page-tests">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3><i class="bi bi-clipboard2-pulse"></i> التحاليل</h3>
+    </div>
+    <div id="testsList">
+      <div class="card p-4 text-center text-muted">
+        <div class="spinner-border text-primary mx-auto mb-2"></div>
+        <div>جاري تحميل التحاليل...</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Finance -->
+  <div class="page" id="page-finance">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3><i class="bi bi-cash-coin"></i> المالية</h3>
+      <button class="btn btn-sm btn-outline-success" onclick="exportFinanceCSV()">
+        <i class="bi bi-file-earmark-excel"></i> تصدير
+      </button>
+    </div>
+
+    <div class="row g-2 mb-3">
+      <div class="col-6">
+        <div class="card p-2 text-center">
+          <div class="small text-muted">إجمالي المُحصّل</div>
+          <div class="stat-value fs-5" id="finCollected">0</div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card p-2 text-center">
+          <div class="small text-muted">المتأخرات</div>
+          <div class="fs-5 fw-bold text-danger" id="finDue">0</div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card p-2 text-center">
+          <div class="small text-muted">المصروفات</div>
+          <div class="fs-5 fw-bold text-warning" id="finExpenses">0</div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card p-2 text-center">
+          <div class="small text-muted">الصافي</div>
+          <div class="fs-5 fw-bold text-success" id="finNet">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card p-3 mb-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-plus-circle"></i> إضافة مصروف</h6>
+      <div class="mb-2">
+        <input type="date" id="expDate" class="form-control form-control-sm" lang="en-GB" dir="ltr">
+      </div>
+      <div class="mb-2">
+        <select id="expCategory" class="form-select form-select-sm">
+          <option>كواشف ومحاليل</option>
+          <option>مستهلكات</option>
+          <option>رواتب</option>
+          <option>كهرباء وماء</option>
+          <option>صيانة</option>
+          <option>أخرى</option>
+        </select>
+      </div>
+      <div class="mb-2">
+        <input type="text" id="expDesc" class="form-control form-control-sm" placeholder="الوصف">
+      </div>
+      <div class="mb-3">
+        <input type="number" id="expAmount" class="form-control form-control-sm" placeholder="المبلغ" dir="ltr">
+      </div>
+      <button class="btn btn-primary btn-sm w-100" onclick="addExpense()">
+        <i class="bi bi-save"></i> حفظ
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="card-header bg-white fw-bold d-flex justify-content-between">
+        <span><i class="bi bi-receipt"></i> أحدث الفواتير</span>
+        <span class="badge bg-primary" id="finCount">0</span>
+      </div>
+      <div id="financeInvoices"></div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-header bg-white fw-bold">
+        <i class="bi bi-cash-stack"></i> المصروفات (آخر 30)
+      </div>
+      <div id="financeExpenses"></div>
+    </div>
+  </div>
+
+  <!-- Statistics -->
+  <div class="page" id="page-stats">
+    <h3 class="mb-3"><i class="bi bi-graph-up-arrow"></i> الإحصائيات</h3>
+
+    <div class="row g-2 mb-3">
+      <div class="col-6 col-md-3">
+        <div class="card p-2 text-center">
+          <div class="small text-muted">المرضى</div>
+          <div class="stat-value fs-4" id="statsPatients">0</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card p-2 text-center">
+          <div class="small text-muted">الزيارات</div>
+          <div class="stat-value fs-4" id="statsVisits">0</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card p-2 text-center">
+          <div class="small text-muted">الإيراد الكلي</div>
+          <div class="stat-value fs-5" id="statsRevenue">0</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card p-2 text-center">
+          <div class="small text-muted">هذا الشهر</div>
+          <div class="stat-value fs-5" id="statsMonth">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card p-3 mb-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-calendar-week"></i> زيارات آخر 7 أيام</h6>
+      <canvas id="weekChart" height="120"></canvas>
+    </div>
+
+    <div class="card p-3 mb-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-cash"></i> الإيراد اليومي (آخر 7 أيام)</h6>
+      <canvas id="revenueChart" height="120"></canvas>
+    </div>
+
+    <div class="card p-3 mb-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-trophy"></i> أكثر 10 تحاليل طلباً</h6>
+      <canvas id="testsChart" height="200"></canvas>
+    </div>
+
+    <div class="card p-3 mb-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-gender-ambiguous"></i> توزيع المرضى</h6>
+      <canvas id="genderChart" height="200"></canvas>
+    </div>
+  </div>
+
+    <!-- Notifications -->
+  <div class="page" id="page-notifications">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3><i class="bi bi-bell"></i> الإشعارات</h3>
+      <span class="badge bg-success"><i class="bi bi-whatsapp"></i> WhatsApp</span>
+    </div>
+    <div id="notificationsList">
+      <div class="text-center text-muted py-4">
+        <div class="spinner-border text-primary"></div>
+        <div class="mt-2">جاري التحميل...</div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Users Management -->
+  <div class="page" id="page-users">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3><i class="bi bi-people-fill"></i> المستخدمون</h3>
+      <span class="badge bg-danger"><i class="bi bi-shield-lock"></i> للمدير فقط</span>
+    </div>
+    <div id="usersList">
+      <div class="text-center text-muted py-4">
+        <div class="spinner-border text-primary"></div>
+        <div class="mt-2">جاري التحميل...</div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Advanced Reports -->
+  <div class="page" id="page-reports-advanced">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3><i class="bi bi-file-earmark-bar-graph"></i> التقارير المتقدمة</h3>
+      <span class="badge bg-danger"><i class="bi bi-shield-lock"></i> للمدير فقط</span>
+    </div>
+
+    <!-- فلاتر الفترة -->
+    <div class="card p-2 mb-3">
+      <div class="d-flex gap-1 mb-2 flex-wrap">
+        <button class="btn btn-sm btn-outline-primary" onclick="loadReport('today')">اليوم</button>
+        <button class="btn btn-sm btn-outline-primary" onclick="loadReport('week')">7 أيام</button>
+        <button class="btn btn-sm btn-outline-primary" onclick="loadReport('30days')">30 يوم</button>
+        <button class="btn btn-sm btn-outline-primary" onclick="loadReport('month')">الشهر</button>
+        <button class="btn btn-sm btn-outline-primary" onclick="loadReport('year')">السنة</button>
+      </div>
+      <div class="row g-2">
+        <div class="col-5">
+          <label class="form-label small mb-1">من</label>
+          <input type="date" id="repFrom" class="form-control form-control-sm" dir="ltr">
+        </div>
+        <div class="col-5">
+          <label class="form-label small mb-1">إلى</label>
+          <input type="date" id="repTo" class="form-control form-control-sm" dir="ltr">
+        </div>
+        <div class="col-2 d-flex align-items-end">
+          <button class="btn btn-sm btn-primary w-100" onclick="applyCustomRange()">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="reportContent">
+      <div class="text-center text-muted py-5">
+        <i class="bi bi-bar-chart" style="font-size:3rem;opacity:.3"></i>
+        <div class="mt-2">اختر الفترة لعرض التقرير</div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Medical Record -->
+  <div class="page" id="page-medical-record">
+    <div id="medicalRecordContent">
+      <div class="text-center py-4">
+        <div class="spinner-border text-primary"></div>
+        <div class="mt-2">جاري التحميل...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div class="page" id="page-settings">
+    <h3 class="mb-3"><i class="bi bi-gear"></i> الإعدادات</h3>
+
+    <div class="card p-3 mb-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-database"></i> البيانات</h6>
+      <!-- ⭐ زر النسخ الموصى به (جديد) -->
+      <button class="btn btn-success btn-lg w-100 mb-3 fw-bold" onclick="KNBackup.export()">
+        <i class="bi bi-download"></i> 📦 تصدير نسخة احتياطية
+      </button>
+      
+      <!-- معلومات آخر نسخة -->
+      <div id="kn-last-backup-info" class="alert alert-info small mb-3" style="display:none;"></div>
+      
+      <hr class="my-3">
+      
+      <button class="btn btn-outline-primary w-100 mb-2" onclick="KNBackup.import()">
+        <i class="bi bi-upload"></i> 📥 استيراد نسخة احتياطية
+      </button>
+      
+      <hr class="my-3">
+      
+      <p class="small text-muted text-center mb-2">أو استخدم الطرق القديمة:</p>
+      
+      <!-- الأزرار القديمة -->
+      <button class="btn btn-outline-secondary btn-sm w-100 mb-2" onclick="backupNow()">
+        <i class="bi bi-shield-check"></i> نسخ احتياطي سريع (IndexedDB)
+      </button>
+      <button class="btn btn-success mb-2" onclick="exportData()">
+        <i class="bi bi-download"></i> تصدير نسخة احتياطية (JSON)
+      </button>
+      <button class="btn btn-outline-primary mb-2" onclick="document.getElementById('importFile').click()">
+        <i class="bi bi-upload"></i> استيراد نسخة احتياطية
+      </button>
+      <input type="file" id="importFile" accept=".json" class="hidden" onchange="importData(event)">
+    </div>
+
+    <div class="card p-3 mb-3" id="cloudCard">
+      <h6 class="fw-bold mb-3">
+        <i class="bi bi-cloud-arrow-up text-primary"></i>
+        Google Drive Backup
+      </h6>
+      <div id="cloudSection">
+        <div class="text-center text-muted py-3 small">
+          <div class="spinner-border spinner-border-sm text-primary"></div>
+          <div class="mt-2">جاري التحميل...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card p-3 mb-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-info-circle text-primary"></i> حول التطبيق</h6>
+      <div class="small text-muted mb-3">
+        <div>الإصدار: 1.0.0 (Standalone)</div>
+        <div>البيانات: IndexedDB (محلية)</div>
+        <div>يعمل بدون إنترنت 100%</div>
+      </div>
+
+      <div class="d-grid gap-2">
+        <a href="privacy.html" class="btn btn-outline-secondary btn-sm" target="_blank">
+          <i class="bi bi-shield-lock"></i> سياسة الخصوصية
+        </a>
+        <a href="eula.html" class="btn btn-outline-secondary btn-sm" target="_blank">
+          <i class="bi bi-file-earmark-text"></i> اتفاقية الترخيص
+        </a>
+        <a href="quickstart.html" class="btn btn-outline-primary btn-sm" target="_blank">
+          <i class="bi bi-rocket-takeoff"></i> دليل البدء السريع
+        </a>
+        <a href="mailto:kodnaqi@gmail.com" class="btn btn-outline-secondary btn-sm">
+          <i class="bi bi-envelope"></i> التواصل مع المطوّر
+        </a>
+      </div>
+
+      <hr class="my-3">
+      <div class="text-center small text-muted">
+        <strong data-brand="name-short">KodNaqi PWA</strong><br>
+        © 2026 Alsunni Khalid Mohammed Ahmed Alsunni<br>
+        جميع الحقوق محفوظة
+      </div>
+    </div>
+
+    <div class="card p-3 border-danger">
+      <div class="card p-3 mb-3" id="accountCard">
+      <h6 class="fw-bold mb-3"><i class="bi bi-shield-lock text-primary"></i> الحساب والأمان</h6>
+      <button class="btn btn-warning w-100 mb-2 settings-admin-only" 
+              onclick="showPage('users')"
+              id="admin-reports-advanced-btn" 
+              onclick="showPage('reports-advanced')"
+              style="display:none;">
+        <i class="bi bi-file-earmark-bar-graph"></i> التقارير المتقدمة
+      </button>
+      <button class="btn btn-warning w-100 mb-2 settings-admin-only" 
+              onclick="showPage('users')"
+              id="admin-manage-users-btn">
+        <i class="bi bi-people-fill"></i> إدارة المستخدمين
+      </button>
+      <button class="btn btn-outline-info w-100 mb-2 settings-admin-only" 
+              onclick="showAuditLog()">
+        <i class="bi bi-clock-history"></i> سجل العمليات
+      </button>
+      
+      <div class="mb-3">
+        <div class="small text-muted mb-1">المستخدم الحالي:</div>
+        <div class="fw-bold" id="currentUserDisplay">-</div>
+      </div>
+
+      <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="showChangePasswordModal()">
+        <i class="bi bi-key"></i> تغيير كلمة المرور
+      </button>
+
+      <button class="btn btn-danger btn-sm w-100" onclick="logout()">
+        <i class="bi bi-box-arrow-right"></i> تسجيل الخروج
+      </button>
+    </div>
+
+    <div class="card p-3 mb-3">
+      <h6 class="fw-bold mb-3 text-danger"><i class="bi bi-exclamation-triangle"></i> منطقة الخطر</h6>
+      <button class="btn btn-outline-danger" onclick="confirmReset()">
+        <i class="bi bi-trash"></i> حذف كل البيانات
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="#" onclick="showPage('dashboard');return false" data-page="dashboard" class="active">
+    <i class="bi bi-house-door-fill"></i>
+    <span>الرئيسية</span>
+  </a>
+  <a href="#" onclick="showPage('patients');return false" data-page="patients">
+    <i class="bi bi-people-fill"></i>
+    <span>المرضى</span>
+  </a>
+  <a href="#" onclick="showPage('finance');return false" data-page="finance">
+    <i class="bi bi-cash-coin"></i>
+    <span>المالية</span>
+  </a>
+  <a href="#" onclick="showPage('stats');return false" data-page="stats">
+    <i class="bi bi-graph-up-arrow"></i>
+    <span>الإحصائيات</span>
+  </a>
+  <a href="#" onclick="showPage('reports-advanced');return false" data-page="reports-advanced" data-permission="stats_view">
+    <i class="bi bi-file-earmark-bar-graph-fill"></i>
+    <span>تقارير</span>
+  </a>
+  <a href="#" onclick="showPage('notifications');return false" data-page="notifications">
+    <i class="bi bi-bell-fill"></i>
+    <span>الإشعارات</span>
+  </a>
+  <a href="#" onclick="showPage('settings');return false" data-page="settings">
+    <i class="bi bi-gear-fill"></i>
+    <span>الإعدادات</span>
+  </a>
+</nav>
+
+<!-- Add Patient Modal -->
+<div class="modal fade" id="patientModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h6 class="modal-title" id="patientModalTitle">إضافة مريض جديد</h6>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="patientId">
+        <div class="mb-2">
+          <label class="form-label small fw-bold">الاسم الكامل *</label>
+          <input type="text" id="pName" class="form-control" required>
+        </div>
+        <div class="row g-2">
+          <div class="col-6 mb-2">
+            <label class="form-label small fw-bold">العمر</label>
+            <input type="number" id="pAge" class="form-control" dir="ltr">
+          </div>
+          <div class="col-6 mb-2">
+            <label class="form-label small fw-bold">الجنس</label>
+            <select id="pGender" class="form-select">
+              <option value="ذكر">ذكر</option>
+              <option value="أنثى">أنثى</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-2">
+          <label class="form-label small fw-bold">رقم الهاتف</label>
+          <input type="tel" id="pPhone" class="form-control" dir="ltr" placeholder="+249...">
+        </div>
+        <div class="mb-2">
+          <label class="form-label small fw-bold">العنوان</label>
+          <input type="text" id="pAddress" class="form-control">
+        </div>
+        <div class="mb-2">
+          <label class="form-label small fw-bold">ملاحظات</label>
+          <textarea id="pNotes" class="form-control" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+        <button class="btn btn-primary" onclick="savePatient()">
+          <i class="bi bi-save"></i> حفظ
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="lib/bootstrap.bundle.min.js"></script>
+<script src="tests.js"></script>
+<script src="import_tests.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="lib/html-to-image.min.js"></script>
+<script src="db.js"></script>
+<script src="visit_system.js"></script>
+<script src="visit_manage.js"></script>
+<script src="reports.js"></script>
+<script src="finance.js"></script>
+<script src="auth.js"></script>
+<script src="users.js"></script>
+<script src="reports_advanced.js"></script>
+<script src="medical_record.js"></script>
+<script src="notifications.js"></script>
+<script src="encryption.js"></script>
+<script src="cloud.js"></script>
+<script src="app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(r => console.log('✅ SW registered'))
+    .catch(e => console.log('SW error:', e));
+}
+</script>
+
+<!-- Login Screen -->
+<div id="loginOverlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,#0b3d91,#0d6efd);z-index:99999;justify-content:center;align-items:center;padding:20px;font-family:'Cairo',system-ui,sans-serif;">
+  <div style="background:#fff;padding:36px 28px;border-radius:20px;box-shadow:0 25px 60px rgba(0,0,0,.35);width:100%;max-width:400px;text-align:center;">
+    
+    <div style="width:100px;height:100px;margin:0 auto 16px;border-radius:50%;background:#fff;box-shadow:0 4px 20px rgba(11,61,145,.15);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+      <img src="logo.png" alt="KodNaqi" style="width:100%;height:100%;object-fit:contain;border-radius:50%;" data-brand="logo">
+    </div>
+
+    <div style="font-size:22px;font-weight:800;color:#0b3d91;margin-bottom:2px;"><span data-brand="name">KodNaqi Diagnostics</span></div>
+    <div style="color:#666;font-size:11px;letter-spacing:2px;margin-bottom:4px;">ACCURATE • RELIABLE • FAST</div>
+    <div style="color:#0d6efd;font-size:12px;font-weight:600;margin-bottom:24px;">دقة في التحليل... ثقة في النتائج</div>
+
+    <div id="loginError" style="display:none;background:#fee;color:#c00;border:1px solid #fcc;padding:10px 14px;border-radius:10px;font-size:13px;margin-bottom:16px;text-align:right;"></div>
+
+    <form onsubmit="handleLoginForm(event)">
+      <div style="margin-bottom:14px;text-align:right;">
+        <label style="display:block;font-size:12px;font-weight:700;color:#333;margin-bottom:6px;">اسم المستخدم</label>
+        <input type="text" id="loginUsername" autocomplete="username" required
+               style="width:100%;padding:12px 14px;border:2px solid #dde3eb;border-radius:10px;font-size:14px;font-family:inherit;box-sizing:border-box;"
+               placeholder="admin">
+      </div>
+
+      <div style="margin-bottom:14px;text-align:right;">
+        <label style="display:block;font-size:12px;font-weight:700;color:#333;margin-bottom:6px;">كلمة المرور</label>
+        <input type="password" id="loginPassword" autocomplete="current-password" required
+               style="width:100%;padding:12px 14px;border:2px solid #dde3eb;border-radius:10px;font-size:14px;font-family:inherit;box-sizing:border-box;"
+               placeholder="••••••••">
+      </div>
+
+      <div style="text-align:right;margin-bottom:20px;font-size:13px;">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+          <input type="checkbox" id="loginRemember" style="width:18px;height:18px;cursor:pointer;">
+          <span>تذكرني لمدة 30 يوماً</span>
+        </label>
+      </div>
+
+      <button type="submit" id="loginBtn"
+              style="width:100%;padding:14px;border:none;border-radius:10px;background:linear-gradient(135deg,#0b3d91,#0d6efd);color:#fff;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:transform .2s;">
+        تسجيل الدخول
+      </button>
+    </form>
+
+    <div style="font-size:11px;color:#999;margin-top:24px;line-height:1.8;">
+      📞 <bdi dir="ltr" data-brand="phone">+249 111 729 111</bdi><br>
+      الخرطوم - السودان
+    </div>
+  </div>
+</div>
+
+
+<!-- Change Password Modal -->
+<div class="modal fade" id="passwordModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h6 class="modal-title"><i class="bi bi-key"></i> تغيير كلمة المرور</h6>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div id="passwordError" class="alert alert-danger py-2 small" style="display:none"></div>
+        <div class="mb-3">
+          <label class="form-label small fw-bold">كلمة المرور الحالية *</label>
+          <input type="password" id="oldPassword" class="form-control" dir="ltr">
+        </div>
+        <div class="mb-3">
+          <label class="form-label small fw-bold">كلمة المرور الجديدة *</label>
+          <input type="password" id="newPassword" class="form-control" dir="ltr">
+          <div class="form-text small">6 أحرف على الأقل</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label small fw-bold">تأكيد كلمة المرور *</label>
+          <input type="password" id="confirmPassword" class="form-control" dir="ltr">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+        <button class="btn btn-primary" onclick="handleChangePassword()">
+          <i class="bi bi-save"></i> حفظ
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// تحميل XLSX عند الحاجة فقط
+var _xlsxLoading = null;
+function ensureXLSX() {
+  if (typeof XLSX !== 'undefined') return Promise.resolve();
+  if (_xlsxLoading) return _xlsxLoading;
+  
+  _xlsxLoading = new Promise(function(resolve, reject) {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js';
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+  return _xlsxLoading;
+}
+
+// تحميل html2canvas عند الحاجة فقط
+var _h2cLoading = null;
+function ensureHtml2Canvas() {
+  if (typeof html2canvas !== 'undefined') return Promise.resolve();
+  if (_h2cLoading) return _h2cLoading;
+  
+  _h2cLoading = new Promise(function(resolve, reject) {
+    var script = document.createElement('script');
+    script.src = 'lib/html2canvas.min.js';
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+  return _h2cLoading;
+}
+</script>
+<!-- شريط الحقوق -->
+<div class="text-center py-3 small text-muted" style="border-top: 1px solid #eee; margin-top: 20px;">
+  <div>
+    <strong data-brand="name-short">KodNaqi PWA</strong> © 2026 
+    <a href="mailto:kodnaqi@gmail.com" class="text-decoration-none">Alsunni Khalid</a>
+  </div>
+  <div class="mt-1" style="font-size: 0.85em;">
+    <a href="https://wa.me/249111729111" class="text-decoration-none">
+      📱 <bdi dir="ltr" data-brand="phone">+249 111 729 111</bdi>
+    </a>
+  </div>
+  <div class="mt-1" style="font-size: 0.85em;">
+    جميع الحقوق محفوظة · نسخة تجارية مرخّصة
+  </div>
+</div>
+
+<script src="lib/thumbmark.min.js"></script>
+<script src="security.js"></script>
+<script src="license.js"></script>
+<script src="branding.js"></script>
+<script src="backup.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إعداد Google Drive — KodNaqi</title>
+<link href="./lib/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="./lib/cairo.css" rel="stylesheet">
+<link href="./lib/bootstrap-icons.css" rel="stylesheet">
+<link href="./brand.css" rel="stylesheet">
+<link href="./theme.css" rel="stylesheet">
+<style>
+  .step { padding: 20px; background: var(--kn-surface-alt); border-radius: 12px; margin-bottom: 15px; border-right: 4px solid var(--kn-accent); }
+  .step-num { display: inline-flex; width: 40px; height: 40px; background: linear-gradient(135deg, var(--kn-primary), var(--kn-primary-light)); color: white; border-radius: 50%; align-items: center; justify-content: center; font-weight: 900; margin-left: 10px; }
+  .code-box { background: var(--kn-primary); color: white; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.85rem; direction: ltr; text-align: left; overflow-x: auto; margin: 10px 0; }
+  .copy-btn { background: var(--kn-accent); color: var(--kn-primary); border: none; padding: 8px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; margin-top: 5px; }
+  .hint { background: var(--kn-surface-alt); border-right: 3px solid var(--kn-accent); padding: 12px; border-radius: 6px; margin: 10px 0; }
+  .big-icon { font-size: 3rem; text-align: center; display: block; margin: 15px 0; }
+  .success-box { background: linear-gradient(135deg, #d1fae5, #a7f3d0); border: 2px solid #10b981; padding: 20px; border-radius: 12px; margin: 20px 0; }
+  .warning-box { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 2px solid #f59e0b; padding: 20px; border-radius: 12px; margin: 20px 0; }
+</style>
+</head>
+<body>
+<div class="doc">
+<div class="doc-content">
+
+  <div class="doc-header">
+    <div class="brand-block">
+      <img src="./logo.png" alt="KodNaqi" class="brand-logo">
+      <div class="brand-text">
+        <h1>KodNaqi</h1>
+        <p>Diagnostics</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-title">
+    <h2>☁️ إعداد Google Drive Backup</h2>
+    <div class="subtitle">دليل خطوة بخطوة — دقيقتان فقط</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="warning-box">
+    <h5 style="margin-bottom: 10px;">🎯 ما ستفعله الآن</h5>
+    <p style="margin: 0;">ستُنشئ "خادمًا شخصيًا" بين تطبيق KodNaqi وحساب Google Drive الخاص بك. <strong>أنت المالك الوحيد</strong> — لا أحد آخر (بما فينا KodNaqi) يستطيع الوصول لبياناتك.</p>
+  </div>
+
+  <h3 style="color: var(--kn-primary); border-right: 5px solid var(--kn-accent); padding-right: 15px;">📋 الخطوات</h3>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <strong>افتح موقع Google Apps Script:</strong>
+    <p>من متصفح هاتفك:</p>
+    <div style="text-align: center; margin: 15px 0;">
+      <a href="https://script.google.com/home/projects/create" 
+         target="_blank"
+         style="display: inline-block; padding: 15px 30px; background: var(--kn-primary); color: white; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px;">
+        🚀 فتح Google Apps Script
+      </a>
+      <br>
+      <a href="https://github.com/Alsunni707/kodnaqi-app/raw/main/gdrive-apps-script.js" 
+         target="_blank"
+         style="display: inline-block; padding: 12px 24px; background: var(--kn-accent); color: var(--kn-primary); text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 0.95rem;">
+        📥 تحميل كود Apps Script
+      </a>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <strong>أنشئ مشروعًا جديدًا</strong>
+    <p>اضغط <strong>"New project"</strong> (مشروع جديد).</p>
+    <span class="big-icon">✨</span>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <strong>الصق الكود</strong>
+    <p>امسح الكود الافتراضي، ثم الصق الكود الذي حمّلته من GitHub.</p>
+    <span class="big-icon">📋</span>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <strong>انشر التطبيق</strong>
+    <p>اضغط:</p>
+    <ul>
+      <li><strong>Deploy</strong> (أزرق، أعلى اليمين) → <strong>New deployment</strong></li>
+      <li>أيقونة ⚙️ → اختر <strong>Web app</strong></li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-num">5</div>
+    <strong>اضبط الإعدادات</strong>
+    <p>املأ الحقول:</p>
+    <ul>
+      <li><strong>Description:</strong> KodNaqi Backup</li>
+      <li><strong>Execute as:</strong> <code>Me</code></li>
+      <li><strong>Who has access:</strong> <code>Anyone</code></li>
+    </ul>
+    <div class="hint">⚠️ "Anyone" ضروري — لكن البيانات تبقى في حسابك فقط.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">6</div>
+    <strong>اضغط Deploy</strong>
+    <p>سيطلب منك الموافقة:</p>
+    <ol>
+      <li>اضغط <strong>Authorize access</strong></li>
+      <li>اختر حسابك</li>
+      <li>اضغط <strong>Advanced</strong> (في الأسفل)</li>
+      <li>اضغط <strong>Go to KodNaqi Backup (unsafe)</strong></li>
+      <li>اضغط <strong>Allow</strong></li>
+    </ol>
+    <div class="hint">هذا طبيعي — السكربت غير موقّع من Google. الكود مفتوح وموثوق.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">7</div>
+    <strong>انسخ Web app URL</strong>
+    <p>ستظهر لك نافذة فيها رابط مثل:</p>
+    <div class="code-box">https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec</div>
+    <p class="small text-muted">(سيظهر لك رابط مشابه بعد النشر — انسخه كاملًا)</p>
+    <p>اضغط <strong>Copy</strong> لنسخه.</p>
+    <span class="big-icon">🔗</span>
+  </div>
+
+  <div class="step">
+    <div class="step-num">8</div>
+    <strong>الصق الرابط في التطبيق</strong>
+    <p>افتح KodNaqi → <strong>الإعدادات</strong> → قسم <strong>Google Drive Backup</strong> → الصق الرابط → اضغط <strong>حفظ الرابط</strong>.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">9</div>
+    <strong>اختبر الاتصال</strong>
+    <p>اضغط <strong>اختبار الاتصال</strong> — يجب أن تظهر:</p>
+    <div class="success-box" style="text-align: center;">
+      ✅ <strong>الاتصال ناجح!</strong>
+    </div>
+  </div>
+
+  <div class="success-box">
+    <h5 style="margin-bottom: 10px;">🎉 مبروك!</h5>
+    <p style="margin: 0;">الآن التطبيق جاهز لحفظ نسخ احتياطية مشفّرة في Google Drive الخاص بك.</p>
+  </div>
+
+  <div class="warning-box">
+    <h5 style="margin-bottom: 10px;">💡 نصائح مهمة</h5>
+    <ul style="margin: 0;">
+      <li>فعّل <strong>التشفير</strong> قبل رفع أي نسخة</li>
+      <li>احفظ <strong>كلمة مرور التشفير</strong> في مكان آمن</li>
+      <li>اعمل نسخة احتياطية <strong>كل أسبوع</strong> على الأقل</li>
+    </ul>
+  </div>
+
+  <div style="background: linear-gradient(135deg, var(--kn-primary), var(--kn-primary-light)); color: white; border-radius: 12px; padding: 25px; text-align: center; margin: 25px 0;">
+    <h5 style="margin-bottom: 15px;">📞 هل تحتاج مساعدة؟</h5>
+    <p style="margin: 5px 0;">📧 <a href="mailto:kodnaqi@gmail.com" style="color: #e5c668; text-decoration: none; font-weight: 700;"><bdi dir="ltr">kodnaqi@gmail.com</bdi></a></p>
+    <p style="margin: 5px 0;">📱 <a href="https://wa.me/249111729111" style="color: #e5c668; text-decoration: none; font-weight: 700;"><bdi dir="ltr">+249 111 729 111</bdi></a></p>
+  </div>
+
+  <div class="doc-footer">
+    <div>
+      <div class="copyright">KodNaqi Diagnostics © 2026</div>
+      <div>جميع الحقوق محفوظة</div>
+    </div>
+  </div>
+
+</div>
+</div>
+<script src="theme.js"></script>
+</body>
+</html>

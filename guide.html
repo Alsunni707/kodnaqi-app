@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل المستخدم — KodNaqi PWA</title>
+<link href="./lib/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="./lib/cairo.css" rel="stylesheet">
+<link href="./lib/bootstrap-icons.css" rel="stylesheet">
+<link href="./brand.css" rel="stylesheet">
+<link href="./theme.css" rel="stylesheet">
+<style>
+  .step { display: flex; gap: 18px; padding: 22px; background: var(--kn-surface-alt); border-radius: 12px; margin-bottom: 15px; border-right: 4px solid var(--kn-accent); }
+  .step-num { flex-shrink: 0; width: 45px; height: 45px; background: linear-gradient(135deg, var(--kn-primary), var(--kn-primary-light)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.2rem; }
+  .step-body { flex: 1; }
+  .step-body h5 { color: var(--kn-primary); font-weight: 800; margin: 0 0 8px; }
+  .step-body p { margin: 5px 0; color: var(--kn-text); }
+  .step-body .hint { background: var(--kn-surface-alt); border-right: 3px solid var(--kn-accent); padding: 8px 12px; border-radius: 6px; margin-top: 8px; font-size: 0.85rem; color: var(--kn-text); }
+  .tip-box { background: linear-gradient(135deg, var(--kn-surface-alt), var(--kn-surface)); border: 2px dashed var(--kn-accent); border-radius: 12px; padding: 20px; margin: 25px 0; }
+  .tip-box h5 { color: var(--kn-primary); margin: 0 0 10px; }
+  .screenshot-mock { background: #0d3b66; color: white; border-radius: 12px; padding: 25px; text-align: center; margin: 15px 0; font-family: monospace; }
+  .screenshot-mock .field-mock { background: rgba(255,255,255,0.1); border: 1px dashed rgba(255,255,255,0.4); padding: 8px 15px; border-radius: 6px; margin: 10px auto; max-width: 300px; text-align: center; }
+  h3 { color: var(--kn-primary); border-right: 5px solid var(--kn-accent); padding-right: 15px; margin-top: 35px; }
+  h3 i { color: var(--kn-accent); }
+  @media print { .no-print { display: none; } .step { page-break-inside: avoid; } h3 { page-break-after: avoid; } }
+</style>
+</head>
+<body>
+<div class="doc">
+<div class="doc-content">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div class="brand-block">
+      <img src="./logo.png" alt="KodNaqi" class="brand-logo">
+      <div class="brand-text">
+        <h1>KodNaqi</h1>
+        <p>Diagnostics</p>
+      </div>
+    </div>
+    <div class="doc-meta">
+      <div><span class="label">الإصدار:</span> 1.0.0</div>
+      <div><span class="label">التاريخ:</span> 2026</div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div class="doc-title">
+    <h2>📖 دليل المستخدم</h2>
+    <div class="subtitle">كيفية تثبيت وتشغيل KodNaqi PWA خطوة بخطوة</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <!-- INTRODUCTION -->
+  <div class="tip-box">
+    <h5>💡 قبل أن تبدأ</h5>
+    <p class="mb-2">هذا الدليل سيرشدك خلال:</p>
+    <ul class="mb-0">
+      <li>🔑 تفعيل التطبيق بمفتاح الترخيص</li>
+      <li>👤 إنشاء حساب المدير الخاص بك</li>
+      <li>🛡️ حماية بياناتك</li>
+      <li>💾 إعداد النسخ الاحتياطي</li>
+    </ul>
+  </div>
+
+  <!-- ==================== FIRST TIME ==================== -->
+  <h3><i class="bi bi-rocket-takeoff-fill"></i> التشغيل الأول</h3>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>افتح التطبيق</h5>
+      <p>افتح الرابط الذي وصلك من KodNaqi، أو اضغط أيقونة التطبيق إن كنت ثبّته.</p>
+      <div class="screenshot-mock">
+        🌐 alsunni707.github.io/kodnaqi-app/
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>شاشة الترحيب — أدخل بيانات معملك</h5>
+      <p>ستظهر لك شاشة تطلب 4 معلومات:</p>
+      <ul>
+        <li><strong>🔑 مفتاح الترخيص:</strong> المفتاح الذي أرسلناه لك (يبدأ بـ <code>KOD-F-</code>)</li>
+        <li><strong>🏥 اسم معملك:</strong> سيظهر على التقارير والفواتير (مثل: معمل النور الطبي)</li>
+        <li><strong>📱 رقم الهاتف:</strong> سيظهر أسفل التقارير (اختياري)</li>
+        <li><strong>🎨 شعار معملك:</strong> سيظهر على التقارير (اختياري)</li>
+      </ul>
+      <div class="hint">
+        ⚠️ إذا لم يكن لديك مفتاح ترخيص، تواصل معنا قبل المتابعة:
+        <br>📧 kodnaqi@gmail.com · 📱 +249 111 729 111
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>اضغط "تفعيل التطبيق"</h5>
+      <p>بعد إدخال البيانات، اضغط الزر الأزرق في الأسفل.</p>
+      <p>✅ ستظهر رسالة <strong>"تم تفعيل الترخيص بنجاح"</strong> ثم يُعاد تحميل التطبيق.</p>
+    </div>
+  </div>
+
+  <!-- ==================== ACCOUNT ==================== -->
+  <h3><i class="bi bi-person-badge-fill"></i> إنشاء حساب المدير</h3>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h5>أدخل بيانات حسابك</h5>
+      <p>بعد التفعيل، ستظهر شاشة تسجيل الدخول. اضغط <strong>"إنشاء حساب جديد"</strong> (إن وُجد) أو استخدم الحقول:</p>
+      <ul>
+        <li><strong>👤 اسم المستخدم:</strong> <code>admin</code> (افتراضي)</li>
+        <li><strong>🔒 كلمة المرور:</strong> اختر كلمة مرور قوية</li>
+      </ul>
+      <div class="hint">
+        🔐 <strong>مهم جدًا:</strong> احفظ كلمة المرور في مكان آمن!
+        <br>لا يمكن استرجاعها — لا نحتفظ بأي كلمات مرور.
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h5>دخول النظام</h5>
+      <p>بعد إنشاء الحساب، ستنتقل إلى <strong>الشاشة الرئيسية</strong>.</p>
+      <p>🎉 <strong>مبروك!</strong> التطبيق جاهز للاستخدام.</p>
+    </div>
+  </div>
+
+  <!-- ==================== SECURITY ==================== -->
+  <h3><i class="bi bi-shield-lock-fill"></i> الأمان والخصوصية</h3>
+
+  <div class="tip-box">
+    <h5>🔒 بياناتك محمية بالكامل</h5>
+    <ul class="mb-0">
+      <li>✅ <strong>لا نملك خوادم:</strong> البيانات محفوظة على جهازك فقط</li>
+      <li>✅ <strong>التشفير AES-256:</strong> لحماية النسخ الاحتياطية</li>
+      <li>✅ <strong>كلمة المرور:</strong> لا تُحفظ ولا تُرسل أبدًا</li>
+      <li>✅ <strong>نسخ احتياطي:</strong> على حساب Google الخاص بك</li>
+    </ul>
+  </div>
+
+  <div class="tip-box" style="background: linear-gradient(135deg, #fee2e2, #fecaca); border-color: #dc2626;">
+    <h5>⚠️ تحذير مهم</h5>
+    <p class="mb-2"><strong>احفظ نسخ احتياطية دورية!</strong></p>
+    <ul class="mb-0">
+      <li>📤 صدّر نسخة (JSON) كل أسبوع</li>
+      <li>☁️ اربط Google Drive للنسخ التلقائي</li>
+      <li>🔐 احفظ كلمة مرور التشفير في مكان آمن</li>
+    </ul>
+  </div>
+
+  <!-- ==================== BACKUP ==================== -->
+  <h3><i class="bi bi-cloud-arrow-up-fill"></i> إعداد النسخ الاحتياطي</h3>
+
+  <div class="step">
+    <div class="step-num">6</div>
+    <div class="step-body">
+      <h5>اذهب إلى الإعدادات</h5>
+      <p>من القائمة السفلية، اضغط <strong>⚙️ الإعدادات</strong>.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">7</div>
+    <div class="step-body">
+      <h5>اربط Google Drive</h5>
+      <p>في قسم <strong>"Google Drive Backup"</strong>:</p>
+      <ol>
+        <li>الصق رابط Google Apps Script (وصلك مع الترخيص)</li>
+        <li>اضغط <strong>"حفظ الرابط"</strong></li>
+        <li>اضغط <strong>"اختبار الاتصال"</strong> — يجب أن ينجح</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">8</div>
+    <div class="step-body">
+      <h5>فعّل التشفير (موصى به بشدة)</h5>
+      <p>في قسم <strong>"تشفير النسخ"</strong>:</p>
+      <ol>
+        <li>اضغط <strong>"تفعيل التشفير"</strong></li>
+        <li>أدخل كلمة مرور قوية</li>
+        <li>احفظها في مكان آمن (لن تُحفظ في التطبيق)</li>
+      </ol>
+      <div class="hint">
+        ⚠️ إذا نسيت كلمة مرور التشفير، لا يمكن استرجاع النسخ المشفرة!
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">9</div>
+    <div class="step-body">
+      <h5>ارفع نسخة احتياطية</h5>
+      <p>اضغط <strong>"رفع نسخة للسحابة الآن"</strong>.</p>
+      <p>✅ ستُشفَّر بياناتك ثم تُرفع إلى Google Drive الخاص بك.</p>
+    </div>
+  </div>
+
+  <!-- ==================== DAILY USE ==================== -->
+  <h3><i class="bi bi-clipboard2-pulse-fill"></i> الاستخدام اليومي</h3>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="step" style="height: 100%;">
+        <div class="step-num" style="background: #198754;">👤</div>
+        <div class="step-body">
+          <h5>إضافة مريض جديد</h5>
+          <p>من الشاشة الرئيسية:</p>
+          <ol>
+            <li>اضغط <strong>➕ إضافة مريض جديد</strong></li>
+            <li>أدخل اسم المريض ورقمه</li>
+            <li>أضف التحاليل المطلوبة</li>
+            <li>احفظ</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="step" style="height: 100%;">
+        <div class="step-num" style="background: #198754;">🖨️</div>
+        <div class="step-body">
+          <h5>طباعة تقرير</h5>
+          <p>من صفحة المريض:</p>
+          <ol>
+            <li>افتح سجل المريض</li>
+            <li>اضغط <strong>🖨️ طباعة</strong></li>
+            <li>سيظهر التقرير بهويتك</li>
+            <li>اطبعه أو احفظه PDF</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TROUBLESHOOTING ==================== -->
+  <h3><i class="bi bi-tools"></i> حل المشاكل الشائعة</h3>
+
+  <div class="tip-box">
+    <h5>❓ التطبيق لا يفتح بدون إنترنت</h5>
+    <p class="mb-0">تأكد أنك فتحت <strong>كل الصفحات</strong> مرة واحدة على الأقل مع الإنترنت — بعدها سيعمل offline.</p>
+  </div>
+
+  <div class="tip-box">
+    <h5>❓ نسيت كلمة المرور</h5>
+    <p class="mb-0">للأسف، لا يمكن استرجاعها. تواصل معنا للمساعدة.</p>
+  </div>
+
+  <div class="tip-box">
+    <h5>❓ ظهرت رسالة "هذا الترخيص مسجّل على جهاز آخر"</h5>
+    <p class="mb-0">المفتاح مرتبط بجهاز واحد فقط. إذا كنت غيّرت الجهاز، تواصل معنا لإعادة الربط.</p>
+  </div>
+
+  <div class="tip-box">
+    <h5>❓ التطبيق يعرض نسخة قديمة</h5>
+    <p class="mb-0">اسحب من الأعلى للتحديث 5 مرات، أو امسح بيانات الموقع من إعدادات المتصفح.</p>
+  </div>
+
+  <!-- ==================== SUPPORT ==================== -->
+  <h3><i class="bi bi-headset"></i> الدعم الفني</h3>
+
+  <div class="ribbon" style="font-size: 1.1rem;">
+    📞 للدعم والمساعدة، تواصل معنا
+  </div>
+
+  <div class="row text-center mt-3">
+    <div class="col-6">
+      <a href="mailto:kodnaqi@gmail.com" class="btn btn-primary btn-lg w-100">
+        📧 <bdi dir="ltr">kodnaqi@gmail.com</bdi>
+      </a>
+    </div>
+    <div class="col-6">
+      <a href="https://wa.me/249111729111" class="btn btn-success btn-lg w-100">
+        💬 <bdi dir="ltr">+249 111 729 111</bdi>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <div>
+      <div class="copyright">KodNaqi Diagnostics © 2026</div>
+      <div>Alsunni Khalid Mohammed Ahmed Alsunni</div>
+    </div>
+    <div class="contact-line">
+      <div>📧 <bdi dir="ltr">kodnaqi@gmail.com</bdi></div>
+      <div>📱 <bdi dir="ltr">+249 111 729 111</bdi></div>
+    </div>
+  </div>
+
+</div>
+</div>
+<script src="theme.js"></script>
+</body>
+</html>

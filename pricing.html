@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الأسعار — KodNaqi Diagnostics</title>
+<link href="./lib/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="./lib/cairo.css" rel="stylesheet">
+<link href="./lib/bootstrap-icons.css" rel="stylesheet">
+<link href="./brand.css" rel="stylesheet">
+<link href="./theme.css" rel="stylesheet">
+<style>
+  .price-card { border: 2px solid #e4e6eb; border-radius: 15px; padding: 28px 22px; height: 100%; position: relative; background: white; transition: 0.3s; }
+  .price-card.featured { border-color: var(--kn-gold); border-width: 3px; box-shadow: 0 15px 40px rgba(201, 162, 39, 0.2); }
+  .price-card.featured::before { content: '⭐ الأكثر طلبًا'; position: absolute; top: -14px; right: 50%; transform: translateX(50%); background: linear-gradient(135deg, var(--kn-gold), var(--kn-gold-light)); color: var(--kn-navy); padding: 5px 18px; border-radius: 20px; font-weight: 800; font-size: 0.8rem; white-space: nowrap; }
+  .price-tag { font-size: 2rem; font-weight: 900; color: var(--kn-navy); line-height: 1; }
+  .price-tag small { font-size: 0.85rem; color: var(--kn-muted); font-weight: 600; }
+  ul.features { list-style: none; padding: 0; margin: 18px 0; }
+  ul.features li { padding: 7px 0; border-bottom: 1px solid #f0f2f5; font-size: 0.9rem; }
+  ul.features li i { color: #198754; margin-left: 8px; }
+  ul.features li.disabled { color: #c5cbd3; }
+  ul.features li.disabled i { color: #c5cbd3; }
+</style>
+</head>
+<body>
+<div class="doc">
+<div class="doc-content">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div class="brand-block">
+      <img src="./logo.png" alt="KodNaqi" class="brand-logo">
+      <div class="brand-text">
+        <h1>KodNaqi</h1>
+        <p>Diagnostics</p>
+      </div>
+    </div>
+    <div class="doc-meta">
+      <div><span class="label">قائمة الأسعار</span></div>
+      <div>سارية حتى: 31 / 12 / 2026</div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div class="doc-title">
+    <h2>💰 باقات KodNaqi PWA</h2>
+    <div class="subtitle">ترخيص دائم · بدون اشتراكات شهرية · تحديثات مجانية لمدة سنة</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="price-card">
+        <div class="text-center mb-3">
+          <div style="font-size: 2rem;">🥉</div>
+          <h4 style="border: none; padding: 0; margin: 5px 0 3px; text-align: center;">الأساسية</h4>
+          <div class="text-muted small">للمعامل الصغيرة</div>
+        </div>
+        <div class="text-center my-3">
+          <div class="price-tag">1,500,000 <small>ج.س</small></div>
+          <div class="text-muted small">(~ $180)</div>
+        </div>
+        <ul class="features">
+          <li><i class="bi bi-check-circle-fill"></i> جهاز واحد</li>
+          <li><i class="bi bi-check-circle-fill"></i> مستخدم واحد</li>
+          <li><i class="bi bi-check-circle-fill"></i> إدارة المرضى والتحاليل</li>
+          <li><i class="bi bi-check-circle-fill"></i> تصدير تقارير PDF</li>
+          <li><i class="bi bi-check-circle-fill"></i> نسخ احتياطي محلي</li>
+          <li><i class="bi bi-check-circle-fill"></i> تشفير AES-256</li>
+          <li><i class="bi bi-check-circle-fill"></i> دعم فني 6 أشهر</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> نسخ سحابي</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> مستخدمون متعددون</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> تقارير متقدمة</li>
+        </ul>
+        <a href="https://wa.me/249111729111" class="btn btn-outline-primary w-100">اطلب الآن</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="price-card featured">
+        <div class="text-center mb-3">
+          <div style="font-size: 2rem;">🥈</div>
+          <h4 style="border: none; padding: 0; margin: 5px 0 3px; text-align: center;">القياسية</h4>
+          <div class="text-muted small">للمعامل المتوسطة</div>
+        </div>
+        <div class="text-center my-3">
+          <div class="price-tag">2,500,000 <small>ج.س</small></div>
+          <div class="text-muted small">(~ $300)</div>
+        </div>
+        <ul class="features">
+          <li><i class="bi bi-check-circle-fill"></i> 3 أجهزة</li>
+          <li><i class="bi bi-check-circle-fill"></i> 5 مستخدمين</li>
+          <li><i class="bi bi-check-circle-fill"></i> كل ميزات الأساسية</li>
+          <li><i class="bi bi-check-circle-fill"></i> نسخ سحابي على Google Drive</li>
+          <li><i class="bi bi-check-circle-fill"></i> نسخ احتياطي تلقائي</li>
+          <li><i class="bi bi-check-circle-fill"></i> استيراد/تصدير JSON</li>
+          <li><i class="bi bi-check-circle-fill"></i> دعم فني سنة كاملة</li>
+          <li><i class="bi bi-check-circle-fill"></i> تدريب أولي (ساعتان)</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> تقارير متقدمة</li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> تخصيص الواجهة</li>
+        </ul>
+        <a href="https://wa.me/249111729111" class="btn btn-warning w-100 fw-bold">اطلب الآن</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="price-card">
+        <div class="text-center mb-3">
+          <div style="font-size: 2rem;">🥇</div>
+          <h4 style="border: none; padding: 0; margin: 5px 0 3px; text-align: center;">المتقدمة</h4>
+          <div class="text-muted small">للمعامل الكبيرة / متعددة الفروع</div>
+        </div>
+        <div class="text-center my-3">
+          <div class="price-tag">4,000,000 <small>ج.س</small></div>
+          <div class="text-muted small">(~ $480)</div>
+        </div>
+        <ul class="features">
+          <li><i class="bi bi-check-circle-fill"></i> أجهزة غير محدودة</li>
+          <li><i class="bi bi-check-circle-fill"></i> مستخدمون غير محدودين</li>
+          <li><i class="bi bi-check-circle-fill"></i> كل ميزات القياسية</li>
+          <li><i class="bi bi-check-circle-fill"></i> تقارير متقدمة وإحصائيات</li>
+          <li><i class="bi bi-check-circle-fill"></i> إدارة الأدوار والصلاحيات</li>
+          <li><i class="bi bi-check-circle-fill"></i> سجل العمليات (Audit Log)</li>
+          <li><i class="bi bi-check-circle-fill"></i> دعم فني سنتان</li>
+          <li><i class="bi bi-check-circle-fill"></i> تدريب فريق كامل</li>
+          <li><i class="bi bi-check-circle-fill"></i> تخصيص حسب الطلب</li>
+          <li><i class="bi bi-check-circle-fill"></i> شعار المعمل (White Label)</li>
+        </ul>
+        <a href="https://wa.me/249111729111" class="btn btn-outline-primary w-100">اطلب عرضًا</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EXTRA SERVICES -->
+  <div class="mt-5 p-4 kn-info-box">
+    <h4 class="kn-h4-clean"><i class="bi bi-gift-fill"></i> خدمات إضافية</h4>
+    <table class="table table-hover mb-0">
+      <tbody>
+        <tr><td>🔧 <strong>تخصيص إضافي</strong> (ميزة غير موجودة)</td><td class="text-end"><strong>حسب الطلب</strong></td></tr>
+        <tr><td>📥 <strong>استيراد بيانات قديمة</strong> من Excel أو نظام آخر</td><td class="text-end"><strong>500,000 ج.س</strong></td></tr>
+        <tr><td>🎓 <strong>تدريب إضافي</strong> (جلسة ساعتين)</td><td class="text-end"><strong>350,000 ج.س</strong></td></tr>
+        <tr><td>🔄 <strong>تجديد الدعم السنوي</strong> (بعد انتهاء المدة)</td><td class="text-end"><strong>20% من قيمة الترخيص</strong></td></tr>
+        <tr><td>🖥️ <strong>تركيب وإعداد</strong> في مقر المعمل</td><td class="text-end"><strong>300,000 ج.س</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PAYMENT INFO -->
+  <div class="ribbon" style="margin-top: 25px;">
+    💳 طرق الدفع المتاحة: تحويل بنكي · محفظة إلكترونية · نقدًا &nbsp;|&nbsp; 📅 شروط الدفع: 50% مقدّمًا، 50% عند التسليم
+  </div>
+
+  <div class="alert alert-warning mt-3" style="border-right: 4px solid var(--kn-gold);">
+    <strong>⏱️ عرض افتتاحي:</strong> خصم <strong>20%</strong> لأول 3 معامل تطلب الترخيص هذا الشهر!
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="https://wa.me/249111729111" class="btn btn-success btn-lg px-5">
+      💬 تواصل عبر واتساب: <bdi dir="ltr">+249 111 729 111</bdi>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <div>
+      <div class="copyright">KodNaqi Diagnostics © 2026</div>
+      <div>جميع الحقوق محفوظة</div>
+    </div>
+    <div class="contact-line">
+      <div>📧 <bdi dir="ltr">kodnaqi@gmail.com</bdi></div>
+      <div>📱 <bdi dir="ltr">+249 111 729 111</bdi></div>
+    </div>
+  </div>
+
+</div>
+</div>
+<script src="theme.js"></script>
+</body>
+</html>
