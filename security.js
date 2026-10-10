@@ -19,6 +19,17 @@
     // إذا كانت محفوظة مسبقًا، أعدها
     if (_cachedFingerprint) return _cachedFingerprint;
 
+    // ═══ انتظر تحميل ThumbmarkJS (حتى 5 ثواني) ═══
+    let attempts = 0;
+    while (typeof window.ThumbmarkJS === 'undefined' && attempts < 50) {
+      await new Promise(function(r) { setTimeout(r, 100); });
+      attempts++;
+    }
+    
+    if (attempts > 0 && typeof window.ThumbmarkJS !== 'undefined') {
+      console.log('[Security] Waited ' + (attempts * 100) + 'ms for ThumbmarkJS');
+    }
+
     // حاول استخدام ThumbmarkJS
     if (typeof window.ThumbmarkJS !== 'undefined') {
       try {
@@ -26,6 +37,7 @@
         const result = await tm.get();
         if (result && result.thumbmark) {
           _cachedFingerprint = 'TM_' + result.thumbmark;
+          console.log('[Security] ThumbmarkJS fingerprint ready');
           return _cachedFingerprint;
         }
       } catch (e) {
@@ -34,6 +46,7 @@
     }
 
     // Fallback — بصمة بسيطة من إشارات المتصفح
+    console.warn('[Security] Using FALLBACK fingerprint (ThumbmarkJS not loaded)');
     _cachedFingerprint = 'FB_' + fallbackFingerprint();
     return _cachedFingerprint;
   }
