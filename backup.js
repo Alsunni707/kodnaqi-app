@@ -207,10 +207,19 @@
   }
 
   function showBackupReminder() {
+    // لا تعرض في وضع المطوّر
+    if (localStorage.getItem('kodnaqi_dev_mode') === 'true') return;
+    
+    // لا تعرض في أول تشغيل (لا يوجد ترخيص أو هوية بعد)
+    const hasLicense = localStorage.getItem('kodnaqi_license');
+    const hasBrand = localStorage.getItem('kodnaqi_brand');
+    if (!hasLicense && !hasBrand) return;
+    
+    // لا تعرض إذا تم تجاهلها اليوم
+    if (localStorage.getItem('kodnaqi_reminder_dismissed') === new Date().toDateString()) return;
+    
     const check = shouldRemindBackup();
     if (!check.should) return;
-    if (localStorage.getItem('kodnaqi_dev_mode') === 'true') return;
-    if (localStorage.getItem('kodnaqi_reminder_dismissed') === new Date().toDateString()) return;
 
     const msg = check.reason === 'never'
       ? '📦 لم تأخذ نسخة احتياطية بعد\n\nهل تريد أخذ نسخة الآن؟'
@@ -293,7 +302,7 @@
 
   // تذكير تلقائي
   document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(showBackupReminder, 5000);
+    setTimeout(showBackupReminder, 5 * 60 * 1000);  // 5 دقائق
   });
 
   console.log('💾 KodNaqi Backup System loaded');

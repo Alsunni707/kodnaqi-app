@@ -96,14 +96,15 @@
     modal.style.cssText = `
       position: fixed; inset: 0; z-index: 99999;
       background: linear-gradient(135deg, #0d3b66 0%, #1e6091 100%);
-      display: flex; align-items: center; justify-content: center;
-      padding: 20px; overflow-y: auto; font-family: 'Cairo', sans-serif;
+      display: flex; align-items: flex-start; justify-content: center;
+      padding: 20px 15px; overflow-y: auto; font-family: 'Cairo', sans-serif;
+      -webkit-overflow-scrolling: touch;
     `;
 
     modal.innerHTML = `
-      <div style="background: white; border-radius: 20px; padding: 35px 25px; max-width: 480px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
+      <div style="background: white; border-radius: 20px; padding: 30px 22px 45px; max-width: 480px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.4); margin: 20px auto;">
         <div style="text-align: center; margin-bottom: 25px;">
-          <img src="./logo.png" style="width: 75px; border-radius: 50%; border: 3px solid #c9a227; padding: 4px; background: white;" alt="Logo">
+          <img src="./logo.png" style="width: 90px; height: 90px; object-fit: contain; border: 3px solid #c9a227; border-radius: 12px; padding: 4px; background: white; display: block; margin: 0 auto;" alt="Logo">
           <h2 style="color: #0d3b66; font-weight: 900; margin: 15px 0 5px;">مرحبًا بك</h2>
           <p style="color: #666; font-size: 0.9rem;">أدخل بيانات معملك لتفعيل التطبيق</p>
         </div>
@@ -124,8 +125,9 @@
               💬 واتساب
             </button>
           </div>
-          <div style="font-size: 0.72rem; color: #7c2d12; margin-top: 8px; line-height: 1.5;">
-            أرسل هذا الكود للدعم على واتساب لتحصل على مفتاح الترخيص
+          <div style="font-size: 0.75rem; color: #7c2d12; margin-top: 10px; line-height: 1.7; padding: 0 5px; word-wrap: break-word;">
+            أرسل هذا الكود للدعم على واتساب<br>
+            لتحصل على مفتاح الترخيص الخاص بمعملك
           </div>
         </div>
 
