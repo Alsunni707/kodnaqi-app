@@ -3,6 +3,7 @@
 *.bak2
 *.bak3
 *.bak4
+*.bak*
 
 # مجلدات النسخ الاحتياطية
 .backup_before_copyright/
@@ -15,6 +16,42 @@
 admin.html
 admin-*.html
 customers.html
+reset.html
+
+# ═══🔒 ملفات حساسة — ممنوعة من الرفع ═══
+# Firebase
+*firebase-adminsdk*
+*service-account*
+kodnaqi-academy-*.json
+kodnaqi-platform-*.json
+
+# المفاتيح
+*.pem
+*.key
+*.keystore
+*.jks
+*.p12
+
+# الأسرار
+.env
+.env.local
+.env.*.local
+.git-credentials
+*secrets*
+*credentials*
+*private-key*
+
+# كلمات المرور
+*kodnaqi-keys*
+*Backup-codes*
+
+# ═══ ملفات المشروع ═══
+package.json
+package-lock.json
+node_modules/
+apk-releases/
+*.apk
+*.aab
 
 # ملفات نظام التشغيل
 .DS_Store
@@ -25,17 +62,9 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
-reset.html
-package.json
-package-lock.json
-node_modules/
-.env
-.env.local
-.git-credentials
-*.pem
-*.key
-*.keystore
-*.bak*
-logo.300x300.png
-logo.original.png
-logo.300x300.png
+*.swo
+
+# ملفات مؤقتة
+*.log
+*.tmp
+*.temp
