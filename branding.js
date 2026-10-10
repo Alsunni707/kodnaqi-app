@@ -108,6 +108,27 @@
           <p style="color: #666; font-size: 0.9rem;">أدخل بيانات معملك لتفعيل التطبيق</p>
         </div>
 
+        <!-- كود الجهاز -->
+        <div style="background: linear-gradient(135deg, #fef3c7, #fde68a); border: 2px solid #f59e0b; border-radius: 12px; padding: 15px; margin-bottom: 20px;">
+          <div style="font-weight: 800; color: #7c2d12; margin-bottom: 8px; font-size: 0.9rem;">
+            📱 كود هذا الجهاز:
+          </div>
+          <div id="kn-device-code" style="background: white; border-radius: 8px; padding: 12px; text-align: center; font-family: monospace; font-size: 1.4rem; font-weight: 800; color: #0d3b66; letter-spacing: 3px; margin-bottom: 10px;">
+            ⏳ جاري الحساب...
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <button type="button" id="kn-copy-devcode" style="padding: 8px; background: #0d3b66; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.85rem;">
+              📋 نسخ
+            </button>
+            <button type="button" id="kn-send-devcode" style="padding: 8px; background: #25D366; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.85rem;">
+              💬 واتساب
+            </button>
+          </div>
+          <div style="font-size: 0.72rem; color: #7c2d12; margin-top: 8px; line-height: 1.5;">
+            أرسل هذا الكود للدعم على واتساب لتحصل على مفتاح الترخيص
+          </div>
+        </div>
+
         <div style="margin-bottom: 15px;">
           <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px;">🔑 مفتاح الترخيص</label>
           <input type="text" id="kn-wiz-key" placeholder="KOD-F-XXXX-XXXX-XXXX"
@@ -145,6 +166,56 @@
 
     document.body.appendChild(modal);
 
+    // ═══ كود الجهاز ═══
+    (async function() {
+      try {
+        const codeEl = document.getElementById('kn-device-code');
+        const copyBtn = document.getElementById('kn-copy-devcode');
+        const waBtn = document.getElementById('kn-send-devcode');
+        if (!codeEl) return;
+        
+        let deviceCode = 'XXXXXX';
+        try {
+          if (window.KodNaqiLicense && window.KodNaqiLicense.getMyDeviceCode) {
+            deviceCode = await window.KodNaqiLicense.getMyDeviceCode();
+          }
+        } catch (e) {
+          console.warn('Device code error:', e);
+        }
+        
+        const formatted = deviceCode.slice(0, 3) + '-' + deviceCode.slice(3);
+        codeEl.textContent = formatted;
+        
+        if (copyBtn) {
+          copyBtn.onclick = function() {
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(deviceCode).then(function() {
+                copyBtn.textContent = '✅ تم';
+                setTimeout(function() { copyBtn.textContent = '📋 نسخ'; }, 2000);
+              }).catch(function() {
+                prompt('انسخ الكود يدويًا:', deviceCode);
+              });
+            } else {
+              prompt('انسخ الكود يدويًا:', deviceCode);
+            }
+          };
+        }
+        
+        if (waBtn) {
+          waBtn.onclick = function() {
+            const msg = encodeURIComponent(
+              '🔑 طلب ترخيص KodNaqi\n\n' +
+              'كود الجهاز: ' + deviceCode + '\n\n' +
+              'الرجاء إرسال مفتاح الترخيص.'
+            );
+            window.open('https://wa.me/249111729111?text=' + msg, '_blank');
+          };
+        }
+      } catch (err) {
+        console.error('Device code setup error:', err);
+      }
+    })();
+
     // ربط الأحداث
     let logoData = null;
 
@@ -160,7 +231,7 @@
       reader.readAsDataURL(file);
     });
 
-    document.getElementById('kn-wiz-submit').addEventListener('click', function() {
+    document.getElementById('kn-wiz-submit').addEventListener('click', async function() {
       const key = document.getElementById('kn-wiz-key').value.trim();
       const name = document.getElementById('kn-wiz-name').value.trim();
       const phone = document.getElementById('kn-wiz-phone').value.trim();
@@ -171,9 +242,22 @@
         return;
       }
 
-      const check = window.KodNaqiLicense.verify(key);
+      const check = await window.KodNaqiLicense.verify(key);
       if (!check.valid) {
-        alert('❌ مفتاح الترخيص غير صحيح\n\nتأكد من إدخاله كاملًا بالشكل:\nKOD-F-XXXX-XXXX-XXXX');
+        let msg = '❌ مفتاح الترخيص غير صحيح';
+        if (check.reason === 'wrong_device') {
+          msg = '⚠️ هذا المفتاح مُصدَر لجهاز آخر\n\n' +
+                'المفتاح يخص: ' + (check.expected || '—') + '\n' +
+                'جهازك الحالي: ' + (check.actual || '—') + '\n\n' +
+                'أرسل كود جهازك للدعم.';
+        } else if (check.reason === 'signature') {
+          msg = '❌ المفتاح غير أصلي';
+        } else if (check.reason === 'format') {
+          msg = '❌ صيغة المفتاح غير صحيحة';
+        } else {
+          msg += '\n\nتأكد من إدخاله كاملًا';
+        }
+        alert(msg);
         return;
       }
 

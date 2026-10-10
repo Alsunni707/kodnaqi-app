@@ -43,26 +43,87 @@
     return s;
   }
 
-  function generateKey(type) {
-    const payload = randomChars(4) + randomChars(4);
-    const sig = hmac(type + payload);
-    return 'KOD-' + type + '-' + payload.slice(0,4) + '-' + payload.slice(4,8) + '-' + sig;
+  // ═══ كود الجهاز ═══
+  function computeDeviceCodeFromFingerprint(fp) {
+    if (!fp) return null;
+    const hash = simpleHash(fp + '|KN-DEVICE-2026');
+    // خذ 6 أحرف فقط
+    let code = hash.replace(/[^A-Z0-9]/g, '');
+    while (code.length < 6) code += 'X';
+    return code.slice(0, 6).toUpperCase();
   }
 
-  function verifyKey(key) {
+  async function getMyDeviceCode() {
+    if (!window.KodNaqiSecurity) {
+      // fallback — استخدم إشارات المتصفح
+      const fp = [
+        navigator.userAgent,
+        navigator.language,
+        screen.width + 'x' + screen.height,
+        new Date().getTimezoneOffset()
+      ].join('|');
+      return computeDeviceCodeFromFingerprint(fp);
+    }
+    const fp = await window.KodNaqiSecurity.getDeviceFingerprint();
+    return computeDeviceCodeFromFingerprint(fp);
+  }
+
+  function formatDeviceCode(code) {
+    if (!code || code.length !== 6) return code || '';
+    return code.slice(0, 3) + '-' + code.slice(3);
+  }
+
+  // ═══ توليد المفتاح (مع كود الجهاز) ═══
+  function generateKey(type, deviceCode) {
+    if (!deviceCode) deviceCode = 'XXXXXX';
+    deviceCode = deviceCode.replace(/-/g, '').toUpperCase();
+    if (deviceCode.length !== 6) {
+      throw new Error('كود الجهاز يجب أن يكون 6 أحرف');
+    }
+    
+    const rand = randomChars(4);
+    const sig = hmac(type + deviceCode + rand).slice(0, 4);
+    return 'KOD-' + type + '-' + deviceCode + '-' + rand + '-' + sig;
+  }
+
+  // ═══ التحقق من المفتاح ═══
+  async function verifyKey(key) {
     if (!key) return { valid: false, reason: 'empty' };
+    
     const parts = key.trim().toUpperCase().split('-');
     if (parts.length !== 5 || parts[0] !== 'KOD') {
       return { valid: false, reason: 'format' };
     }
+    
     const type = parts[1];
-    const payload = parts[2] + parts[3];
-    const sig = parts[4];
-    const expected = hmac(type + payload);
-    if (sig !== expected) {
+    const deviceCode = parts[2];    // 6 أحرف
+    const rand = parts[3];           // 4 أحرف
+    const sig = parts[4];            // 4 أحرف
+    
+    if (deviceCode.length !== 6 || rand.length !== 4 || sig.length !== 4) {
+      return { valid: false, reason: 'format' };
+    }
+    
+    // 1. التحقق من التوقيع
+    const expectedSig = hmac(type + deviceCode + rand).slice(0, 4);
+    if (sig !== expectedSig) {
       return { valid: false, reason: 'signature' };
     }
-    return { valid: true, type: type, key: key.toUpperCase() };
+    
+    // 2. التحقق من أن المفتاح يخص هذا الجهاز
+    if (deviceCode !== 'XXXXXX') {
+      const myCode = await getMyDeviceCode();
+      if (myCode && deviceCode !== myCode) {
+        return { 
+          valid: false, 
+          reason: 'wrong_device',
+          expected: deviceCode,
+          actual: myCode
+        };
+      }
+    }
+    
+    return { valid: true, type: type, key: key.toUpperCase(), deviceCode: deviceCode };
   }
 
   function getTrialStart() {
@@ -151,9 +212,18 @@
   }
 
   async function activateWithKey(key) {
-    const check = verifyKey(key);
+    const check = await verifyKey(key);
     if (!check.valid) {
-      return { success: false, reason: check.reason };
+      let errorMsg = 'المفتاح غير صحيح';
+      if (check.reason === 'wrong_device') {
+        errorMsg = 'هذا المفتاح مُصدَر لجهاز آخر.\n\n' +
+                   'الرجاء إرسال كود جهازك الحالي للدعم.';
+      } else if (check.reason === 'signature') {
+        errorMsg = 'المفتاح مُعدَّل أو غير أصلي';
+      } else if (check.reason === 'format') {
+        errorMsg = 'صيغة المفتاح غير صحيحة';
+      }
+      return { success: false, reason: check.reason, message: errorMsg };
     }
 
     // مفتاح تجريبي (T) → لا يُحفظ كترخيص دائم
@@ -364,6 +434,8 @@
 
   // API عام
   window.KodNaqiLicense = {
+    getMyDeviceCode: getMyDeviceCode,
+    formatDeviceCode: formatDeviceCode,
     verify: verifyKey,
     generate: generateKey,
     status: getStatus,
