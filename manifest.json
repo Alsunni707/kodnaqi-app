@@ -1,20 +1,90 @@
 {
-  "name": "KodNaqi Diagnostics",
+  "id": "/kodnaqi-app/",
+  "name": "KodNaqi Diagnostics — نظام إدارة المعامل الطبية",
   "short_name": "KodNaqi",
-  "description": "نظام إدارة المعمل الطبي - كود نقي للتشخيص",
-  "start_url": "./index.html",
+  "description": "نظام متكامل لإدارة المعامل الطبية التشخيصية — يعمل بدون إنترنت، مع تشفير AES-256 ونسخ احتياطي آمن",
+  "start_url": "./?utm_source=pwa",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#0b3d91",
-  "theme_color": "#0b3d91",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0d3b66",
+  "theme_color": "#0d3b66",
   "lang": "ar",
   "dir": "rtl",
-  "categories": ["medical", "health", "productivity"],
+  "categories": ["medical", "health", "productivity", "business"],
+  "prefer_related_applications": false,
   "icons": [
-    { "src": "logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "logo.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
-    { "src": "logo.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
-  ]
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "إضافة مريض جديد",
+      "short_name": "مريض جديد",
+      "description": "إضافة مريض جديد بسرعة",
+      "url": "./?action=new-patient",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "قائمة المرضى",
+      "short_name": "المرضى",
+      "description": "عرض قائمة المرضى",
+      "url": "./?page=patients",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "التقارير",
+      "short_name": "التقارير",
+      "description": "عرض التقارير والإحصائيات",
+      "url": "./?page=reports",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "logo.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "الشاشة الرئيسية"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "إدارة المرضى"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
 }
