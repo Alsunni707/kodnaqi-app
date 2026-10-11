@@ -482,6 +482,275 @@
   }
 
   // API عام
+
+  // ═══════════════════════════════════════════════════
+  // 📦 باقات الترخيص
+  // ═══════════════════════════════════════════════════
+  const PACKAGES = {
+    B: { 
+      name: 'أساسية', 
+      nameEn: 'Basic',
+      icon: '🥉',
+      devices: 1, 
+      users: 1, 
+      cloud: false, 
+      financial: false, 
+      advReports: false, 
+      userMgmt: false, 
+      auditLog: false, 
+      whiteLabel: false,
+      support: '6 أشهر',
+      description: 'للمعامل الصغيرة'
+    },
+    S: { 
+      name: 'قياسية', 
+      nameEn: 'Standard',
+      icon: '🥈',
+      devices: 3, 
+      users: 5, 
+      cloud: true, 
+      financial: true, 
+      advReports: true, 
+      userMgmt: true, 
+      auditLog: false, 
+      whiteLabel: false,
+      support: 'سنة كاملة',
+      description: 'للمعامل المتوسطة'
+    },
+    A: { 
+      name: 'متقدمة', 
+      nameEn: 'Advanced',
+      icon: '🥇',
+      devices: 999, 
+      users: 999, 
+      cloud: true, 
+      financial: true, 
+      advReports: true, 
+      userMgmt: true, 
+      auditLog: true, 
+      whiteLabel: true,
+      support: 'سنتان',
+      description: 'للمعامل الكبيرة'
+    },
+    E: { 
+      name: 'مؤسسية', 
+      nameEn: 'Enterprise',
+      icon: '🏢',
+      devices: 999, 
+      users: 999, 
+      cloud: true, 
+      financial: true, 
+      advReports: true, 
+      userMgmt: true, 
+      auditLog: true, 
+      whiteLabel: true,
+      support: 'مفتوح',
+      description: 'لمجموعات المعامل'
+    },
+    T: { 
+      name: 'تجريبية', 
+      nameEn: 'Trial',
+      icon: '🎁',
+      devices: 1, 
+      users: 1, 
+      cloud: false, 
+      financial: false, 
+      advReports: false, 
+      userMgmt: false, 
+      auditLog: false, 
+      whiteLabel: false,
+      support: '14 يومًا',
+      description: 'نسخة تجريبية'
+    },
+    F: { 
+      name: 'كاملة (قديمة)', 
+      nameEn: 'Legacy Full',
+      icon: '⚙️',
+      devices: 999, 
+      users: 999, 
+      cloud: true, 
+      financial: true, 
+      advReports: true, 
+      userMgmt: true, 
+      auditLog: true, 
+      whiteLabel: false,
+      support: 'سنة',
+      description: 'نظام قديم'
+    }
+  };
+
+  function getPackageInfo() {
+    const lic = getLicense();
+    if (!lic) return { type: 'T', ...PACKAGES.T };
+    const type = lic.type || 'T';
+    return { type, ...(PACKAGES[type] || PACKAGES.T) };
+  }
+
+  function hasFeature(featureName) {
+    // وضع المطوّر = كل الميزات
+    if (localStorage.getItem('kodnaqi_dev_mode') === 'true') return true;
+    
+    const pkg = getPackageInfo();
+    const val = pkg[featureName];
+    if (typeof val === 'boolean') return val;
+    if (typeof val === 'number') return val > 0;
+    return false;
+  }
+
+  function getDeviceLimit() {
+    if (localStorage.getItem('kodnaqi_dev_mode') === 'true') return 999;
+    return getPackageInfo().devices || 1;
+  }
+
+  function getUserLimit() {
+    if (localStorage.getItem('kodnaqi_dev_mode') === 'true') return 999;
+    return getPackageInfo().users || 1;
+  }
+
+  // ═══ تطبيق قيود الباقة على الواجهة ═══
+  function applyPackageRestrictions() {
+    if (localStorage.getItem('kodnaqi_dev_mode') === 'true') {
+      console.log('[Package] Dev mode — all features enabled');
+      return;
+    }
+    
+    const pkg = getPackageInfo();
+    console.log('[Package] Type:', pkg.type, '| Name:', pkg.name);
+    console.log('[Package] Features:', {
+      financial: pkg.financial,
+      cloud: pkg.cloud,
+      advReports: pkg.advReports,
+      userMgmt: pkg.userMgmt,
+      auditLog: pkg.auditLog,
+      whiteLabel: pkg.whiteLabel
+    });
+    
+    // ═══ 1. المالية (للـ B فقط) ═══
+    if (!pkg.financial) {
+      hideElement('a[data-page="finance"]');
+      hideElement('#page-finance');
+      console.log('[Package] 💰 Financial hidden');
+    }
+    
+    // ═══ 2. الإحصائيات (للـ B فقط) ═══
+    if (!pkg.advReports) {
+      hideElement('a[data-page="stats"]');
+      hideElement('#page-stats');
+      hideElement('a[data-page="reports-advanced"]');
+      hideElement('#page-reports-advanced');
+      hideElement('#admin-reports-advanced-btn');
+      console.log('[Package] 📊 Advanced reports hidden');
+    }
+    
+    // ═══ 3. الإشعارات (للـ B فقط) ═══
+    if (!pkg.advReports) {
+      hideElement('a[data-page="notifications"]');
+      hideElement('#page-notifications');
+      console.log('[Package] 🔔 Notifications hidden');
+    }
+    
+    // ═══ 4. إدارة المستخدمين (للـ A, E فقط) ═══
+    if (!pkg.userMgmt || pkg.type === 'B' || pkg.type === 'S') {
+      if (pkg.type === 'B' || pkg.type === 'S') {
+        hideElement('a[data-page="users"]');
+        hideElement('#page-users');
+        hideElement('#admin-manage-users-btn');
+        console.log('[Package] 👥 User management hidden');
+      }
+    }
+    
+    // ═══ 5. سجل العمليات (للـ A, E فقط) ═══
+    if (!pkg.auditLog) {
+      // البحث بـ onclick
+      document.querySelectorAll('button').forEach(btn => {
+        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes('showAuditLog')) {
+          btn.style.display = 'none';
+        }
+      });
+      console.log('[Package] 📋 Audit log hidden');
+    }
+    
+    // ═══ 6. النسخ السحابي (للـ B فقط) ═══
+    if (!pkg.cloud) {
+      hideElement('#cloudCard');
+      console.log('[Package] ☁️ Cloud backup hidden');
+    }
+    
+    // ═══ 7. White Label (للـ B, S فقط) ═══
+    if (!pkg.whiteLabel) {
+      document.querySelectorAll('button').forEach(btn => {
+        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes('showCustomizer')) {
+          btn.style.display = 'none';
+        }
+      });
+      console.log('[Package] 🎨 White Label customizer hidden');
+    }
+    
+    // ═══ 8. شارة الباقة في الإعدادات ═══
+    addPackageBadge(pkg);
+    
+    console.log('[Package] ✅ Restrictions applied');
+  }
+  
+  function hideElement(selector) {
+    try {
+      const els = document.querySelectorAll(selector);
+      els.forEach(el => {
+        el.style.display = 'none';
+        el.setAttribute('data-hidden-by-package', 'true');
+      });
+    } catch (e) {}
+  }
+  
+  function addPackageBadge(pkg) {
+    // ابحث عن قسم الإعدادات
+    const settingsPage = document.getElementById('page-settings');
+    if (!settingsPage) return;
+    if (document.getElementById('packageBadge')) return;
+    
+    // ابحث عن أول بطاقة في الإعدادات
+    const firstCard = settingsPage.querySelector('.card');
+    if (!firstCard) return;
+    
+    const badge = document.createElement('div');
+    badge.id = 'packageBadge';
+    badge.style.cssText = 'background: linear-gradient(135deg, #fef9c3, #fef3c7); border: 2px solid #c9a227; border-radius: 12px; padding: 15px; margin-bottom: 15px; text-align: center;';
+    badge.innerHTML = `
+      <div style="font-size: 1.8rem; margin-bottom: 5px;">${pkg.icon}</div>
+      <div style="font-weight: 800; color: #0d3b66; font-size: 1rem;">باقة ${pkg.name}</div>
+      <div style="font-size: 0.75rem; color: #7c2d12; margin-top: 4px;">${pkg.description}</div>
+      <div style="font-size: 0.7rem; color: #666; margin-top: 8px;">
+        📱 ${pkg.devices === 999 ? 'أجهزة غير محدودة' : pkg.devices + ' جهاز'} · 
+        👥 ${pkg.users === 999 ? 'مستخدمون غير محدودين' : pkg.users + ' مستخدمين'} · 
+        📞 ${pkg.support}
+      </div>
+    `;
+    
+    firstCard.parentElement.insertBefore(badge, firstCard);
+  }
+
+  function addPackageBadge(pkg) {
+    // ابحث عن قسم "حول التطبيق"
+    const aboutSection = document.querySelector('[data-brand="about"]') || 
+                        Array.from(document.querySelectorAll('h6')).find(h => h.textContent.includes('حول التطبيق'));
+    
+    if (!aboutSection) return;
+    if (document.getElementById('packageBadge')) return;
+    
+    const badge = document.createElement('div');
+    badge.id = 'packageBadge';
+    badge.style.cssText = 'background: linear-gradient(135deg, #fef9c3, #fef3c7); border: 2px solid #c9a227; border-radius: 10px; padding: 12px; margin-bottom: 15px; text-align: center;';
+    badge.innerHTML = `
+      <div style="font-size: 1.5rem; margin-bottom: 4px;">${pkg.icon}</div>
+      <div style="font-weight: 800; color: #0d3b66; font-size: 0.95rem;">باقة ${pkg.name}</div>
+      <div style="font-size: 0.75rem; color: #7c2d12;">${pkg.description}</div>
+    `;
+    
+    const parent = aboutSection.parentElement;
+    if (parent) parent.insertBefore(badge, aboutSection);
+  }
+
+
   window.KodNaqiLicense = {
     getMyDeviceCode: getMyDeviceCode,
     formatDeviceCode: formatDeviceCode,
@@ -489,6 +758,12 @@
     formatYearMonth: formatYearMonth,
     verify: verifyKey,
     generate: generateKey,
+    getPackageInfo: getPackageInfo,
+    hasFeature: hasFeature,
+    getDeviceLimit: getDeviceLimit,
+    getUserLimit: getUserLimit,
+    applyRestrictions: applyPackageRestrictions,
+    PACKAGES: PACKAGES,
     status: getStatus,
     activate: activateWithKey,
     showDialog: showLicenseDialog,
@@ -500,6 +775,15 @@
   // فحص تلقائي عند التحميل
   document.addEventListener('DOMContentLoaded', async function() {
     setTimeout(async function() {
+      // تطبيق قيود الباقة
+      try {
+        if (window.KodNaqiLicense && window.KodNaqiLicense.applyRestrictions) {
+          window.KodNaqiLicense.applyRestrictions();
+        }
+      } catch (e) {
+        console.warn('[Package] restrictions failed:', e);
+      }
+      
       // ═══ وضع المطوّر — أظهر شارة فقط ═══
       if (localStorage.getItem('kodnaqi_dev_mode') === 'true') {
         console.log('🧑‍💻 Dev mode active');

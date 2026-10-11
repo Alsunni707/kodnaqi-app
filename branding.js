@@ -113,6 +113,17 @@
         el.style.display = 'none';
       }
     });
+
+    // ═══ إعادة تطبيق قيود الباقة بعد تحميل الهوية ═══
+    setTimeout(function() {
+      try {
+        if (window.KodNaqiLicense && window.KodNaqiLicense.applyRestrictions) {
+          window.KodNaqiLicense.applyRestrictions();
+        }
+      } catch (e) {
+        console.warn('[Branding] restrictions failed:', e);
+      }
+    }, 500);
     
     // الشعار التسويقي
     document.querySelectorAll('[data-brand="slogan"]').forEach(el => {
@@ -164,6 +175,17 @@
         el.style.display = 'none';
       }
     });
+
+    // ═══ إعادة تطبيق قيود الباقة بعد تحميل الهوية ═══
+    setTimeout(function() {
+      try {
+        if (window.KodNaqiLicense && window.KodNaqiLicense.applyRestrictions) {
+          window.KodNaqiLicense.applyRestrictions();
+        }
+      } catch (e) {
+        console.warn('[Branding] restrictions failed:', e);
+      }
+    }, 500);
     document.querySelectorAll('[data-brand="email"]').forEach(el => {
       el.textContent = b.email;
     });
