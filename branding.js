@@ -536,13 +536,221 @@
     showSetupWizard();
   }
 
+  // ═══════════════════════════════════════════════════
+  // ✏️ نافذة تعديل الهوية (للمدير)
+  // ═══════════════════════════════════════════════════
+  function showBrandingEditor() {
+    const b = getBrand();
+    const overlay = document.createElement('div');
+    overlay.id = 'kn-branding-editor';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:99998;background:rgba(0,0,0,0.7);display:flex;align-items:flex-start;justify-content:center;padding:15px;overflow-y:auto;font-family:Cairo,sans-serif;';
+
+    overlay.onclick = function(e) {
+      if (e.target === overlay) overlay.remove();
+    };
+
+    // متغيرات مؤقتة
+    let newLogo = b.logoData;
+    let newStamp = b.stampData;
+    let newTech = b.techSignatureData;
+    let newDoctor = b.doctorSignatureData;
+
+    overlay.innerHTML = `
+      <div style="background:white;border-radius:20px;padding:25px 20px;max-width:520px;width:100%;margin:20px auto;box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+          <h2 style="color:#0d3b66;font-weight:900;margin:0;font-size:1.2rem;">✏️ تعديل هوية المعمل</h2>
+          <button onclick="this.closest('div').parentElement.parentElement.remove()" 
+                  style="background:transparent;border:none;font-size:1.5rem;color:#999;cursor:pointer;padding:0;line-height:1;">✕</button>
+        </div>
+
+        <!-- الشعار -->
+        <div style="margin-bottom:18px;">
+          <label style="font-weight:700;color:#0d3b66;display:block;margin-bottom:8px;font-size:0.9rem;">🖼️ شعار المعمل</label>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <div style="flex:1;">
+              <input type="file" id="kn-edit-logo" accept="image/*"
+                     style="width:100%;padding:8px;border:2px dashed #c9a227;border-radius:8px;background:#fdfcf7;font-size:0.8rem;">
+            </div>
+            <div id="kn-edit-logo-preview" style="width:60px;height:60px;border-radius:50%;overflow:hidden;background:#f0f0f0;display:flex;align-items:center;justify-content:center;border:2px solid #c9a227;">
+              ${newLogo ? '<img src="' + newLogo + '" style="width:100%;height:100%;object-fit:cover;">' : '<span style="color:#999;font-size:1.5rem;">🖼️</span>'}
+            </div>
+          </div>
+        </div>
+
+        <!-- اسم المعمل -->
+        <div style="margin-bottom:15px;">
+          <label style="font-weight:700;color:#0d3b66;display:block;margin-bottom:6px;font-size:0.9rem;">🏥 اسم المعمل</label>
+          <input type="text" id="kn-edit-name" value="${(b.labName || '').replace(/"/g, '&quot;')}"
+                 style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-family:Cairo;font-size:0.95rem;">
+        </div>
+
+        <!-- الشعار التسويقي -->
+        <div style="margin-bottom:15px;">
+          <label style="font-weight:700;color:#0d3b66;display:block;margin-bottom:6px;font-size:0.9rem;">💬 شعار تسويقي</label>
+          <input type="text" id="kn-edit-slogan" value="${(b.slogan || '').replace(/"/g, '&quot;')}" maxlength="60"
+                 style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-family:Cairo;font-size:0.9rem;">
+        </div>
+
+        <!-- الهاتف -->
+        <div style="margin-bottom:15px;">
+          <label style="font-weight:700;color:#0d3b66;display:block;margin-bottom:6px;font-size:0.9rem;">📱 رقم الهاتف</label>
+          <input type="tel" id="kn-edit-phone" value="${(b.phone || '').replace(/"/g, '&quot;')}" dir="ltr"
+                 style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-family:Cairo;font-size:0.95rem;">
+        </div>
+
+        <!-- البريد -->
+        <div style="margin-bottom:15px;">
+          <label style="font-weight:700;color:#0d3b66;display:block;margin-bottom:6px;font-size:0.9rem;">📧 البريد الإلكتروني</label>
+          <input type="email" id="kn-edit-email" value="${(b.email || '').replace(/"/g, '&quot;')}" dir="ltr"
+                 style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-family:Cairo;font-size:0.95rem;">
+        </div>
+
+        <!-- العنوان -->
+        <div style="margin-bottom:15px;">
+          <label style="font-weight:700;color:#0d3b66;display:block;margin-bottom:6px;font-size:0.9rem;">📍 العنوان</label>
+          <input type="text" id="kn-edit-address" value="${(b.address || '').replace(/"/g, '&quot;')}" maxlength="80"
+                 style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-family:Cairo;font-size:0.95rem;">
+        </div>
+
+        <hr style="margin:20px 0;border:none;border-top:1px solid #eee;">
+
+        <h4 style="color:#0d3b66;font-weight:800;margin-bottom:15px;font-size:1rem;">🎨 المستندات (ختم + توقيعات)</h4>
+
+        <!-- الختم -->
+        <div style="margin-bottom:15px;">
+          <label style="font-weight:700;color:#0d3b66;display:block;margin-bottom:8px;font-size:0.9rem;">🔖 ختم المعمل</label>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <div style="flex:1;">
+              <input type="file" id="kn-edit-stamp" accept="image/*"
+                     style="width:100%;padding:8px;border:2px dashed #c9a227;border-radius:8px;background:#fdfcf7;font-size:0.8rem;">
+            </div>
+            <div id="kn-edit-stamp-preview" style="width:60px;height:60px;border-radius:8px;overflow:hidden;background:#f0f0f0;display:flex;align-items:center;justify-content:center;border:2px solid #c9a227;">
+              ${newStamp ? '<img src="' + newStamp + '" style="width:100%;height:100%;object-fit:contain;">' : '<span style="color:#999;font-size:1.5rem;">🔖</span>'}
+            </div>
+          </div>
+        </div>
+
+        <!-- توقيع الفني -->
+        <div style="margin-bottom:15px;">
+          <label style="font-weight:700;color:#0d3b66;display:block;margin-bottom:8px;font-size:0.9rem;">✍️ توقيع الفني / المختص</label>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <div style="flex:1;">
+              <input type="file" id="kn-edit-tech" accept="image/*"
+                     style="width:100%;padding:8px;border:2px dashed #c9a227;border-radius:8px;background:#fdfcf7;font-size:0.8rem;">
+            </div>
+            <div id="kn-edit-tech-preview" style="width:60px;height:60px;border-radius:8px;overflow:hidden;background:#f0f0f0;display:flex;align-items:center;justify-content:center;border:2px solid #c9a227;">
+              ${newTech ? '<img src="' + newTech + '" style="width:100%;height:100%;object-fit:contain;">' : '<span style="color:#999;font-size:1.5rem;">✍️</span>'}
+            </div>
+          </div>
+        </div>
+
+        <!-- توقيع المدير -->
+        <div style="margin-bottom:20px;">
+          <label style="font-weight:700;color:#0d3b66;display:block;margin-bottom:8px;font-size:0.9rem;">✍️ توقيع المدير / الطبيب</label>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <div style="flex:1;">
+              <input type="file" id="kn-edit-doctor" accept="image/*"
+                     style="width:100%;padding:8px;border:2px dashed #c9a227;border-radius:8px;background:#fdfcf7;font-size:0.8rem;">
+            </div>
+            <div id="kn-edit-doctor-preview" style="width:60px;height:60px;border-radius:8px;overflow:hidden;background:#f0f0f0;display:flex;align-items:center;justify-content:center;border:2px solid #c9a227;">
+              ${newDoctor ? '<img src="' + newDoctor + '" style="width:100%;height:100%;object-fit:contain;">' : '<span style="color:#999;font-size:1.5rem;">✍️</span>'}
+            </div>
+          </div>
+        </div>
+
+        <!-- أزرار الحفظ -->
+        <div style="display:flex;gap:10px;margin-top:20px;">
+          <button id="kn-edit-save" 
+                  style="flex:1;padding:14px;background:linear-gradient(135deg,#0d3b66,#1e6091);color:white;border:none;border-radius:10px;font-weight:800;font-size:1rem;cursor:pointer;font-family:Cairo;">
+            💾 حفظ التعديلات
+          </button>
+          <button onclick="this.closest('div').parentElement.parentElement.remove()"
+                  style="padding:14px 20px;background:#f0f0f0;color:#666;border:none;border-radius:10px;font-weight:700;cursor:pointer;font-family:Cairo;">
+            إلغاء
+          </button>
+        </div>
+
+        <p style="text-align:center;color:#999;font-size:0.75rem;margin-top:15px;">
+          التعديلات تُحفظ فورًا وتُطبق على التقارير الجديدة
+        </p>
+      </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    // ═══ ربط الأحداث ═══
+
+    function bindImageInput(inputId, previewId, callback) {
+      const input = document.getElementById(inputId);
+      const preview = document.getElementById(previewId);
+      if (!input || !preview) return;
+
+      input.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          callback(ev.target.result);
+          preview.innerHTML = '<img src="' + ev.target.result + '" style="width:100%;height:100%;object-fit:contain;">';
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    bindImageInput('kn-edit-logo', 'kn-edit-logo-preview', function(data) { newLogo = data; });
+    bindImageInput('kn-edit-stamp', 'kn-edit-stamp-preview', function(data) { newStamp = data; });
+    bindImageInput('kn-edit-tech', 'kn-edit-tech-preview', function(data) { newTech = data; });
+    bindImageInput('kn-edit-doctor', 'kn-edit-doctor-preview', function(data) { newDoctor = data; });
+
+    // ═══ زر الحفظ ═══
+    document.getElementById('kn-edit-save').onclick = function() {
+      const nameEl = document.getElementById('kn-edit-name');
+      const sloganEl = document.getElementById('kn-edit-slogan');
+      const phoneEl = document.getElementById('kn-edit-phone');
+      const emailEl = document.getElementById('kn-edit-email');
+      const addressEl = document.getElementById('kn-edit-address');
+
+      const newBrandData = {
+        labName: nameEl.value.trim() || b.labName,
+        labNameShort: (nameEl.value.trim() || b.labName).split(' ')[0] || 'Lab',
+        logoData: newLogo,
+        slogan: sloganEl.value.trim(),
+        phone: phoneEl.value.trim() || b.phone,
+        email: emailEl.value.trim() || b.email,
+        address: addressEl.value.trim() || b.address,
+        stampData: newStamp,
+        techSignatureData: newTech,
+        doctorSignatureData: newDoctor,
+        primaryColor: b.primaryColor,
+        accentColor: b.accentColor,
+        isConfigured: true,
+        configuredAt: b.configuredAt,
+        updatedAt: Date.now()
+      };
+
+      saveBrand(newBrandData);
+      overlay.remove();
+
+      if (typeof showToast === 'function') {
+        showToast('✅ تم حفظ التعديلات بنجاح');
+      } else {
+        alert('✅ تم حفظ التعديلات');
+      }
+
+      console.log('✅ Branding updated');
+    };
+
+    console.log('✏️ Branding editor opened');
+  }
+
   // ============ API عام ============
   window.KodNaqiBrand = {
     get: getBrand,
     save: saveBrand,
     apply: applyBrand,
     showSetup: showSetupWizard,
-    showSettings: showBrandingSettings
+    showSettings: showBrandingSettings,
+    showEditor: showBrandingEditor
   };
 
   // ============ التشغيل التلقائي ============
