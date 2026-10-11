@@ -194,7 +194,7 @@
     localStorage.removeItem(STORAGE_KEY);
   }
 
-  function getStatus() {
+  async function getStatus() {
     // وضع المطوّر — تجاهل كل شيء
     if (localStorage.getItem('kodnaqi_dev_mode') === 'true') {
       return { status: 'dev' };
@@ -289,8 +289,8 @@
     return { success: true, type: check.type, isTrial: false };
   }
 
-  function showLicenseDialog() {
-    const status = getStatus();
+  async function showLicenseDialog() {
+    const status = await getStatus();
 
     if (status.status === 'dev') {
       if (confirm('🧑‍💻 وضع المطوّر مفعّل\n\nهل تريد إلغاؤه؟ (لتصبح كعميل عادي)')) {
@@ -498,7 +498,7 @@
   };
 
   // فحص تلقائي عند التحميل
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', async function() {
     setTimeout(async function() {
       // ═══ وضع المطوّر — أظهر شارة فقط ═══
       if (localStorage.getItem('kodnaqi_dev_mode') === 'true') {
