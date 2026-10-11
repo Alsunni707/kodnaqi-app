@@ -12,6 +12,8 @@
   const DEFAULT_BRAND = {
     labName: 'KodNaqi Diagnostics',
     labNameShort: 'KodNaqi',
+    slogan: 'ACCURATE • RELIABLE • FAST',
+    slogan: 'ACCURATE • RELIABLE • FAST',
     logoData: null,         // Data URL للشعار
     primaryColor: '#0d3b66',
     accentColor: '#c9a227',
@@ -58,6 +60,26 @@
     });
     document.querySelectorAll('[data-brand="phone"]').forEach(el => {
       el.textContent = b.phone;
+    });
+    
+    // الشعار التسويقي — يظهر فقط إذا وُجد
+    document.querySelectorAll('[data-brand="slogan"]').forEach(el => {
+      if (b.slogan && b.slogan.trim()) {
+        el.textContent = b.slogan;
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+    
+    // الشعار التسويقي — يظهر فقط إذا وُجد
+    document.querySelectorAll('[data-brand="slogan"]').forEach(el => {
+      if (b.slogan && b.slogan.trim()) {
+        el.textContent = b.slogan;
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
     });
     document.querySelectorAll('[data-brand="email"]').forEach(el => {
       el.textContent = b.email;
@@ -149,6 +171,20 @@
                  style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; direction: ltr;">
         </div>
 
+        <div style="margin-bottom: 15px;">
+          <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px;">💬 شعار تسويقي (اختياري)</label>
+          <input type="text" id="kn-wiz-slogan" placeholder="مثال: ACCURATE • RELIABLE • FAST" maxlength="60"
+                 style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.95rem;">
+          <div style="font-size: 0.75rem; color: #666; margin-top: 4px;">سطر صغير يظهر تحت اسم معملك</div>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px;">💬 شعار تسويقي (اختياري)</label>
+          <input type="text" id="kn-wiz-slogan" placeholder="مثال: ACCURATE • RELIABLE • FAST" maxlength="60"
+                 style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.95rem;">
+          <div style="font-size: 0.75rem; color: #666; margin-top: 4px;">سطر صغير يظهر تحت اسم معملك</div>
+        </div>
+
         <div style="margin-bottom: 20px;">
           <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px;">🎨 شعار المعمل (اختياري)</label>
           <input type="file" id="kn-wiz-logo" accept="image/*"
@@ -237,6 +273,8 @@
       const key = document.getElementById('kn-wiz-key').value.trim();
       const name = document.getElementById('kn-wiz-name').value.trim();
       const phone = document.getElementById('kn-wiz-phone').value.trim();
+      const slogan = document.getElementById('kn-wiz-slogan').value.trim();
+      const slogan = document.getElementById('kn-wiz-slogan').value.trim();
 
       // التحقق من المفتاح
       if (!window.KodNaqiLicense) {
@@ -278,6 +316,7 @@
         logoData: logoData,
         phone: phone || DEFAULT_BRAND.phone,
         email: DEFAULT_BRAND.email,
+        slogan: slogan,
         primaryColor: DEFAULT_BRAND.primaryColor,
         accentColor: DEFAULT_BRAND.accentColor,
         isConfigured: true,
