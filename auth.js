@@ -38,18 +38,10 @@ function saveUsers(users) {
 
 // إنشاء admin افتراضي إذا لم يوجد مستخدمون
 async function initDefaultAdmin() {
+  // ═══ لا نُنشئ admin تلقائيًا — العميل ينشئ حسابه ═══
+  // هذا يمنع كلمة المرور الافتراضية kodnaqi2025
   const users = getUsers();
-  if (Object.keys(users).length === 0) {
-    const defaultHash = await hashPassword('kodnaqi2025');
-    users['admin'] = {
-      username: 'admin',
-      passwordHash: defaultHash,
-      fullName: 'مدير المعمل',
-      createdAt: new Date().toISOString(),
-    };
-    saveUsers(users);
-    console.log('✅ تم إنشاء admin افتراضي');
-  }
+  console.log('👥 عدد المستخدمين:', Object.keys(users).length);
 }
 
 // ============ محاولات تسجيل الدخول ============
@@ -341,19 +333,28 @@ function startLockCountdown() {
 
 // ============ إعداد صفحة الدخول ============
 async function setupAuth() {
-  // 1) أنشئ admin افتراضي
   await initDefaultAdmin();
 
-  // 2) إذا كان مسجل دخول → اخفِ الشاشة
+  // 1) هل هناك مستخدمون؟
+  const users = getUsers();
+  const hasUsers = Object.keys(users).length > 0;
+
+  // 2) مسجّل دخول؟
   if (isAuthenticated()) {
     hideLoginScreen();
     return true;
   }
 
-  // 3) إذا لم يكن مسجل → اعرض الشاشة
+  // 3) لا يوجد مستخدمون → شاشة إنشاء حساب
+  if (!hasUsers) {
+    showLoginScreen();
+    switchToCreateAccountMode();
+    return false;
+  }
+
+  // 4) يوجد مستخدمون → شاشة دخول عادية
   showLoginScreen();
 
-  // 4) إذا كان مقفلاً → ابدأ العد
   if (isLocked()) {
     startLockCountdown();
   }
@@ -484,3 +485,121 @@ async function loginWithBiometric(username) {
 
 // تصدير عام
 window.loginWithBiometric = loginWithBiometric;
+
+
+// ═══════════════════════════════════════════════════
+// إنشاء حساب المدير (أول تشغيل)
+// ═══════════════════════════════════════════════════
+
+let _createAccountMode = false;
+
+function switchToCreateAccountMode() {
+  _createAccountMode = true;
+  
+  const title = document.getElementById('loginTitle');
+  const subtitle = document.getElementById('loginSubtitle');
+  const submitBtn = document.getElementById('loginBtn');
+  const confirmGroup = document.getElementById('confirmPasswordGroup');
+  const rememberGroup = document.getElementById('rememberMeGroup');
+  const switchLink = document.getElementById('switchModeLink');
+  
+  if (title) title.textContent = '🆕 إنشاء حساب المدير';
+  if (subtitle) subtitle.textContent = 'أنشئ حسابك الخاص للبدء';
+  if (submitBtn) submitBtn.textContent = 'إنشاء الحساب';
+  if (confirmGroup) confirmGroup.style.display = 'block';
+  if (rememberGroup) rememberGroup.style.display = 'none';
+  if (switchLink) switchLink.style.display = 'none';
+  
+  // غيّر placeholder
+  const userInput = document.getElementById('loginUsername');
+  if (userInput) {
+    userInput.placeholder = 'اختر اسم مستخدم (مثل: admin)';
+    userInput.value = 'admin';
+    userInput.autocomplete = 'off';
+  }
+  
+  const passInput = document.getElementById('loginPassword');
+  if (passInput) {
+    passInput.placeholder = 'اختر كلمة مرور قوية';
+    passInput.autocomplete = 'new-password';
+  }
+  
+  const confirmInput = document.getElementById('loginPasswordConfirm');
+  if (confirmInput) {
+    confirmInput.placeholder = 'أعد كتابة كلمة المرور';
+    confirmInput.autocomplete = 'new-password';
+  }
+  
+  console.log('🆕 وضع إنشاء الحساب مفعّل');
+}
+
+async function handleCreateAccount(event) {
+  event.preventDefault();
+  
+  const username = document.getElementById('loginUsername').value.trim();
+  const password = document.getElementById('loginPassword').value;
+  const confirm = document.getElementById('loginPasswordConfirm')?.value || '';
+  const errorEl = document.getElementById('loginError');
+  const btn = document.getElementById('loginBtn');
+  
+  // تحقق
+  if (!username || username.length < 3) {
+    errorEl.textContent = '⚠️ اسم المستخدم يجب أن يكون 3 أحرف على الأقل';
+    errorEl.style.display = 'block';
+    return;
+  }
+  
+  if (!password || password.length < 6) {
+    errorEl.textContent = '⚠️ كلمة المرور يجب أن تكون 6 أحرف على الأقل';
+    errorEl.style.display = 'block';
+    return;
+  }
+  
+  if (password !== confirm) {
+    errorEl.textContent = '⚠️ كلمتا المرور غير متطابقتين';
+    errorEl.style.display = 'block';
+    return;
+  }
+  
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> جاري الإنشاء...';
+  
+  try {
+    const users = getUsers();
+    if (users[username]) {
+      throw new Error('اسم المستخدم محجوز — اختر اسمًا آخر');
+    }
+    
+    const hash = await hashPassword(password);
+    users[username] = {
+      username: username,
+      passwordHash: hash,
+      fullName: username === 'admin' ? 'مدير المعمل' : username,
+      role: 'admin',
+      createdAt: new Date().toISOString()
+    };
+    saveUsers(users);
+    
+    // تسجيل الدخول مباشرة
+    saveSession(username, true);
+    
+    errorEl.style.display = 'none';
+    hideLoginScreen();
+    
+    if (typeof postLoginInit === 'function') {
+      await postLoginInit();
+    }
+    
+    console.log('✅ تم إنشاء الحساب والدخول بنجاح');
+    
+  } catch (err) {
+    btn.disabled = false;
+    btn.innerHTML = 'إنشاء الحساب';
+    errorEl.textContent = '❌ ' + err.message;
+    errorEl.style.display = 'block';
+  }
+}
+
+// تصدير
+window.switchToCreateAccountMode = switchToCreateAccountMode;
+window.handleCreateAccount = handleCreateAccount;

@@ -715,19 +715,26 @@ if ('serviceWorker' in navigator) {
 
     <div id="loginError" style="display:none;background:#fee;color:#c00;border:1px solid #fcc;padding:10px 14px;border-radius:10px;font-size:13px;margin-bottom:16px;text-align:right;"></div>
 
-    <form onsubmit="handleLoginForm(event)">
+    <form onsubmit="event.preventDefault(); _createAccountMode ? handleCreateAccount(event) : handleLoginForm(event);">
       <div style="margin-bottom:14px;text-align:right;">
         <label style="display:block;font-size:12px;font-weight:700;color:#333;margin-bottom:6px;">اسم المستخدم</label>
-        <input type="text" id="loginUsername" autocomplete="username" required
+        <input type="text" id="loginUsername" autocomplete="off" required
                style="width:100%;padding:12px 14px;border:2px solid #dde3eb;border-radius:10px;font-size:14px;font-family:inherit;box-sizing:border-box;"
                placeholder="admin">
       </div>
 
       <div style="margin-bottom:14px;text-align:right;">
         <label style="display:block;font-size:12px;font-weight:700;color:#333;margin-bottom:6px;">كلمة المرور</label>
-        <input type="password" id="loginPassword" autocomplete="current-password" required
+        <input type="password" id="loginPassword" autocomplete="new-password" required
                style="width:100%;padding:12px 14px;border:2px solid #dde3eb;border-radius:10px;font-size:14px;font-family:inherit;box-sizing:border-box;"
                placeholder="••••••••">
+
+    <div id="confirmPasswordGroup" style="display:none;margin-bottom:16px;">
+      <label style="display:block;font-size:13px;color:#666;margin-bottom:6px;font-weight:600;">تأكيد كلمة المرور</label>
+      <input type="password" id="loginPasswordConfirm" autocomplete="new-password"
+             style="width:100%;padding:14px 16px;border:1px solid #ddd;border-radius:10px;font-size:15px;font-family:Cairo,sans-serif;"
+             placeholder="أعد كتابة كلمة المرور">
+    </div>
       </div>
 
       <div style="text-align:right;margin-bottom:20px;font-size:13px;">

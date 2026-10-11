@@ -178,12 +178,7 @@
           <div style="font-size: 0.75rem; color: #666; margin-top: 4px;">سطر صغير يظهر تحت اسم معملك</div>
         </div>
 
-        <div style="margin-bottom: 15px;">
-          <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px;">💬 شعار تسويقي (اختياري)</label>
-          <input type="text" id="kn-wiz-slogan" placeholder="مثال: ACCURATE • RELIABLE • FAST" maxlength="60"
-                 style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.95rem;">
-          <div style="font-size: 0.75rem; color: #666; margin-top: 4px;">سطر صغير يظهر تحت اسم معملك</div>
-        </div>
+
 
         <div style="margin-bottom: 20px;">
           <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px;">🎨 شعار المعمل (اختياري)</label>
