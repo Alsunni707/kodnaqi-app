@@ -179,8 +179,10 @@ async function showNotificationMenu(visitId) {
 
   html += '</div>' +
     '<div class="mt-3">' +
-    '<button class="btn btn-outline-secondary w-100" onclick="showNotificationHistory(' + visitId + ')">' +
-    '<i class="bi bi-clock-history"></i> سجل الإشعارات السابقة</button>' +
+    ((window.KodNaqiLicense && window.KodNaqiLicense.hasFeature('advReports')) 
+      ? '<button class="btn btn-outline-secondary w-100" onclick="showNotificationHistory(' + visitId + ')">' +
+        '<i class="bi bi-clock-history"></i> سجل الإشعارات السابقة</button>'
+      : '') +
     '</div>';
 
   showInfoModal(html, '📱 إشعار WhatsApp');
@@ -224,6 +226,11 @@ async function confirmSendNotification(visitId, templateKey) {
 
 // ============ سجل إشعارات زيارة ============
 async function showNotificationHistory(visitId) {
+  // ═══ حماية: تحقق من الباقة ═══
+  if (window.KodNaqiLicense && !window.KodNaqiLicense.hasFeature('advReports')) {
+    alert('⚠️ سجل الإشعارات متاح في الباقة القياسية وما فوق');
+    return;
+  }
   try {
     var all = await dbGetAll('notifications');
     var filtered = all.filter(function(n) { return n.visit_id === visitId; });
