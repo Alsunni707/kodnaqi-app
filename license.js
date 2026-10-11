@@ -306,11 +306,18 @@
         ? '⚠️ تنبيه: الترخيص ينتهي قريبًا' 
         : '✅ التطبيق مُرخَّص';
       
+      // احصل على اسم الباقة
+      const pkg = getPackageInfo();
+      const typeName = pkg.icon + ' ' + pkg.name;
+      
       alert(
         title + '\n\n' +
         'المفتاح: ' + status.key + '\n' +
-        'النوع: ' + (status.type === 'F' ? 'ترخيص سنوي' :
-                    status.type === 'E' ? 'ترخيص مؤسسي سنوي' : 'ترخيص') + '\n' +
+        'النوع: ' + typeName + '\n' +
+        'الوصف: ' + pkg.description + '\n' +
+        '📱 الأجهزة: ' + (pkg.devices === 999 ? 'غير محدودة' : pkg.devices) + '\n' +
+        '👥 المستخدمون: ' + (pkg.users === 999 ? 'غير محدودين' : pkg.users) + '\n' +
+        '📞 الدعم: ' + pkg.support + '\n' +
         'تاريخ التفعيل: ' + new Date(status.activated).toLocaleDateString('ar-EG') + '\n' +
         'تاريخ الانتهاء: ' + new Date(status.expiresAt).toLocaleDateString('ar-EG') + '\n' +
         '⏳ المتبقي: ' + status.daysLeft + ' يوم' +
@@ -499,6 +506,7 @@
       userMgmt: false, 
       auditLog: false, 
       whiteLabel: false,
+      biometric: false,
       support: '6 أشهر',
       description: 'للمعامل الصغيرة'
     },
@@ -514,6 +522,7 @@
       userMgmt: true, 
       auditLog: false, 
       whiteLabel: false,
+      biometric: true,
       support: 'سنة كاملة',
       description: 'للمعامل المتوسطة'
     },
@@ -529,6 +538,7 @@
       userMgmt: true, 
       auditLog: true, 
       whiteLabel: true,
+      biometric: true,
       support: 'سنتان',
       description: 'للمعامل الكبيرة'
     },
@@ -544,6 +554,7 @@
       userMgmt: true, 
       auditLog: true, 
       whiteLabel: true,
+      biometric: true,
       support: 'مفتوح',
       description: 'لمجموعات المعامل'
     },
@@ -559,6 +570,7 @@
       userMgmt: false, 
       auditLog: false, 
       whiteLabel: false,
+      biometric: false,
       support: '14 يومًا',
       description: 'نسخة تجريبية'
     },
@@ -574,6 +586,7 @@
       userMgmt: true, 
       auditLog: true, 
       whiteLabel: false,
+      biometric: true,
       support: 'سنة',
       description: 'نظام قديم'
     }
@@ -684,6 +697,17 @@
         }
       });
       console.log('[Package] 🎨 White Label customizer hidden');
+    }
+    
+    // ═══ 8. بصمة الإصبع (للباقات المتقدمة فقط) ═══
+    if (!pkg.biometric) {
+      document.querySelectorAll('button').forEach(btn => {
+        const onclick = btn.getAttribute('onclick') || '';
+        if (onclick.includes('KNBiometric') || onclick.includes('بصمة الإصبع')) {
+          btn.style.display = 'none';
+        }
+      });
+      console.log('[Package] 🖐️ Biometric hidden');
     }
     
     // ═══ 8. شارة الباقة في الإعدادات ═══
