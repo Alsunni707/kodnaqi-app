@@ -9,6 +9,82 @@
 <link href="./lib/bootstrap-icons.css" rel="stylesheet">
 <link href="./brand.css" rel="stylesheet">
 <link href="./theme.css" rel="stylesheet">
+<style>
+  .field {
+    background: linear-gradient(180deg, #fafbfc 0%, #eef2f7 100%);
+    padding: 5px 14px;
+    border: 1px dashed #b8c1cc;
+    display: inline-block;
+    min-width: 180px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--kn-primary);
+  }
+  .checkbox-box {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--kn-primary);
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  .package-box {
+    background: linear-gradient(135deg, #fef9c3, #fef3c7);
+    border: 2px solid #c9a227;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 15px 0;
+  }
+  .package-box h5 {
+    color: #7c2d12;
+    font-weight: 800;
+    margin: 0 0 12px;
+  }
+  .package-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .package-option {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+  }
+  .package-option strong {
+    display: block;
+    color: var(--kn-primary);
+    margin-bottom: 5px;
+  }
+  .package-option small {
+    color: #666;
+    font-size: 0.8rem;
+  }
+  .signature-block {
+    background: var(--kn-surface-alt);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+  .signature-block .title {
+    color: var(--kn-primary);
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .signature-line {
+    border-bottom: 2px solid var(--kn-primary);
+    margin: 25px 0 8px;
+    height: 40px;
+  }
+  .signature-label {
+    text-align: center;
+    color: #666;
+    font-size: 0.8rem;
+  }
+</style>
 </head>
 <body>
 <div class="doc">
@@ -24,8 +100,8 @@
       </div>
     </div>
     <div class="doc-meta">
-      <div><span class="label">رقم العقد:</span> KOD-C-2026-____</div>
-      <div><span class="label">التاريخ:</span> ____ / ____ / 2026</div>
+      <div><span class="label">رقم العقد:</span> KOD-C-2026-_____</div>
+      <div><span class="label">التاريخ:</span> _____ / _____ / 2026</div>
     </div>
   </div>
 
@@ -36,17 +112,19 @@
     <div class="gold-line"></div>
   </div>
 
-  <p>إنه في يوم <span class="field">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> الموافق <span class="field">&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;20</span>، تم الاتفاق بين كل من:</p>
+  <p>إنه في يوم <span class="field">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> الموافق <span class="field">&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;&nbsp;20____</span>، تم الاتفاق بين كل من:</p>
 
-  <h4><i class="bi bi-person-badge"></i> الطرف الأول (المرخِّص / المالك)</h4>
+  <!-- ═══ الطرف الأول ═══ -->
+  <h4><i class="bi bi-person-badge-fill"></i> الطرف الأول (المرخِّص / المالك)</h4>
   <ul class="list-unstyled">
     <li><strong>الاسم:</strong> السني خالد محمد أحمد السني</li>
     <li><strong>البريد الإلكتروني:</strong> <bdi dir="ltr">kodnaqi@gmail.com</bdi></li>
     <li><strong>الهاتف:</strong> <bdi dir="ltr">+249 111 729 111</bdi></li>
-    <li><strong>العنوان:</strong> <span class="field">&nbsp;</span></li>
+    <li><strong>العنوان:</strong> الخرطوم - السودان</li>
   </ul>
 
-  <h4><i class="bi bi-building"></i> الطرف الثاني (المرخَّص له / العميل)</h4>
+  <!-- ═══ الطرف الثاني ═══ -->
+  <h4><i class="bi bi-building-fill"></i> الطرف الثاني (المرخَّص له / العميل)</h4>
   <ul class="list-unstyled">
     <li><strong>اسم المعمل:</strong> <span class="field">&nbsp;</span></li>
     <li><strong>اسم المالك / المدير:</strong> <span class="field">&nbsp;</span></li>
@@ -57,91 +135,216 @@
 
   <div class="ribbon">📜 شروط الاتفاقية</div>
 
-  <h4><i class="bi bi-1-circle"></i> المادة الأولى: الموضوع</h4>
-  <p>يمنح الطرف الأول للطرف الثاني ترخيصًا <strong>غير حصري</strong>، <strong>غير قابل للنقل</strong>، <strong>غير قابل لإعادة الترخيص</strong>، لاستخدام برنامج <strong>KodNaqi PWA</strong> في المعمل المذكور أعلاه فقط.</p>
+  <!-- ═══ المادة 1 ═══ -->
+  <h4><i class="bi bi-1-circle-fill"></i> المادة الأولى: الموضوع</h4>
+  <p>يمنح الطرف الأول للطرف الثاني ترخيصًا <strong>غير حصري</strong>، <strong>غير قابل للنقل</strong>، <strong>غير قابل لإعادة الترخيص</strong>، لاستخدام برنامج <strong>KodNaqi PWA</strong> في المعمل المذكور أعلاه فقط، وفق الشروط المبينة في هذا العقد.</p>
 
-  <h4><i class="bi bi-2-circle"></i> المادة الثانية: نطاق الترخيص</h4>
+  <!-- ═══ المادة 2 ═══ -->
+  <h4><i class="bi bi-2-circle-fill"></i> المادة الثانية: الباقة المختارة</h4>
+  <p>يختار الطرف الثاني الباقة التالية:</p>
+
+  <div class="package-box">
+    <h5>💼 اختر الباقة:</h5>
+    <div class="package-options">
+      <div class="package-option">
+        <div class="checkbox-box"></div>
+        <strong style="display: inline-block;">🥉 الباقة الأساسية</strong>
+        <small>جهاز واحد · مستخدم واحد<br>معمل صغير</small>
+      </div>
+      <div class="package-option">
+        <div class="checkbox-box"></div>
+        <strong style="display: inline-block;">🥈 الباقة القياسية</strong>
+        <small>3 أجهزة · 5 مستخدمين<br>معمل متوسط</small>
+      </div>
+      <div class="package-option">
+        <div class="checkbox-box"></div>
+        <strong style="display: inline-block;">🥇 الباقة المتقدمة</strong>
+        <small>أجهزة ومستخدمون غير محدودين<br>معمل كبير</small>
+      </div>
+      <div class="package-option">
+        <div class="checkbox-box"></div>
+        <strong style="display: inline-block;">🏢 الباقة المؤسسية</strong>
+        <small>White Label · غير محدود<br>مجموعة معامل</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ المادة 3 ═══ -->
+  <h4><i class="bi bi-3-circle-fill"></i> المادة الثالثة: نطاق الترخيص</h4>
   <ul>
     <li><strong>عدد الأجهزة المسموح بها:</strong> <span class="field">____</span> جهاز</li>
     <li><strong>عدد المستخدمين:</strong> <span class="field">____</span> مستخدم</li>
-    <li><strong>نوع الترخيص:</strong> ☐ دائم &nbsp; ☐ سنوي</li>
-    <li><strong>مدة الدعم المجاني:</strong> <strong>12 شهرًا</strong> من تاريخ التوقيع</li>
+    <li><strong>مدة الترخيص:</strong> <strong>سنة كاملة (365 يومًا)</strong> من تاريخ التفعيل</li>
+    <li><strong>تاريخ الإصدار:</strong> <span class="field">____ / ____ / 20____</span></li>
+    <li><strong>تاريخ الانتهاء:</strong> <span class="field">____ / ____ / 20____</span></li>
+    <li><strong>مدة الدعم المجاني:</strong> طوال مدة الترخيص</li>
   </ul>
 
-  <h4><i class="bi bi-3-circle"></i> المادة الثالثة: الثمن وطريقة الدفع</h4>
+  <!-- ═══ المادة 4 ═══ -->
+  <h4><i class="bi bi-4-circle-fill"></i> المادة الرابعة: الثمن وطريقة الدفع</h4>
   <ul>
-    <li><strong>إجمالي قيمة الترخيص:</strong> <span class="field">_____________</span> جنيه سوداني</li>
+    <li><strong>إجمالي قيمة الترخيص السنوي:</strong> <span class="field">_____________</span> جنيه سوداني</li>
     <li><strong>الدفعة المقدمة (50%):</strong> <span class="field">_____________</span> تُدفع عند التوقيع</li>
     <li><strong>الدفعة النهائية (50%):</strong> <span class="field">_____________</span> تُدفع عند التسليم والتفعيل</li>
-    <li><strong>طريقة الدفع:</strong> ☐ تحويل بنكي &nbsp; ☐ محفظة إلكترونية &nbsp; ☐ نقدًا</li>
+    <li><strong>طريقة الدفع:</strong>
+      <br>
+      <span class="checkbox-box"></span> تحويل بنكي (بنك الخرطوم: 4046346)
+      <br>
+      <span class="checkbox-box"></span> بنك فيصل الإسلامي (51627855)
+      <br>
+      <span class="checkbox-box"></span> محفظة mCash (300045779)
+      <br>
+      <span class="checkbox-box"></span> نقدًا
+    </li>
   </ul>
 
-  <h4><i class="bi bi-4-circle"></i> المادة الرابعة: التزامات الطرف الأول</h4>
+  <!-- ═══ المادة 5 ═══ -->
+  <h4><i class="bi bi-5-circle-fill"></i> المادة الخامسة: التجديد</h4>
+  <p>ينتهي الترخيص تلقائيًا بعد <strong>365 يومًا</strong> من تاريخ الإصدار. للاستمرار في استخدام البرنامج، يجب على الطرف الثاني:</p>
+  <ol>
+    <li>دفع رسوم التجديد السنوي قبل انتهاء المدة.</li>
+    <li>الحصول على مفتاح ترخيص جديد من الطرف الأول.</li>
+  </ol>
+  <p><strong>ملاحظة:</strong> يحق للطرف الثاني الحصول على <strong>خصم 20%</strong> إذا جدّد قبل انتهاء المدة بـ 30 يومًا على الأقل.</p>
+
+  <!-- ═══ المادة 6 ═══ -->
+  <h4><i class="bi bi-6-circle-fill"></i> المادة السادسة: التزامات الطرف الأول</h4>
   <ol>
     <li>تسليم البرنامج مفعّلًا وجاهزًا للعمل خلال <strong>7 أيام</strong> من استلام الدفعة المقدمة.</li>
     <li>توفير تدريب أولي (ساعتان) لموظفي المعمل.</li>
-    <li>تقديم دعم فني مجاني طوال مدة الدعم المتفق عليها.</li>
+    <li>تقديم دعم فني مجاني طوال مدة الترخيص.</li>
     <li>إصلاح أي خلل تقني ناتج عن البرنامج دون مقابل.</li>
+    <li>إصدار تحديثات مجانية خلال مدة الترخيص.</li>
+    <li>عدم الوصول لبيانات المرضى (محفوظة محليًا ومشفّرة).</li>
   </ol>
 
-  <h4><i class="bi bi-5-circle"></i> المادة الخامسة: التزامات الطرف الثاني</h4>
+  <!-- ═══ المادة 7 ═══ -->
+  <h4><i class="bi bi-7-circle-fill"></i> المادة السابعة: التزامات الطرف الثاني</h4>
   <ol>
     <li>سداد قيمة الترخيص في المواعيد المتفق عليها.</li>
     <li>عدم نسخ أو توزيع أو بيع البرنامج لأي طرف ثالث.</li>
     <li>عدم محاولة فك الكود المصدري أو الهندسة العكسية.</li>
-    <li>الحفاظ على سرية كلمات المرور وأخذ نسخ احتياطية دورية.</li>
+    <li>الحفاظ على سرية كلمات المرور.</li>
+    <li>أخذ نسخ احتياطية دورية من البيانات.</li>
     <li>إبلاغ الطرف الأول فورًا بأي مشكلة تقنية.</li>
+    <li>استخدام البرنامج في المعمل المذكور فقط.</li>
   </ol>
 
-  <h4><i class="bi bi-6-circle"></i> المادة السادسة: المحظورات</h4>
+  <!-- ═══ المادة 8 ═══ -->
+  <h4><i class="bi bi-8-circle-fill"></i> المادة الثامنة: المحظورات</h4>
   <p>يُحظر على الطرف الثاني صراحةً:</p>
   <ul>
     <li>إعادة بيع البرنامج أو تأجيره أو ترخيصه لطرف آخر.</li>
     <li>إزالة إشعارات حقوق النشر من داخل البرنامج.</li>
     <li>استخدام البرنامج في أكثر من المعمل المذكور في هذا العقد.</li>
     <li>تعديل البرنامج أو إضافة ميزات دون إذن كتابي من الطرف الأول.</li>
+    <li>استخدام البرنامج لأغراض غير مشروعة.</li>
+    <li>محاولة اختراق نظام الترخيص أو نسخ المفاتيح.</li>
   </ul>
 
-  <h4><i class="bi bi-7-circle"></i> المادة السابعة: ملكية البيانات</h4>
-  <p>جميع البيانات المدخلة في البرنامج تبقى ملكًا حصريًا للطرف الثاني (العميل). يلتزم الطرف الأول بعدم الوصول إليها أو الاطلاع عليها، وهي محفوظة محليًا ومشفّرة.</p>
+  <!-- ═══ المادة 9 ═══ -->
+  <h4><i class="bi bi-9-circle-fill"></i> المادة التاسعة: ملكية البيانات</h4>
+  <p>جميع البيانات المدخلة في البرنامج تبقى ملكًا <strong>حصريًا للطرف الثاني</strong>. يلتزم الطرف الأول بعدم الوصول إليها أو الاطلاع عليها. البيانات محفوظة محليًا على أجهزة الطرف الثاني، ومشفّرة عند النسخ السحابي.</p>
 
-  <h4><i class="bi bi-8-circle"></i> المادة الثامنة: الملكية الفكرية</h4>
+  <!-- ═══ المادة 10 ═══ -->
+  <h4><i class="bi bi-10-circle-fill"></i> المادة العاشرة: الملكية الفكرية</h4>
   <p>يبقى البرنامج وكوده المصدري واسم <strong>"KodNaqi"</strong> علامة تجارية مملوكة حصريًا للطرف الأول. لا ينقل هذا العقد أي حق ملكية للطرف الثاني.</p>
 
-  <h4><i class="bi bi-9-circle"></i> المادة التاسعة: الدعم والتحديثات</h4>
-  <p>يحق للطرف الثاني الحصول على التحديثات المجانية خلال مدة الدعم. بعد انتهائها، يمكنه تجديد الدعم سنويًا مقابل <strong>20%</strong> من قيمة الترخيص الأصلي.</p>
-
-  <h4><i class="bi bi-10-circle"></i> المادة العاشرة: إخلاء المسؤولية</h4>
+  <!-- ═══ المادة 11 ═══ -->
+  <h4><i class="bi bi-11-circle-fill"></i> المادة الحادية عشر: إخلاء المسؤولية</h4>
   <p>يُقدَّم البرنامج "كما هو". الطرف الأول غير مسؤول عن أي أضرار مباشرة أو غير مباشرة، بما في ذلك فقدان البيانات. <strong>الطرف الثاني مسؤول مسؤولية كاملة عن أخذ نسخ احتياطية دورية.</strong></p>
 
-  <h4><i class="bi bi-11-circle"></i> المادة الحادية عشر: إنهاء العقد</h4>
-  <p>يُلغى هذا العقد تلقائيًا في حال مخالفة أي بند. عند الإلغاء، يجب على الطرف الثاني التوقف فورًا عن استخدام البرنامج وحذف نسخه.</p>
+  <!-- ═══ المادة 12 ═══ -->
+  <h4><i class="bi bi-12-circle-fill"></i> المادة الثانية عشر: إنهاء العقد</h4>
+  <p>يُلغى هذا العقد تلقائيًا في الحالات التالية:</p>
+  <ul>
+    <li>مخالفة أي بند من بنود العقد.</li>
+    <li>عدم سداد رسوم التجديد خلال 30 يومًا من تاريخ الانتهاء.</li>
+    <li>استخدام البرنامج في نشاط غير مشروع.</li>
+  </ul>
+  <p>عند الإلغاء، يجب على الطرف الثاني التوقف فورًا عن استخدام البرنامج وحذف نسخه.</p>
 
-  <h4><i class="bi bi-12-circle"></i> المادة الثانية عشر: القانون المُطبَّق</h4>
-  <p>تخضع هذه الاتفاقية وتُفسَّر وفقًا لأحكام القوانين السارية في <strong>جمهورية السودان</strong>. أي نزاع يُحال إلى المحاكم المختصة.</p>
+  <!-- ═══ المادة 13 ═══ -->
+  <h4><i class="bi bi-13-circle-fill"></i> المادة الثالثة عشر: تسوية النزاعات</h4>
+  <p>في حال نشوء أي نزاع بين الطرفين، يتم حلّه وديًا خلال <strong>30 يومًا</strong>. في حال تعذّر ذلك، يُحال النزاع إلى المحاكم المختصة في <strong>جمهورية السودان</strong>.</p>
 
-  <h4><i class="bi bi-13-circle"></i> المادة الثالثة عشر: نسخ العقد</h4>
+  <!-- ═══ المادة 14 ═══ -->
+  <h4><i class="bi bi-14-circle-fill"></i> المادة الرابعة عشر: نسخ العقد</h4>
   <p>حُرِّر هذا العقد من نسختين أصليتين، بيد كل طرف نسخة للعمل بمقتضاها.</p>
 
-  <!-- SIGNATURES -->
-  <div class="signature">
-    <div class="block">
-      <div class="title">الطرف الأول (المرخِّص)</div>
-      <div class="name">السني خالد محمد أحمد السني</div>
-      <div class="line">التوقيع</div>
+  <!-- ═══ التوقيعات ═══ -->
+  <div class="signature-block">
+    <div class="title">✍️ التوقيعات</div>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+      <div>
+        <div style="font-weight: 700; color: var(--kn-primary); text-align: center; margin-bottom: 10px;">
+          الطرف الأول (المرخِّص)
+        </div>
+        <div style="text-align: center; color: #666; font-size: 0.85rem; margin-bottom: 5px;">
+          السني خالد محمد أحمد السني
+        </div>
+        <div class="signature-line"></div>
+        <div class="signature-label">التوقيع</div>
+        <div style="text-align: center; color: #666; font-size: 0.8rem; margin-top: 15px;">
+          التاريخ: ____ / ____ / 20____
+        </div>
+      </div>
+      
+      <div>
+        <div style="font-weight: 700; color: var(--kn-primary); text-align: center; margin-bottom: 10px;">
+          الطرف الثاني (العميل)
+        </div>
+        <div style="text-align: center; color: #666; font-size: 0.85rem; margin-bottom: 5px;">
+          &nbsp;
+        </div>
+        <div class="signature-line"></div>
+        <div class="signature-label">التوقيع</div>
+        <div style="text-align: center; color: #666; font-size: 0.8rem; margin-top: 15px;">
+          التاريخ: ____ / ____ / 20____
+        </div>
+      </div>
     </div>
-    <div class="block">
-      <div class="title">الطرف الثاني (العميل)</div>
-      <div class="name">&nbsp;</div>
-      <div class="line">التوقيع</div>
+  </div>
+
+  <!-- ═══ الشهود (اختياري) ═══ -->
+  <div class="signature-block" style="margin-top: 20px;">
+    <div class="title">👥 الشهود (اختياري)</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+      <div>
+        <div style="font-weight: 700; color: var(--kn-primary); text-align: center; margin-bottom: 5px;">
+          الشاهد الأول
+        </div>
+        <div style="text-align: center; color: #666; font-size: 0.85rem; margin-bottom: 5px;">
+          الاسم: _____________
+        </div>
+        <div class="signature-line"></div>
+        <div class="signature-label">التوقيع</div>
+      </div>
+      <div>
+        <div style="font-weight: 700; color: var(--kn-primary); text-align: center; margin-bottom: 5px;">
+          الشاهد الثاني
+        </div>
+        <div style="text-align: center; color: #666; font-size: 0.85rem; margin-bottom: 5px;">
+          الاسم: _____________
+        </div>
+        <div class="signature-line"></div>
+        <div class="signature-label">التوقيع</div>
+      </div>
     </div>
+  </div>
+
+  <!-- ═══ ملاحظة ═══ -->
+  <div class="tip-box" style="margin-top: 25px;">
+    <h5>📌 ملاحظة مهمة</h5>
+    <p style="margin: 0;">هذا العقد ساري المفعول من تاريخ التوقيع. يُحفظ نسخة عند كل طرف. للحصول على نسخة PDF رسمية، تواصل معنا.</p>
   </div>
 
   <!-- FOOTER -->
   <div class="doc-footer">
     <div>
       <div class="copyright">KodNaqi Diagnostics © 2026</div>
-      <div>جميع الحقوق محفوظة</div>
+      <div>السني خالد محمد أحمد السني</div>
     </div>
     <div class="contact-line">
       <div>📧 <bdi dir="ltr">kodnaqi@gmail.com</bdi></div>
