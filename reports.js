@@ -25,7 +25,7 @@ const LAB_INFO = {
   name_ar: 'كود نقي للتشخيص',
   tagline_en: 'ACCURATE • RELIABLE • FAST',
   tagline_ar: 'دقة في التحليل... ثقة في النتائج',
-  address: 'الخرطوم - السودان',
+  get address() { return KN_BRAND().address; },
   get phone() { return KN_BRAND().phone; },
   get whatsapp() { return KN_BRAND().whatsapp; },
   get email() { return KN_BRAND().email; },
@@ -668,7 +668,7 @@ async function printViaBluetooth(visitId) {
         <div style="border-top: 1px dashed #000; margin: 8px 0;"></div>
         <div style="text-align: center; font-size: 10px;">
           📞 ${KN_BRAND().phone}<br>
-          📍 الخرطوم - السودان<br>
+          📍 ${LAB_INFO.address}<br>
           ✉️ ${KN_BRAND().email}<br>
           <span style="margin-top: 4px; display: block;">Thank you 🌟</span>
         </div>
