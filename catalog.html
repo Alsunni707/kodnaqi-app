@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كتالوج KodNaqi — الحل الكامل للمعامل الطبية</title>
+<link href="./lib/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="./lib/cairo.css" rel="stylesheet">
+<link href="./lib/bootstrap-icons.css" rel="stylesheet">
+<link href="./theme.css" rel="stylesheet">
+<style>
+  body { font-family: 'Cairo', sans-serif; background: #f0f2f5; padding: 0; margin: 0; }
+  .page { max-width: 900px; margin: 0 auto; background: white; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+  
+  /* Hero */
+  .hero { background: linear-gradient(135deg, #0d3b66 0%, #1e6091 100%); color: white; padding: 50px 30px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(201,162,39,0.2), transparent 70%); border-radius: 50%; }
+  .hero img.logo { width: 90px; height: 90px; border-radius: 50%; border: 3px solid #c9a227; padding: 3px; background: white; margin-bottom: 15px; position: relative; z-index: 1; }
+  .hero h1 { font-size: 2rem; font-weight: 900; margin: 0; position: relative; z-index: 1; }
+  .hero .subtitle { font-size: 1rem; opacity: 0.95; margin-top: 8px; position: relative; z-index: 1; }
+  .hero .tagline { display: inline-block; margin-top: 20px; padding: 8px 22px; border: 1px solid rgba(201,162,39,0.6); border-radius: 30px; font-size: 0.85rem; background: rgba(255,255,255,0.05); position: relative; z-index: 1; }
+  
+  /* Section */
+  .section { padding: 40px 30px; border-bottom: 1px solid #eef1f5; }
+  .section:last-child { border-bottom: none; }
+  .section h2 { color: #0d3b66; font-weight: 900; margin-bottom: 20px; font-size: 1.4rem; position: relative; padding-right: 15px; }
+  .section h2::before { content: ''; position: absolute; right: 0; top: 8px; bottom: 8px; width: 5px; background: #c9a227; border-radius: 3px; }
+  
+  /* Problem list */
+  .problem-list { list-style: none; padding: 0; }
+  .problem-list li { padding: 10px 0; padding-right: 30px; position: relative; color: #555; font-size: 1rem; }
+  .problem-list li::before { content: '❌'; position: absolute; right: 0; top: 10px; }
+  
+  /* Solution grid */
+  .solution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+  .solution-card { padding: 20px; background: linear-gradient(135deg, #f8fafc, #eef1f5); border-radius: 12px; border-right: 4px solid #c9a227; }
+  .solution-card .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+  .solution-card h4 { color: #0d3b66; font-weight: 800; margin-bottom: 8px; font-size: 1rem; }
+  .solution-card p { color: #666; font-size: 0.9rem; margin: 0; line-height: 1.6; }
+  
+  /* Comparison table */
+  .comparison { width: 100%; border-collapse: collapse; margin-top: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0,0,0,0.05); }
+  .comparison th { background: #0d3b66; color: white; padding: 14px 12px; font-weight: 700; font-size: 0.95rem; }
+  .comparison th.before { background: #c62828; }
+  .comparison th.after { background: #2e7d32; }
+  .comparison td { padding: 12px; border-bottom: 1px solid #eef1f5; font-size: 0.9rem; color: #555; }
+  .comparison tr:nth-child(even) { background: #f8fafc; }
+  .comparison td.before { color: #c62828; font-weight: 600; }
+  .comparison td.after { color: #2e7d32; font-weight: 700; }
+  
+  /* Features */
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 20px; }
+  .feature { padding: 15px; background: white; border: 2px solid #eef1f5; border-radius: 10px; text-align: center; transition: all 0.3s; }
+  .feature:hover { border-color: #c9a227; transform: translateY(-3px); }
+  .feature .emoji { font-size: 2rem; display: block; margin-bottom: 8px; }
+  .feature h5 { color: #0d3b66; font-weight: 800; font-size: 0.95rem; margin: 0 0 5px; }
+  .feature p { color: #777; font-size: 0.8rem; margin: 0; }
+  
+  /* Pricing preview */
+  .pricing-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; }
+  .plan { border: 2px solid #e0e0e0; border-radius: 15px; padding: 20px; text-align: center; transition: all 0.3s; }
+  .plan.featured { border-color: #c9a227; border-width: 3px; box-shadow: 0 10px 30px rgba(201,162,39,0.2); position: relative; }
+  .plan.featured::before { content: 'الأكثر طلبًا'; position: absolute; top: -12px; right: 50%; transform: translateX(50%); background: #c9a227; color: #0d3b66; padding: 4px 15px; border-radius: 15px; font-size: 0.75rem; font-weight: 800; white-space: nowrap; }
+  .plan h3 { color: #0d3b66; font-weight: 800; margin-bottom: 10px; font-size: 1.1rem; }
+  .plan .price { font-size: 1.8rem; font-weight: 900; color: #0d3b66; margin: 15px 0 5px; }
+  .plan .price small { font-size: 0.75rem; color: #999; }
+  .plan .period { color: #999; font-size: 0.8rem; margin-bottom: 15px; }
+  .plan ul { list-style: none; padding: 0; text-align: right; margin-top: 15px; }
+  .plan li { padding: 5px 0; font-size: 0.85rem; color: #555; position: relative; padding-right: 22px; }
+  .plan li::before { content: '✓'; position: absolute; right: 0; color: #2e7d32; font-weight: 900; }
+  
+  /* CTA */
+  .cta-box { background: linear-gradient(135deg, #c9a227 0%, #e5c668 100%); padding: 35px 25px; text-align: center; color: #0d3b66; }
+  .cta-box h2 { color: #0d3b66; border: none; padding: 0; font-size: 1.5rem; margin-bottom: 15px; }
+  .cta-box h2::before { display: none; }
+  .cta-box .contact-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+  .cta-box .contact-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #0d3b66; color: white; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 0.95rem; transition: all 0.3s; }
+  .cta-box .contact-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0,0,0,0.2); color: white; }
+  .cta-box .contact-btn.whatsapp { background: #25D366; }
+  
+  /* Footer */
+  .footer { background: #0d3b66; color: white; padding: 25px; text-align: center; }
+  .footer .info { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 15px; font-size: 0.9rem; }
+  .footer .info span { display: flex; align-items: center; gap: 6px; }
+  .footer .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; font-size: 0.8rem; opacity: 0.7; }
+  
+  /* Quote */
+  .quote-box { background: linear-gradient(135deg, #fef9c3, #fef3c7); padding: 25px; border-radius: 15px; border-right: 5px solid #c9a227; margin-top: 20px; }
+  .quote-box::before { content: '"'; font-size: 4rem; color: #c9a227; position: absolute; line-height: 1; opacity: 0.3; margin-right: -10px; margin-top: -10px; }
+  .quote-box p { font-size: 1.05rem; color: #555; font-style: italic; margin: 0 0 10px; line-height: 1.8; }
+  .quote-box .author { font-weight: 800; color: #0d3b66; }
+  
+  /* Print */
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; }
+    .hero::before { display: none; }
+  }
+  
+  /* Mobile */
+  @media (max-width: 576px) {
+    .section { padding: 30px 18px; }
+    .hero { padding: 35px 20px; }
+    .hero h1 { font-size: 1.5rem; }
+    .comparison th, .comparison td { padding: 8px 6px; font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="./logo.png" alt="KodNaqi" class="logo" onerror="this.style.display='none'">
+    <h1>KodNaqi Diagnostics</h1>
+    <div class="subtitle">نظام إدارة المعامل الطبية التشخيصية</div>
+    <div class="tagline">🎯 الحل الذي تحتاجه معملك اليوم</div>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="section">
+    <h2>😟 هل تعاني من هذه المشاكل؟</h2>
+    <ul class="problem-list">
+      <li>فقدان بيانات المرضى بسبب انقطاع الكهرباء أو الإنترنت</li>
+      <li>ساعات طويلة لإصدار تقرير طبي واحد يدويًا</li>
+      <li>صعوبة البحث عن سجل مريض قديم</li>
+      <li>عدم وجود نسخة احتياطية آمنة للبيانات</li>
+      <li>تكاليف مرتفعة للأنظمة الجاهزة (اشتراكات شهرية)</li>
+      <li>خطر تسرّب بيانات المرضى الحساسة</li>
+      <li>عدم القدرة على متابعة الإيرادات والمصروفات</li>
+      <li>تقارير غير احترافية لا تعكس صورة معملك</li>
+    </ul>
+  </div>
+
+  <!-- SOLUTION -->
+  <div class="section">
+    <h2>✨ الحل: KodNaqi</h2>
+    <p style="color: #666; margin-bottom: 20px;">نظام متكامل يدير معملك بالكامل — من استقبال المريض حتى أرشفة التقرير.</p>
+    
+    <div class="solution-grid">
+      <div class="solution-card">
+        <span class="icon">📴</span>
+        <h4>يعمل بدون إنترنت</h4>
+        <p>لا يحتاج اتصالًا دائمًا. يعمل دائمًا حتى لو انقطعت الشبكة أو الكهرباء.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">🔐</span>
+        <h4>تشفير AES-256</h4>
+        <p>بيانات المرضى محمية بأقوى معايير التشفير العالمية — نفس ما تستخدمه البنوك.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">☁️</span>
+        <h4>نسخ احتياطي تلقائي</h4>
+        <p>نسخة محلية + نسخة سحابية في حسابك الخاص — بدون تدخل منك.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">⚡</span>
+        <h4>سرعة فائقة</h4>
+        <p>إصدار تقرير في دقيقة واحدة بدلًا من 15. والبحث عن مريض في ثوانٍ.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">🎨</span>
+        <h4>هوية معملك الخاصة</h4>
+        <p>شعارك، اسمك، ختمك، توقيعاتك — على كل تقرير وفاتورة.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">📱</span>
+        <h4>على جميع الأجهزة</h4>
+        <p>جوال، تابلت، حاسوب — كلها تدير نفس المعمل بسلاسة.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">📊</span>
+        <h4>تقارير وإحصائيات</h4>
+        <p>تقارير يومية/شهرية/سنوية عن المرضى والتحاليل والإيرادات.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">🖨️</span>
+        <h4>طباعة احترافية</h4>
+        <p>تقارير جاهزة للطباعة أو التصدير PDF بجودة عالية.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">👥</span>
+        <h4>إدارة المستخدمين</h4>
+        <p>صلاحيات مختلفة لكل موظف — من الفني حتى المدير.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">💰</span>
+        <h4>إدارة مالية</h4>
+        <p>فواتير، إيرادات، مصروفات، ودفعات — كل شيء في مكان واحد.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">🖐️</span>
+        <h4>بصمة الإصبع</h4>
+        <p>دخول سريع وآمن ببصمة إصبعك — بدون كتابة كلمات مرور.</p>
+      </div>
+      <div class="solution-card">
+        <span class="icon">🔄</span>
+        <h4>تحديثات مجانية</h4>
+        <p>كل التحسينات والميزات الجديدة تُضاف تلقائيًا خلال مدة الترخيص.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARISON -->
+  <div class="section">
+    <h2>📊 قبل / بعد استخدام KodNaqi</h2>
+    <table class="comparison">
+      <thead>
+        <tr>
+          <th>المقياس</th>
+          <th class="before">❌ قبل</th>
+          <th class="after">✅ بعد</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>⏱️ وقت إصدار تقرير</td>
+          <td class="before">15 دقيقة</td>
+          <td class="after">دقيقة واحدة</td>
+        </tr>
+        <tr>
+          <td>🔍 البحث عن مريض</td>
+          <td class="before">5-10 دقائق</td>
+          <td class="after">3 ثوانٍ</td>
+        </tr>
+        <tr>
+          <td>💾 النسخ الاحتياطي</td>
+          <td class="before">لا يوجد / ورقي</td>
+          <td class="after">تلقائي مشفّر</td>
+        </tr>
+        <tr>
+          <td>📊 التقارير الشهرية</td>
+          <td class="before">ساعات يدويًا</td>
+          <td class="after">زر واحد</td>
+        </tr>
+        <tr>
+          <td>🚫 فقدان البيانات</td>
+          <td class="before">ممكن</td>
+          <td class="after">شبه مستحيل</td>
+        </tr>
+        <tr>
+          <td>🔐 حماية البيانات</td>
+          <td class="before">لا شيء</td>
+          <td class="after">AES-256</td>
+        </tr>
+        <tr>
+          <td>💰 التكلفة الشهرية</td>
+          <td class="before">مرتفعة</td>
+          <td class="after">دفعة سنوية</td>
+        </tr>
+        <tr>
+          <td>🌐 الاحتياج للإنترنت</td>
+          <td class="before">إلزامي</td>
+          <td class="after">اختياري</td>
+        </tr>
+        <tr>
+          <td>📱 الأجهزة المدعومة</td>
+          <td class="before">حاسوب فقط</td>
+          <td class="after">جميع الأجهزة</td>
+        </tr>
+        <tr>
+          <td>🎨 الهوية البصرية</td>
+          <td class="before">عامة</td>
+          <td class="after">خاصة بمعملك</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PRICING -->
+  <div class="section">
+    <h2>💰 باقات الترخيص</h2>
+    <p style="color: #666; margin-bottom: 20px;">جميع الباقات لمدة سنة كاملة، مع تحديثات ودعم مجاني.</p>
+    
+    <div class="pricing-preview">
+      <div class="plan">
+        <h3>🥉 الأساسية</h3>
+        <div class="price">1,800,000 <small>ج.س</small></div>
+        <div class="period">سنويًا</div>
+        <ul>
+          <li>جهاز واحد</li>
+          <li>مستخدم واحد</li>
+          <li>إدارة المرضى والتحاليل</li>
+          <li>تصدير PDF</li>
+          <li>نسخ احتياطي محلي</li>
+          <li>تشفير AES-256</li>
+        </ul>
+      </div>
+      
+      <div class="plan featured">
+        <h3>🥈 القياسية</h3>
+        <div class="price">2,800,000 <small>ج.س</small></div>
+        <div class="period">سنويًا</div>
+        <ul>
+          <li>3 أجهزة</li>
+          <li>5 مستخدمين</li>
+          <li>كل ميزات الأساسية</li>
+          <li>نسخ سحابي (Google Drive)</li>
+          <li>تقارير متقدمة</li>
+          <li>تدريب أولي</li>
+        </ul>
+      </div>
+      
+      <div class="plan">
+        <h3>🥇 المتقدمة</h3>
+        <div class="price">4,500,000 <small>ج.س</small></div>
+        <div class="period">سنويًا</div>
+        <ul>
+          <li>أجهزة غير محدودة</li>
+          <li>مستخدمون غير محدودين</li>
+          <li>كل ميزات القياسية</li>
+          <li>تقارير وإحصائيات كاملة</li>
+          <li>تخصيص كامل</li>
+          <li>دعم أولوية</li>
+        </ul>
+      </div>
+    </div>
+    
+    <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9rem;">
+      💳 <strong>طرق الدفع:</strong> تحويل بنكي · محفظة إلكترونية · نقدًا<br>
+      📅 <strong>شروط الدفع:</strong> 50% مقدّمًا · 50% عند التسليم
+    </p>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="section">
+    <h2>💬 ماذا يقول عملاؤنا؟</h2>
+    <div class="quote-box">
+      <p>وفّرنا أكثر من 4 ساعات يوميًا. التقارير أصبحت جاهزة في دقيقة، والبيانات محفوظة بشكل احترافي.</p>
+      <div class="author">— مدير معمل (عميل تجريبي)</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h2>🎁 اطلب عرضًا تجريبيًا مجانيًا (14 يومًا)</h2>
+    <p style="margin: 15px 0; font-size: 1rem;">جرّب النظام كاملًا بدون أي التزام — لا نطلب بطاقة دفع</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/249111729111" class="contact-btn whatsapp">
+        <i class="bi bi-whatsapp"></i> واتساب مباشر
+      </a>
+      <a href="mailto:kodnaqi@gmail.com" class="contact-btn">
+        <i class="bi bi-envelope"></i> البريد الإلكتروني
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="info">
+      <span>📱 <bdi dir="ltr">+249 111 729 111</bdi></span>
+      <span>📧 <bdi dir="ltr">kodnaqi@gmail.com</bdi></span>
+    </div>
+    <div class="copyright">
+      KodNaqi Diagnostics © 2026 — Alsunni Khalid Mohammed Ahmed Alsunni<br>
+      جميع الحقوق محفوظة
+    </div>
+  </div>
+
+</div>
+<script src="theme.js"></script>
+</body>
+</html>
