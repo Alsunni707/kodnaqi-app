@@ -62,56 +62,34 @@ async function getLogoBase64() {
   return _logoBase64Cache;
 }
 async function getStampBase64() {
-  if (_stampBase64Cache) return _stampBase64Cache;
-  
-  // 1) من هوية المعمل
+  // ═══ افحص الختم المخصص أولًا (بدون cache) ═══
   const customStamp = KN_BRAND().stampData;
-  if (customStamp) {
-    _stampBase64Cache = customStamp;
-    return _stampBase64Cache;
-  }
+  if (customStamp) return customStamp;
   
-  // 2) fallback — من ملف ثابت
-  try {
-    _stampBase64Cache = await fileToBase64('stamp.png');
-  } catch (e) {
-    _stampBase64Cache = null;
+  // fallback مع cache
+  if (!_stampBase64Cache) {
+    try { _stampBase64Cache = await fileToBase64('stamp.png'); }
+    catch (e) { _stampBase64Cache = null; }
   }
   return _stampBase64Cache;
 }
 async function getTechSigBase64() {
-  if (_techSigBase64Cache) return _techSigBase64Cache;
-  
-  // 1) من هوية المعمل
   const customSig = KN_BRAND().techSignatureData;
-  if (customSig) {
-    _techSigBase64Cache = customSig;
-    return _techSigBase64Cache;
-  }
+  if (customSig) return customSig;
   
-  // 2) fallback
-  try {
-    _techSigBase64Cache = await fileToBase64('signatures/tech.png');
-  } catch (e) {
-    _techSigBase64Cache = null;
+  if (!_techSigBase64Cache) {
+    try { _techSigBase64Cache = await fileToBase64('signatures/tech.png'); }
+    catch (e) { _techSigBase64Cache = null; }
   }
   return _techSigBase64Cache;
 }
 async function getDoctorSigBase64() {
-  if (_doctorSigBase64Cache) return _doctorSigBase64Cache;
-  
-  // 1) من هوية المعمل
   const customSig = KN_BRAND().doctorSignatureData;
-  if (customSig) {
-    _doctorSigBase64Cache = customSig;
-    return _doctorSigBase64Cache;
-  }
+  if (customSig) return customSig;
   
-  // 2) fallback
-  try {
-    _doctorSigBase64Cache = await fileToBase64('signatures/doctor.png');
-  } catch (e) {
-    _doctorSigBase64Cache = null;
+  if (!_doctorSigBase64Cache) {
+    try { _doctorSigBase64Cache = await fileToBase64('signatures/doctor.png'); }
+    catch (e) { _doctorSigBase64Cache = null; }
   }
   return _doctorSigBase64Cache;
 }
