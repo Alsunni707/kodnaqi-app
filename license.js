@@ -201,7 +201,7 @@
     }
     const lic = getLicense();
     if (lic) {
-      const check = verifyKey(lic.key);
+      const check = await verifyKey(lic.key);
       if (check.valid) {
         // مفتاح تجريبي محفوظ سابقًا — نتجاهله ونحسب التجربة
         if (check.type === 'T') {
