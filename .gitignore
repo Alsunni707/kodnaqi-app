@@ -78,3 +78,10 @@ sales-scripts.html
 whatsapp-templates.txt
 customers.html
 admin.html
+
+# ═══ ملفات سرية — محلي فقط ═══
+sales-scripts.html
+whatsapp-templates.txt
+customers.html
+admin.html
+gdrive-apps-script.js
