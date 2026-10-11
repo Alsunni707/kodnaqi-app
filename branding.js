@@ -36,23 +36,20 @@
     }
   }
 
-  function saveBrand(brand) {
+  async function saveBrand(brand) {
     localStorage.setItem(BRAND_KEY, JSON.stringify(brand));
-    applyBrand();
+    await applyBrand();
   }
 
-  function applyBrand() {
-    // معالجة ?dev=1 / ?dev=0
+  async function applyBrand() {
+    // ═══ معالجة dev mode الآمنة عبر security-dev.js ═══
     try {
-      const params = new URLSearchParams(location.search);
-      if (params.get('dev') === '1') {
-        localStorage.setItem('kodnaqi_dev_mode', 'true');
-        console.log('🧑‍💻 Developer mode ENABLED');
-      } else if (params.get('dev') === '0') {
-        localStorage.removeItem('kodnaqi_dev_mode');
-        console.log('👤 Developer mode DISABLED');
+      if (window.KNDevMode && typeof window.KNDevMode.handle === 'function') {
+        await window.KNDevMode.handle();
       }
-    } catch (e) {}
+    } catch (e) {
+      console.warn('[Branding] dev mode handling failed:', e);
+    }
     const b = getBrand();
 
     // تغيير الاسم في كل مكان
@@ -755,8 +752,8 @@
 
   // ============ التشغيل التلقائي ============
   document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-      applyBrand();
+    setTimeout(async function() {
+      await applyBrand();
 
       // وضع المطوّر: تجاهل شاشة الترحيب
       if (localStorage.getItem('kodnaqi_dev_mode') === 'true') {
