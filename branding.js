@@ -274,7 +274,6 @@
       const name = document.getElementById('kn-wiz-name').value.trim();
       const phone = document.getElementById('kn-wiz-phone').value.trim();
       const slogan = document.getElementById('kn-wiz-slogan').value.trim();
-      const slogan = document.getElementById('kn-wiz-slogan').value.trim();
 
       // التحقق من المفتاح
       if (!window.KodNaqiLicense) {
