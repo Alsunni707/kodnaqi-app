@@ -72,3 +72,9 @@ desktop.ini
 # شعارات احتياطية
 logo.original.png
 logo.300x300.png
+
+# ═══ ملفات سرية — محلي فقط ═══
+sales-scripts.html
+whatsapp-templates.txt
+customers.html
+admin.html
