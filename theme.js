@@ -18,7 +18,26 @@
     slate: { name: 'الرمادي العصري', primary: '#334155', primaryDark: '#1e293b', primaryLight: '#64748b', accent: '#0ea5e9', accentLight: '#38bdf8' }
   };
 
-  function getThemePreference() { return localStorage.getItem(THEME_KEY) || 'auto'; }
+  function getThemePreference() {
+    // تفضيل المستخدم إن وُجد
+    const userPref = localStorage.getItem(THEME_KEY);
+    
+    // إذا اختار المستخدم يدويًا، احترم اختياره
+    if (userPref === 'light' || userPref === 'dark') {
+      // تحقق هل تغيير يدوي (خلال آخر 24 ساعة)
+      const manualAt = localStorage.getItem('kodnaqi_theme_manual_at');
+      if (manualAt) {
+        const hoursSince = (Date.now() - parseInt(manualAt)) / 3600000;
+        if (hoursSince < 24) return userPref;
+      }
+    }
+    
+    // الوضع الذكي: حسب الوقت
+    const hour = new Date().getHours();
+    // من 6 صباحًا إلى 6 مساءً = نهاري
+    // من 6 مساءً إلى 6 صباحًا = ليلي
+    return (hour >= 6 && hour < 18) ? 'light' : 'dark';
+  }
 
   function setThemePreference(pref) {
     localStorage.setItem(THEME_KEY, pref);
@@ -40,7 +59,10 @@
 
   function toggleTheme() {
     const isDark = document.body.classList.contains('dark-mode');
-    setThemePreference(isDark ? 'light' : 'dark');
+    const newTheme = isDark ? 'light' : 'dark';
+    localStorage.setItem(THEME_KEY, newTheme);
+    localStorage.setItem('kodnaqi_theme_manual_at', Date.now().toString());
+    applyTheme(newTheme);
     showToast(isDark ? '☀️ الوضع النهاري' : '🌙 الوضع الليلي');
   }
 

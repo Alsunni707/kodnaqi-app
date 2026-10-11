@@ -14,7 +14,11 @@
     labNameShort: 'KodNaqi',
     slogan: 'ACCURATE • RELIABLE • FAST',
     slogan: 'ACCURATE • RELIABLE • FAST',
-    logoData: null,         // Data URL للشعار
+    logoData: null,
+    stampData: null,
+    techSignatureData: null,
+    doctorSignatureData: null,
+    address: 'الخرطوم - السودان',         // Data URL للشعار
     primaryColor: '#0d3b66',
     accentColor: '#c9a227',
     phone: '+249 111 729 111',
@@ -62,7 +66,7 @@
       el.textContent = b.phone;
     });
     
-    // الشعار التسويقي — يظهر فقط إذا وُجد
+    // الشعار التسويقي
     document.querySelectorAll('[data-brand="slogan"]').forEach(el => {
       if (b.slogan && b.slogan.trim()) {
         el.textContent = b.slogan;
@@ -71,11 +75,93 @@
         el.style.display = 'none';
       }
     });
+
+    // العنوان
+    document.querySelectorAll('[data-brand="address"]').forEach(el => {
+      el.textContent = b.address || 'الخرطوم - السودان';
+    });
+
+    // البريد
+    document.querySelectorAll('[data-brand="email"]').forEach(el => {
+      el.textContent = b.email || 'kodnaqi@gmail.com';
+      if (el.tagName === 'A') el.href = 'mailto:' + (b.email || 'kodnaqi@gmail.com');
+    });
+
+    // الختم — مخفي إن لم يوجد
+    document.querySelectorAll('[data-brand="stamp"]').forEach(el => {
+      if (b.stampData) {
+        el.src = b.stampData;
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+
+    // توقيع الفني
+    document.querySelectorAll('[data-brand="tech-signature"]').forEach(el => {
+      if (b.techSignatureData) {
+        el.src = b.techSignatureData;
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+
+    // توقيع المدير
+    document.querySelectorAll('[data-brand="doctor-signature"]').forEach(el => {
+      if (b.doctorSignatureData) {
+        el.src = b.doctorSignatureData;
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
     
-    // الشعار التسويقي — يظهر فقط إذا وُجد
+    // الشعار التسويقي
     document.querySelectorAll('[data-brand="slogan"]').forEach(el => {
       if (b.slogan && b.slogan.trim()) {
         el.textContent = b.slogan;
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+
+    // العنوان
+    document.querySelectorAll('[data-brand="address"]').forEach(el => {
+      el.textContent = b.address || 'الخرطوم - السودان';
+    });
+
+    // البريد
+    document.querySelectorAll('[data-brand="email"]').forEach(el => {
+      el.textContent = b.email || 'kodnaqi@gmail.com';
+      if (el.tagName === 'A') el.href = 'mailto:' + (b.email || 'kodnaqi@gmail.com');
+    });
+
+    // الختم — مخفي إن لم يوجد
+    document.querySelectorAll('[data-brand="stamp"]').forEach(el => {
+      if (b.stampData) {
+        el.src = b.stampData;
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+
+    // توقيع الفني
+    document.querySelectorAll('[data-brand="tech-signature"]').forEach(el => {
+      if (b.techSignatureData) {
+        el.src = b.techSignatureData;
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+
+    // توقيع المدير
+    document.querySelectorAll('[data-brand="doctor-signature"]').forEach(el => {
+      if (b.doctorSignatureData) {
+        el.src = b.doctorSignatureData;
         el.style.display = '';
       } else {
         el.style.display = 'none';
@@ -178,6 +264,53 @@
           <div style="font-size: 0.75rem; color: #666; margin-top: 4px;">سطر صغير يظهر تحت اسم معملك</div>
         </div>
 
+        <div style="margin-bottom: 15px;">
+          <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px;">📍 العنوان (اختياري)</label>
+          <input type="text" id="kn-wiz-address" placeholder="مثال: الخرطوم - السودان" maxlength="80"
+                 style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.95rem;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px;">📧 البريد الإلكتروني (اختياري)</label>
+          <input type="email" id="kn-wiz-email" placeholder="lab@example.com" maxlength="60" dir="ltr"
+                 style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.95rem;">
+        </div>
+
+        <!-- قسم المزيد (قابل للطي) -->
+        <div style="background: #f8fafc; border-radius: 10px; padding: 12px; margin-bottom: 15px;">
+          <button type="button" id="kn-more-toggle" 
+                  style="width: 100%; background: transparent; border: none; text-align: right; color: #0d3b66; font-weight: 700; cursor: pointer; padding: 5px; font-size: 0.9rem;">
+            ▼ خيارات متقدمة (ختم + توقيعات)
+          </button>
+          
+          <div id="kn-more-options" style="display: none; margin-top: 12px;">
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 12px;">
+              🎨 ارفع صور الختم والتوقيعات لتظهر في تقاريرك (اختياري)
+            </p>
+
+            <div style="margin-bottom: 12px;">
+              <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px; font-size: 0.85rem;">🔖 ختم المعمل</label>
+              <input type="file" id="kn-wiz-stamp" accept="image/*"
+                     style="width: 100%; padding: 8px; border: 2px dashed #c9a227; border-radius: 8px; background: white; font-size: 0.85rem;">
+              <div id="kn-stamp-preview" style="text-align: center; margin-top: 6px;"></div>
+            </div>
+
+            <div style="margin-bottom: 12px;">
+              <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px; font-size: 0.85rem;">✍️ توقيع الفني/المختص</label>
+              <input type="file" id="kn-wiz-tech" accept="image/*"
+                     style="width: 100%; padding: 8px; border: 2px dashed #c9a227; border-radius: 8px; background: white; font-size: 0.85rem;">
+              <div id="kn-tech-preview" style="text-align: center; margin-top: 6px;"></div>
+            </div>
+
+            <div style="margin-bottom: 8px;">
+              <label style="font-weight: 700; color: #0d3b66; display: block; margin-bottom: 6px; font-size: 0.85rem;">✍️ توقيع المدير/الطبيب</label>
+              <input type="file" id="kn-wiz-doctor" accept="image/*"
+                     style="width: 100%; padding: 8px; border: 2px dashed #c9a227; border-radius: 8px; background: white; font-size: 0.85rem;">
+              <div id="kn-doctor-preview" style="text-align: center; margin-top: 6px;"></div>
+            </div>
+          </div>
+        </div>
+
 
 
         <div style="margin-bottom: 20px;">
@@ -249,8 +382,72 @@
       }
     })();
 
-    // ربط الأحداث
+    // ═══ خيارات متقدمة — التبديل ═══
+    const moreToggle = document.getElementById('kn-more-toggle');
+    const moreOptions = document.getElementById('kn-more-options');
+    if (moreToggle && moreOptions) {
+      moreToggle.onclick = function() {
+        const isHidden = moreOptions.style.display === 'none';
+        moreOptions.style.display = isHidden ? 'block' : 'none';
+        moreToggle.textContent = isHidden 
+          ? '▲ إخفاء الخيارات المتقدمة'
+          : '▼ خيارات متقدمة (ختم + توقيعات)';
+      };
+    }
+
+    // ═══ متغيرات الصور ═══
     let logoData = null;
+    let stampData = null;
+    let techSignatureData = null;
+    let doctorSignatureData = null;
+
+    // ═══ ربط حقل الختم ═══
+    const stampInput = document.getElementById('kn-wiz-stamp');
+    if (stampInput) {
+      stampInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          stampData = ev.target.result;
+          document.getElementById('kn-stamp-preview').innerHTML =
+            '<img src="' + stampData + '" style="max-width: 70px; border-radius: 8px; border: 2px solid #c9a227; padding: 2px;">';
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    // ═══ ربط حقل توقيع الفني ═══
+    const techInput = document.getElementById('kn-wiz-tech');
+    if (techInput) {
+      techInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          techSignatureData = ev.target.result;
+          document.getElementById('kn-tech-preview').innerHTML =
+            '<img src="' + techSignatureData + '" style="max-width: 70px; background: white; border-radius: 8px; padding: 2px; border: 1px solid #ddd;">';
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    // ═══ ربط حقل توقيع المدير ═══
+    const doctorInput = document.getElementById('kn-wiz-doctor');
+    if (doctorInput) {
+      doctorInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          doctorSignatureData = ev.target.result;
+          document.getElementById('kn-doctor-preview').innerHTML =
+            '<img src="' + doctorSignatureData + '" style="max-width: 70px; background: white; border-radius: 8px; padding: 2px; border: 1px solid #ddd;">';
+        };
+        reader.readAsDataURL(file);
+      });
+    }
 
     document.getElementById('kn-wiz-logo').addEventListener('change', function(e) {
       const file = e.target.files[0];
@@ -268,7 +465,12 @@
       const key = document.getElementById('kn-wiz-key').value.trim();
       const name = document.getElementById('kn-wiz-name').value.trim();
       const phone = document.getElementById('kn-wiz-phone').value.trim();
-      const slogan = document.getElementById('kn-wiz-slogan').value.trim();
+      const sloganEl = document.getElementById('kn-wiz-slogan');
+      const slogan = sloganEl ? sloganEl.value.trim() : '';
+      const addressEl = document.getElementById('kn-wiz-address');
+      const address = addressEl ? addressEl.value.trim() : '';
+      const emailEl = document.getElementById('kn-wiz-email');
+      const email = emailEl ? emailEl.value.trim() : '';
 
       // التحقق من المفتاح
       if (!window.KodNaqiLicense) {
@@ -309,8 +511,12 @@
         labNameShort: name.split(' ')[0] || 'Lab',
         logoData: logoData,
         phone: phone || DEFAULT_BRAND.phone,
-        email: DEFAULT_BRAND.email,
+        email: email || DEFAULT_BRAND.email,
+        address: address || DEFAULT_BRAND.address,
         slogan: slogan,
+        stampData: stampData,
+        techSignatureData: techSignatureData,
+        doctorSignatureData: doctorSignatureData,
         primaryColor: DEFAULT_BRAND.primaryColor,
         accentColor: DEFAULT_BRAND.accentColor,
         isConfigured: true,
