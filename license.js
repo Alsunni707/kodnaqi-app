@@ -663,13 +663,12 @@
     }
     
     // ═══ 4. إدارة المستخدمين (للـ A, E فقط) ═══
-    if (!pkg.userMgmt || pkg.type === 'B' || pkg.type === 'S') {
-      if (pkg.type === 'B' || pkg.type === 'S') {
-        hideElement('a[data-page="users"]');
-        hideElement('#page-users');
-        hideElement('#admin-manage-users-btn');
-        console.log('[Package] 👥 User management hidden');
-      }
+    // إدارة المستخدمين: B فقط (S+ تحتاجها لإدارة الموظفين)
+    if (pkg.type === 'B') {
+      hideElement('a[data-page="users"]');
+      hideElement('#page-users');
+      hideElement('#admin-manage-users-btn');
+      console.log('[Package] 👥 User management hidden (Basic only)');
     }
     
     // ═══ 5. سجل العمليات (للـ A, E فقط) ═══
