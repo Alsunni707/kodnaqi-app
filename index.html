@@ -576,6 +576,9 @@ body {
       <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="KodNaqiBrand.showEditor()">
         <i class="bi bi-palette2"></i> تعديل هوية المعمل (شعار، ختم، توقيعات)
       </button>
+      <button class="btn btn-outline-warning btn-sm w-100 mb-2" onclick="KNPriceEditor.open()">
+        <i class="bi bi-currency-exchange"></i> 💰 تعديل أسعار التحاليل
+      </button>
 
       <button class="btn btn-danger btn-sm w-100" onclick="logout()">
         <i class="bi bi-box-arrow-right"></i> تسجيل الخروج
@@ -852,6 +855,7 @@ function ensureHtml2Canvas() {
 <script src="branding.js"></script>
 <script src="biometric.js"></script>
 <script src="backup.js"></script>
+<script src="prices_editor.js"></script>
 <script src="theme.js"></script>
 </body>
 </html>
