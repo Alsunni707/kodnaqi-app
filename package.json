@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"Building web assets...\" && mkdir -p www && cp -r *.html *.js *.css *.png *.json *.txt www/ 2>/dev/null; cp -r lib www/ 2>/dev/null; echo \"Build complete\""
+    "build": "mkdir -p www && cp -r *.html *.js *.css *.png *.json *.txt www/ 2>/dev/null || true && cp -r lib www/ 2>/dev/null || true"
   },
   "repository": {
     "type": "git",
