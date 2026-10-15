@@ -47,7 +47,6 @@ kodnaqi-platform-*.json
 
 # ═══ ملفات المشروع ═══
 package.json
-package-lock.json
 node_modules/
 apk-releases/
 *.apk
