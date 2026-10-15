@@ -602,3 +602,112 @@
 
   console.log('[License] v2 (ECDSA) loaded');
 })();
+
+// ═══════════════════════════════════════════════════
+// 🔧 وضع المطور — مفتاح دائم للاختبار
+// ═══════════════════════════════════════════════════
+const DEV_MODE_KEY = 'kodnaqi_dev_mode';
+const DEV_LICENSE = {
+  key: 'KOD2.DEV.MODE.PERMANENT.LICENSE',
+  payload: {
+    v: 1,
+    id: 'KN-DEV-000001',
+    tier: 'E',
+    customer: 'المطور (Developer)',
+    devices: ['*'],
+    issued: 0,
+    expires: 9999999999999 // دائم
+  }
+};
+
+function isDevMode() {
+  try {
+    return localStorage.getItem(DEV_MODE_KEY) === 'true';
+  } catch(e) { return false; }
+}
+
+const DEV_PASSWORD = 'kodnaqi2026dev'; // غيّرها لاحقاً!
+
+function enableDevMode() {
+  const input = prompt('🔐 أدخل كلمة مرور المطور:');
+  if (input !== DEV_PASSWORD) {
+    alert('❌ كلمة المرور غير صحيحة!');
+    return;
+  }
+  
+  try {
+    localStorage.setItem(DEV_MODE_KEY, 'true');
+    localStorage.setItem('kodnaqi_license', JSON.stringify({
+      key: DEV_LICENSE.key,
+      payload: DEV_LICENSE.payload,
+      deviceCode: 'DEV',
+      activatedAt: Date.now()
+    }));
+    alert('✅ تم تفعيل وضع المطور بنجاح!');
+    location.reload();
+  } catch(e) {}
+}
+
+function disableDevMode() {
+  try {
+    localStorage.removeItem(DEV_MODE_KEY);
+    localStorage.removeItem('kodnaqi_license');
+    location.reload();
+  } catch(e) {}
+}
+
+// التحقق من وضع المطور عند بدء التشغيل
+(function checkDevMode() {
+  if (isDevMode()) {
+    // حقن الترخيص المطور قبل أي فحص
+    const originalGetLicenseStatus = window.KodNaqiLicense?.getLicenseStatus;
+    if (window.KodNaqiLicense) {
+      window.KodNaqiLicense.getLicenseStatus = async function() {
+        return {
+          status: 'valid',
+          payload: DEV_LICENSE.payload,
+          daysLeft: Infinity,
+          data: { key: DEV_LICENSE.key, payload: DEV_LICENSE.payload }
+        };
+      };
+    }
+    console.log('[DEV MODE] ✅ Developer mode active — All features unlocked');
+  }
+})();
+
+// إضافة أزرار وضع المطور إلى API
+if (window.KodNaqiLicense) {
+  window.KodNaqiLicense.enableDevMode = enableDevMode;
+  window.KodNaqiLicense.disableDevMode = disableDevMode;
+  window.KodNaqiLicense.isDevMode = isDevMode;
+}
+
+// زر إلغاء وضع المطور (يظهر فقط عندما يكون مفعلاً)
+function addDisableDevButton() {
+  if (!isDevMode()) return;
+  
+  const btn = document.createElement('button');
+  btn.className = 'btn btn-outline-secondary btn-sm mt-2 w-100';
+  btn.innerHTML = '<i class="bi bi-x-circle"></i> إلغاء وضع المطور';
+  btn.onclick = function() {
+    if (confirm('هل تريد إلغاء وضع المطور والعودة للوضع العادي؟')) {
+      disableDevMode();
+    }
+  };
+  
+  // إضافة الزر بجانب زر التفعيل
+  const devBtn = document.getElementById('devModeBtn');
+  if (devBtn && devBtn.parentNode) {
+    devBtn.parentNode.insertBefore(btn, devBtn.nextSibling);
+    // تغيير نص زر التفعيل
+    devBtn.innerHTML = '<i class="bi bi-check-circle-fill"></i> وضع المطور مفعل';
+    devBtn.disabled = true;
+  }
+}
+
+// تشغيل عند تحميل الصفحة
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', addDisableDevButton);
+} else {
+  addDisableDevButton();
+}
