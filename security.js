@@ -322,7 +322,6 @@
   async function verifyLicense(licenseStr) {
   try {
     const sig = await verifyLicenseSignature(licenseStr);
-  alert('sig result: ' + JSON.stringify(sig));
     if (!sig.ok) return { valid: false, reason: sig.reason };
 
     const payload = sig.payload;
