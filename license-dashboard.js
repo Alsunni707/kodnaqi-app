@@ -869,3 +869,113 @@
 
   console.log('[License Dashboard] loaded');
 })();
+
+// ═══════════════════════════════════════════════════
+// 📊 Dashboard — لوحة التحكم الشاملة
+// ═══════════════════════════════════════════════════
+async function loadDashboard() {
+  try {
+    const secret = getSecret();
+    if (!secret) return;
+    
+    const cfg = window.KODNAQI_FIREBASE;
+    const url = cfg.url + '/' + cfg.licensesPath + '.json?auth=' + encodeURIComponent(secret);
+    const r = await fetch(url, { cache: 'no-store' });
+    const data = await r.json();
+    
+    if (!data) {
+      updateDashboardUI({ totalRevenue: 0, activeCustomers: 0, expiringSoon: 0, totalDevices: 0, recent: [], alerts: [] });
+      return;
+    }
+    
+    const licenses = Object.values(data);
+    const now = Date.now();
+    const thirtyDays = 30 * 24 * 60 * 60 * 1000;
+    
+    let totalRevenue = 0;
+    let activeCustomers = 0;
+    let expiringSoon = 0;
+    let totalDevices = 0;
+    
+    const tierPrices = { B: 1500000, S: 2500000, A: 4000000, E: 4000000, TRIAL: 0 };
+    
+    licenses.forEach(lic => {
+      if (lic.status === 'active') {
+        activeCustomers++;
+        totalRevenue += tierPrices[lic.tier] || 0;
+        if (lic.expires && (lic.expires - now) < thirtyDays && (lic.expires - now) > 0) {
+          expiringSoon++;
+        }
+        if (lic.devices) {
+          totalDevices += lic.devices.length;
+        }
+      }
+    });
+    
+    const recent = licenses
+      .sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0))
+      .slice(0, 5);
+    
+    const alerts = licenses
+      .filter(lic => lic.status === 'active' && lic.expires && (lic.expires - now) < thirtyDays && (lic.expires - now) > 0)
+      .sort((a, b) => a.expires - b.expires);
+    
+    updateDashboardUI({ totalRevenue, activeCustomers, expiringSoon, totalDevices, recent, alerts });
+    
+  } catch (e) {
+    console.error('Dashboard error:', e);
+  }
+}
+
+function updateDashboardUI(data) {
+  // تحديث الإحصائيات
+  const el = (id) => document.getElementById(id);
+  if (el('dashTotalRevenue')) el('dashTotalRevenue').textContent = data.totalRevenue.toLocaleString();
+  if (el('dashActiveCustomers')) el('dashActiveCustomers').textContent = data.activeCustomers;
+  if (el('dashExpiringSoon')) el('dashExpiringSoon').textContent = data.expiringSoon;
+  if (el('dashTotalDevices')) el('dashTotalDevices').textContent = data.totalDevices;
+  
+  // آخر التراخيص
+  if (el('dashRecentLicenses')) {
+    if (data.recent.length === 0) {
+      el('dashRecentLicenses').innerHTML = '<p style="color:#64748b;text-align:center;">لا توجد بيانات</p>';
+    } else {
+      el('dashRecentLicenses').innerHTML = data.recent.map(lic => `
+        <div style="padding:12px;border-bottom:1px solid #e2e8f0;display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-weight:700;color:#0d3b66;">${lic.customer || 'بدون اسم'}</div>
+            <div style="font-size:0.8rem;color:#64748b;">${lic.tier || '?'}</div>
+          </div>
+          <div style="text-align:left;">
+            <div style="font-size:0.8rem;color:${lic.expires > Date.now() ? '#059669' : '#dc2626'};">
+              ${lic.expires ? Math.ceil((lic.expires - Date.now()) / 86400000) + ' يوم' : '—'}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+  
+  // تنبيهات التجديد
+  if (el('dashRenewalAlerts')) {
+    if (data.alerts.length === 0) {
+      el('dashRenewalAlerts').innerHTML = '<p style="color:#059669;text-align:center;">✅ لا توجد تراخيص تنتهي قريباً</p>';
+    } else {
+      el('dashRenewalAlerts').innerHTML = data.alerts.map(lic => `
+        <div style="padding:12px;border-bottom:1px solid #e2e8f0;background:#fef3c7;border-radius:8px;margin-bottom:8px;">
+          <div style="font-weight:700;color:#92400e;">${lic.customer || 'بدون اسم'}</div>
+          <div style="font-size:0.8rem;color:#b45309;">
+            ينتهي خلال ${Math.ceil((lic.expires - Date.now()) / 86400000)} يوم
+          </div>
+          <button onclick="licSendWhatsApp('${lic.id}')" style="margin-top:8px;padding:6px 12px;background:#25d366;color:white;border:none;border-radius:6px;font-size:0.8rem;cursor:pointer;">
+            💬 تذكير واتساب
+          </button>
+        </div>
+      `).join('');
+    }
+  }
+}
+
+// تصدير للاستخدام
+window.loadDashboard = loadDashboard;
+console.log('[Dashboard] Module loaded');
