@@ -7,6 +7,7 @@ function getIndexPath() {
     path.join(__dirname, 'www', 'index.html'),
     path.join(__dirname, 'index.html')
   ];
+
   return candidates.find((candidate) => fs.existsSync(candidate)) || candidates[0];
 }
 
