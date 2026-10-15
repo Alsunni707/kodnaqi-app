@@ -519,7 +519,6 @@
     document.getElementById('kodnaqi-btn-close').addEventListener('click', function() { wrapper.remove(); });
 
     document.getElementById('kodnaqi-btn-activate').addEventListener('click', async function() {
-                                                  alert('زر التفعيل يعمل!');
       const msg = document.getElementById('kodnaqi-license-msg');
 
       // إذا كان الترخيص نشطًا → إلغاء
@@ -548,15 +547,16 @@
       } else {
         msg.style.color = '#dc2626';
         const map = {
-          empty: 'المفتاح فارغ',
-          format: 'صيغة المفتاح غير صحيحة',
-          old_format: 'هذا مفتاح قديم — تواصل مع المطور',
-          signature: 'التوقيع غير صالح — المفتاح مزوّر',
-          wrong_device: 'هذا المفتاح لا يخص جهازك',
-          expired: 'انتهت صلاحية الترخيص',
-          clock_rollback: 'تم اكتشاف تلاعب بساعة الجهاز',
-          clock_before_issued: 'ساعة الجهاز غير صحيحة',
-          security_not_loaded: 'خطأ في تحميل طبقة الحماية'
+          empty: 'الصق مفتاح الترخيص أولاً',
+          format: 'صيغة المفتاح غير صحيحة — تأكد من نسخه كاملاً',
+          old_format: 'هذا مفتاح بنظام قديم — تواصل مع الدعم',
+          signature: 'المفتاح غير أصلي — تأكد من المصدر الرسمي',
+          wrong_device: 'هذا المفتاح لجهاز آخر — تواصل مع الدعم',
+          expired: 'انتهت صلاحية الترخيص — جدد الآن',
+          clock_rollback: 'ساعة الجهاز غير صحيحة',
+          clock_before_issued: 'ساعة الجهاز قبل تاريخ الإصدار',
+          security_error: 'تعذر التحقق — أعد المحاولة',
+          exception: 'حدث خطأ — تواصل مع الدعم'
         };
         msg.textContent = '❌ ' + (map[result.reason] || result.message || 'فشل التحقق');
       }
