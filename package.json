@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mkdir -p www && cp -r *.html *.js *.css *.png *.json *.txt www/ 2>/dev/null || true && cp -r lib www/ 2>/dev/null || true",
+    "build": "node -e \"const fs=require('fs');const path=require('path');if(fs.existsSync('www'))fs.rmSync('www',{recursive:true});fs.mkdirSync('www');['.html','.js','.css','.png','.json','.txt'].forEach(ext=>{fs.readdirSync('.').filter(f=>f.endsWith(ext)).forEach(f=>fs.copyFileSync(f,path.join('www',f)));});if(fs.existsSync('lib'))fs.cpSync('lib','www/lib',{recursive:true});console.log('Build complete')\"",
     "start": "electron .",
     "build-win": "electron-builder --win --x64 --publish never",
     "build-win32": "electron-builder --win --ia32"
