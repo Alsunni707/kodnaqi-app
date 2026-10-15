@@ -1,0 +1,24 @@
+[
+  {
+    "name": "CBC",
+    "nameAr": "تعداد الدم الكامل",
+    "category": "Hematology",
+    "categoryAr": "أمراض الدم",
+    "price": 15000,
+    "type": "panel",
+    "parameters": [
+      {"name": "Hemoglobin", "unit": "g/dL", "refRange": "12-17", "defaultValue": "15"},
+      {"name": "WBC", "unit": "10^3/μL", "refRange": "4-11", "defaultValue": "5.5"}
+    ]
+  },
+  {
+    "name": "Dengue NS1",
+    "nameAr": "حمى الضنك NS1",
+    "category": "Serology",
+    "price": 35000,
+    "type": "single",
+    "refRange": "Negative",
+    "defaultValue": "Negative",
+    "options": ["Negative", "Positive"]
+  }
+]
