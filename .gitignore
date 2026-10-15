@@ -46,7 +46,6 @@ kodnaqi-platform-*.json
 *Backup-codes*
 
 # ═══ ملفات المشروع ═══
-package.json
 node_modules/
 apk-releases/
 *.apk
@@ -88,3 +87,5 @@ gdrive-apps-script.js
 # قائمة الإطلاق (محلي)
 launch-checklist.html
 *.OLD_*
+firebase-config.js
+admin.html
