@@ -1,47 +1,77 @@
-name: Build APK
+name: Build KodNaqi Android APK
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-apk-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
+    name: Build Android APK
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
     steps:
-      - uses: actions/checkout@v4
+      # 1. Download repository source code
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
+      # 2. Install Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18.x'
+          node-version: 20
+          cache: npm
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build web assets
-        run: npm run build
-
-      - name: Sync Capacitor
-        run: npx cap sync android
-
+      # 3. Install Java before running Gradle
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu'
+          distribution: temurin
           java-version: '17'
-          cache: 'gradle'
+          cache: gradle
 
-      - name: Grant execute permission to gradlew
-        run: chmod +x android/gradlew
+      # 4. Install project dependencies
+      - name: Install dependencies
+        run: npm ci
 
+      # 5. Build web application
+      - name: Build web assets
+        run: npm run build
+
+      # 6. Sync Capacitor with Android
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      # 7. Verify Android project files
+      - name: Verify Android project
+        run: |
+          test -f android/gradlew
+          test -f android/settings.gradle || \
+            test -f android/settings.gradle.kts
+          test -f android/app/build.gradle || \
+            test -f android/app/build.gradle.kts
+          chmod +x android/gradlew
+
+      # 8. Build debug APK
       - name: Build APK
         working-directory: android
-        run: ./gradlew assembleDebug
+        run: ./gradlew --no-daemon assembleDebug
 
+      # 9. Upload APK as a downloadable artifact
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: kodnaqi-apk
           path: android/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          retention-days: 14
