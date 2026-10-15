@@ -18,7 +18,23 @@ let currentPage = 'dashboard';
 let cachedPatients = [];
 
 // ============ التنقل ============
-function showPage(pageName) {
+async function showPage(pageName) {
+  // ═══ الحجب الأمني حسب الباقة ═══
+  const targetPage = document.getElementById('page-' + pageName);
+  if (targetPage) {
+    const reqFeature = targetPage.getAttribute('data-require-feature');
+    if (reqFeature && window.KodNaqiLicense && typeof window.KodNaqiLicense.hasFeature === 'function') {
+      try {
+        const ok = await window.KodNaqiLicense.hasFeature(reqFeature);
+        if (!ok) {
+          if (typeof toast === 'function') toast('🔒 هذه الميزة غير متوفرة في باقتك الحالية', 'error');
+          else alert('🔒 هذه الميزة غير متوفرة في باقتك الحالية');
+          return;
+        }
+      } catch (e) { /* fail-safe: نسمح بالمرور لو حدث خطأ */ }
+    }
+  }
+
   // إخفاء كل الصفحات
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
 

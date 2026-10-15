@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">KodNaqi Diagnostics</string>
+    <string name="title_activity_main">KodNaqi Diagnostics</string>
+    <string name="package_name">com.kodnaqi.diagnostics</string>
+    <string name="custom_url_scheme">com.kodnaqi.diagnostics</string>
+</resources>

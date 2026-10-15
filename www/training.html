@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل التدريب — KodNaqi Diagnostics</title>
+<link href="./lib/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="./lib/cairo.css" rel="stylesheet">
+<link href="./lib/bootstrap-icons.css" rel="stylesheet">
+<link href="./brand.css" rel="stylesheet">
+<link href="./theme.css" rel="stylesheet">
+<style>
+  .lesson {
+    background: var(--kn-surface-alt);
+    border-radius: 15px;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-right: 5px solid var(--kn-accent);
+  }
+  .lesson-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--kn-primary), var(--kn-primary-light));
+    color: white;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-left: 12px;
+  }
+  .lesson h3 {
+    color: var(--kn-primary);
+    font-weight: 800;
+    margin: 0 0 15px;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+  }
+  .lesson h4 {
+    color: var(--kn-primary);
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .step-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+  }
+  .step-list li {
+    padding: 10px 0;
+    padding-right: 40px;
+    position: relative;
+    border-bottom: 1px dashed var(--kn-border);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .step-list li:last-child { border-bottom: none; }
+  .step-list li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 26px;
+    height: 26px;
+    background: var(--kn-accent);
+    color: var(--kn-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.8rem;
+  }
+  .tip {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    border: 2px solid #3b82f6;
+    border-radius: 12px;
+    padding: 15px 18px;
+    margin: 15px 0;
+    color: #1e40af;
+  }
+  .tip strong { color: #1e3a8a; }
+  .warning {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 2px solid #f59e0b;
+    border-radius: 12px;
+    padding: 15px 18px;
+    margin: 15px 0;
+    color: #7c2d12;
+  }
+  .success {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    border: 2px solid #10b981;
+    border-radius: 12px;
+    padding: 15px 18px;
+    margin: 15px 0;
+    color: #065f46;
+  }
+  .keyboard {
+    display: inline-block;
+    background: var(--kn-primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    direction: ltr;
+  }
+  .screen-mock {
+    background: #1e293b;
+    color: #e0e0e0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    margin: 12px 0;
+    direction: ltr;
+    text-align: left;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+  .screen-mock .label { color: #fbbf24; }
+  .screen-mock .value { color: #6ee7b7; }
+  .question-box {
+    background: linear-gradient(135deg, #fef2f2, #fee2e2);
+    border: 2px solid #dc2626;
+    border-radius: 12px;
+    padding: 15px 18px;
+    margin: 15px 0;
+  }
+  .question-box h5 {
+    color: #991b1b;
+    margin: 0 0 10px;
+    font-weight: 800;
+  }
+  .question-box p { margin: 5px 0; color: #7f1d1d; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<div class="doc">
+<div class="doc-content">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div class="brand-block">
+      <img src="./logo.png" alt="KodNaqi" class="brand-logo">
+      <div class="brand-text">
+        <h1>KodNaqi</h1>
+        <p>Diagnostics</p>
+      </div>
+    </div>
+    <div class="doc-meta">
+      <div><span class="label">دليل التدريب</span></div>
+      <div>الإصدار 1.0</div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div class="doc-title">
+    <h2>🎬 دليل التدريب الرسمي</h2>
+    <div class="subtitle">10 دروس لإتقان استخدام النظام كاملًا</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="tip">
+    <strong>📖 عن هذا الدليل:</strong><br>
+    هذا الدليل مُصمّم لتدريب فريق معملك خلال ساعتين. كل درس يحتوي على خطوات واضحة ولقطات شاشة (إن أمكن). ننصح بطباعته والرجوع إليه عند الحاجة.
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 1 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">1</span>
+      تشغيل النظام أول مرة
+    </h3>
+    
+    <h4>🎯 الهدف:</h4>
+    <p>تفعيل التطبيق وإنشاء حساب المدير.</p>
+
+    <h4>📋 الخطوات:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>افتح التطبيق</strong><br>
+        اضغط أيقونة KodNaqi على شاشة هاتفك.
+      </li>
+      <li>
+        <strong>ستظهر شاشة الترحيب</strong><br>
+        سترى:
+        <ul style="margin-top: 8px;">
+          <li>📱 كود جهازك (6 أحرف) — احتفظ به</li>
+          <li>🔑 حقل مفتاح الترخيص</li>
+          <li>🏥 حقل اسم المعمل</li>
+        </ul>
+      </li>
+      <li>
+        <strong>أدخل مفتاح الترخيص</strong><br>
+        المفتاح يبدأ بـ <span class="keyboard">KOD-</span>
+      </li>
+      <li>
+        <strong>أدخل بيانات معملك</strong>
+        <ul style="margin-top: 8px;">
+          <li>🏥 اسم المعمل (سيظهر على التقارير)</li>
+          <li>📱 رقم الهاتف</li>
+          <li>💬 شعار تسويقي (اختياري)</li>
+          <li>📍 العنوان</li>
+          <li>📧 البريد الإلكتروني</li>
+          <li>🎨 شعار المعمل (اختياري)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>اضغط "تفعيل التطبيق"</strong>
+      </li>
+      <li>
+        <strong>أنشئ حساب المدير</strong>
+        <ul style="margin-top: 8px;">
+          <li>اسم المستخدم: <span class="keyboard">admin</span></li>
+          <li>كلمة مرور قوية (6 أحرف على الأقل)</li>
+          <li>تأكيد كلمة المرور</li>
+        </ul>
+      </li>
+      <li>
+        <strong>سجّل الدخول</strong> — ستدخل التطبيق مباشرة!
+      </li>
+    </ol>
+
+    <div class="warning">
+      ⚠️ <strong>مهم جدًا:</strong> احفظ كلمة مرور المدير في مكان آمن. لا يمكن استرجاعها إذا فُقدت.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 2 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">2</span>
+      إضافة مريض جديد
+    </h3>
+
+    <h4>📋 الخطوات:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>من الشاشة الرئيسية</strong><br>
+        اضغط <span class="keyboard">➕ إضافة مريض جديد</span>
+      </li>
+      <li>
+        <strong>املأ بيانات المريض</strong>
+        <ul style="margin-top: 8px;">
+          <li>👤 الاسم الكامل (إجباري)</li>
+          <li>🎂 العمر</li>
+          <li>⚧ الجنس (ذكر/أنثى)</li>
+          <li>📱 رقم الهاتف</li>
+          <li>📍 العنوان</li>
+        </ul>
+      </li>
+      <li>
+        <strong>احفظ</strong><br>
+        سيُعطى المريض رقمًا تسلسليًا تلقائيًا (مثل: <span class="keyboard">KN-P-2026-000001</span>)
+      </li>
+    </ol>
+
+    <div class="tip">
+      💡 <strong>نصيحة:</strong> أدخل رقم هاتف المريض — يُستخدم لاحقًا لإرسال النتائج على واتساب.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 3 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">3</span>
+      إضافة زيارة وتحاليل
+    </h3>
+
+    <h4>📋 الخطوات:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>افتح ملف المريض</strong><br>
+        اضغط على اسمه من قائمة المرضى.
+      </li>
+      <li>
+        <strong>اضغط "➕ زيارة جديدة"</strong>
+      </li>
+      <li>
+        <strong>اختر التحاليل المطلوبة</strong>
+        <ul style="margin-top: 8px;">
+          <li>🧪 CBC (تعداد الدم)</li>
+          <li>🩸 BFFM (ملاريا)</li>
+          <li>💧 Urine Analysis (تحليل بول)</li>
+          <li>... وهكذا</li>
+        </ul>
+      </li>
+      <li>
+        <strong>أدخل السعر</strong><br>
+        إجمالي الفاتورة
+      </li>
+      <li>
+        <strong>احفظ الزيارة</strong>
+      </li>
+    </ol>
+
+    <div class="tip">
+      💡 <strong>نصيحة:</strong> يمكنك إضافة أكثر من زيارة للمريض نفسه — كل زيارة تُحفظ بشكل مستقل.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 4 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">4</span>
+      إدخال نتائج التحاليل
+    </h3>
+
+    <h4>📋 الخطوات:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>من ملف المريض</strong><br>
+        افتح الزيارة → اضغط <span class="keyboard">عرض / تعديل النتائج</span>
+      </li>
+      <li>
+        <strong>أدخل نتائج كل تحليل</strong>
+        <ul style="margin-top: 8px;">
+          <li>Hemoglobin: 15</li>
+          <li>WBC: 5.5</li>
+          <li>RBC: 5.2</li>
+          <li>... إلخ</li>
+        </ul>
+      </li>
+      <li>
+        <strong>النظام يقارن تلقائيًا</strong>
+        <ul style="margin-top: 8px;">
+          <li>✅ <strong>NORMAL</strong> (أخضر) — إذا كان طبيعيًا</li>
+          <li>⚠️ <strong>HIGH</strong> (أحمر) — إذا كان مرتفعًا</li>
+          <li>⚠️ <strong>LOW</strong> (برتقالي) — إذا كان منخفضًا</li>
+        </ul>
+      </li>
+      <li>
+        <strong>احفظ النتائج</strong>
+      </li>
+    </ol>
+
+    <div class="success">
+      ✅ <strong>ميزة ذكية:</strong> النظام يقارن النتائج مع النطاق الطبيعي تلقائيًا — لا حاجة للتحقق يدويًا!
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 5 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">5</span>
+      طباعة التقرير الطبي
+    </h3>
+
+    <h4>📋 الخطوات:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>من صفحة الزيارة</strong><br>
+        اضغط <span class="keyboard">🖨️ طباعة</span>
+      </li>
+      <li>
+        <strong>تفتح معاينة التقرير</strong>
+        <ul style="margin-top: 8px;">
+          <li>🎨 شعار معملك</li>
+          <li>🏥 اسم المعمل</li>
+          <li>📞 رقم الهاتف</li>
+          <li>📧 البريد</li>
+          <li>🔖 الختم</li>
+          <li>✍️ التوقيعات</li>
+        </ul>
+      </li>
+      <li>
+        <strong>اضغط "Print / Save PDF"</strong>
+      </li>
+      <li>
+        <strong>اختر:</strong>
+        <ul style="margin-top: 8px;">
+          <li>🖨️ طباعة ورقية</li>
+          <li>📄 حفظ PDF</li>
+          <li>📱 مشاركة على واتساب</li>
+        </ul>
+      </li>
+    </ol>
+
+    <div class="tip">
+      💡 <strong>نصيحة:</strong> احفظ نسخة PDF من كل تقرير مهم — للاحتفاظ بها في السجل.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 6 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">6</span>
+      الإدارة المالية
+    </h3>
+
+    <h4>📋 الخطوات:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>من القائمة السفلية</strong><br>
+        اضغط <span class="keyboard">💰 المالية</span>
+      </li>
+      <li>
+        <strong>سترى 4 بطاقات:</strong>
+        <ul style="margin-top: 8px;">
+          <li>💚 إجمالي المفصّل</li>
+          <li>📊 المتأخرات</li>
+          <li>💵 الصافي</li>
+          <li>💸 المصروفات</li>
+        </ul>
+      </li>
+      <li>
+        <strong>لإضافة مصروف:</strong><br>
+        املأ النموذج:
+        <ul style="margin-top: 8px;">
+          <li>📅 التاريخ</li>
+          <li>📁 النوع (كواشف ومحاليل، كهرباء، إيجار...)</li>
+          <li>📝 الوصف</li>
+          <li>💰 المبلغ</li>
+        </ul>
+      </li>
+      <li>
+        <strong>اضغط "💾 حفظ"</strong>
+      </li>
+      <li>
+        <strong>لعرض الإحصائيات:</strong><br>
+        القائمة السفلية → <span class="keyboard">📊 الإحصائيات</span>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 7 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">7</span>
+      الإحصائيات والتقارير
+    </h3>
+
+    <h4>📊 الإحصائيات (للمدير):</h4>
+    <ul style="line-height: 2;">
+      <li>📈 الإيراد اليومي (آخر 7 أيام)</li>
+      <li>🏆 أكثر 10 تحاليل طلبًا</li>
+      <li>👥 توزيع المرضى (ذكور/إناث)</li>
+    </ul>
+
+    <h4>📄 التقارير المتقدمة (للمدير فقط):</h4>
+    <ol class="step-list">
+      <li>
+        <strong>من القائمة السفلية</strong><br>
+        اضغط <span class="keyboard">📄 تقارير</span>
+      </li>
+      <li>
+        <strong>اختر الفترة:</strong>
+        <ul style="margin-top: 8px;">
+          <li>اليوم</li>
+          <li>7 أيام</li>
+          <li>30 يوم</li>
+          <li>شهر</li>
+          <li>سنة</li>
+          <li>مخصص (من تاريخ إلى تاريخ)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>اطلع على:</strong>
+        <ul style="margin-top: 8px;">
+          <li>👥 عدد المرضى الجدد</li>
+          <li>📊 إجمالي الزيارات</li>
+          <li>💰 الفواتير والمصروفات</li>
+          <li>💵 صافي الربح</li>
+        </ul>
+      </li>
+      <li>
+        <strong>صدّر إلى Excel</strong><br>
+        اضغط <span class="keyboard">تصدير التقرير Excel</span>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 8 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">8</span>
+      الإشعارات وواتساب
+    </h3>
+
+    <h4>📱 إرسال النتائج على واتساب:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>من صفحة المريض</strong><br>
+        اضغط على رقم الهاتف، أو زر "إرسال"
+      </li>
+      <li>
+        <strong>اختر القالب:</strong>
+        <ul style="margin-top: 8px;">
+          <li>✅ <strong>نتائج جاهزة</strong></li>
+          <li>⏰ <strong>تذكير بالاستلام</strong></li>
+          <li>⚠️ <strong>نتائج تحتاج مراجعة</strong></li>
+          <li>📅 <strong>تذكير بموعد</strong></li>
+          <li>💚 <strong>شكر وتقدير</strong></li>
+        </ul>
+      </li>
+      <li>
+        <strong>يُفتح واتساب تلقائيًا</strong><br>
+        مع رسالة جاهزة معدّلة بهوية معملك
+      </li>
+      <li>
+        <strong>أضف النتائج كـ PDF</strong> وأرسل
+      </li>
+    </ol>
+
+    <div class="success">
+      ✅ <strong>ميزة:</strong> الرسائل تحتوي تلقائيًا على اسم معملك ورقم هاتفك.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 9 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">9</span>
+      النسخ الاحتياطي (مهم!)
+    </h3>
+
+    <h4>💾 التصدير اليدوي (موصى به):</h4>
+    <ol class="step-list">
+      <li>
+        <strong>الإعدادات</strong> → قسم <span class="keyboard">البيانات</span>
+      </li>
+      <li>
+        <strong>اضغط</strong> <span class="keyboard">📦 تصدير نسخة احتياطية</span>
+      </li>
+      <li>
+        <strong>يُنزَّل ملف</strong> بامتداد <span class="keyboard">.kodnaqi.json</span>
+      </li>
+      <li>
+        <strong>احفظ الملف في:</strong>
+        <ul style="margin-top: 8px;">
+          <li>💾 فلاشة USB</li>
+          <li>📧 إيميلك</li>
+          <li>☁️ Google Drive</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h4>☁️ النسخ السحابي (Google Drive):</h4>
+    <ol class="step-list">
+      <li>
+        <strong>اطلب إعداده</strong> من فريق الدعم
+      </li>
+      <li>
+        <strong>سيتم ربط حسابك</strong> بـ Google Drive
+      </li>
+      <li>
+        <strong>بعدها</strong> كل نسخة تُرفع تلقائيًا (مشفّرة)
+      </li>
+    </ol>
+
+    <div class="warning">
+      ⚠️ <strong>مهم جدًا:</strong> صدّر نسخة احتياطية كل أسبوع على الأقل!
+    </div>
+
+    <h4>🔄 الاسترجاع:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>الإعدادات</strong> → <span class="keyboard">📥 استيراد نسخة احتياطية</span>
+      </li>
+      <li>
+        <strong>اختر الملف</strong> من هاتفك
+      </li>
+      <li>
+        <strong>سيتم استرجاع كل البيانات</strong>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 10 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="lesson">
+    <h3>
+      <span class="lesson-num">10</span>
+      إدارة الموظفين والصلاحيات
+    </h3>
+
+    <h4>👥 إضافة موظف جديد:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>الإعدادات</strong> → قسم <span class="keyboard">الحساب والأمان</span>
+      </li>
+      <li>
+        <strong>اضغط</strong> <span class="keyboard">👥 إدارة المستخدمين</span>
+      </li>
+      <li>
+        <strong>اضغط</strong> <span class="keyboard">➕ إضافة مستخدم</span>
+      </li>
+      <li>
+        <strong>املأ البيانات:</strong>
+        <ul style="margin-top: 8px;">
+          <li>👤 اسم المستخدم</li>
+          <li>🔒 كلمة المرور</li>
+          <li>👔 الدور (مدير / فني / سكرتير)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>احفظ</strong>
+      </li>
+    </ol>
+
+    <h4>🔑 الأدوار والصلاحيات:</h4>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9rem;">
+      <tr style="background: var(--kn-primary); color: white;">
+        <th style="padding: 10px; text-align: right;">الميزة</th>
+        <th style="padding: 10px;">مدير</th>
+        <th style="padding: 10px;">فني</th>
+        <th style="padding: 10px;">سكرتير</th>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border-bottom: 1px solid var(--kn-border);">إضافة مريض</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border-bottom: 1px solid var(--kn-border);">إدخال نتائج</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">❌</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border-bottom: 1px solid var(--kn-border);">المالية</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px;">إدارة المستخدمين</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FAQ -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="doc-title" style="margin-top: 40px;">
+    <h2>❓ الأسئلة الشائعة</h2>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="question-box">
+    <h5>❓ نسيت كلمة المرور — ماذا أفعل؟</h5>
+    <p>تواصل مع الدعم الفني. لا يمكن استرجاعها تلقائيًا.</p>
+  </div>
+
+  <div class="question-box">
+    <h5>❓ هل التطبيق يعمل بدون إنترنت؟</h5>
+    <p>نعم 100%. كل الميزات تعمل بدون اتصال.</p>
+  </div>
+
+  <div class="question-box">
+    <h5>❓ هل بياناتي آمنة؟</h5>
+    <p>نعم — بياناتك محفوظة على جهازك فقط، مشفّرة بـ AES-256. لا نملك خوادم تجمع البيانات.</p>
+  </div>
+
+  <div class="question-box">
+    <h5>❓ كيف أنقل البيانات لجهاز جديد؟</h5>
+    <p>1. من الجهاز القديم: صدّر نسخة احتياطية (JSON)<br>
+       2. أرسل الملف للجهاز الجديد<br>
+       3. من الجهاز الجديد: استورد النسخة</p>
+  </div>
+
+  <div class="question-box">
+    <h5>❓ ماذا لو تعطّل الجهاز؟</h5>
+    <p>بياناتك محفوظة في:
+    <br>• النسخة السحابية (Google Drive)
+    <br>• الملف الاحتياطي (JSON)
+    <br>فقط استرجعها على جهاز جديد.</p>
+  </div>
+
+  <div class="question-box">
+    <h5>❓ كيف أضيف جهازًا إضافيًا؟</h5>
+    <p>تواصل مع الدعم. سيُصدر مفتاحًا جديدًا لجهازك الإضافي بنفس تاريخ الانتهاء.</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- CONTACT -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="ribbon" style="margin-top: 40px; font-size: 1.1rem; text-align: center; padding: 20px;">
+    📞 للدعم الفني، تواصل معنا في أي وقت
+  </div>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://wa.me/249111729111" class="btn btn-success" style="margin: 5px;">
+      <i class="bi bi-whatsapp"></i> واتساب مباشر
+    </a>
+    <a href="mailto:kodnaqi@gmail.com" class="btn btn-primary" style="margin: 5px;">
+      <i class="bi bi-envelope"></i> البريد الإلكتروني
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <div>
+      <div class="copyright">KodNaqi Diagnostics © 2026</div>
+      <div>دليل التدريب الرسمي — الإصدار 1.0</div>
+    </div>
+    <div class="contact-line">
+      <div>📧 <bdi dir="ltr">kodnaqi@gmail.com</bdi></div>
+      <div>📱 <bdi dir="ltr">+249 111 729 111</bdi></div>
+    </div>
+  </div>
+
+</div>
+</div>
+<script src="theme.js"></script>
+</body>
+</html>

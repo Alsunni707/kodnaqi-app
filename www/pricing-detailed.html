@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جدول الأسعار المفصّل — KodNaqi</title>
+<link href="./lib/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="./lib/cairo.css" rel="stylesheet">
+<link href="./lib/bootstrap-icons.css" rel="stylesheet">
+<link href="./brand.css" rel="stylesheet">
+<link href="./theme.css" rel="stylesheet">
+<style>
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 0.9rem;
+  }
+  .price-table th {
+    background: var(--kn-primary);
+    color: white;
+    padding: 15px 12px;
+    font-weight: 700;
+    text-align: center;
+    border-left: 1px solid rgba(255,255,255,0.1);
+  }
+  .price-table th:last-child { border-left: none; }
+  .price-table th.featured {
+    background: var(--kn-accent);
+    color: var(--kn-primary);
+    position: relative;
+  }
+  .price-table th.featured::before {
+    content: '⭐';
+    margin-left: 5px;
+  }
+  .price-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--kn-border);
+    text-align: center;
+    color: var(--kn-text);
+  }
+  .price-table td:first-child {
+    text-align: right;
+    font-weight: 600;
+    background: var(--kn-surface-alt);
+  }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-table td.featured {
+    background: linear-gradient(135deg, #fef9c3, #fef3c7);
+    font-weight: 700;
+    color: var(--kn-primary);
+  }
+  .price-table .check { color: #10b981; font-size: 1.2rem; }
+  .price-table .cross { color: #dc2626; font-size: 1.2rem; opacity: 0.5; }
+  .price-table .price-main {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--kn-primary);
+    display: block;
+  }
+  .price-table .price-usd {
+    font-size: 0.75rem;
+    color: var(--kn-text-muted);
+    margin-top: 3px;
+  }
+  .info-box {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    border: 2px solid #3b82f6;
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin: 18px 0;
+  }
+  .info-box h5 { color: #1e40af; margin-top: 0; font-weight: 800; }
+  .warn-box {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 2px solid #f59e0b;
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin: 18px 0;
+  }
+  .warn-box h5 { color: #7c2d12; margin-top: 0; font-weight: 800; }
+  .services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 0.9rem;
+  }
+  .services-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--kn-border);
+  }
+  .services-table tr:hover { background: var(--kn-surface-alt); }
+  .services-table td:last-child {
+    text-align: left;
+    font-weight: 700;
+    color: var(--kn-accent);
+    white-space: nowrap;
+  }
+  .compare-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-right: 8px;
+  }
+  .badge-basic { background: #e5e7eb; color: #374151; }
+  .badge-standard { background: #c9a227; color: white; }
+  .badge-advanced { background: #0d3b66; color: white; }
+  .badge-enterprise { background: #7c3aed; color: white; }
+  .total-row {
+    background: linear-gradient(135deg, var(--kn-primary), var(--kn-primary-light)) !important;
+    color: white !important;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .total-row td {
+    color: white !important;
+    background: transparent !important;
+    border-bottom: none !important;
+  }
+  @media (max-width: 576px) {
+    .price-table { font-size: 0.75rem; }
+    .price-table th, .price-table td { padding: 8px 6px; }
+    .price-table .price-main { font-size: 1rem; }
+    .services-table { font-size: 0.8rem; }
+    .services-table td { padding: 10px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="doc">
+<div class="doc-content">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div class="brand-block">
+      <img src="./logo.png" alt="KodNaqi" class="brand-logo">
+      <div class="brand-text">
+        <h1>KodNaqi</h1>
+        <p>Diagnostics</p>
+      </div>
+    </div>
+    <div class="doc-meta">
+      <div><span class="label">قائمة الأسعار</span></div>
+      <div>سارية حتى: 31 ديسمبر 2026</div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div class="doc-title">
+    <h2>💰 الأسعار المفصّلة</h2>
+    <div class="subtitle">مقارنة شاملة للباقات والخدمات</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <!-- INFO -->
+  <div class="info-box">
+    <h5>📌 ملاحظات مهمة</h5>
+    <ul style="margin-bottom: 0; color: #1e40af;">
+      <li>✅ جميع الأسعار <strong>لمدة سنة كاملة</strong> (365 يومًا)</li>
+      <li>✅ تشمل <strong>التحديثات المجانية</strong> خلال المدة</li>
+      <li>✅ تشمل <strong>الدعم الفني</strong> عبر واتساب</li>
+      <li>✅ لا توجد <strong>اشتراكات شهرية</strong> خفية</li>
+      <li>⚠️ السعر بالدولار <strong>للمقارنة فقط</strong> (السعر بالجنيه ثابت)</li>
+    </ul>
+  </div>
+
+  <!-- MAIN COMPARISON TABLE -->
+  <h3 style="color: var(--kn-primary); border-right: 5px solid var(--kn-accent); padding-right: 15px; margin-top: 30px;">
+    📊 مقارنة الباقات
+  </h3>
+
+  <div style="overflow-x: auto;">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>الميزة</th>
+          <th>🥉 أساسية</th>
+          <th class="featured">🥈 قياسية</th>
+          <th>🥇 متقدمة</th>
+          <th>🏢 مؤسسية</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>💰 السعر السنوي</td>
+          <td><span class="price-main">1.8M</span><div class="price-usd">~$215</div></td>
+          <td class="featured"><span class="price-main">2.8M</span><div class="price-usd">~$335</div></td>
+          <td><span class="price-main">4.5M</span><div class="price-usd">~$535</div></td>
+          <td><span class="price-main">تفاوض</span><div class="price-usd">من 6M+</div></td>
+        </tr>
+        <tr>
+          <td>📱 عدد الأجهزة</td>
+          <td>1</td>
+          <td class="featured">3</td>
+          <td>غير محدود</td>
+          <td>غير محدود</td>
+        </tr>
+        <tr>
+          <td>👥 عدد المستخدمين</td>
+          <td>1</td>
+          <td class="featured">5</td>
+          <td>غير محدود</td>
+          <td>غير محدود</td>
+        </tr>
+        <tr>
+          <td>📋 إدارة المرضى</td>
+          <td><span class="check">✅</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>🧪 إدارة التحاليل</td>
+          <td><span class="check">✅</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>📄 تقارير PDF</td>
+          <td><span class="check">✅</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>🔐 تشفير AES-256</td>
+          <td><span class="check">✅</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>💾 نسخ احتياطي محلي</td>
+          <td><span class="check">✅</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>🖐️ بصمة الإصبع</td>
+          <td><span class="check">✅</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>🎨 هوية معملك (شعار/ختم/توقيع)</td>
+          <td><span class="check">✅</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>☁️ نسخ احتياطي سحابي</td>
+          <td><span class="cross">❌</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>📊 تقارير متقدمة وإحصائيات</td>
+          <td><span class="cross">❌</span></td>
+          <td class="featured">أساسية</td>
+          <td><span class="check">✅</span> كاملة</td>
+          <td><span class="check">✅</span> + مخصصة</td>
+        </tr>
+        <tr>
+          <td>💰 إدارة مالية كاملة</td>
+          <td><span class="cross">❌</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>👥 إدارة المستخدمين والصلاحيات</td>
+          <td><span class="cross">❌</span></td>
+          <td class="featured"><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>📋 سجل العمليات (Audit Log)</td>
+          <td><span class="cross">❌</span></td>
+          <td class="featured"><span class="cross">❌</span></td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span></td>
+        </tr>
+        <tr>
+          <td>🎓 تدريب أولي</td>
+          <td>لا</td>
+          <td class="featured">ساعتان</td>
+          <td>يوم كامل</td>
+          <td>مخصص</td>
+        </tr>
+        <tr>
+          <td>⏱️ مدة الدعم الفني</td>
+          <td>6 أشهر</td>
+          <td class="featured">سنة كاملة</td>
+          <td>سنتان</td>
+          <td>مفتوح</td>
+        </tr>
+        <tr>
+          <td>🌐 White Label (باسم معملك)</td>
+          <td><span class="cross">❌</span></td>
+          <td class="featured"><span class="cross">❌</span></td>
+          <td>خيار إضافي</td>
+          <td><span class="check">✅</span> كامل</td>
+        </tr>
+        <tr>
+          <td>🔧 تخصيص حسب الطلب</td>
+          <td><span class="cross">❌</span></td>
+          <td class="featured">محدود</td>
+          <td><span class="check">✅</span></td>
+          <td><span class="check">✅</span> كامل</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SERVICES -->
+  <h3 style="color: var(--kn-primary); border-right: 5px solid var(--kn-accent); padding-right: 15px; margin-top: 35px;">
+    🛠️ خدمات إضافية
+  </h3>
+
+  <table class="services-table">
+    <tr>
+      <td>🔧 <strong>تخصيص ميزة جديدة</strong> غير موجودة</td>
+      <td>حسب الطلب</td>
+    </tr>
+    <tr>
+      <td>📥 <strong>استيراد بيانات قديمة</strong> من Excel / نظام آخر</td>
+      <td>500,000 ج.س</td>
+    </tr>
+    <tr>
+      <td>🎓 <strong>تدريب إضافي</strong> (جلسة ساعتين)</td>
+      <td>350,000 ج.س</td>
+    </tr>
+    <tr>
+      <td>🖥️ <strong>تركيب وإعداد</strong> في مقر المعمل</td>
+      <td>300,000 ج.س</td>
+    </tr>
+    <tr>
+      <td>🎨 <strong>تصميم شعار احترافي</strong> للمعمل</td>
+      <td>250,000 ج.س</td>
+    </tr>
+    <tr>
+      <td>🔑 <strong>إصدار مفتاح لجهاز إضافي</strong></td>
+      <td>400,000 ج.س</td>
+    </tr>
+    <tr>
+      <td>☎️ <strong>دعم فني ذو أولوية</strong> (24/7)</td>
+      <td>600,000 ج.س/سنة</td>
+    </tr>
+    <tr>
+      <td>🔄 <strong>تجديد الدعم السنوي</strong> (بعد انتهاء المدة)</td>
+      <td>20% من قيمة الترخيص</td>
+    </tr>
+    <tr>
+      <td>💾 <strong>استعادة نسخة احتياطية</strong> من السحابة</td>
+      <td>مجانًا</td>
+    </tr>
+  </table>
+
+  <!-- PAYMENT TERMS -->
+  <h3 style="color: var(--kn-primary); border-right: 5px solid var(--kn-accent); padding-right: 15px; margin-top: 35px;">
+    💳 شروط الدفع
+  </h3>
+
+  <div class="info-box">
+    <h5>💼 طرق الدفع المقبولة</h5>
+    <table style="width: 100%; font-size: 0.95rem;">
+      <tr>
+        <td style="padding: 8px 0;">🏦 <strong>بنك الخرطوم</strong></td>
+        <td style="text-align: left;"><bdi dir="ltr">4046346</bdi></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 0;">🏦 <strong>بنك فيصل الإسلامي</strong></td>
+        <td style="text-align: left;"><bdi dir="ltr">51627855</bdi></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 0;">📱 <strong>محفظة mCash</strong></td>
+        <td style="text-align: left;"><bdi dir="ltr">300045779</bdi></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 0;">💵 <strong>نقدًا</strong></td>
+        <td style="text-align: left;">عند التسليم</td>
+      </tr>
+    </table>
+    <p style="margin-top: 15px; font-weight: 700; color: #1e40af;">
+      اسم الحساب: السني خالد محمد أحمد السني
+    </p>
+  </div>
+
+  <!-- PAYMENT STAGES -->
+  <h3 style="color: var(--kn-primary); border-right: 5px solid var(--kn-accent); padding-right: 15px; margin-top: 25px;">
+    📅 جدول الدفع
+  </h3>
+
+  <table class="price-table">
+    <thead>
+      <tr>
+        <th>المرحلة</th>
+        <th>النسبة</th>
+        <th>التوقيت</th>
+        <th>المبلغ (قياسية)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>الدفعة المقدمة</td>
+        <td>50%</td>
+        <td>عند التوقيع</td>
+        <td>1,400,000 ج.س</td>
+      </tr>
+      <tr>
+        <td>الدفعة النهائية</td>
+        <td>50%</td>
+        <td>عند التسليم والتفعيل</td>
+        <td>1,400,000 ج.س</td>
+      </tr>
+      <tr class="total-row">
+        <td>الإجمالي</td>
+        <td>100%</td>
+        <td>—</td>
+        <td>2,800,000 ج.س</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- LAUNCH OFFER -->
+  <div class="warn-box">
+    <h5>🎁 عرض الإطلاق (لأول 5 معامل فقط)</h5>
+    <ul style="margin-bottom: 0; color: #7c2d12;">
+      <li>✅ <strong>خصم 25%</strong> على الباقة القياسية</li>
+      <li>✅ <strong>تركيب مجاني</strong> في مقر المعمل</li>
+      <li>✅ <strong>تدريب فريق كامل</strong> (3 ساعات)</li>
+      <li>✅ <strong>شعار احترافي هدية</strong></li>
+      <li>✅ <strong>دعم مفتوح 6 أشهر إضافية</strong></li>
+      <li>✅ <strong>جهاز إضافي مجانًا</strong></li>
+    </ul>
+    <p style="margin-top: 15px; color: #7c2d12; font-weight: 800; text-align: center; font-size: 1.1rem;">
+      ⏰ العرض ساري حتى 30 نوفمبر 2026
+    </p>
+  </div>
+
+  <!-- GUARANTEE -->
+  <div class="info-box" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-color: #10b981;">
+    <h5 style="color: #065f46;">✅ ضماناتنا</h5>
+    <ul style="margin-bottom: 0; color: #065f46;">
+      <li>🎁 <strong>تجربة مجانية</strong> 14 يومًا — بدون أي التزام</li>
+      <li>💰 <strong>استرداد كامل</strong> خلال 7 أيام إذا لم يعجبك</li>
+      <li>📞 <strong>دعم فني</strong> بالعربية على واتساب</li>
+      <li>🔐 <strong>بياناتك ملكك</strong> — لا نصل إليها أبدًا</li>
+      <li>📄 <strong>عقد موثّق</strong> بين الطرفين</li>
+    </ul>
+  </div>
+
+  <!-- CONTACT -->
+  <div style="text-align: center; margin: 30px 0;">
+    <h3 style="color: var(--kn-primary); border: none; padding: 0;">📞 اطلب الآن</h3>
+    <p style="color: var(--kn-text-muted);">للحصول على عرض سعر مخصص لمعملك</p>
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
+      <a href="https://wa.me/249111729111" class="btn btn-success">
+        <i class="bi bi-whatsapp"></i> واتساب
+      </a>
+      <a href="mailto:kodnaqi@gmail.com" class="btn btn-primary">
+        <i class="bi bi-envelope"></i> البريد الإلكتروني
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <div>
+      <div class="copyright">KodNaqi Diagnostics © 2026</div>
+      <div>السني خالد محمد أحمد السني</div>
+    </div>
+    <div class="contact-line">
+      <div>📧 <bdi dir="ltr">kodnaqi@gmail.com</bdi></div>
+      <div>📱 <bdi dir="ltr">+249 111 729 111</bdi></div>
+    </div>
+  </div>
+
+</div>
+</div>
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+{
+  "id": "/kodnaqi-app/",
+  "name": "KodNaqi Diagnostics — نظام إدارة المعامل الطبية",
+  "short_name": "KodNaqi",
+  "description": "نظام متكامل لإدارة المعامل الطبية التشخيصية — يعمل بدون إنترنت، مع تشفير AES-256 ونسخ احتياطي آمن",
+  "start_url": "./?utm_source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0d3b66",
+  "theme_color": "#0d3b66",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["medical", "health", "productivity", "business"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "icon-72.png",  "sizes": "72x72",   "type": "image/png", "purpose": "any" },
+    { "src": "icon-96.png",  "sizes": "96x96",   "type": "image/png", "purpose": "any" },
+    { "src": "icon-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" },
+    { "src": "icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any" },
+    { "src": "icon-152.png", "sizes": "152x152", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-384.png", "sizes": "384x384", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "إضافة مريض جديد",
+      "short_name": "مريض جديد",
+      "description": "إضافة مريض جديد بسرعة",
+      "url": "./?action=new-patient",
+      "icons": [
+        { "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }
+      ]
+    },
+    {
+      "name": "قائمة المرضى",
+      "short_name": "المرضى",
+      "description": "عرض قائمة المرضى",
+      "url": "./?page=patients",
+      "icons": [
+        { "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }
+      ]
+    },
+    {
+      "name": "التقارير",
+      "short_name": "التقارير",
+      "description": "عرض التقارير والإحصائيات",
+      "url": "./?page=reports",
+      "icons": [
+        { "src": "icon-96.png", "sizes": "96x96", "type": "image/png" }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-1.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "الشاشة الرئيسية — KodNaqi Diagnostics"
+    },
+    {
+      "src": "screenshot-2.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "إدارة المعمل الطبي"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}

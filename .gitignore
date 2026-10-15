@@ -88,3 +88,4 @@ gdrive-apps-script.js
 
 # قائمة الإطلاق (محلي)
 launch-checklist.html
+*.OLD_*

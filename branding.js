@@ -493,11 +493,16 @@
 
       // التحقق من المفتاح
       if (!window.KodNaqiLicense) {
-        alert('⚠️ خطأ في التحميل، أعد فتح التطبيق');
         return;
       }
 
-      const check = await window.KodNaqiLicense.verify(key);
+      let check;
+      try {
+        check = await window.KodNaqiLicense.verify(key);
+
+      } catch(e) {
+        return;
+      }
       if (!check.valid) {
         let msg = '❌ مفتاح الترخيص غير صحيح';
         if (check.reason === 'wrong_device') {
@@ -512,12 +517,10 @@
         } else {
           msg += '\n\nتأكد من إدخاله كاملًا';
         }
-        alert(msg);
         return;
       }
 
       if (!name) {
-        alert('⚠️ الرجاء إدخال اسم المعمل');
         return;
       }
 
@@ -550,7 +553,19 @@
   }
 
   // ============ إعادة تخصيص الهوية (من الإعدادات) ============
-  function showBrandingSettings() {
+  async function showBrandingSettings() {
+    // ═══ الحماية حسب الباقة ═══
+    if (window.KodNaqiLicense && typeof window.KodNaqiLicense.hasFeature === 'function') {
+      try {
+        const ok = await window.KodNaqiLicense.hasFeature('whiteLabel');
+        if (!ok) {
+          if (typeof toast === 'function') toast('🔒 تخصيص هوية المعمل متاح في الباقة المتقدمة فقط', 'error');
+          else alert('🔒 تخصيص هوية المعمل متاح في الباقة المتقدمة فقط');
+          return;
+        }
+      } catch (e) { /* fail-safe */ }
+    }
+
     // يمكن إعادة استعمال نفس المعالج
     showSetupWizard();
   }
@@ -753,7 +768,6 @@
       if (typeof showToast === 'function') {
         showToast('✅ تم حفظ التعديلات بنجاح');
       } else {
-        alert('✅ تم حفظ التعديلات');
       }
 
       console.log('✅ Branding updated');

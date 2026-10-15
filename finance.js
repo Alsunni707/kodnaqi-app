@@ -144,7 +144,10 @@ async function exportFinanceCSV() {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 
-  alert('✅ تم تصدير الملف');
+  // لا نعرض إشعاراً هنا لأننا لا نستطيع التأكد من حفظ الملف فعلياً
+  if (window.showToast) {
+    showToast('📊 تم تجهيز الملف للتنزيل', 'info');
+  }
 }
 
 // ============ الإحصائيات ============

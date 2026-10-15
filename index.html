@@ -250,7 +250,7 @@ body {
 
 
   <!-- Finance -->
-  <div class="page" id="page-finance">
+  <div class="page" id="page-finance" data-require-feature="finance">
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h3><i class="bi bi-cash-coin"></i> المالية</h3>
       <button class="btn btn-sm btn-outline-success" onclick="exportFinanceCSV()">
@@ -394,7 +394,7 @@ body {
   </div>
 
     <!-- Users Management -->
-  <div class="page" id="page-users">
+  <div class="page" id="page-users" data-require-feature="users">
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h3><i class="bi bi-people-fill"></i> المستخدمون</h3>
       <span class="badge bg-danger"><i class="bi bi-shield-lock"></i> للمدير فقط</span>
@@ -408,7 +408,7 @@ body {
   </div>
 
     <!-- Advanced Reports -->
-  <div class="page" id="page-reports-advanced">
+  <div class="page" id="page-reports-advanced" data-require-feature="advReports">
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h3><i class="bi bi-file-earmark-bar-graph"></i> التقارير المتقدمة</h3>
       <span class="badge bg-danger"><i class="bi bi-shield-lock"></i> للمدير فقط</span>
@@ -465,7 +465,7 @@ body {
     <div class="card p-3 mb-3">
       <h6 class="fw-bold mb-3"><i class="bi bi-database"></i> البيانات</h6>
       <!-- ⭐ زر النسخ الموصى به (جديد) -->
-      <button class="btn btn-success btn-lg w-100 mb-3 fw-bold" onclick="KNBackup.export()">
+      <button class="btn btn-success btn-lg w-100 mb-3 fw-bold" onclick="KNBackup.export()" data-require-feature="jsonIO">
         <i class="bi bi-download"></i> 📦 تصدير نسخة احتياطية
       </button>
       
@@ -474,7 +474,7 @@ body {
       
       <hr class="my-3">
       
-      <button class="btn btn-outline-primary w-100 mb-2" onclick="KNBackup.import()">
+      <button class="btn btn-outline-primary w-100 mb-2" onclick="KNBackup.import()" data-require-feature="jsonIO">
         <i class="bi bi-upload"></i> 📥 استيراد نسخة احتياطية
       </button>
       
@@ -495,7 +495,7 @@ body {
       <input type="file" id="importFile" accept=".json" class="hidden" onchange="importData(event)">
     </div>
 
-    <div class="card p-3 mb-3" id="cloudCard">
+    <div class="card p-3 mb-3" id="cloudCard" data-require-feature="cloud">
       <h6 class="fw-bold mb-3">
         <i class="bi bi-cloud-arrow-up text-primary"></i>
         Google Drive Backup
@@ -549,16 +549,19 @@ body {
               onclick="showPage('users')"
               id="admin-reports-advanced-btn" 
               onclick="showPage('reports-advanced')"
-              style="display:none;">
+              style="display:none;"
+              data-require-feature="advReports">
         <i class="bi bi-file-earmark-bar-graph"></i> التقارير المتقدمة
       </button>
       <button class="btn btn-warning w-100 mb-2 settings-admin-only" 
               onclick="showPage('users')"
-              id="admin-manage-users-btn">
+              id="admin-manage-users-btn"
+              data-require-feature="users">
         <i class="bi bi-people-fill"></i> إدارة المستخدمين
       </button>
       <button class="btn btn-outline-info w-100 mb-2 settings-admin-only" 
-              onclick="showAuditLog()">
+              onclick="showAuditLog()"
+              data-require-feature="audit">
         <i class="bi bi-clock-history"></i> سجل العمليات
       </button>
       
@@ -573,7 +576,7 @@ body {
       <button class="btn btn-outline-success btn-sm w-100 mb-2" onclick="KNBiometric.showSettings()">
         <i class="bi bi-fingerprint"></i> بصمة الإصبع (الدخول السريع)
       </button>
-      <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="KodNaqiBrand.showEditor()">
+      <button data-require-feature="whiteLabel" class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="KodNaqiBrand.showEditor()">
         <i class="bi bi-palette2"></i> تعديل هوية المعمل (شعار، ختم، توقيعات)
       </button>
       <button class="btn btn-outline-warning btn-sm w-100 mb-2" onclick="KNPriceEditor.open()">
@@ -605,7 +608,7 @@ body {
     <i class="bi bi-people-fill"></i>
     <span>المرضى</span>
   </a>
-  <a href="#" onclick="showPage('finance');return false" data-page="finance">
+  <a href="#" onclick="showPage('finance');return false" data-page="finance" data-require-feature="finance">
     <i class="bi bi-cash-coin"></i>
     <span>المالية</span>
   </a>
@@ -613,7 +616,7 @@ body {
     <i class="bi bi-graph-up-arrow"></i>
     <span>الإحصائيات</span>
   </a>
-  <a href="#" onclick="showPage('reports-advanced');return false" data-page="reports-advanced" data-permission="stats_view">
+  <a href="#" onclick="showPage('reports-advanced');return false" data-page="reports-advanced" data-permission="stats_view" data-require-feature="advReports">
     <i class="bi bi-file-earmark-bar-graph-fill"></i>
     <span>تقارير</span>
   </a>
@@ -849,13 +852,69 @@ function ensureHtml2Canvas() {
 </div>
 
 <script src="lib/thumbmark.min.js"></script>
+<script src="firebase-config.js"></script>
 <script src="security.js"></script>
-<script src="security-dev.js"></script>
+<!-- security-dev.js معطل في الإصدار النهائي -- <script src="security-dev.js"></script> -->
 <script src="license.js"></script>
 <script src="branding.js"></script>
 <script src="biometric.js"></script>
 <script src="backup.js"></script>
 <script src="prices_editor.js"></script>
 <script src="theme.js"></script>
+
+<!-- TEST PANEL (يُحذف لاحقًا) -->
+<div id="knTestPanel" style="position:fixed;bottom:80px;right:8px;z-index:9999;display:none;background:#0f172a;color:#a5f3fc;padding:12px;border-radius:10px;max-width:90vw;max-height:60vh;overflow:auto;font-family:monospace;font-size:0.75rem;white-space:pre-wrap;box-shadow:0 8px 24px rgba(0,0,0,0.5);">
+  <div id="knTestOut">اضغط زر الاختبار...</div>
+  <button onclick="document.getElementById('knTestPanel').style.display='none'" style="margin-top:8px;padding:4px 10px;background:#dc3545;color:#fff;border:none;border-radius:6px;cursor:pointer;">إغلاق</button>
+</div>
+<button id="knTestBtn" onclick="knRunTest()" style="position:fixed;bottom:80px;right:8px;z-index:9998;width:48px;height:48px;border-radius:50%;background:#0d3b66;color:#fff;border:none;font-size:1.2rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);">🧪</button>
+
+<script>
+async function knRunTest() {
+  const out = document.getElementById('knTestOut');
+  const panel = document.getElementById('knTestPanel');
+  panel.style.display = 'block';
+  out.textContent = '⏳ جاري الفحص...';
+
+  let result = '🧪 نتائج فحص الترخيص\n';
+  result += '═══════════════════════\n\n';
+
+  try {
+    const tier = await window.KodNaqiLicense.getActiveTier();
+    result += '📊 الباقة الحالية: ' + (tier || 'بلا ترخيص') + '\n\n';
+  } catch (e) {
+    result += '❌ getActiveTier: ' + e.message + '\n';
+  }
+
+  const features = ['finance', 'cloud', 'jsonIO', 'users', 'advReports', 'roles', 'audit', 'whiteLabel'];
+  result += '🔍 الميزات:\n';
+  for (const f of features) {
+    try {
+      const ok = await window.KodNaqiLicense.hasFeature(f);
+      result += '  ' + (ok ? '✅' : '❌') + ' ' + f + '\n';
+    } catch (e) {
+      result += '  ⚠️ ' + f + ': ' + e.message + '\n';
+    }
+  }
+
+  result += '\n📋 العناصر المحمية:\n';
+  const protected_els = document.querySelectorAll('[data-require-feature]');
+  result += '  إجمالي: ' + protected_els.length + '\n';
+  protected_els.forEach(el => {
+    const f = el.getAttribute('data-require-feature');
+    const visible = el.style.display !== 'none' && !el.hidden;
+    const tag = el.tagName.toLowerCase();
+    const id = el.id || (el.dataset.page || '');
+    result += '  ' + (visible ? '👁️' : '🚫') + ' [' + f + '] ' + tag + (id ? '#' + id : '') + '\n';
+  });
+
+  result += '\n🧪 اختبار الحجب:\n';
+  result += '  افتح Console للاختبار الحقيقي\n';
+
+  out.textContent = result;
+  console.log(result);
+}
+</script>
+
 </body>
 </html>

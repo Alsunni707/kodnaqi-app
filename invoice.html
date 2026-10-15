@@ -148,5 +148,76 @@
 </div>
 </div>
 <script src="theme.js"></script>
+<script>
+// ═══ تعبئة الفاتورة تلقائيًا من البيانات ═══
+(function() {
+  try {
+    const data = JSON.parse(localStorage.getItem('kodnaqi_invoice_data') || '{}');
+    if (!data.customer) return;
+
+    // 1. رقم الفاتورة والتاريخ
+    const invoiceNum = document.querySelector('.doc-meta div[dir="ltr"]');
+    if (invoiceNum && data.licenseId) {
+      invoiceNum.textContent = '#' + data.licenseId;
+    }
+    const dateDiv = document.querySelector('.doc-meta div:last-child');
+    if (dateDiv) {
+      dateDiv.textContent = 'التاريخ: ' + new Date().toLocaleDateString('ar-EG');
+    }
+
+    // 2. بيانات العميل
+    const fieldLines = document.querySelectorAll('.info-grid .field-line');
+    fieldLines.forEach(function(line) {
+      const strong = line.querySelector('strong');
+      if (!strong) return;
+      
+      if (line.textContent.includes('اسم المعمل')) {
+        line.innerHTML = '<strong>اسم المعمل:</strong> ' + (data.customer || '—');
+      } else if (line.textContent.includes('الهاتف')) {
+        line.innerHTML = '<strong>الهاتف:</strong> ' + (data.phone || '—');
+      } else if (line.textContent.includes('العنوان')) {
+        line.innerHTML = '<strong>العنوان:</strong> ' + (data.address || '—');
+      }
+    });
+
+    // 3. البند والسعر
+    const tierPrices = { B: 1500000, S: 2500000, A: 4000000, E: 0 };
+    const tierNames = { B: 'الباقة الأساسية', S: 'الباقة القياسية', A: 'الباقة المتقدمة', E: 'الباقة المؤسسية' };
+    const price = tierPrices[data.tier] || 0;
+    const tierName = tierNames[data.tier] || data.tier;
+
+    const tbody = document.querySelector('table.items tbody');
+    if (tbody) {
+      tbody.innerHTML = '<tr>' +
+        '<td>ترخيص استخدام KodNaqi — ' + tierName + ' (' + (data.devices ? data.devices.length : 1) + ' جهاز)</td>' +
+        '<td>1</td>' +
+        '<td>' + price.toLocaleString() + ' ج.س</td>' +
+        '<td>' + price.toLocaleString() + ' ج.س</td>' +
+        '</tr>';
+    }
+
+    // 4. الإجماليات
+    const totalsTable = document.querySelector('.totals table');
+    if (totalsTable) {
+      const half = Math.round(price / 2);
+      totalsTable.innerHTML = 
+        '<tr><td>الإجمالي الفرعي:</td><td>' + price.toLocaleString() + ' ج.س</td></tr>' +
+        '<tr><td>الضريبة (0%):</td><td>0 ج.س</td></tr>' +
+        '<tr class="grand-total"><td>الإجمالي المستحق:</td><td>' + price.toLocaleString() + ' ج.س</td></tr>';
+    }
+
+    // 5. صندوق الدفع
+    const paymentBox = document.querySelector('.payment-box');
+    if (paymentBox && price > 0) {
+      const half = Math.round(price / 2);
+      paymentBox.innerHTML = 
+        '<h6>💳 تفاصيل الدفع</h6>' +
+        '<div class="row-line"><strong>الدفعة المقدمة (50%):</strong> ' + half.toLocaleString() + ' ج.س — تُدفع عند التوقيع</div>' +
+        '<div class="row-line"><strong>الدفعة النهائية (50%):</strong> ' + half.toLocaleString() + ' ج.س — تُدفع عند التسليم</div>' +
+        '<div class="row-line"><strong>طريقة الدفع:</strong> تحويل بنكي / كاش / بنكك</div>';
+    }
+  } catch(e) { console.warn('Invoice autofill error:', e); }
+})();
+</script>
 </body>
 </html>

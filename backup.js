@@ -7,6 +7,65 @@
 (function() {
   'use strict';
 
+  // ═══ تشفير النسخ الاحتياطي (AES-GCM) ═══
+  async function deriveKey(password, salt) {
+    const enc = new TextEncoder();
+    const keyMaterial = await crypto.subtle.importKey(
+      'raw',
+      enc.encode(password),
+      'PBKDF2',
+      false,
+      ['deriveBits', 'deriveKey']
+    );
+    return crypto.subtle.deriveKey(
+      {
+        name: 'PBKDF2',
+        salt: salt,
+        iterations: 100000,
+        hash: 'SHA-256'
+      },
+      keyMaterial,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['encrypt', 'decrypt']
+    );
+  }
+
+  async function encryptBackup(data, password) {
+    const enc = new TextEncoder();
+    const salt = crypto.getRandomValues(new Uint8Array(16));
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const key = await deriveKey(password, salt);
+    const plaintext = enc.encode(JSON.stringify(data));
+    const ciphertext = await crypto.subtle.encrypt(
+      { name: 'AES-GCM', iv: iv },
+      key,
+      plaintext
+    );
+    return {
+      _encrypted: true,
+      _format: 'kodnaqi-backup-encrypted',
+      _version: '3.0',
+      salt: Array.from(salt),
+      iv: Array.from(iv),
+      data: Array.from(new Uint8Array(ciphertext))
+    };
+  }
+
+  async function decryptBackup(encrypted, password) {
+    const dec = new TextDecoder();
+    const salt = new Uint8Array(encrypted.salt);
+    const iv = new Uint8Array(encrypted.iv);
+    const data = new Uint8Array(encrypted.data);
+    const key = await deriveKey(password, salt);
+    const decrypted = await crypto.subtle.decrypt(
+      { name: 'AES-GCM', iv: iv },
+      key,
+      data
+    );
+    return JSON.parse(dec.decode(decrypted));
+  }
+
   const LAST_BACKUP_KEY = 'kodnaqi_last_backup';
   const REMINDER_DAYS = 7;
 
@@ -105,9 +164,29 @@
   async function exportToFile() {
     try {
       showToast('⏳ جاري تجهيز النسخة...', 'info');
+      
+      // طلب كلمة مرور من المستخدم
+      const password = prompt('🔐 أدخل كلمة مرور للنسخة الاحتياطية: (ستحتاجها عند الاستيراد)');
+      if (!password) {
+        showToast('❌ تم إلغاء التصدير', 'error');
+        return { success: false, error: 'cancelled' };
+      }
+      if (password.length < 4) {
+        alert('⚠️ كلمة المرور يجب أن تكون 4 أحرف على الأقل');
+        return { success: false, error: 'weak_password' };
+      }
+      
+      showToast('⏳ جاري تشفير النسخة...', 'info');
 
       const backup = await collectAllData();
-      const content = JSON.stringify(backup, null, 2);
+      
+      // استبعاد الترخيص من النسخة الاحتياطية (حماية إضافية)
+      delete backup.localStorage['kodnaqi_license'];
+      delete backup.localStorage['kodnaqi_trial_start'];
+      
+      // تشفير البيانات
+      const encrypted = await encryptBackup(backup, password);
+      const content = JSON.stringify(encrypted, null, 2);
       const filename = generateFilename();
 
       const blob = new Blob([content], { type: 'application/json' });
@@ -168,9 +247,30 @@
     )) return;
 
     const reader = new FileReader();
-    reader.onload = function(e) {
+    reader.onload = async function(e) {
       try {
-        const backup = JSON.parse(e.target.result);
+        // التحقق من كون الملف مشفرًا
+        let backup;
+        const parsed = JSON.parse(e.target.result);
+        
+        if (parsed._encrypted === true && parsed._format === 'kodnaqi-backup-encrypted') {
+          // الملف مشفر — نطلب كلمة المرور
+          const password = prompt('🔐 هذا الملف مشفر. أدخل كلمة المرور:');
+          if (!password) {
+            alert('❌ تم إلغاء الاستيراد');
+            return;
+          }
+          try {
+            showToast('⏳ جاري فك التشفير...', 'info');
+            backup = await decryptBackup(parsed, password);
+          } catch (err) {
+            alert('❌ كلمة المرور غير صحيحة أو الملف تالف!');
+            return;
+          }
+        } else {
+          // ملف غير مشفر (صيغة قديمة)
+          backup = parsed;
+        }
 
         // دعم الصيغتين: القديمة والجديدة
         if (backup._format === 'kodnaqi-backup' && backup.indexedDB) {

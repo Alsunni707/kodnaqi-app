@@ -1,0 +1,485 @@
+/*!
+ * KodNaqi — نظام النسخ الاحتياطي المبسّط
+ * Copyright © 2026 Alsunni Khalid Mohammed Ahmed Alsunni
+ * All Rights Reserved.
+ */
+
+(function() {
+  'use strict';
+
+  // ═══ تشفير النسخ الاحتياطي (AES-GCM) ═══
+  async function deriveKey(password, salt) {
+    const enc = new TextEncoder();
+    const keyMaterial = await crypto.subtle.importKey(
+      'raw',
+      enc.encode(password),
+      'PBKDF2',
+      false,
+      ['deriveBits', 'deriveKey']
+    );
+    return crypto.subtle.deriveKey(
+      {
+        name: 'PBKDF2',
+        salt: salt,
+        iterations: 100000,
+        hash: 'SHA-256'
+      },
+      keyMaterial,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['encrypt', 'decrypt']
+    );
+  }
+
+  async function encryptBackup(data, password) {
+    const enc = new TextEncoder();
+    const salt = crypto.getRandomValues(new Uint8Array(16));
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const key = await deriveKey(password, salt);
+    const plaintext = enc.encode(JSON.stringify(data));
+    const ciphertext = await crypto.subtle.encrypt(
+      { name: 'AES-GCM', iv: iv },
+      key,
+      plaintext
+    );
+    return {
+      _encrypted: true,
+      _format: 'kodnaqi-backup-encrypted',
+      _version: '3.0',
+      salt: Array.from(salt),
+      iv: Array.from(iv),
+      data: Array.from(new Uint8Array(ciphertext))
+    };
+  }
+
+  async function decryptBackup(encrypted, password) {
+    const dec = new TextDecoder();
+    const salt = new Uint8Array(encrypted.salt);
+    const iv = new Uint8Array(encrypted.iv);
+    const data = new Uint8Array(encrypted.data);
+    const key = await deriveKey(password, salt);
+    const decrypted = await crypto.subtle.decrypt(
+      { name: 'AES-GCM', iv: iv },
+      key,
+      data
+    );
+    return JSON.parse(dec.decode(decrypted));
+  }
+
+  const LAST_BACKUP_KEY = 'kodnaqi_last_backup';
+  const REMINDER_DAYS = 7;
+
+  // ═══════════════════════════════════════════════════
+  // قائمة مخازن IndexedDB
+  // ═══════════════════════════════════════════════════
+  const IDB_STORES = [
+    'patients',
+    'tests',
+    'parameters',
+    'visits',
+    'visit_tests',
+    'results',
+    'expenses',
+    'inventory',
+    'users_store'
+  ];
+
+  // ═══════════════════════════════════════════════════
+  // 1. توليد اسم الملف
+  // ═══════════════════════════════════════════════════
+  function generateFilename() {
+    const now = new Date();
+    const date = now.toISOString().slice(0, 10);
+    const time = now.toTimeString().slice(0, 5).replace(':', '-');
+    const labName = ((window.KodNaqiBrand && window.KodNaqiBrand.get().labName) || 'KodNaqi')
+      .replace(/\s+/g, '_')
+      .replace(/[^\w\u0600-\u06FF-]/g, '');
+    return labName + '_' + date + '_' + time + '.kodnaqi.json';
+  }
+
+  // ═══════════════════════════════════════════════════
+  // 2. جمع كل البيانات
+  // ═══════════════════════════════════════════════════
+  async function collectAllData() {
+    const backup = {
+      _format: 'kodnaqi-backup',
+      _version: '2.0',
+      _created: new Date().toISOString(),
+      _app: 'KodNaqi PWA',
+      _lab: (window.KodNaqiBrand && window.KodNaqiBrand.get().labName) || 'KodNaqi',
+      _device: await getDevicePreview(),
+      localStorage: {},
+      indexedDB: {}
+    };
+
+    // ═══ 1. localStorage ═══
+    try {
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && (key.startsWith('kodnaqi_') || key.startsWith('kn_'))) {
+          backup.localStorage[key] = localStorage.getItem(key);
+        }
+      }
+      console.log('[Backup] localStorage keys:', Object.keys(backup.localStorage).length);
+    } catch (e) {
+      console.warn('[Backup] localStorage error:', e);
+    }
+
+    // ═══ 2. IndexedDB (بالطريقة الصحيحة) ═══
+    let totalRecords = 0;
+    for (const storeName of IDB_STORES) {
+      try {
+        // استخدم دالة dbGetAll من db.js
+        if (typeof window.dbGetAll === 'function') {
+          const items = await window.dbGetAll(storeName);
+          backup.indexedDB[storeName] = items || [];
+          totalRecords += (items || []).length;
+          console.log('[Backup] ' + storeName + ': ' + (items || []).length + ' عنصر');
+        } else {
+          console.warn('[Backup] dbGetAll غير متاحة');
+        }
+      } catch (e) {
+        console.warn('[Backup] فشل قراءة ' + storeName + ':', e.message);
+        backup.indexedDB[storeName] = [];
+      }
+    }
+
+    console.log('[Backup] الإجمالي: ' + totalRecords + ' سجل');
+    return backup;
+  }
+
+  async function getDevicePreview() {
+    if (window.KodNaqiSecurity) {
+      try {
+        const info = await window.KodNaqiSecurity.getDeviceInfo();
+        return info.preview;
+      } catch (e) {}
+    }
+    return 'unknown';
+  }
+
+  // ═══════════════════════════════════════════════════
+  // 3. تصدير لملف
+  // ═══════════════════════════════════════════════════
+  async function exportToFile() {
+    try {
+      showToast('⏳ جاري تجهيز النسخة...', 'info');
+      
+      // طلب كلمة مرور من المستخدم
+      const password = prompt('🔐 أدخل كلمة مرور للنسخة الاحتياطية: (ستحتاجها عند الاستيراد)');
+      if (!password) {
+        showToast('❌ تم إلغاء التصدير', 'error');
+        return { success: false, error: 'cancelled' };
+      }
+      if (password.length < 4) {
+        alert('⚠️ كلمة المرور يجب أن تكون 4 أحرف على الأقل');
+        return { success: false, error: 'weak_password' };
+      }
+      
+      showToast('⏳ جاري تشفير النسخة...', 'info');
+
+      const backup = await collectAllData();
+      
+      // استبعاد الترخيص من النسخة الاحتياطية (حماية إضافية)
+      delete backup.localStorage['kodnaqi_license'];
+      delete backup.localStorage['kodnaqi_trial_start'];
+      
+      // تشفير البيانات
+      const encrypted = await encryptBackup(backup, password);
+      const content = JSON.stringify(encrypted, null, 2);
+      const filename = generateFilename();
+
+      const blob = new Blob([content], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      setTimeout(function() { URL.revokeObjectURL(url); }, 2000);
+
+      // احفظ البيانات الوصفية
+      const totalRecords = Object.keys(backup.indexedDB).reduce(function(sum, key) {
+        return sum + (backup.indexedDB[key] ? backup.indexedDB[key].length : 0);
+      }, 0);
+
+      localStorage.setItem(LAST_BACKUP_KEY, JSON.stringify({
+        date: new Date().toISOString(),
+        filename: filename,
+        size: blob.size,
+        records: totalRecords
+      }));
+
+      showSuccessDialog(filename, blob.size, totalRecords);
+
+      return { success: true, filename: filename, size: blob.size, records: totalRecords };
+    } catch (err) {
+      console.error('[Backup] Export failed:', err);
+      alert('❌ فشل التصدير: ' + err.message);
+      return { success: false, error: err.message };
+    }
+  }
+
+  // ═══════════════════════════════════════════════════
+  // 4. استيراد من ملف
+  // ═══════════════════════════════════════════════════
+  function selectImportFile() {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json,.kodnaqi';
+    input.onchange = function(e) {
+      const file = e.target.files[0];
+      if (file) confirmImport(file);
+    };
+    input.click();
+  }
+
+  function confirmImport(file) {
+    if (!confirm(
+      '⚠️ تحذير مهم\n\n' +
+      'سيتم استبدال جميع البيانات الحالية بالبيانات الموجودة في الملف.\n\n' +
+      'الملف: ' + file.name + '\n' +
+      'الحجم: ' + formatSize(file.size) + '\n\n' +
+      'هل أنت متأكد؟'
+    )) return;
+
+    const reader = new FileReader();
+    reader.onload = async function(e) {
+      try {
+        // التحقق من كون الملف مشفرًا
+        let backup;
+        const parsed = JSON.parse(e.target.result);
+        
+        if (parsed._encrypted === true && parsed._format === 'kodnaqi-backup-encrypted') {
+          // الملف مشفر — نطلب كلمة المرور
+          const password = prompt('🔐 هذا الملف مشفر. أدخل كلمة المرور:');
+          if (!password) {
+            alert('❌ تم إلغاء الاستيراد');
+            return;
+          }
+          try {
+            showToast('⏳ جاري فك التشفير...', 'info');
+            backup = await decryptBackup(parsed, password);
+          } catch (err) {
+            alert('❌ كلمة المرور غير صحيحة أو الملف تالف!');
+            return;
+          }
+        } else {
+          // ملف غير مشفر (صيغة قديمة)
+          backup = parsed;
+        }
+
+        // دعم الصيغتين: القديمة والجديدة
+        if (backup._format === 'kodnaqi-backup' && backup.indexedDB) {
+          performRestore(backup, file.name);
+        } else if (backup.patients || backup.visits || backup.tests) {
+          // صيغة قديمة — حوّلها
+          const converted = {
+            _format: 'kodnaqi-backup',
+            _version: '1.0',
+            _created: backup._created || new Date().toISOString(),
+            _lab: backup._lab || 'معمل',
+            localStorage: backup.localStorage || {},
+            indexedDB: {
+              patients: backup.patients || [],
+              visits: backup.visits || [],
+              tests: backup.tests || [],
+              parameters: backup.parameters || [],
+              visit_tests: backup.visit_tests || [],
+              results: backup.results || [],
+              expenses: backup.expenses || [],
+              inventory: backup.inventory || [],
+              users_store: backup.users_store || []
+            }
+          };
+          performRestore(converted, file.name);
+        } else {
+          throw new Error('صيغة الملف غير معروفة');
+        }
+      } catch (err) {
+        alert('❌ فشل قراءة الملف:\n' + err.message);
+      }
+    };
+    reader.onerror = function() {
+      alert('❌ فشل قراءة الملف');
+    };
+    reader.readAsText(file);
+  }
+
+  // ═══════════════════════════════════════════════════
+  // 5. تنفيذ الاستعادة
+  // ═══════════════════════════════════════════════════
+  async function performRestore(backup, filename) {
+    try {
+      showToast('⏳ جاري الاسترجاع...', 'info');
+
+      let restoredRecords = 0;
+
+      // ═══ 1. استعادة IndexedDB ═══
+      if (backup.indexedDB && typeof window.dbClear === 'function' && typeof window.dbAdd === 'function') {
+        for (const storeName in backup.indexedDB) {
+          const items = backup.indexedDB[storeName];
+          if (!Array.isArray(items)) continue;
+
+          try {
+            // امسح المخزن الحالي
+            await window.dbClear(storeName);
+
+            // أضف كل العناصر
+            for (const item of items) {
+              await window.dbAdd(storeName, item);
+              restoredRecords++;
+            }
+            console.log('[Restore] ' + storeName + ': ' + items.length + ' عنصر');
+          } catch (e) {
+            console.warn('[Restore] فشل استرجاع ' + storeName + ':', e.message);
+          }
+        }
+      }
+
+      // ═══ 2. استعادة localStorage ═══
+      if (backup.localStorage) {
+        for (const key in backup.localStorage) {
+          try {
+            localStorage.setItem(key, backup.localStorage[key]);
+          } catch (e) {
+            console.warn('[Restore] فشل مفتاح ' + key + ':', e.message);
+          }
+        }
+      }
+
+      alert(
+        '✅ تم الاسترجاع بنجاح!\n\n' +
+        '📁 الملف: ' + filename + '\n' +
+        '🏥 المعمل: ' + (backup._lab || 'غير معروف') + '\n' +
+        '📅 التاريخ: ' + new Date(backup._created).toLocaleDateString('ar-EG') + '\n' +
+        '📊 السجلات: ' + restoredRecords + '\n\n' +
+        '⚠️ سيُعاد تحميل التطبيق الآن.'
+      );
+
+      setTimeout(function() { location.reload(); }, 2000);
+    } catch (err) {
+      console.error('[Backup] Restore failed:', err);
+      alert('❌ فشل الاسترجاع:\n' + err.message);
+    }
+  }
+
+  // ═══════════════════════════════════════════════════
+  // 6. تذكير دوري
+  // ═══════════════════════════════════════════════════
+  function shouldRemindBackup() {
+    const last = localStorage.getItem(LAST_BACKUP_KEY);
+    if (!last) return { should: true, reason: 'never' };
+
+    try {
+      const lastDate = new Date(JSON.parse(last).date);
+      const daysSince = Math.floor((Date.now() - lastDate) / 86400000);
+      return { should: daysSince >= REMINDER_DAYS, daysSince: daysSince };
+    } catch (e) {
+      return { should: true, reason: 'never' };
+    }
+  }
+
+  function showBackupReminder() {
+    if (localStorage.getItem('kodnaqi_dev_mode') === 'true') return;
+
+    const hasLicense = localStorage.getItem('kodnaqi_license');
+    const hasBrand = localStorage.getItem('kodnaqi_brand');
+    if (!hasLicense && !hasBrand) return;
+
+    if (localStorage.getItem('kodnaqi_reminder_dismissed') === new Date().toDateString()) return;
+
+    const check = shouldRemindBackup();
+    if (!check.should) return;
+
+    const msg = check.reason === 'never'
+      ? '📦 لم تأخذ نسخة احتياطية بعد\n\nهل تريد أخذ نسخة الآن؟'
+      : '📦 آخر نسخة احتياطية منذ ' + check.daysSince + ' يوم\n\nهل تريد تحديثها الآن؟';
+
+    if (confirm(msg)) {
+      exportToFile();
+    } else {
+      localStorage.setItem('kodnaqi_reminder_dismissed', new Date().toDateString());
+    }
+  }
+
+  function getLastBackupInfo() {
+    const last = localStorage.getItem(LAST_BACKUP_KEY);
+    if (!last) return null;
+    try { return JSON.parse(last); } catch (e) { return null; }
+  }
+
+  // ═══════════════════════════════════════════════════
+  // 7. واجهات المستخدم
+  // ═══════════════════════════════════════════════════
+  function showToast(msg, type) {
+    type = type || 'success';
+    const colors = { success: '#198754', error: '#dc3545', info: '#0d3b66', warning: '#ffc107' };
+    const toast = document.createElement('div');
+    toast.textContent = msg;
+    toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:' + colors[type] + ';color:white;padding:12px 24px;border-radius:25px;font-family:Cairo,sans-serif;font-size:0.95rem;font-weight:700;z-index:999999;box-shadow:0 5px 20px rgba(0,0,0,0.3);max-width:90%;text-align:center;';
+    document.body.appendChild(toast);
+    setTimeout(function() {
+      toast.style.opacity = '0';
+      toast.style.transition = 'opacity 0.3s';
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 2500);
+  }
+
+  function showSuccessDialog(filename, size, records) {
+    const sizeKB = (size / 1024).toFixed(1);
+
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:999999;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;padding:20px;font-family:Cairo,sans-serif;';
+    overlay.innerHTML =
+      '<div style="background:white;border-radius:20px;padding:30px 25px;max-width:420px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.5);">' +
+        '<div style="font-size:4rem;margin-bottom:15px;">✅</div>' +
+        '<h3 style="color:#0d3b66;font-weight:900;margin-bottom:15px;">تم التصدير بنجاح!</h3>' +
+        '<div style="background:#f8f9fa;padding:15px;border-radius:10px;margin-bottom:20px;">' +
+          '<div style="font-size:0.85rem;color:#666;margin-bottom:5px;">اسم الملف:</div>' +
+          '<div style="font-family:monospace;font-size:0.8rem;color:#0d3b66;word-break:break-all;margin-bottom:10px;">' + filename + '</div>' +
+          '<div style="font-size:0.85rem;color:#666;">الحجم: ' + sizeKB + ' KB</div>' +
+          '<div style="font-size:0.85rem;color:#198754;font-weight:700;margin-top:5px;">📊 السجلات: ' + records + '</div>' +
+        '</div>' +
+        '<div style="background:#dbeafe;border-right:4px solid #0d3b66;padding:12px;border-radius:8px;text-align:right;font-size:0.85rem;color:#1e3a8a;margin-bottom:20px;">' +
+          '<strong>💡 نصيحة:</strong><br>' +
+          'احفظ الملف في مكان آمن:<br>' +
+          '• فلاشة USB<br>' +
+          '• Google Drive<br>' +
+          '• أرسله لنفسك على واتساب' +
+        '</div>' +
+        '<button onclick="this.closest(\'div\').parentElement.remove()" style="width:100%;padding:14px;background:linear-gradient(135deg,#0d3b66,#1e6091);color:white;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;">فهمت</button>' +
+      '</div>';
+    document.body.appendChild(overlay);
+  }
+
+  function formatSize(bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / 1024 / 1024).toFixed(2) + ' MB';
+  }
+
+  // ═══════════════════════════════════════════════════
+  // API عام
+  // ═══════════════════════════════════════════════════
+  window.KNBackup = {
+    export: exportToFile,
+    import: selectImportFile,
+    getInfo: getLastBackupInfo,
+    shouldRemind: shouldRemindBackup,
+    showReminder: showBackupReminder,
+    filename: generateFilename,
+    stores: IDB_STORES
+  };
+
+  // تذكير تلقائي
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(showBackupReminder, 5 * 60 * 1000);
+  });
+
+  console.log('💾 KodNaqi Backup System v2.0 loaded');
+  console.log('💾 Stores:', IDB_STORES.join(', '));
+})();
