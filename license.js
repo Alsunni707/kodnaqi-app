@@ -773,3 +773,81 @@ function showActivationSuccess(payload) {
 
 // تصدير للاستخدام
 window.showActivationSuccess = showActivationSuccess;
+
+// ═══════════════════════════════════════════════════
+// 🔄 التحديث التلقائي — التحقق من GitHub Releases
+// ═══════════════════════════════════════════════════
+const UPDATE_CHECK_KEY = 'kodnaqi_last_update_check';
+const UPDATE_INTERVAL = 24 * 60 * 60 * 1000; // فحص كل 24 ساعة
+const CURRENT_VERSION = '1.0.1'; // رقم الإصدار الحالي
+
+async function checkForUpdates() {
+  try {
+    // التحقق من آخر فحص
+    const lastCheck = localStorage.getItem(UPDATE_CHECK_KEY) || 0;
+    if (Date.now() - lastCheck < UPDATE_INTERVAL) return;
+    
+    localStorage.setItem(UPDATE_CHECK_KEY, Date.now());
+    
+    // جلب آخر إصدار من GitHub
+    const response = await fetch('https://api.github.com/repos/Alsunni707/kodnaqi-app/releases/latest', {
+      cache: 'no-store'
+    });
+    
+    if (!response.ok) return;
+    
+    const release = await response.json();
+    const latestVersion = release.tag_name.replace('v', '');
+    
+    // مقارنة الإصدارات
+    if (latestVersion > CURRENT_VERSION) {
+      showUpdateDialog(latestVersion, release.html_url, release.assets);
+    }
+  } catch (e) {
+    console.log('[Update] Check failed:', e.message);
+  }
+}
+
+function showUpdateDialog(version, releaseUrl, assets) {
+  // البحث عن ملف APK في assets
+  const apkAsset = assets.find(a => a.name.endsWith('.apk'));
+  const downloadUrl = apkAsset ? apkAsset.browser_download_url : releaseUrl;
+  
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;z-index:999999;padding:20px;direction:rtl;';
+  
+  overlay.innerHTML = `
+    <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:24px;padding:35px;max-width:400px;width:100%;text-align:center;box-shadow:0 25px 80px rgba(0,0,0,0.5);color:white;">
+      <div style="font-size:4rem;margin-bottom:15px;">🎉</div>
+      <h2 style="margin:0 0 10px;font-size:1.6rem;font-weight:800;">تحديث جديد متاح!</h2>
+      <p style="margin:0 0 20px;opacity:0.9;">الإصدار ${version} متاح الآن</p>
+      
+      <div style="background:rgba(255,255,255,0.2);border-radius:12px;padding:15px;margin-bottom:20px;font-size:0.9rem;">
+        ✨ تحسينات وإصلاحات جديدة<br>
+        🔒 تحديثات أمنية<br>
+        ⚡ أداء أسرع
+      </div>
+      
+      <button onclick="window.open('${downloadUrl}', '_blank');this.closest('div').parentElement.remove();" style="width:100%;padding:14px;background:white;color:#667eea;border:none;border-radius:12px;font-size:1rem;font-weight:800;cursor:pointer;margin-bottom:10px;">
+        ⬇️ تحميل التحديث
+      </button>
+      
+      <button onclick="this.closest('div').parentElement.remove();" style="width:100%;padding:12px;background:rgba(255,255,255,0.2);color:white;border:none;border-radius:12px;font-size:0.9rem;cursor:pointer;">
+        لاحقاً
+      </button>
+    </div>
+  `;
+  
+  document.body.appendChild(overlay);
+}
+
+// تشغيل الفحص عند تحميل الصفحة
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', checkForUpdates);
+} else {
+  checkForUpdates();
+}
+
+// تصدير للاستخدام اليدوي
+window.checkForUpdates = checkForUpdates;
+console.log('[Update] Auto-update checker loaded');
