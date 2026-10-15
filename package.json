@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node -e \"const fs=require('fs');const path=require('path');if(fs.existsSync('www'))fs.rmSync('www',{recursive:true});fs.mkdirSync('www');['.html','.js','.css','.png','.json','.txt'][...]",
+    "build": "node -e \"const fs=require('fs');if(fs.existsSync('www'))fs.rmSync('www',{recursive:true});fs.mkdirSync('www');['.html','.js','.css','.png','.json','.txt'].forEach(e=>fs.readdirSync('.').filter(f=>f.endsWith(e)).forEach(f=>fs.copyFileSync(f,'www/'+f)));if(fs.existsSync('lib'))fs.cpSync('lib','www/lib',{recursive:true});if(fs.existsSync('www/package.json')){const p=JSON.parse(fs.readFileSync('www/package.json'));delete p.build;fs.writeFileSync('www/package.json',JSON.stringify(p,null,2));}console.log('Synced root to www')\"",
     "start": "electron .",
     "build-win": "electron-builder --win --x64 --publish never",
     "build-win32": "electron-builder --win --ia32"
