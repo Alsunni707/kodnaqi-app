@@ -1,17 +1,16 @@
-name: Build KodNaqi Android APK
+name: Build KodNaqi APK
 
 on:
   push:
     branches:
       - main
-
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: build-apk-${{ github.ref }}
+  group: kodnaqi-apk-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -21,18 +20,15 @@ jobs:
     timeout-minutes: 45
 
     steps:
-      # 1. Download repository source code
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Install Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      # 3. Install Java before running Gradle
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -40,38 +36,33 @@ jobs:
           java-version: '17'
           cache: gradle
 
-      # 4. Install project dependencies
       - name: Install dependencies
         run: npm ci
 
-      # 5. Build web application
       - name: Build web assets
         run: npm run build
 
-      # 6. Sync Capacitor with Android
       - name: Sync Capacitor
         run: npx cap sync android
 
-      # 7. Verify Android project files
+      - name: Grant Gradle permission
+        run: chmod +x android/gradlew
+
       - name: Verify Android project
         run: |
           test -f android/gradlew
-          test -f android/settings.gradle || \
-            test -f android/settings.gradle.kts
-          test -f android/app/build.gradle || \
-            test -f android/app/build.gradle.kts
-          chmod +x android/gradlew
+          test -f android/settings.gradle
+          test -f android/app/build.gradle
+          test -f android/app/src/main/AndroidManifest.xml
 
-      # 8. Build debug APK
-      - name: Build APK
+      - name: Build debug APK
         working-directory: android
         run: ./gradlew --no-daemon assembleDebug
 
-      # 9. Upload APK as a downloadable artifact
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: kodnaqi-apk
+          name: KodNaqi-APK
           path: android/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
           retention-days: 14
