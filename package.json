@@ -1,13 +1,14 @@
 {
   "name": "kodnaqi-pwa",
   "version": "1.0.0",
-  "description": "تطبيق إدارة معمل طبي تشخيصي — PWA يعمل بدون إنترنت.",
+  "description": "\u062a\u0637\u0628\u064a\u0642 \u0625\u062f\u0627\u0631\u0629 \u0645\u0639\u0645\u0644 \u0637\u0628\u064a \u062a\u0634\u062e\u064a\u0635\u064a \u2014 PWA \u064a\u0639\u0645\u0644 \u0628\u062f\u0648\u0646 \u0625\u0646\u062a\u0631\u0646\u062a.",
   "main": "app.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Building web assets...\" && mkdir -p www && cp -r *.html *.js *.css *.png *.json *.txt www/ 2>/dev/null; cp -r lib www/ 2>/dev/null; echo \"Build complete\""
   },
   "repository": {
     "type": "git",
