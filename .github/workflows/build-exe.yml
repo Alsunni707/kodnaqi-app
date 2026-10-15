@@ -23,9 +23,11 @@ jobs:
     
     - name: Build web assets
       run: npm run build
+      shell: bash
     
     - name: Build EXE
       run: npm run build-win
+      shell: bash
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
