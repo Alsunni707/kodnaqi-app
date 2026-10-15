@@ -328,7 +328,6 @@
     const myCode = await getDeviceCode();
 
     // فحص الأجهزة المسموحة
-  alert('devices check: payload.devices=' + JSON.stringify(payload.devices) + ', myCode=' + myCode);
   // (مع دعم فترة السماح للأجهزة المنقولة)
   if (Array.isArray(payload.devices) && payload.devices.length > 0) {
     const isAllowed = payload.devices.indexOf('*') !== -1 || payload.devices.indexOf(myCode) !== -1;
@@ -340,7 +339,6 @@
       if (graceUntil > now) {
         // مسموح مؤقتًا خلال فترة السماح
         const clock = await checkClock(payload);
-  alert('clock result: ' + JSON.stringify(clock));
         if (!clock.ok) return { valid: false, reason: clock.reason, details: clock };
         await updateLastSeen(now);
         return { valid: true, payload, deviceCode: myCode, grace: true, graceUntil: graceUntil };
