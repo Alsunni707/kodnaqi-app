@@ -2410,3 +2410,88 @@
 
   console.log('[DefaultTests] Module loaded. Total tests:', DEFAULT_TESTS.length);
 })();
+
+// ═══════════════════════════════════════════════════
+// دالة إعادة تعيين الفحوصات الافتراضية
+// ═══════════════════════════════════════════════════
+window.resetDefaultTests = async function() {
+  if (!confirm('⚠️ سيتم حذف جميع الفحوصات الحالية وإعادة تعيين الفحوصات الافتراضية (110+ فحص).\n\nهل أنت متأكد؟')) {
+    return;
+  }
+  
+  try {
+    // حذف جميع الفحوصات الحالية
+    const existing = await window.dbGetAll('tests');
+    for (const test of existing) {
+      await window.dbDelete('tests', test.id);
+    }
+    
+    // إعادة إضافة الفحوصات الافتراضية
+    await window.KodNaqiDefaultTests.init();
+    
+    alert('✅ تم إعادة تعيين الفحوصات الافتراضية بنجاح!\n\nأعد تحميل الصفحة لرؤية التغييرات.');
+    location.reload();
+  } catch (err) {
+    alert('❌ خطأ: ' + err.message);
+  }
+};
+
+// ═══════════════════════════════════════════════════
+// دالة تحديث الفحوصات من ملف JSON
+// ═══════════════════════════════════════════════════
+window.updateTestsFromFile = function() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json';
+  input.onchange = async function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    try {
+      const text = await file.text();
+      const newTests = JSON.parse(text);
+      
+      if (!Array.isArray(newTests)) {
+        alert('❌ الملف يجب أن يحتوي على قائمة (Array) من الفحوصات');
+        return;
+      }
+      
+      if (!confirm(`📦 سيتم استيراد ${newTests.length} فحص من الملف.\n\nهل تريد الاستمرار؟`)) {
+        return;
+      }
+      
+      // حذف الفحوصات القديمة
+      const existing = await window.dbGetAll('tests');
+      for (const test of existing) {
+        await window.dbDelete('tests', test.id);
+      }
+      
+      // إضافة الفحوصات الجديدة
+      for (const test of newTests) {
+        await window.dbAdd('tests', {
+          name: test.name || '',
+          nameAr: test.nameAr || '',
+          category: test.category || 'General',
+          categoryAr: test.categoryAr || 'عام',
+          price: test.price || 0,
+          unit: test.unit || '',
+          refRange: test.refRange || '',
+          type: test.type || 'single',
+          parameters: test.parameters ? JSON.stringify(test.parameters) : null,
+          defaultValue: test.defaultValue || '',
+          options: test.options ? JSON.stringify(test.options) : null,
+          isDefault: false,
+          createdAt: new Date().toISOString()
+        });
+      }
+      
+      alert(`✅ تم استيراد ${newTests.length} فحص بنجاح!\n\nأعد تحميل الصفحة.`);
+      location.reload();
+    } catch (err) {
+      alert('❌ خطأ في قراءة الملف: ' + err.message);
+    }
+  };
+  input.click();
+};
+
+console.log('[DefaultTests] Reset & Update functions loaded');
