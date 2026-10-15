@@ -48,13 +48,16 @@
         "nsis",
         "portable"
       ],
-      "icon": "www/icon-512.png"
+      "icon": "www/logo.png"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
-      "createStartMenuShortcut": true
+      "createStartMenuShortcut": true,
+      "installerIcon": "www/logo.png",
+      "uninstallerIcon": "www/logo.png",
+      "installerHeaderIcon": "www/logo.png"
     },
     "asarUnpack": [
       "main.js"

@@ -7,8 +7,17 @@ function getIndexPath() {
     path.join(__dirname, 'www', 'index.html'),
     path.join(__dirname, 'index.html')
   ];
-
   return candidates.find((candidate) => fs.existsSync(candidate)) || candidates[0];
+}
+
+function getIconPath() {
+  const candidates = [
+    path.join(__dirname, 'www', 'logo.png'),
+    path.join(__dirname, 'logo.png'),
+    path.join(__dirname, 'www', 'icon-512.png'),
+    path.join(__dirname, 'icon-512.png')
+  ];
+  return candidates.find((candidate) => fs.existsSync(candidate));
 }
 
 function createWindow() {
@@ -19,6 +28,7 @@ function createWindow() {
     minHeight: 700,
     show: false,
     backgroundColor: '#0f172a',
+    icon: getIconPath(),
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,
