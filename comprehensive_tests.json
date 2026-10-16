@@ -6,7 +6,49 @@
     "sub": "Routine Hematology",
     "price": 15000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Hemoglobin (Hb)",
+        "unit": "g/dL",
+        "normal": "13.5 - 17.5"
+      },
+      {
+        "name": "Total WBCs",
+        "unit": "10^3/uL",
+        "normal": "4.0 - 11.0"
+      },
+      {
+        "name": "RBCs",
+        "unit": "10^6/uL",
+        "normal": "4.5 - 5.9"
+      },
+      {
+        "name": "Platelets (PLT)",
+        "unit": "10^3/uL",
+        "normal": "150 - 450"
+      },
+      {
+        "name": "Hematocrit (Hct)",
+        "unit": "%",
+        "normal": "41 - 53"
+      },
+      {
+        "name": "MCV",
+        "unit": "fL",
+        "normal": "80 - 100"
+      },
+      {
+        "name": "MCH",
+        "unit": "pg",
+        "normal": "27 - 33"
+      },
+      {
+        "name": "MCHC",
+        "unit": "g/dL",
+        "normal": "32 - 36"
+      }
+    ]
   },
   {
     "code": "HEM-002",
@@ -15,7 +57,14 @@
     "sub": "Routine Hematology",
     "price": 8000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Erythrocyte Sedimentation Rate (ESR)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HEM-003",
@@ -24,7 +73,14 @@
     "sub": "Special Hematology",
     "price": 20000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Reticulocyte Count",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HEM-004",
@@ -33,7 +89,14 @@
     "sub": "Special Hematology",
     "price": 25000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Sickling Test",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HEM-005",
@@ -42,7 +105,14 @@
     "sub": "Special Hematology",
     "price": 45000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Hemoglobin Electrophoresis",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HEM-006",
@@ -51,7 +121,14 @@
     "sub": "Special Hematology",
     "price": 45000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "G6PD Enzyme Activity",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HEM-007",
@@ -60,7 +137,14 @@
     "sub": "Coagulation",
     "price": 20000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Prothrombin Time (PT)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HEM-008",
@@ -69,7 +153,14 @@
     "sub": "Coagulation",
     "price": 20000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Activated Partial Thromboplastin Time (APTT)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HEM-009",
@@ -78,7 +169,14 @@
     "sub": "Coagulation",
     "price": 40000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "D-Dimer",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HEM-010",
@@ -87,7 +185,14 @@
     "sub": "Coagulation",
     "price": 25000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Fibrinogen Level",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "CHE-001",
@@ -96,7 +201,29 @@
     "sub": "Renal Function Tests (RFT)",
     "price": 10000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Serum Creatinine",
+        "unit": "mg/dL",
+        "normal": "0.6 - 1.2"
+      },
+      {
+        "name": "Blood Urea Nitrogen (BUN)",
+        "unit": "mg/dL",
+        "normal": "7 - 20"
+      },
+      {
+        "name": "Uric Acid",
+        "unit": "mg/dL",
+        "normal": "3.5 - 7.2"
+      },
+      {
+        "name": "Serum Urea",
+        "unit": "mg/dL",
+        "normal": "15 - 45"
+      }
+    ]
   },
   {
     "code": "CHE-002",
@@ -105,7 +232,44 @@
     "sub": "Liver Function Tests (LFT)",
     "price": 15000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "ALT (SGPT)",
+        "unit": "U/L",
+        "normal": "7 - 56"
+      },
+      {
+        "name": "AST (SGOT)",
+        "unit": "U/L",
+        "normal": "10 - 40"
+      },
+      {
+        "name": "Alkaline Phosphatase (ALP)",
+        "unit": "U/L",
+        "normal": "44 - 147"
+      },
+      {
+        "name": "Total Bilirubin",
+        "unit": "mg/dL",
+        "normal": "0.2 - 1.2"
+      },
+      {
+        "name": "Direct Bilirubin",
+        "unit": "mg/dL",
+        "normal": "0.0 - 0.3"
+      },
+      {
+        "name": "Total Protein",
+        "unit": "g/dL",
+        "normal": "6.0 - 8.3"
+      },
+      {
+        "name": "Albumin",
+        "unit": "g/dL",
+        "normal": "3.4 - 5.4"
+      }
+    ]
   },
   {
     "code": "CHE-003",
@@ -114,7 +278,34 @@
     "sub": "Lipid Profile",
     "price": 18000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Total Cholesterol",
+        "unit": "mg/dL",
+        "normal": "< 200"
+      },
+      {
+        "name": "Triglycerides",
+        "unit": "mg/dL",
+        "normal": "< 150"
+      },
+      {
+        "name": "HDL Cholesterol",
+        "unit": "mg/dL",
+        "normal": "> 40"
+      },
+      {
+        "name": "LDL Cholesterol",
+        "unit": "mg/dL",
+        "normal": "< 130"
+      },
+      {
+        "name": "VLDL Cholesterol",
+        "unit": "mg/dL",
+        "normal": "2 - 30"
+      }
+    ]
   },
   {
     "code": "CHE-004",
@@ -123,7 +314,14 @@
     "sub": "Cardiac Biomarkers",
     "price": 150000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Cardiac Profile",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "CHE-005",
@@ -132,7 +330,14 @@
     "sub": "Electrolytes & Minerals",
     "price": 15000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Serum Electrolytes",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "CHE-006",
@@ -141,7 +346,14 @@
     "sub": "Electrolytes & Minerals",
     "price": 15000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Total Calcium",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "CHE-007",
@@ -150,7 +362,14 @@
     "sub": "Metabolic & Diabetes",
     "price": 8000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Result Value",
+        "unit": "mg/dL or %",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "CHE-008",
@@ -159,7 +378,14 @@
     "sub": "Metabolic & Diabetes",
     "price": 25000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Result Value",
+        "unit": "mg/dL or %",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "MIC-001",
@@ -168,7 +394,24 @@
     "sub": "Bacteriology Cultures",
     "price": 100000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Growth Status",
+        "unit": "",
+        "normal": "No Growth after 48 hours"
+      },
+      {
+        "name": "Isolated Organism",
+        "unit": "",
+        "normal": "None"
+      },
+      {
+        "name": "Sensitivity Report",
+        "unit": "",
+        "normal": "See Antibiogram"
+      }
+    ]
   },
   {
     "code": "MIC-002",
@@ -177,7 +420,24 @@
     "sub": "Bacteriology Cultures",
     "price": 50000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Growth Status",
+        "unit": "",
+        "normal": "No Growth after 48 hours"
+      },
+      {
+        "name": "Isolated Organism",
+        "unit": "",
+        "normal": "None"
+      },
+      {
+        "name": "Sensitivity Report",
+        "unit": "",
+        "normal": "See Antibiogram"
+      }
+    ]
   },
   {
     "code": "MIC-003",
@@ -186,7 +446,24 @@
     "sub": "Bacteriology Cultures",
     "price": 40000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Growth Status",
+        "unit": "",
+        "normal": "No Growth after 48 hours"
+      },
+      {
+        "name": "Isolated Organism",
+        "unit": "",
+        "normal": "None"
+      },
+      {
+        "name": "Sensitivity Report",
+        "unit": "",
+        "normal": "See Antibiogram"
+      }
+    ]
   },
   {
     "code": "MIC-004",
@@ -195,7 +472,14 @@
     "sub": "Mycobacteriology",
     "price": 30000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Sputum for Acid Fast Bacilli (AFB)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "MIC-005",
@@ -204,7 +488,14 @@
     "sub": "Mycobacteriology",
     "price": 150000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "GeneXpert Mycobacterium tuberculosis",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "PAR-001",
@@ -213,7 +504,44 @@
     "sub": "Stool & Urine Parasites",
     "price": 15000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Color",
+        "unit": "",
+        "normal": "Brown"
+      },
+      {
+        "name": "Consistency",
+        "unit": "",
+        "normal": "Formed"
+      },
+      {
+        "name": "Mucus",
+        "unit": "",
+        "normal": "Absent"
+      },
+      {
+        "name": "Blood",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "Ova & Cysts",
+        "unit": "",
+        "normal": "No Parasites Seen"
+      },
+      {
+        "name": "Pus Cells",
+        "unit": "HPF",
+        "normal": "0 - 2"
+      },
+      {
+        "name": "RBCs",
+        "unit": "HPF",
+        "normal": "0 - 1"
+      }
+    ]
   },
   {
     "code": "PAR-002",
@@ -222,7 +550,74 @@
     "sub": "Stool & Urine Parasites",
     "price": 15000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Color",
+        "unit": "",
+        "normal": "Yellow / Clear"
+      },
+      {
+        "name": "Appearance",
+        "unit": "",
+        "normal": "Clear"
+      },
+      {
+        "name": "Specific Gravity",
+        "unit": "",
+        "normal": "1.005 - 1.030"
+      },
+      {
+        "name": "pH",
+        "unit": "",
+        "normal": "4.5 - 8.0"
+      },
+      {
+        "name": "Protein",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "Glucose",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "Ketones",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "Bilirubin",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "Blood",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "WBCs",
+        "unit": "HPF",
+        "normal": "0 - 5"
+      },
+      {
+        "name": "RBCs",
+        "unit": "HPF",
+        "normal": "0 - 2"
+      },
+      {
+        "name": "Epithelial Cells",
+        "unit": "HPF",
+        "normal": "Few"
+      },
+      {
+        "name": "Bacteria",
+        "unit": "",
+        "normal": "Absent"
+      }
+    ]
   },
   {
     "code": "PAR-003",
@@ -231,7 +626,74 @@
     "sub": "Urine & Biochemical Analysis",
     "price": 15000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Color",
+        "unit": "",
+        "normal": "Yellow / Clear"
+      },
+      {
+        "name": "Appearance",
+        "unit": "",
+        "normal": "Clear"
+      },
+      {
+        "name": "Specific Gravity",
+        "unit": "",
+        "normal": "1.005 - 1.030"
+      },
+      {
+        "name": "pH",
+        "unit": "",
+        "normal": "4.5 - 8.0"
+      },
+      {
+        "name": "Protein",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "Glucose",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "Ketones",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "Bilirubin",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "Blood",
+        "unit": "",
+        "normal": "Negative"
+      },
+      {
+        "name": "WBCs",
+        "unit": "HPF",
+        "normal": "0 - 5"
+      },
+      {
+        "name": "RBCs",
+        "unit": "HPF",
+        "normal": "0 - 2"
+      },
+      {
+        "name": "Epithelial Cells",
+        "unit": "HPF",
+        "normal": "Few"
+      },
+      {
+        "name": "Bacteria",
+        "unit": "",
+        "normal": "Absent"
+      }
+    ]
   },
   {
     "code": "PAR-004",
@@ -240,7 +702,14 @@
     "sub": "Endemic Endoparasites",
     "price": 25000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Malaria Microscopy (Thick & Thin Film)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "IMM-001",
@@ -249,7 +718,19 @@
     "sub": "Infectious Serology",
     "price": 30000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Test Result",
+        "unit": "",
+        "normal": "Negative / Non-Reactive"
+      },
+      {
+        "name": "Titer / Index",
+        "unit": "",
+        "normal": "< 1.0 (Negative)"
+      }
+    ]
   },
   {
     "code": "IMM-002",
@@ -258,7 +739,19 @@
     "sub": "Infectious Serology",
     "price": 35000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Test Result",
+        "unit": "",
+        "normal": "Negative / Non-Reactive"
+      },
+      {
+        "name": "Titer / Index",
+        "unit": "",
+        "normal": "< 1.0 (Negative)"
+      }
+    ]
   },
   {
     "code": "IMM-003",
@@ -267,7 +760,14 @@
     "sub": "Infectious Serology",
     "price": 40000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Visceral Leishmaniasis (Kala-azar)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "IMM-004",
@@ -276,7 +776,19 @@
     "sub": "Viral Screening",
     "price": 30000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Test Result",
+        "unit": "",
+        "normal": "Negative / Non-Reactive"
+      },
+      {
+        "name": "Titer / Index",
+        "unit": "",
+        "normal": "< 1.0 (Negative)"
+      }
+    ]
   },
   {
     "code": "IMM-005",
@@ -285,7 +797,19 @@
     "sub": "Viral Screening",
     "price": 35000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Test Result",
+        "unit": "",
+        "normal": "Negative / Non-Reactive"
+      },
+      {
+        "name": "Titer / Index",
+        "unit": "",
+        "normal": "< 1.0 (Negative)"
+      }
+    ]
   },
   {
     "code": "IMM-006",
@@ -294,7 +818,19 @@
     "sub": "Viral Screening",
     "price": 40000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Test Result",
+        "unit": "",
+        "normal": "Negative / Non-Reactive"
+      },
+      {
+        "name": "Titer / Index",
+        "unit": "",
+        "normal": "< 1.0 (Negative)"
+      }
+    ]
   },
   {
     "code": "IMM-007",
@@ -303,7 +839,14 @@
     "sub": "Autoimmunity",
     "price": 25000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Rheumatoid Factor (RF)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "IMM-008",
@@ -312,7 +855,14 @@
     "sub": "Autoimmunity",
     "price": 70000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Antinuclear Antibodies (ANA)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "IMM-009",
@@ -321,7 +871,14 @@
     "sub": "Autoimmunity",
     "price": 80000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Anti-double Stranded DNA (anti-dsDNA)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "IMM-010",
@@ -330,7 +887,19 @@
     "sub": "Tumor Markers",
     "price": 100000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Test Result",
+        "unit": "",
+        "normal": "Negative / Non-Reactive"
+      },
+      {
+        "name": "Titer / Index",
+        "unit": "",
+        "normal": "< 1.0 (Negative)"
+      }
+    ]
   },
   {
     "code": "IMM-011",
@@ -339,7 +908,14 @@
     "sub": "Tumor Markers",
     "price": 120000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Alpha-Fetoprotein (AFP)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "IMM-012",
@@ -348,7 +924,19 @@
     "sub": "Tumor Markers",
     "price": 150000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Test Result",
+        "unit": "",
+        "normal": "Negative / Non-Reactive"
+      },
+      {
+        "name": "Titer / Index",
+        "unit": "",
+        "normal": "< 1.0 (Negative)"
+      }
+    ]
   },
   {
     "code": "HIS-001",
@@ -357,7 +945,14 @@
     "sub": "Surgical Pathology",
     "price": 200000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Biopsy / Tissue Histopathology Examination",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HIS-002",
@@ -366,7 +961,14 @@
     "sub": "Cytopathology",
     "price": 150000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Fine Needle Aspiration Cytology (FNAC)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HIS-003",
@@ -375,7 +977,14 @@
     "sub": "Cytopathology",
     "price": 100000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Pap Smear (Cervical Cytology)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "HIS-004",
@@ -384,7 +993,14 @@
     "sub": "Immunohistochemistry (IHC)",
     "price": 300000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Breast Cancer IHC Panel",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "MOL-001",
@@ -393,7 +1009,14 @@
     "sub": "Molecular Virology (PCR)",
     "price": 200000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Hepatitis B Virus DNA Quantification (Viral Load)",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "MOL-002",
@@ -402,7 +1025,14 @@
     "sub": "Molecular Virology (PCR)",
     "price": 200000,
     "type": "single",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Hepatitis C Virus RNA Quantification",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "code": "MOL-003",
@@ -411,7 +1041,24 @@
     "sub": "Endocrinology / Hormones",
     "price": 40000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "TSH",
+        "unit": "uIU/mL",
+        "normal": "0.4 - 4.0"
+      },
+      {
+        "name": "Free T3",
+        "unit": "pg/mL",
+        "normal": "2.3 - 4.2"
+      },
+      {
+        "name": "Free T4",
+        "unit": "ng/dL",
+        "normal": "0.8 - 1.8"
+      }
+    ]
   },
   {
     "code": "MOL-004",
@@ -420,7 +1067,14 @@
     "sub": "Reproductive Hormones",
     "price": 70000,
     "type": "panel",
-    "Component_Count": 1
+    "Component_Count": 1,
+    "components": [
+      {
+        "name": "Fertility Panel",
+        "unit": "",
+        "normal": "Normal Range"
+      }
+    ]
   },
   {
     "Test_Code": "HEM-011",
@@ -436,6 +1090,13 @@
         "Analyte": "Bleeding Time",
         "Unit": "Minutes",
         "Range": "2 - 7"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -453,6 +1114,13 @@
         "Analyte": "Clotting Time",
         "Unit": "Minutes",
         "Range": "5 - 10"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -476,6 +1144,13 @@
         "Unit": "Type",
         "Range": "Positive/Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -492,6 +1167,13 @@
         "Analyte": "DAT",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -510,6 +1192,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -526,6 +1215,13 @@
         "Analyte": "Glucose",
         "Unit": "mg/dL",
         "Range": "80 - 140"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -554,6 +1250,13 @@
         "Unit": "mg/dL",
         "Range": "< 140"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -570,6 +1273,13 @@
         "Analyte": "Amylase",
         "Unit": "U/L",
         "Range": "30 - 110"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -588,6 +1298,13 @@
         "Unit": "U/L",
         "Range": "10 - 60"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -604,6 +1321,13 @@
         "Analyte": "Iron",
         "Unit": "ug/dL",
         "Range": "60 - 170"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -622,6 +1346,13 @@
         "Unit": "ug/dL",
         "Range": "250 - 450"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -638,6 +1369,13 @@
         "Analyte": "Ferritin",
         "Unit": "ng/mL",
         "Range": "15 - 200"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -656,6 +1394,13 @@
         "Unit": "mg/dL",
         "Range": "1.7 - 2.2"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -672,6 +1417,13 @@
         "Analyte": "Phosphorus",
         "Unit": "mg/dL",
         "Range": "2.5 - 4.5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -690,6 +1442,13 @@
         "Unit": "U/L",
         "Range": "140 - 280"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -706,6 +1465,13 @@
         "Analyte": "CK",
         "Unit": "U/L",
         "Range": "30 - 200"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -724,6 +1490,13 @@
         "Unit": "mg/L",
         "Range": "< 6"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -740,6 +1513,13 @@
         "Analyte": "hs-CRP",
         "Unit": "mg/L",
         "Range": "< 1.0"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -758,6 +1538,13 @@
         "Unit": "ng/mL",
         "Range": "< 0.5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -774,6 +1561,13 @@
         "Analyte": "Homocysteine",
         "Unit": "umol/L",
         "Range": "5 - 15"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -792,6 +1586,13 @@
         "Unit": "pg/mL",
         "Range": "200 - 900"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -808,6 +1609,13 @@
         "Analyte": "Folic Acid",
         "Unit": "ng/mL",
         "Range": "4 - 20"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -826,6 +1634,13 @@
         "Unit": "ng/mL",
         "Range": "30 - 100"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -842,6 +1657,13 @@
         "Analyte": "Culture",
         "Unit": "Text",
         "Range": "No Growth"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -860,6 +1682,13 @@
         "Unit": "Text",
         "Range": "Normal Flora"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -876,6 +1705,13 @@
         "Analyte": "H. pylori",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -894,6 +1730,13 @@
         "Unit": "Text",
         "Range": "No Growth"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -910,6 +1753,13 @@
         "Analyte": "CRAG",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -928,6 +1778,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -944,6 +1801,13 @@
         "Analyte": "Schistosoma Eggs",
         "Unit": "Count",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -962,6 +1826,13 @@
         "Unit": "Text",
         "Range": "Not Seen"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -978,6 +1849,13 @@
         "Analyte": "Dengue NS1",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -996,6 +1874,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1012,6 +1897,13 @@
         "Analyte": "Dengue IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1040,6 +1932,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1056,6 +1955,13 @@
         "Analyte": "Chikungunya IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1074,6 +1980,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1090,6 +2003,13 @@
         "Analyte": "Rickettsia IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1108,6 +2028,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1124,6 +2051,13 @@
         "Analyte": "Toxoplasma IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1142,6 +2076,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1158,6 +2099,13 @@
         "Analyte": "Rubella IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1176,6 +2124,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1192,6 +2147,13 @@
         "Analyte": "CMV IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1210,6 +2172,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1226,6 +2195,13 @@
         "Analyte": "TPHA",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1244,6 +2220,13 @@
         "Unit": "U/mL",
         "Range": "< 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1260,6 +2243,13 @@
         "Analyte": "Anti-TPO",
         "Unit": "IU/mL",
         "Range": "< 34"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1278,6 +2268,13 @@
         "Unit": "IU/mL",
         "Range": "< 40"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1294,6 +2291,13 @@
         "Analyte": "CEA",
         "Unit": "ng/mL",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1312,6 +2316,13 @@
         "Unit": "U/mL",
         "Range": "< 37"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1328,6 +2339,13 @@
         "Analyte": "Beta-hCG",
         "Unit": "mIU/mL",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1346,6 +2364,13 @@
         "Unit": "IU/mL",
         "Range": "< 200"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1362,6 +2387,13 @@
         "Analyte": "Cell Block",
         "Unit": "Text",
         "Range": "Benign"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1380,6 +2412,13 @@
         "Unit": "Text",
         "Range": "Normal"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1396,6 +2435,13 @@
         "Analyte": "Biopsy",
         "Unit": "Text",
         "Range": "Normal"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1414,6 +2460,13 @@
         "Unit": "copies/mL",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1430,6 +2483,13 @@
         "Analyte": "HIV DNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1448,6 +2508,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1464,6 +2531,13 @@
         "Analyte": "Cortisol",
         "Unit": "ug/dL",
         "Range": "6 - 23"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1482,6 +2556,13 @@
         "Unit": "ng/dL",
         "Range": "300 - 1000"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1498,6 +2579,13 @@
         "Analyte": "Estradiol",
         "Unit": "pg/mL",
         "Range": "12 - 498"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1516,6 +2604,13 @@
         "Unit": "ng/mL",
         "Range": "0.2 - 25"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1532,6 +2627,13 @@
         "Analyte": "GH",
         "Unit": "ng/mL",
         "Range": "0.1 - 10"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1550,6 +2652,13 @@
         "Unit": "ug/mL",
         "Range": "10 - 30"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1566,6 +2675,13 @@
         "Analyte": "Salicylate",
         "Unit": "mg/dL",
         "Range": "2 - 20"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1584,6 +2700,13 @@
         "Unit": "mg/dL",
         "Range": "0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1600,6 +2723,13 @@
         "Analyte": "COHb",
         "Unit": "%",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1638,6 +2768,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1654,6 +2791,13 @@
         "Analyte": "hCG",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1672,6 +2816,13 @@
         "Unit": "mg/24h",
         "Range": "< 150"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1688,6 +2839,13 @@
         "Analyte": "Microalbumin",
         "Unit": "mg/L",
         "Range": "< 30"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1706,6 +2864,13 @@
         "Unit": "Qualitative",
         "Range": "Non-Reactive"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1722,6 +2887,13 @@
         "Analyte": "HIV",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1740,6 +2912,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1756,6 +2935,13 @@
         "Analyte": "HBeAg",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1774,6 +2960,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1790,6 +2983,13 @@
         "Analyte": "HAV IgG",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1808,6 +3008,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1824,6 +3031,13 @@
         "Analyte": "Mycoplasma IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1842,6 +3056,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1858,6 +3079,13 @@
         "Analyte": "Echinococcus Ab",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1876,6 +3104,13 @@
         "Unit": "Seconds",
         "Range": "14 - 21"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1892,6 +3127,13 @@
         "Analyte": "Anti-Xa",
         "Unit": "IU/mL",
         "Range": "0.3 - 0.7"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1910,6 +3152,13 @@
         "Unit": "%",
         "Range": "70 - 130"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1926,6 +3175,13 @@
         "Analyte": "Protein S",
         "Unit": "%",
         "Range": "65 - 140"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1944,6 +3200,13 @@
         "Unit": "%",
         "Range": "80 - 120"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1960,6 +3223,13 @@
         "Analyte": "LA",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -1978,6 +3248,13 @@
         "Unit": "%",
         "Range": "50 - 150"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -1994,6 +3271,13 @@
         "Analyte": "Factor IX",
         "Unit": "%",
         "Range": "60 - 140"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2012,6 +3296,13 @@
         "Unit": "%",
         "Range": "50 - 150"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2028,6 +3319,13 @@
         "Analyte": "Insulin",
         "Unit": "uIU/mL",
         "Range": "2 - 25"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2046,6 +3344,13 @@
         "Unit": "ng/mL",
         "Range": "0.5 - 2.0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2062,6 +3367,13 @@
         "Analyte": "PTH",
         "Unit": "pg/mL",
         "Range": "15 - 65"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2080,6 +3392,13 @@
         "Unit": "ng/dL",
         "Range": "3 - 16"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2096,6 +3415,13 @@
         "Analyte": "Renin",
         "Unit": "ng/mL/hr",
         "Range": "0.6 - 4.3"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2114,6 +3440,13 @@
         "Unit": "ug/dL",
         "Range": "35 - 430"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2130,6 +3463,13 @@
         "Analyte": "17-OHP",
         "Unit": "ng/mL",
         "Range": "0.2 - 1.3"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2148,6 +3488,13 @@
         "Unit": "nmol/L",
         "Range": "10 - 80"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2164,6 +3511,13 @@
         "Analyte": "Free Testosterone",
         "Unit": "pg/mL",
         "Range": "9 - 30"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2182,6 +3536,13 @@
         "Unit": "ng/mL",
         "Range": "0.7 - 8.0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2198,6 +3559,13 @@
         "Analyte": "Total IgE",
         "Unit": "IU/mL",
         "Range": "< 100"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2261,6 +3629,13 @@
         "Unit": "kU/L",
         "Range": "< 0.35"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2313,6 +3688,13 @@
         "Unit": "kU/L",
         "Range": "< 0.35"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2329,6 +3711,13 @@
         "Analyte": "Zinc",
         "Unit": "ug/dL",
         "Range": "70 - 150"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2347,6 +3736,13 @@
         "Unit": "ug/dL",
         "Range": "70 - 140"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2363,6 +3759,13 @@
         "Analyte": "Selenium",
         "Unit": "ug/L",
         "Range": "70 - 150"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2381,6 +3784,13 @@
         "Unit": "ug/L",
         "Range": "4 - 15"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2397,6 +3807,13 @@
         "Analyte": "Vitamin A",
         "Unit": "ug/dL",
         "Range": "30 - 80"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2415,6 +3832,13 @@
         "Unit": "mg/L",
         "Range": "5 - 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2431,6 +3855,13 @@
         "Analyte": "Vitamin K1",
         "Unit": "ng/mL",
         "Range": "0.2 - 3.2"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2449,6 +3880,13 @@
         "Unit": "mg/L",
         "Range": "4 - 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2465,6 +3903,13 @@
         "Analyte": "Vitamin B1",
         "Unit": "nmol/L",
         "Range": "70 - 180"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2483,6 +3928,13 @@
         "Unit": "nmol/L",
         "Range": "20 - 125"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2499,6 +3951,13 @@
         "Analyte": "AFP",
         "Unit": "IU/mL",
         "Range": "< 10"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2517,6 +3976,13 @@
         "Unit": "mAU/mL",
         "Range": "< 40"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2533,6 +3999,13 @@
         "Analyte": "Ceruloplasmin",
         "Unit": "mg/dL",
         "Range": "20 - 60"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2551,6 +4024,13 @@
         "Unit": "mg/dL",
         "Range": "90 - 200"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2567,6 +4047,13 @@
         "Analyte": "Cystatin C",
         "Unit": "mg/L",
         "Range": "0.5 - 1.0"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2585,6 +4072,13 @@
         "Unit": "mg/L",
         "Range": "0.7 - 1.8"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2601,6 +4095,13 @@
         "Analyte": "Osmolality",
         "Unit": "mOsm/kg",
         "Range": "300 - 900"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2619,6 +4120,13 @@
         "Unit": "mOsm/kg",
         "Range": "275 - 295"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2635,6 +4143,13 @@
         "Analyte": "Anion Gap",
         "Unit": "mmol/L",
         "Range": "8 - 12"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2653,6 +4168,13 @@
         "Unit": "ng/mL",
         "Range": "< 90"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2669,6 +4191,13 @@
         "Analyte": "Troponin T",
         "Unit": "ng/L",
         "Range": "< 14"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2687,6 +4216,13 @@
         "Unit": "pg/mL",
         "Range": "< 100"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2703,6 +4239,13 @@
         "Analyte": "Lp(a)",
         "Unit": "mg/dL",
         "Range": "< 30"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2721,6 +4264,13 @@
         "Unit": "mg/dL",
         "Range": "120 - 180"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2737,6 +4287,13 @@
         "Analyte": "Apo B",
         "Unit": "mg/dL",
         "Range": "60 - 120"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2755,6 +4312,13 @@
         "Unit": "ng/dL",
         "Range": "10 - 24"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2771,6 +4335,13 @@
         "Analyte": "TBG",
         "Unit": "ug/mL",
         "Range": "13 - 39"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2789,6 +4360,13 @@
         "Unit": "ng/mL",
         "Range": "< 40"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2806,6 +4384,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2822,6 +4407,13 @@
         "Analyte": "SARS-CoV-2 Ag",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2845,6 +4437,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2861,6 +4460,13 @@
         "Analyte": "RSV",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2879,6 +4485,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2895,6 +4508,13 @@
         "Analyte": "Rotavirus",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2913,6 +4533,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2929,6 +4556,13 @@
         "Analyte": "Malaria RDT",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2947,6 +4581,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2963,6 +4604,13 @@
         "Analyte": "Brucella IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -2981,6 +4629,13 @@
         "Unit": "U/mL",
         "Range": "< 30"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -2997,6 +4652,13 @@
         "Analyte": "CA 72-4",
         "Unit": "U/mL",
         "Range": "< 6.9"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3015,6 +4677,13 @@
         "Unit": "ng/mL",
         "Range": "< 1.5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3031,6 +4700,13 @@
         "Analyte": "NSE",
         "Unit": "ng/mL",
         "Range": "< 16"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3049,6 +4725,13 @@
         "Unit": "mg/L",
         "Range": "< 3"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3065,6 +4748,13 @@
         "Analyte": "HE4",
         "Unit": "pmol/L",
         "Range": "< 140"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3083,6 +4773,13 @@
         "Unit": "ng/mL",
         "Range": "< 100"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3099,6 +4796,13 @@
         "Analyte": "BAP",
         "Unit": "U/L",
         "Range": "10 - 40"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3117,6 +4821,13 @@
         "Unit": "ng/mL",
         "Range": "5 - 30"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3133,6 +4844,13 @@
         "Analyte": "CTX",
         "Unit": "ng/mL",
         "Range": "< 0.5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3151,6 +4869,13 @@
         "Unit": "ng/mL",
         "Range": "20 - 80"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3167,6 +4892,13 @@
         "Analyte": "sTfR",
         "Unit": "mg/L",
         "Range": "0.8 - 3.3"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3185,6 +4917,13 @@
         "Unit": "mg/dL",
         "Range": "30 - 200"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3201,6 +4940,13 @@
         "Analyte": "Bilirubin",
         "Unit": "mg/dL",
         "Range": "< 12"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3219,6 +4965,13 @@
         "Unit": "Qualitative",
         "Range": "Normal"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3235,6 +4988,13 @@
         "Analyte": "MetHb",
         "Unit": "%",
         "Range": "< 2"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3253,6 +5013,13 @@
         "Unit": "%",
         "Range": "< 1"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3269,6 +5036,13 @@
         "Analyte": "SpO2",
         "Unit": "%",
         "Range": "95 - 100"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3287,6 +5061,13 @@
         "Unit": "mmol/L",
         "Range": "0.5 - 2.0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3304,6 +5085,13 @@
         "Unit": "umol/L",
         "Range": "15 - 45"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3320,6 +5108,13 @@
         "Analyte": "Ketones",
         "Unit": "mmol/L",
         "Range": "< 0.6"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3348,6 +5143,13 @@
         "Unit": "%",
         "Range": "Lymphocytes"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3364,6 +5166,13 @@
         "Analyte": "Protein",
         "Unit": "mg/dL",
         "Range": "15 - 45"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3382,6 +5191,13 @@
         "Unit": "mg/dL",
         "Range": "50 - 80"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3398,6 +5214,13 @@
         "Analyte": "Chloride",
         "Unit": "mmol/L",
         "Range": "110 - 130"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3416,6 +5239,13 @@
         "Unit": "Text",
         "Range": "No Organisms"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3432,6 +5262,13 @@
         "Analyte": "Culture",
         "Unit": "Text",
         "Range": "No Growth"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3450,6 +5287,13 @@
         "Unit": "Text",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3466,6 +5310,13 @@
         "Analyte": "Oligoclonal Bands",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3499,6 +5350,13 @@
         "Unit": "U/L",
         "Range": "< 200"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3531,6 +5389,13 @@
         "Unit": "g/dL",
         "Range": "Serum-Ascites Gradient"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3557,6 +5422,13 @@
         "Analyte": "Culture",
         "Unit": "Text",
         "Range": "No Growth"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3594,6 +5466,13 @@
         "Analyte": "Culture",
         "Unit": "Text",
         "Range": "No Growth"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3636,6 +5515,13 @@
         "Analyte": "pH",
         "Unit": "pH",
         "Range": "7.2 - 8.0"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3699,6 +5585,13 @@
         "Unit": "M/mL",
         "Range": "< 1"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3715,6 +5608,13 @@
         "Analyte": "MAR",
         "Unit": "%",
         "Range": "< 50"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3733,6 +5633,13 @@
         "Unit": "%",
         "Range": "< 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3749,6 +5656,13 @@
         "Analyte": "Factor V Leiden",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3767,6 +5681,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3783,6 +5704,13 @@
         "Analyte": "MTHFR",
         "Unit": "Qualitative",
         "Range": "Normal"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3801,6 +5729,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3817,6 +5752,13 @@
         "Analyte": "CFTR",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3835,6 +5777,13 @@
         "Unit": "Qualitative",
         "Range": "Normal"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3851,6 +5800,13 @@
         "Analyte": "Beta-Globin",
         "Unit": "Qualitative",
         "Range": "Normal"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3869,6 +5825,13 @@
         "Unit": "Qualitative",
         "Range": "Normal"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3885,6 +5848,13 @@
         "Analyte": "Digoxin",
         "Unit": "ng/mL",
         "Range": "0.5 - 2.0"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3903,6 +5873,13 @@
         "Unit": "mmol/L",
         "Range": "0.6 - 1.0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3919,6 +5896,13 @@
         "Analyte": "Valproate",
         "Unit": "ug/mL",
         "Range": "50 - 100"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3937,6 +5921,13 @@
         "Unit": "ug/mL",
         "Range": "4 - 12"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3953,6 +5944,13 @@
         "Analyte": "Phenytoin",
         "Unit": "ug/mL",
         "Range": "10 - 20"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -3971,6 +5969,13 @@
         "Unit": "ug/mL",
         "Range": "10 - 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -3988,6 +5993,13 @@
         "Unit": "ug/mL",
         "Range": "5 - 10"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4004,6 +6016,13 @@
         "Analyte": "Vancomycin",
         "Unit": "ug/mL",
         "Range": "10 - 20"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4041,6 +6060,13 @@
         "Analyte": "G6PD",
         "Unit": "Qualitative",
         "Range": "Normal"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4104,6 +6130,13 @@
         "Unit": "umol/L",
         "Range": "Normal"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4136,6 +6169,13 @@
         "Unit": "mg/dL",
         "Range": "10 - 120"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4158,6 +6198,13 @@
         "Unit": "mg/dL",
         "Range": "10 - 90"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4174,6 +6221,13 @@
         "Analyte": "C3",
         "Unit": "mg/dL",
         "Range": "90 - 180"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4192,6 +6246,13 @@
         "Unit": "mg/dL",
         "Range": "10 - 40"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4208,6 +6269,13 @@
         "Analyte": "CH50",
         "Unit": "U/mL",
         "Range": "30 - 75"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4226,6 +6294,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4242,6 +6317,13 @@
         "Analyte": "Anti-RNP",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4260,6 +6342,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4276,6 +6365,13 @@
         "Analyte": "Anti-SSB",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4294,6 +6390,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4310,6 +6413,13 @@
         "Analyte": "Anti-Jo-1",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4328,6 +6438,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4344,6 +6461,13 @@
         "Analyte": "Anti-GBM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4367,6 +6491,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4383,6 +6514,13 @@
         "Analyte": "AMA",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4401,6 +6539,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4417,6 +6562,13 @@
         "Analyte": "Anti-Insulin",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4435,6 +6587,13 @@
         "Unit": "U/mL",
         "Range": "< 5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4451,6 +6610,13 @@
         "Analyte": "Anti-IA2",
         "Unit": "U/mL",
         "Range": "< 0.8"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4469,6 +6635,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4485,6 +6658,13 @@
         "Analyte": "Anti-PLA2R",
         "Unit": "U/mL",
         "Range": "< 20"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4503,6 +6683,13 @@
         "Unit": "U/mL",
         "Range": "< 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4519,6 +6706,13 @@
         "Analyte": "Anti-PR3",
         "Unit": "U/mL",
         "Range": "< 20"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4537,6 +6731,13 @@
         "Unit": "U/mL",
         "Range": "< 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4553,6 +6754,13 @@
         "Analyte": "EMA",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4571,6 +6779,13 @@
         "Unit": "U/mL",
         "Range": "< 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4587,6 +6802,13 @@
         "Analyte": "Gliadin IgG",
         "Unit": "U/mL",
         "Range": "< 20"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4610,6 +6832,13 @@
         "Unit": "U/mL",
         "Range": "< 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4626,6 +6855,13 @@
         "Analyte": "Lactoferrin",
         "Unit": "ug/g",
         "Range": "< 7.3"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4644,6 +6880,13 @@
         "Unit": "ug/g",
         "Range": "< 50"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4660,6 +6903,13 @@
         "Analyte": "Anti-HDV",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4678,6 +6928,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4695,6 +6952,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4711,6 +6975,13 @@
         "Analyte": "Anti-HBs",
         "Unit": "mIU/mL",
         "Range": "> 10"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4743,6 +7014,13 @@
         "Analyte": "HSV IgG",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4796,6 +7074,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4812,6 +7097,13 @@
         "Analyte": "WNV IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4830,6 +7122,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4846,6 +7145,13 @@
         "Analyte": "Zika IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4864,6 +7170,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4880,6 +7193,13 @@
         "Analyte": "Typhus IgG",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4898,6 +7218,13 @@
         "Unit": "Index",
         "Range": "< 0.5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4914,6 +7241,13 @@
         "Analyte": "Beta-D-Glucan",
         "Unit": "pg/mL",
         "Range": "< 80"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4932,6 +7266,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4948,6 +7289,13 @@
         "Analyte": "Coccidioides Ab",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -4966,6 +7314,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -4982,6 +7337,13 @@
         "Analyte": "Strongyloides Ab",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5000,6 +7362,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5016,6 +7385,13 @@
         "Analyte": "Filaria Ab",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5034,6 +7410,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5050,6 +7433,13 @@
         "Analyte": "Cysticercosis Ab",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5068,6 +7458,13 @@
         "Unit": "Text",
         "Range": "No Growth"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5084,6 +7481,13 @@
         "Analyte": "Candida Ag",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5102,6 +7506,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5118,6 +7529,13 @@
         "Analyte": "Anti-Mannan",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5136,6 +7554,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5152,6 +7577,13 @@
         "Analyte": "Parvovirus IgG",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5170,6 +7602,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5186,6 +7625,13 @@
         "Analyte": "Measles IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5204,6 +7650,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5220,6 +7673,13 @@
         "Analyte": "VZV IgG",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5238,6 +7698,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5254,6 +7721,13 @@
         "Analyte": "HSV DNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5272,6 +7746,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5288,6 +7769,13 @@
         "Analyte": "CMV DNA",
         "Unit": "IU/mL",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5306,6 +7794,13 @@
         "Unit": "IU/mL",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5322,6 +7817,13 @@
         "Analyte": "BK Virus DNA",
         "Unit": "copies/mL",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5340,6 +7842,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5356,6 +7865,13 @@
         "Analyte": "Pneumococcal Ag",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5374,6 +7890,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5390,6 +7913,13 @@
         "Analyte": "GDH",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5408,6 +7938,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5424,6 +7961,13 @@
         "Analyte": "VRE DNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5442,6 +7986,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5458,6 +8009,13 @@
         "Analyte": "C. trachomatis DNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5476,6 +8034,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5492,6 +8057,13 @@
         "Analyte": "T. vaginalis DNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5510,6 +8082,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5526,6 +8105,13 @@
         "Analyte": "Ureaplasma DNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5544,6 +8130,13 @@
         "Unit": "Text",
         "Range": "No Growth"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5560,6 +8153,13 @@
         "Analyte": "DST",
         "Unit": "S/R",
         "Range": "Sensitive"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5578,6 +8178,13 @@
         "Unit": "S/R",
         "Range": "Sensitive"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5594,6 +8201,13 @@
         "Analyte": "LPA",
         "Unit": "Qualitative",
         "Range": "Sensitive"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5637,6 +8251,13 @@
         "Unit": "%",
         "Range": "0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5654,6 +8275,13 @@
         "Unit": "%",
         "Range": "0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5670,6 +8298,13 @@
         "Analyte": "CD4",
         "Unit": "cells/uL",
         "Range": "500 - 1500"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5692,6 +8327,13 @@
         "Analyte": "CD8",
         "Unit": "cells/uL",
         "Range": "200 - 800"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5730,6 +8372,13 @@
         "Unit": "%",
         "Range": "5 - 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5746,6 +8395,13 @@
         "Analyte": "JAK2",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5764,6 +8420,13 @@
         "Unit": "IS %",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5780,6 +8443,13 @@
         "Analyte": "PML-RARA",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5798,6 +8468,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5814,6 +8491,13 @@
         "Analyte": "NPM1",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5832,6 +8516,13 @@
         "Unit": "Qualitative",
         "Range": "Wild Type"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5848,6 +8539,13 @@
         "Analyte": "KRAS",
         "Unit": "Qualitative",
         "Range": "Wild Type"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5866,6 +8564,13 @@
         "Unit": "Qualitative",
         "Range": "Wild Type"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5882,6 +8587,13 @@
         "Analyte": "BRAF",
         "Unit": "Qualitative",
         "Range": "Wild Type"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5900,6 +8612,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5916,6 +8635,13 @@
         "Analyte": "ROS1",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5934,6 +8660,13 @@
         "Unit": "TPS %",
         "Range": "< 1"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5950,6 +8683,13 @@
         "Analyte": "MSI",
         "Unit": "Qualitative",
         "Range": "Stable"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -5968,6 +8708,13 @@
         "Unit": "mut/Mb",
         "Range": "< 10"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -5984,6 +8731,13 @@
         "Analyte": "CYP2C19",
         "Unit": "Genotype",
         "Range": "*1/*1"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6002,6 +8756,13 @@
         "Unit": "Genotype",
         "Range": "*1/*1"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6018,6 +8779,13 @@
         "Analyte": "CYP2C9",
         "Unit": "Genotype",
         "Range": "*1/*1"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6036,6 +8804,13 @@
         "Unit": "Genotype",
         "Range": "GG"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6053,6 +8828,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6069,6 +8851,13 @@
         "Analyte": "HLA-B*15:02",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6097,6 +8886,13 @@
         "Unit": "Risk",
         "Range": "Low"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6113,6 +8909,13 @@
         "Analyte": "Karyotype",
         "Unit": "Text",
         "Range": "46,XX/46,XY"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6131,6 +8934,13 @@
         "Unit": "Text",
         "Range": "46,XX/46,XY"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6147,6 +8957,13 @@
         "Analyte": "fFN",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6175,6 +8992,13 @@
         "Unit": "Type",
         "Range": "Typed"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6202,6 +9026,13 @@
         "Unit": "Type",
         "Range": "Typed"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6218,6 +9049,13 @@
         "Analyte": "PRA",
         "Unit": "%",
         "Range": "< 10"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6236,6 +9074,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6253,6 +9098,13 @@
         "Unit": "MFI",
         "Range": "< 1000"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6269,6 +9121,13 @@
         "Analyte": "DSA",
         "Unit": "MFI",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6332,6 +9191,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6348,6 +9214,13 @@
         "Analyte": "EtG",
         "Unit": "ng/mL",
         "Range": "< 500"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6386,6 +9259,13 @@
         "Unit": "pg/mg",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6402,6 +9282,13 @@
         "Analyte": "Lead",
         "Unit": "ug/dL",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6420,6 +9307,13 @@
         "Unit": "ug/L",
         "Range": "< 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6436,6 +9330,13 @@
         "Analyte": "Arsenic",
         "Unit": "ug/L",
         "Range": "< 50"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6454,6 +9355,13 @@
         "Unit": "ug/L",
         "Range": "< 5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6470,6 +9378,13 @@
         "Analyte": "Cholinesterase",
         "Unit": "U/mL",
         "Range": "Normal"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6488,6 +9403,13 @@
         "Unit": "mIU/mL",
         "Range": "2.6 - 18.5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6505,6 +9427,13 @@
         "Unit": "Ratio",
         "Range": "< 4"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6521,6 +9450,13 @@
         "Analyte": "hGH",
         "Unit": "Qualitative",
         "Range": "Normal"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6574,6 +9510,13 @@
         "Unit": "%",
         "Range": "3 - 10"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6626,6 +9569,13 @@
         "Unit": "%",
         "Range": "1 - 4"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6642,6 +9592,13 @@
         "Analyte": "Heartworm",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6660,6 +9617,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6676,6 +9640,13 @@
         "Analyte": "FIV",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6703,6 +9674,13 @@
         "Analyte": "Heterotrophic Plate",
         "Unit": "CFU/mL",
         "Range": "< 500"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6741,6 +9719,13 @@
         "Unit": "mg/L",
         "Range": "0.5 - 1.5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6772,6 +9757,13 @@
         "Analyte": "Salmonella",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6809,6 +9801,13 @@
         "Analyte": "Adulteration",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6852,6 +9851,13 @@
         "Unit": "pg/mL",
         "Range": "< 5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6883,6 +9889,13 @@
         "Analyte": "CXCL10/IP-10",
         "Unit": "pg/mL",
         "Range": "< 50"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6916,6 +9929,13 @@
         "Unit": "pg/mL",
         "Range": "< 50"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6942,6 +9962,13 @@
         "Analyte": "Resistin",
         "Unit": "ng/mL",
         "Range": "5 - 50"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -6970,6 +9997,13 @@
         "Unit": "U/mL",
         "Range": "Normal"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -6986,6 +10020,13 @@
         "Analyte": "Mpox DNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7004,6 +10045,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7020,6 +10068,13 @@
         "Analyte": "Marburg RNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7038,6 +10093,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7054,6 +10116,13 @@
         "Analyte": "RVF IgM",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7072,6 +10141,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7088,6 +10164,13 @@
         "Analyte": "Nipah RNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7106,6 +10189,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7122,6 +10212,13 @@
         "Analyte": "Prealbumin",
         "Unit": "mg/dL",
         "Range": "20 - 40"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7140,6 +10237,13 @@
         "Unit": "mg/dL",
         "Range": "200 - 360"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7156,6 +10260,13 @@
         "Analyte": "RBP",
         "Unit": "mg/dL",
         "Range": "3 - 6"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7174,6 +10285,13 @@
         "Unit": "kb",
         "Range": "Age-dependent"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7191,6 +10309,13 @@
         "Unit": "Years",
         "Range": "Chronological"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7207,6 +10332,13 @@
         "Analyte": "CD34+",
         "Unit": "cells/uL",
         "Range": "Variable"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7240,6 +10372,13 @@
         "Unit": "%",
         "Range": "< 2"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7267,6 +10406,13 @@
         "Unit": "Qualitative",
         "Range": "Positive"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7283,6 +10429,13 @@
         "Analyte": "ctDNA",
         "Unit": "ng/mL",
         "Range": "Variable"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7301,6 +10454,13 @@
         "Unit": "cells/mL",
         "Range": "0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7317,6 +10477,13 @@
         "Analyte": "Microbiome",
         "Unit": "Composition",
         "Range": "Diverse"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7335,6 +10502,13 @@
         "Unit": "Species",
         "Range": "Complete"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7352,6 +10526,13 @@
         "Unit": "Composition",
         "Range": "Normal"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7368,6 +10549,13 @@
         "Analyte": "Skin Microbiome",
         "Unit": "Composition",
         "Range": "Normal"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7391,6 +10579,13 @@
         "Unit": "umol/L",
         "Range": "Normal"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7407,6 +10602,13 @@
         "Analyte": "Organic Acids",
         "Unit": "mmol/mol",
         "Range": "Normal"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7434,6 +10636,13 @@
         "Analyte": "Saturated",
         "Unit": "%",
         "Range": "< 40"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7472,6 +10681,13 @@
         "Unit": "%",
         "Range": "12 - 22"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7488,6 +10704,13 @@
         "Analyte": "Monoclonal Protein",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7516,6 +10739,13 @@
         "Unit": "Ratio",
         "Range": "0.26 - 1.65"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7543,6 +10773,13 @@
         "Unit": "%",
         "Range": "Normal"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7559,6 +10796,13 @@
         "Analyte": "HbA1c",
         "Unit": "%",
         "Range": "< 5.7"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7577,6 +10821,13 @@
         "Unit": "%",
         "Range": "11 - 16"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7593,6 +10844,13 @@
         "Analyte": "1,5-AG",
         "Unit": "ug/mL",
         "Range": "> 10"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7611,6 +10869,13 @@
         "Unit": "mg/dL",
         "Range": "70 - 100"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7628,6 +10893,13 @@
         "Unit": "mmol/L",
         "Range": "< 0.6"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7644,6 +10916,13 @@
         "Analyte": "Lactate",
         "Unit": "mmol/L",
         "Range": "0.5 - 2.0"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7692,6 +10971,13 @@
         "Unit": "mmol/L",
         "Range": "0.5 - 2.0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7728,6 +11014,13 @@
         "Analyte": "Lactate",
         "Unit": "mmol/L",
         "Range": "0.5 - 2.0"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7766,6 +11059,13 @@
         "Unit": "mmol/L",
         "Range": "0.5 - 2.0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7782,6 +11082,13 @@
         "Analyte": "INR",
         "Unit": "Ratio",
         "Range": "0.8 - 1.2"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7800,6 +11107,13 @@
         "Unit": "ug/mL",
         "Range": "< 0.5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7816,6 +11130,13 @@
         "Analyte": "Troponin I",
         "Unit": "ng/mL",
         "Range": "< 0.04"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7834,6 +11155,13 @@
         "Unit": "pg/mL",
         "Range": "< 100"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7850,6 +11178,13 @@
         "Analyte": "Malaria",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7868,6 +11203,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7884,6 +11226,13 @@
         "Analyte": "HCV",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7902,6 +11251,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7918,6 +11274,13 @@
         "Analyte": "Syphilis",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -7981,6 +11344,13 @@
         "Unit": "SG",
         "Range": "1.005 - 1.030"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -7997,6 +11367,13 @@
         "Analyte": "hCG",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8015,6 +11392,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8031,6 +11415,13 @@
         "Analyte": "Rotavirus",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8049,6 +11440,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8065,6 +11463,13 @@
         "Analyte": "Strep A",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8088,6 +11493,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8104,6 +11516,13 @@
         "Analyte": "SARS-CoV-2 Ag",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8122,6 +11541,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8138,6 +11564,13 @@
         "Analyte": "SARS-CoV-2 RNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8166,6 +11599,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8182,6 +11622,13 @@
         "Analyte": "MRSA DNA",
         "Unit": "Qualitative",
         "Range": "Not Detected"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8200,6 +11647,13 @@
         "Unit": "Qualitative",
         "Range": "Not Detected"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8216,6 +11670,13 @@
         "Analyte": "Hemoglobin",
         "Unit": "g/dL",
         "Range": "12 - 17"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8234,6 +11695,13 @@
         "Unit": "%",
         "Range": "36 - 52"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8250,6 +11718,13 @@
         "Analyte": "WBC",
         "Unit": "x10^3/uL",
         "Range": "4 - 11"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8268,6 +11743,13 @@
         "Unit": "x10^3/uL",
         "Range": "150 - 450"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8284,6 +11766,13 @@
         "Analyte": "Sodium",
         "Unit": "mmol/L",
         "Range": "135 - 145"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8302,6 +11791,13 @@
         "Unit": "mmol/L",
         "Range": "3.5 - 5.1"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8318,6 +11814,13 @@
         "Analyte": "Chloride",
         "Unit": "mmol/L",
         "Range": "98 - 107"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8336,6 +11839,13 @@
         "Unit": "mmol/L",
         "Range": "1.12 - 1.32"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8352,6 +11862,13 @@
         "Analyte": "Magnesium",
         "Unit": "mmol/L",
         "Range": "0.7 - 1.0"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8370,6 +11887,13 @@
         "Unit": "mg/dL",
         "Range": "0.2 - 1.2"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8386,6 +11910,13 @@
         "Analyte": "ALT",
         "Unit": "U/L",
         "Range": "5 - 45"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8404,6 +11935,13 @@
         "Unit": "U/L",
         "Range": "5 - 40"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8420,6 +11958,13 @@
         "Analyte": "ALP",
         "Unit": "U/L",
         "Range": "40 - 130"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8438,6 +11983,13 @@
         "Unit": "U/L",
         "Range": "10 - 60"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8454,6 +12006,13 @@
         "Analyte": "Albumin",
         "Unit": "g/dL",
         "Range": "3.5 - 5.0"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8472,6 +12031,13 @@
         "Unit": "g/dL",
         "Range": "6.4 - 8.3"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8488,6 +12054,13 @@
         "Analyte": "Creatinine",
         "Unit": "mg/dL",
         "Range": "0.6 - 1.2"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8506,6 +12079,13 @@
         "Unit": "mg/dL",
         "Range": "15 - 45"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8522,6 +12102,13 @@
         "Analyte": "Uric Acid",
         "Unit": "mg/dL",
         "Range": "3.5 - 7.2"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8540,6 +12127,13 @@
         "Unit": "mg/dL",
         "Range": "< 200"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8556,6 +12150,13 @@
         "Analyte": "HDL",
         "Unit": "mg/dL",
         "Range": "> 40"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8574,6 +12175,13 @@
         "Unit": "mg/dL",
         "Range": "< 150"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8590,6 +12198,13 @@
         "Analyte": "LDL",
         "Unit": "mg/dL",
         "Range": "< 100"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8608,6 +12223,13 @@
         "Unit": "mg/dL",
         "Range": "70 - 100"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8624,6 +12246,13 @@
         "Analyte": "HbA1c",
         "Unit": "%",
         "Range": "< 5.7"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8642,6 +12271,13 @@
         "Unit": "uIU/mL",
         "Range": "0.45 - 4.5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8658,6 +12294,13 @@
         "Analyte": "Free T4",
         "Unit": "ng/dL",
         "Range": "0.8 - 1.8"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8676,6 +12319,13 @@
         "Unit": "pg/mL",
         "Range": "2.0 - 4.4"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8692,6 +12342,13 @@
         "Analyte": "CK-MB",
         "Unit": "ng/mL",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8710,6 +12367,13 @@
         "Unit": "ng/mL",
         "Range": "< 90"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8726,6 +12390,13 @@
         "Analyte": "D-Dimer",
         "Unit": "ng/mL",
         "Range": "< 500"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8744,6 +12415,13 @@
         "Unit": "mg/L",
         "Range": "< 6"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8760,6 +12438,13 @@
         "Analyte": "Procalcitonin",
         "Unit": "ng/mL",
         "Range": "< 0.5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8778,6 +12463,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8794,6 +12486,13 @@
         "Analyte": "FSH",
         "Unit": "Qualitative",
         "Range": "Normal"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8812,6 +12511,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8828,6 +12534,13 @@
         "Analyte": "CRAG",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8846,6 +12559,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8862,6 +12582,13 @@
         "Analyte": "Reticulocytes",
         "Unit": "%",
         "Range": "0.5 - 2.5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8880,6 +12607,13 @@
         "Unit": "mm/hr",
         "Range": "0 - 15"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8896,6 +12630,13 @@
         "Analyte": "PT",
         "Unit": "Seconds",
         "Range": "11 - 13"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8914,6 +12655,13 @@
         "Unit": "Seconds",
         "Range": "25 - 35"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8931,6 +12679,13 @@
         "Unit": "mg/dL",
         "Range": "200 - 400"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8947,6 +12702,13 @@
         "Analyte": "Dengue NS1",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -8970,6 +12732,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -8986,6 +12755,13 @@
         "Analyte": "Chikungunya",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9004,6 +12780,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9020,6 +12803,13 @@
         "Analyte": "PSA",
         "Unit": "ng/mL",
         "Range": "< 4"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9038,6 +12828,13 @@
         "Unit": "ng/mL",
         "Range": "< 10"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9054,6 +12851,13 @@
         "Analyte": "CEA",
         "Unit": "ng/mL",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9072,6 +12876,13 @@
         "Unit": "U/mL",
         "Range": "< 35"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9088,6 +12899,13 @@
         "Analyte": "RF",
         "Unit": "IU/mL",
         "Range": "< 14"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9106,6 +12924,13 @@
         "Unit": "U/mL",
         "Range": "< 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9122,6 +12947,13 @@
         "Analyte": "ANA",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9140,6 +12972,13 @@
         "Unit": "IU/mL",
         "Range": "< 25"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9156,6 +12995,13 @@
         "Analyte": "Total IgE",
         "Unit": "IU/mL",
         "Range": "< 100"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9174,6 +13020,13 @@
         "Unit": "kU/L",
         "Range": "< 0.35"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9190,6 +13043,13 @@
         "Analyte": "Salbutamol",
         "Unit": "ng/mL",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9208,6 +13068,13 @@
         "Unit": "ng/mL",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9224,6 +13091,13 @@
         "Analyte": "Cocaine",
         "Unit": "ng/mL",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9242,6 +13116,13 @@
         "Unit": "ng/mL",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9258,6 +13139,13 @@
         "Analyte": "THC",
         "Unit": "ng/mL",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9276,6 +13164,13 @@
         "Unit": "ng/mL",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9292,6 +13187,13 @@
         "Analyte": "Barbiturates",
         "Unit": "ng/mL",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9310,6 +13212,13 @@
         "Unit": "ng/mL",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9326,6 +13235,13 @@
         "Analyte": "Methadone",
         "Unit": "ng/mL",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9344,6 +13260,13 @@
         "Unit": "ng/mL",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9360,6 +13283,13 @@
         "Analyte": "TCA",
         "Unit": "ng/mL",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9378,6 +13308,13 @@
         "Unit": "ng/mL",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9394,6 +13331,13 @@
         "Analyte": "Hydrocodone",
         "Unit": "ng/mL",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9412,6 +13356,13 @@
         "Unit": "ng/mL",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9428,6 +13379,13 @@
         "Analyte": "Buprenorphine",
         "Unit": "ng/mL",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9446,6 +13404,13 @@
         "Unit": "mg/L",
         "Range": "0"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9462,6 +13427,13 @@
         "Analyte": "Alcohol",
         "Unit": "mg/L",
         "Range": "0"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9480,6 +13452,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9496,6 +13475,13 @@
         "Analyte": "Paternity",
         "Unit": "Probability",
         "Range": "> 99.9"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9514,6 +13500,13 @@
         "Unit": "%",
         "Range": "Report"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9530,6 +13523,13 @@
         "Analyte": "PGx",
         "Unit": "Genotype",
         "Range": "Report"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9548,6 +13548,13 @@
         "Unit": "pH",
         "Range": "4 - 6"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9564,6 +13571,13 @@
         "Analyte": "Infection",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9582,6 +13596,13 @@
         "Unit": "pCi/L",
         "Range": "< 4"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9598,6 +13619,13 @@
         "Analyte": "CO",
         "Unit": "ppm",
         "Range": "< 9"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9616,6 +13644,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9632,6 +13667,13 @@
         "Analyte": "Lead",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9650,6 +13692,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9666,6 +13715,13 @@
         "Analyte": "Peanut",
         "Unit": "ppm",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9684,6 +13740,13 @@
         "Unit": "ppm",
         "Range": "< 20"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9700,6 +13763,13 @@
         "Analyte": "Milk",
         "Unit": "ppm",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9718,6 +13788,13 @@
         "Unit": "ppm",
         "Range": "< 5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9734,6 +13811,13 @@
         "Analyte": "Soy",
         "Unit": "ppm",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9752,6 +13836,13 @@
         "Unit": "ppm",
         "Range": "< 5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9768,6 +13859,13 @@
         "Analyte": "Shellfish",
         "Unit": "ppm",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9786,6 +13884,13 @@
         "Unit": "ppm",
         "Range": "< 5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9802,6 +13907,13 @@
         "Analyte": "Sesame",
         "Unit": "ppm",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9820,6 +13932,13 @@
         "Unit": "ppm",
         "Range": "< 5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9836,6 +13955,13 @@
         "Analyte": "Celery",
         "Unit": "ppm",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9854,6 +13980,13 @@
         "Unit": "ppm",
         "Range": "< 5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9870,6 +14003,13 @@
         "Analyte": "Molluscs",
         "Unit": "ppm",
         "Range": "< 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9888,6 +14028,13 @@
         "Unit": "ppm",
         "Range": "< 10"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9904,6 +14051,13 @@
         "Analyte": "Gluten",
         "Unit": "ppm",
         "Range": "< 20"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9922,6 +14076,13 @@
         "Unit": "pH",
         "Range": "6.5 - 8.5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9938,6 +14099,13 @@
         "Analyte": "Chlorine",
         "Unit": "mg/L",
         "Range": "0.2 - 2"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9956,6 +14124,13 @@
         "Unit": "mg/L",
         "Range": "< 180"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -9972,6 +14147,13 @@
         "Analyte": "Nitrate",
         "Unit": "mg/L",
         "Range": "< 10"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -9990,6 +14172,13 @@
         "Unit": "mg/L",
         "Range": "< 1"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10006,6 +14195,13 @@
         "Analyte": "Fluoride",
         "Unit": "mg/L",
         "Range": "0.5 - 1.5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10024,6 +14220,13 @@
         "Unit": "mg/L",
         "Range": "< 0.3"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10040,6 +14243,13 @@
         "Analyte": "Copper",
         "Unit": "mg/L",
         "Range": "< 1.3"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10058,6 +14268,13 @@
         "Unit": "mg/L",
         "Range": "< 0.015"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10074,6 +14291,13 @@
         "Analyte": "Arsenic",
         "Unit": "mg/L",
         "Range": "< 0.01"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10092,6 +14316,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10108,6 +14339,13 @@
         "Analyte": "E. coli",
         "Unit": "Qualitative",
         "Range": "Negative"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10126,6 +14364,13 @@
         "Unit": "Qualitative",
         "Range": "Negative"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10142,6 +14387,13 @@
         "Analyte": "TPC",
         "Unit": "CFU/mL",
         "Range": "< 500"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10160,6 +14412,13 @@
         "Unit": "NTU",
         "Range": "< 5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10176,6 +14435,13 @@
         "Analyte": "DO",
         "Unit": "mg/L",
         "Range": "> 5"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10194,6 +14460,13 @@
         "Unit": "uS/cm",
         "Range": "< 1500"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10210,6 +14483,13 @@
         "Analyte": "TDS",
         "Unit": "mg/L",
         "Range": "< 1000"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10228,6 +14508,13 @@
         "Unit": "°C",
         "Range": "Variable"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10244,6 +14531,13 @@
         "Analyte": "ORP",
         "Unit": "mV",
         "Range": "> 650"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10262,6 +14556,13 @@
         "Unit": "mg/L",
         "Range": "< 0.5"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10278,6 +14579,13 @@
         "Analyte": "Phosphate",
         "Unit": "mg/L",
         "Range": "< 0.1"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10296,6 +14604,13 @@
         "Unit": "pH",
         "Range": "6 - 7"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10312,6 +14627,13 @@
         "Analyte": "Nitrogen",
         "Unit": "mg/kg",
         "Range": "Variable"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10330,6 +14652,13 @@
         "Unit": "mg/kg",
         "Range": "Variable"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10346,6 +14675,13 @@
         "Analyte": "Potassium",
         "Unit": "mg/kg",
         "Range": "Variable"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10364,6 +14700,13 @@
         "Unit": "%",
         "Range": "> 3"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10380,6 +14723,13 @@
         "Analyte": "Moisture",
         "Unit": "%",
         "Range": "Variable"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10398,6 +14748,13 @@
         "Unit": "°C",
         "Range": "Variable"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10414,6 +14771,13 @@
         "Analyte": "EC",
         "Unit": "dS/m",
         "Range": "< 4"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10432,6 +14796,13 @@
         "Unit": "dS/m",
         "Range": "< 4"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10448,6 +14819,13 @@
         "Analyte": "Texture",
         "Unit": "Class",
         "Range": "Variable"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10466,6 +14844,13 @@
         "Unit": "ug/m3",
         "Range": "< 35"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10482,6 +14867,13 @@
         "Analyte": "PM10",
         "Unit": "ug/m3",
         "Range": "< 150"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10500,6 +14892,13 @@
         "Unit": "ppm",
         "Range": "< 1000"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10516,6 +14915,13 @@
         "Analyte": "CO",
         "Unit": "ppm",
         "Range": "< 9"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10534,6 +14940,13 @@
         "Unit": "ppb",
         "Range": "< 70"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10550,6 +14963,13 @@
         "Analyte": "NO2",
         "Unit": "ppb",
         "Range": "< 100"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10568,6 +14988,13 @@
         "Unit": "ppb",
         "Range": "< 75"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10584,6 +15011,13 @@
         "Analyte": "VOCs",
         "Unit": "mg/m3",
         "Range": "< 0.3"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10602,6 +15036,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.1"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10618,6 +15059,13 @@
         "Analyte": "Benzene",
         "Unit": "mg/m3",
         "Range": "< 0.005"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10636,6 +15084,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.2"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10652,6 +15107,13 @@
         "Analyte": "Xylene",
         "Unit": "mg/m3",
         "Range": "< 0.2"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10670,6 +15132,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.1"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10686,6 +15155,13 @@
         "Analyte": "Styrene",
         "Unit": "mg/m3",
         "Range": "< 0.07"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10704,6 +15180,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.01"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10720,6 +15203,13 @@
         "Analyte": "Acetaldehyde",
         "Unit": "mg/m3",
         "Range": "< 0.2"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10738,6 +15228,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.002"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10754,6 +15251,13 @@
         "Analyte": "Acrylonitrile",
         "Unit": "mg/m3",
         "Range": "< 0.002"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10772,6 +15276,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.002"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10788,6 +15299,13 @@
         "Analyte": "Vinyl Chloride",
         "Unit": "mg/m3",
         "Range": "< 0.001"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10806,6 +15324,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.005"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10822,6 +15347,13 @@
         "Analyte": "Chloroform",
         "Unit": "mg/m3",
         "Range": "< 0.05"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10840,6 +15372,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.05"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10856,6 +15395,13 @@
         "Analyte": "TCE",
         "Unit": "mg/m3",
         "Range": "< 0.005"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10874,6 +15420,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.005"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10890,6 +15443,13 @@
         "Analyte": "1,1,1-TCA",
         "Unit": "mg/m3",
         "Range": "< 0.05"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10908,6 +15468,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.005"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10924,6 +15491,13 @@
         "Analyte": "1,2-DCA",
         "Unit": "mg/m3",
         "Range": "< 0.005"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10942,6 +15516,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.005"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10958,6 +15539,13 @@
         "Analyte": "1,4-Dioxane",
         "Unit": "mg/m3",
         "Range": "< 0.005"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -10976,6 +15564,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.001"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -10992,6 +15587,13 @@
         "Analyte": "PO",
         "Unit": "mg/m3",
         "Range": "< 0.005"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -11010,6 +15612,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.0003"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -11026,6 +15635,13 @@
         "Analyte": "ECH",
         "Unit": "mg/m3",
         "Range": "< 0.001"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -11044,6 +15660,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.0001"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -11060,6 +15683,13 @@
         "Analyte": "EDC",
         "Unit": "mg/m3",
         "Range": "< 0.001"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -11078,6 +15708,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.0001"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -11094,6 +15731,13 @@
         "Analyte": "HCE",
         "Unit": "mg/m3",
         "Range": "< 0.001"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   },
@@ -11112,6 +15756,13 @@
         "Unit": "mg/m3",
         "Range": "< 0.05"
       }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
+      }
     ]
   },
   {
@@ -11128,6 +15779,13 @@
         "Analyte": "Methylene Chloride",
         "Unit": "mg/m3",
         "Range": "< 0.05"
+      }
+    ],
+    "components": [
+      {
+        "name": "Result Parameter",
+        "unit": "",
+        "normal": "Normal Range"
       }
     ]
   }
