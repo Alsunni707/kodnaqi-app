@@ -42,7 +42,13 @@
     "files": [
       "main.js",
       "www/**/*",
-      "package.json"
+      "package.json",
+      "!android/",
+      "!node_modules/",
+      "!*.md",
+      "!.github/",
+      "!www/security.js",
+      "!www/*.bak"
     ],
     "win": {
       "target": [
