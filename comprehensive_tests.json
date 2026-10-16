@@ -48,7 +48,8 @@
         "unit": "g/dL",
         "normal": "32 - 36"
       }
-    ]
+    ],
+    "component_count": 8
   },
   {
     "code": "HEM-002",
@@ -64,7 +65,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-003",
@@ -80,7 +82,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-004",
@@ -96,7 +99,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-005",
@@ -112,7 +116,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-006",
@@ -128,7 +133,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-007",
@@ -144,7 +150,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-008",
@@ -160,7 +167,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-009",
@@ -176,7 +184,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-010",
@@ -192,7 +201,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-001",
@@ -223,7 +233,8 @@
         "unit": "mg/dL",
         "normal": "15 - 45"
       }
-    ]
+    ],
+    "component_count": 4
   },
   {
     "code": "CHE-002",
@@ -269,7 +280,8 @@
         "unit": "g/dL",
         "normal": "3.4 - 5.4"
       }
-    ]
+    ],
+    "component_count": 7
   },
   {
     "code": "CHE-003",
@@ -305,7 +317,8 @@
         "unit": "mg/dL",
         "normal": "2 - 30"
       }
-    ]
+    ],
+    "component_count": 5
   },
   {
     "code": "CHE-004",
@@ -321,7 +334,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-005",
@@ -337,7 +351,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-006",
@@ -353,7 +368,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-007",
@@ -369,7 +385,8 @@
         "unit": "mg/dL or %",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-008",
@@ -385,7 +402,8 @@
         "unit": "mg/dL or %",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MIC-001",
@@ -411,7 +429,8 @@
         "unit": "",
         "normal": "See Antibiogram"
       }
-    ]
+    ],
+    "component_count": 3
   },
   {
     "code": "MIC-002",
@@ -437,7 +456,8 @@
         "unit": "",
         "normal": "See Antibiogram"
       }
-    ]
+    ],
+    "component_count": 3
   },
   {
     "code": "MIC-003",
@@ -463,7 +483,8 @@
         "unit": "",
         "normal": "See Antibiogram"
       }
-    ]
+    ],
+    "component_count": 3
   },
   {
     "code": "MIC-004",
@@ -479,7 +500,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MIC-005",
@@ -495,7 +517,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "PAR-001",
@@ -541,7 +564,8 @@
         "unit": "HPF",
         "normal": "0 - 1"
       }
-    ]
+    ],
+    "component_count": 7
   },
   {
     "code": "PAR-002",
@@ -617,7 +641,8 @@
         "unit": "",
         "normal": "Absent"
       }
-    ]
+    ],
+    "component_count": 13
   },
   {
     "code": "PAR-003",
@@ -693,7 +718,8 @@
         "unit": "",
         "normal": "Absent"
       }
-    ]
+    ],
+    "component_count": 13
   },
   {
     "code": "PAR-004",
@@ -709,7 +735,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-001",
@@ -730,7 +757,8 @@
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-002",
@@ -751,7 +779,8 @@
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-003",
@@ -767,7 +796,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-004",
@@ -788,7 +818,8 @@
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-005",
@@ -809,7 +840,8 @@
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-006",
@@ -830,7 +862,8 @@
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-007",
@@ -846,7 +879,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-008",
@@ -862,7 +896,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-009",
@@ -878,7 +913,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-010",
@@ -899,7 +935,8 @@
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-011",
@@ -915,7 +952,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-012",
@@ -936,7 +974,8 @@
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "HIS-001",
@@ -952,7 +991,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HIS-002",
@@ -968,7 +1008,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HIS-003",
@@ -984,7 +1025,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HIS-004",
@@ -1000,7 +1042,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MOL-001",
@@ -1016,7 +1059,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MOL-002",
@@ -1032,7 +1076,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MOL-003",
@@ -1058,7 +1103,8 @@
         "unit": "ng/dL",
         "normal": "0.8 - 1.8"
       }
-    ]
+    ],
+    "component_count": 3
   },
   {
     "code": "MOL-004",
@@ -1074,7 +1120,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-011",
@@ -1098,7 +1145,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-012",
@@ -1122,7 +1170,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-013",
@@ -1151,7 +1200,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-014",
@@ -1175,7 +1225,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-015",
@@ -1199,7 +1250,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-009",
@@ -1223,7 +1275,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-010",
@@ -1257,7 +1310,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-011",
@@ -1281,7 +1335,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-012",
@@ -1305,7 +1360,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-013",
@@ -1329,7 +1385,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-014",
@@ -1353,7 +1410,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-015",
@@ -1377,7 +1435,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-016",
@@ -1401,7 +1460,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-017",
@@ -1425,7 +1485,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-018",
@@ -1449,7 +1510,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-019",
@@ -1473,7 +1535,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-020",
@@ -1497,7 +1560,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-021",
@@ -1521,7 +1585,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-022",
@@ -1545,7 +1610,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-023",
@@ -1569,7 +1635,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-024",
@@ -1593,7 +1660,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-025",
@@ -1617,7 +1685,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-026",
@@ -1641,7 +1710,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-006",
@@ -1665,7 +1735,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-007",
@@ -1689,7 +1760,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-008",
@@ -1713,7 +1785,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-009",
@@ -1737,7 +1810,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-010",
@@ -1761,7 +1835,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-005",
@@ -1785,7 +1860,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-006",
@@ -1809,7 +1885,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-007",
@@ -1833,7 +1910,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-013",
@@ -1857,7 +1935,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-014",
@@ -1881,7 +1960,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-015",
@@ -1905,7 +1985,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-016",
@@ -1939,7 +2020,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-017",
@@ -1963,7 +2045,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-018",
@@ -1987,7 +2070,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-019",
@@ -2011,7 +2095,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-020",
@@ -2035,7 +2120,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-021",
@@ -2059,7 +2145,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-022",
@@ -2083,7 +2170,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-023",
@@ -2107,7 +2195,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-024",
@@ -2131,7 +2220,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-025",
@@ -2155,7 +2245,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-026",
@@ -2179,7 +2270,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-027",
@@ -2203,7 +2295,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-028",
@@ -2227,7 +2320,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-029",
@@ -2251,7 +2345,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-030",
@@ -2275,7 +2370,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-031",
@@ -2299,7 +2395,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-032",
@@ -2323,7 +2420,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-033",
@@ -2347,7 +2445,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-034",
@@ -2371,7 +2470,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HIS-005",
@@ -2395,7 +2495,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HIS-006",
@@ -2419,7 +2520,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HIS-007",
@@ -2443,7 +2545,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-005",
@@ -2467,7 +2570,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-006",
@@ -2491,7 +2595,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-007",
@@ -2515,7 +2620,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-008",
@@ -2539,7 +2645,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-009",
@@ -2563,7 +2670,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-010",
@@ -2587,7 +2695,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-011",
@@ -2611,7 +2720,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-012",
@@ -2635,7 +2745,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOX-001",
@@ -2659,7 +2770,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOX-002",
@@ -2683,7 +2795,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOX-003",
@@ -2707,7 +2820,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOX-004",
@@ -2731,7 +2845,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "URN-001",
@@ -2775,7 +2890,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "URN-002",
@@ -2799,7 +2915,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "URN-003",
@@ -2823,7 +2940,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "URN-004",
@@ -2847,7 +2965,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-001",
@@ -2871,7 +2990,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-002",
@@ -2895,7 +3015,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-003",
@@ -2919,7 +3040,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-004",
@@ -2943,7 +3065,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-005",
@@ -2967,7 +3090,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-006",
@@ -2991,7 +3115,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-007",
@@ -3015,7 +3140,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-008",
@@ -3039,7 +3165,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-009",
@@ -3063,7 +3190,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-010",
@@ -3087,7 +3215,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-001",
@@ -3111,7 +3240,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-002",
@@ -3135,7 +3265,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-003",
@@ -3159,7 +3290,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-004",
@@ -3183,7 +3315,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-005",
@@ -3207,7 +3340,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-006",
@@ -3231,7 +3365,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-007",
@@ -3255,7 +3390,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-008",
@@ -3279,7 +3415,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-009",
@@ -3303,7 +3440,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-001",
@@ -3327,7 +3465,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-002",
@@ -3351,7 +3490,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-003",
@@ -3375,7 +3515,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-004",
@@ -3399,7 +3540,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-005",
@@ -3423,7 +3565,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-006",
@@ -3447,7 +3590,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-007",
@@ -3471,7 +3615,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-008",
@@ -3495,7 +3640,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-009",
@@ -3519,7 +3665,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-010",
@@ -3543,7 +3690,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ALG-001",
@@ -3567,7 +3715,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ALG-002",
@@ -3636,7 +3785,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ALG-003",
@@ -3695,7 +3845,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-001",
@@ -3719,7 +3870,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-002",
@@ -3743,7 +3895,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-003",
@@ -3767,7 +3920,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-004",
@@ -3791,7 +3945,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-005",
@@ -3815,7 +3970,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-006",
@@ -3839,7 +3995,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-007",
@@ -3863,7 +4020,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-008",
@@ -3887,7 +4045,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-009",
@@ -3911,7 +4070,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-010",
@@ -3935,7 +4095,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIV-001",
@@ -3959,7 +4120,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIV-002",
@@ -3983,7 +4145,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIV-003",
@@ -4007,7 +4170,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIV-004",
@@ -4031,7 +4195,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-001",
@@ -4055,7 +4220,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-002",
@@ -4079,7 +4245,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-003",
@@ -4103,7 +4270,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-004",
@@ -4127,7 +4295,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-005",
@@ -4151,7 +4320,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-001",
@@ -4175,7 +4345,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-002",
@@ -4199,7 +4370,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-003",
@@ -4223,7 +4395,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-004",
@@ -4247,7 +4420,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-005",
@@ -4271,7 +4445,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-006",
@@ -4295,7 +4470,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "THY-001",
@@ -4319,7 +4495,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "THY-002",
@@ -4343,7 +4520,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "THY-003",
@@ -4367,7 +4545,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-001",
@@ -4391,7 +4570,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-002",
@@ -4415,7 +4595,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-003",
@@ -4444,7 +4625,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-004",
@@ -4468,7 +4650,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-005",
@@ -4492,7 +4675,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-006",
@@ -4516,7 +4700,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-007",
@@ -4540,7 +4725,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-008",
@@ -4564,7 +4750,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-009",
@@ -4588,7 +4775,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-010",
@@ -4612,7 +4800,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-001",
@@ -4636,7 +4825,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-002",
@@ -4660,7 +4850,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-003",
@@ -4684,7 +4875,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-004",
@@ -4708,7 +4900,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-005",
@@ -4732,7 +4925,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-006",
@@ -4756,7 +4950,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-007",
@@ -4780,7 +4975,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BON-001",
@@ -4804,7 +5000,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BON-002",
@@ -4828,7 +5025,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BON-003",
@@ -4852,7 +5050,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BON-004",
@@ -4876,7 +5075,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ANE-001",
@@ -4900,7 +5100,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ANE-002",
@@ -4924,7 +5125,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ANE-003",
@@ -4948,7 +5150,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-001",
@@ -4972,7 +5175,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-002",
@@ -4996,7 +5200,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-003",
@@ -5020,7 +5225,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-004",
@@ -5044,7 +5250,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-005",
@@ -5068,7 +5275,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-006",
@@ -5092,7 +5300,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-007",
@@ -5116,7 +5325,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-001",
@@ -5150,7 +5360,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-002",
@@ -5174,7 +5385,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-003",
@@ -5198,7 +5410,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-004",
@@ -5222,7 +5435,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-005",
@@ -5246,7 +5460,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-006",
@@ -5270,7 +5485,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-007",
@@ -5294,7 +5510,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-008",
@@ -5318,7 +5535,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PLF-001",
@@ -5357,7 +5575,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PLF-002",
@@ -5396,7 +5615,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PLF-003",
@@ -5430,7 +5650,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PLF-004",
@@ -5474,7 +5695,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SEM-001",
@@ -5523,7 +5745,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SEM-002",
@@ -5592,7 +5815,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SEM-003",
@@ -5616,7 +5840,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SEM-004",
@@ -5640,7 +5865,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-001",
@@ -5664,7 +5890,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-002",
@@ -5688,7 +5915,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-003",
@@ -5712,7 +5940,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-004",
@@ -5736,7 +5965,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-005",
@@ -5760,7 +5990,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-006",
@@ -5784,7 +6015,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-007",
@@ -5808,7 +6040,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-008",
@@ -5832,7 +6065,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-001",
@@ -5856,7 +6090,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-002",
@@ -5880,7 +6115,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-003",
@@ -5904,7 +6140,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-004",
@@ -5928,7 +6165,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-005",
@@ -5952,7 +6190,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-006",
@@ -5976,7 +6215,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-007",
@@ -6000,7 +6240,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-008",
@@ -6024,7 +6265,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NBS-001",
@@ -6068,7 +6310,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NBS-002",
@@ -6137,7 +6380,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-001",
@@ -6176,7 +6420,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-002",
@@ -6205,7 +6450,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-003",
@@ -6229,7 +6475,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-004",
@@ -6253,7 +6500,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-005",
@@ -6277,7 +6525,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-001",
@@ -6301,7 +6550,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-002",
@@ -6325,7 +6575,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-003",
@@ -6349,7 +6600,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-004",
@@ -6373,7 +6625,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-005",
@@ -6397,7 +6650,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-006",
@@ -6421,7 +6675,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-007",
@@ -6445,7 +6700,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-008",
@@ -6469,7 +6725,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-009",
@@ -6498,7 +6755,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-010",
@@ -6522,7 +6780,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-011",
@@ -6546,7 +6805,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-012",
@@ -6570,7 +6830,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-013",
@@ -6594,7 +6855,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-014",
@@ -6618,7 +6880,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-015",
@@ -6642,7 +6905,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NEP-001",
@@ -6666,7 +6930,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NEP-002",
@@ -6690,7 +6955,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NEP-003",
@@ -6714,7 +6980,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-001",
@@ -6738,7 +7005,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-002",
@@ -6762,7 +7030,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-003",
@@ -6786,7 +7055,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-004",
@@ -6810,7 +7080,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-005",
@@ -6839,7 +7110,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-006",
@@ -6863,7 +7135,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-007",
@@ -6887,7 +7160,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEP-001",
@@ -6911,7 +7185,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEP-002",
@@ -6935,7 +7210,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEP-003",
@@ -6959,7 +7235,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEP-004",
@@ -6983,7 +7260,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOR-001",
@@ -7022,7 +7300,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOR-002",
@@ -7081,7 +7360,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ARB-001",
@@ -7105,7 +7385,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ARB-002",
@@ -7129,7 +7410,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ARB-003",
@@ -7153,7 +7435,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RCK-001",
@@ -7177,7 +7460,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RCK-002",
@@ -7201,7 +7485,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-001",
@@ -7225,7 +7510,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-002",
@@ -7249,7 +7535,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-003",
@@ -7273,7 +7560,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-004",
@@ -7297,7 +7585,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-005",
@@ -7321,7 +7610,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-008",
@@ -7345,7 +7635,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-009",
@@ -7369,7 +7660,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-010",
@@ -7393,7 +7685,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-011",
@@ -7417,7 +7710,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-012",
@@ -7441,7 +7735,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MYC-001",
@@ -7465,7 +7760,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MYC-002",
@@ -7489,7 +7785,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MYC-003",
@@ -7513,7 +7810,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MYC-004",
@@ -7537,7 +7835,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-001",
@@ -7561,7 +7860,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-002",
@@ -7585,7 +7885,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-003",
@@ -7609,7 +7910,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-004",
@@ -7633,7 +7935,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-005",
@@ -7657,7 +7960,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-006",
@@ -7681,7 +7985,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-007",
@@ -7705,7 +8010,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-008",
@@ -7729,7 +8035,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-009",
@@ -7753,7 +8060,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-010",
@@ -7777,7 +8085,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-011",
@@ -7801,7 +8110,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-012",
@@ -7825,7 +8135,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-001",
@@ -7849,7 +8160,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-002",
@@ -7873,7 +8185,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-003",
@@ -7897,7 +8210,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-004",
@@ -7921,7 +8235,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-005",
@@ -7945,7 +8260,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-006",
@@ -7969,7 +8285,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-007",
@@ -7993,7 +8310,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-008",
@@ -8017,7 +8335,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-009",
@@ -8041,7 +8360,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-010",
@@ -8065,7 +8385,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-011",
@@ -8089,7 +8410,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-012",
@@ -8113,7 +8435,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MTB-001",
@@ -8137,7 +8460,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MTB-002",
@@ -8161,7 +8485,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MTB-003",
@@ -8185,7 +8510,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MTB-004",
@@ -8209,7 +8535,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HGB-001",
@@ -8258,7 +8585,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HGB-002",
@@ -8282,7 +8610,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FLO-001",
@@ -8306,7 +8635,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FLO-002",
@@ -8335,7 +8665,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FLO-003",
@@ -8379,7 +8710,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-001",
@@ -8403,7 +8735,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-002",
@@ -8427,7 +8760,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-003",
@@ -8451,7 +8785,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-004",
@@ -8475,7 +8810,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-005",
@@ -8499,7 +8835,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-001",
@@ -8523,7 +8860,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-002",
@@ -8547,7 +8885,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-003",
@@ -8571,7 +8910,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-004",
@@ -8595,7 +8935,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-005",
@@ -8619,7 +8960,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-006",
@@ -8643,7 +8985,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-007",
@@ -8667,7 +9010,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-008",
@@ -8691,7 +9035,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-009",
@@ -8715,7 +9060,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-001",
@@ -8739,7 +9085,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-002",
@@ -8763,7 +9110,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-003",
@@ -8787,7 +9135,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-004",
@@ -8811,7 +9160,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-005",
@@ -8835,7 +9185,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-006",
@@ -8859,7 +9210,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRE-001",
@@ -8893,7 +9245,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRE-002",
@@ -8917,7 +9270,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRE-003",
@@ -8941,7 +9295,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRE-004",
@@ -8965,7 +9320,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-001",
@@ -8999,7 +9355,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-002",
@@ -9033,7 +9390,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-003",
@@ -9057,7 +9415,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-004",
@@ -9081,7 +9440,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-005",
@@ -9105,7 +9465,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-006",
@@ -9129,7 +9490,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FOR-001",
@@ -9198,7 +9560,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FOR-002",
@@ -9222,7 +9585,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FOR-003",
@@ -9266,7 +9630,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-001",
@@ -9290,7 +9655,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-002",
@@ -9314,7 +9680,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-003",
@@ -9338,7 +9705,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-004",
@@ -9362,7 +9730,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-005",
@@ -9386,7 +9755,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPT-001",
@@ -9410,7 +9780,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPT-002",
@@ -9434,7 +9805,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPT-003",
@@ -9458,7 +9830,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-001",
@@ -9517,7 +9890,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-002",
@@ -9576,7 +9950,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-003",
@@ -9600,7 +9975,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-004",
@@ -9624,7 +10000,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-005",
@@ -9648,7 +10025,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ENV-001",
@@ -9682,7 +10060,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ENV-002",
@@ -9726,7 +10105,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ENV-003",
@@ -9765,7 +10145,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ENV-004",
@@ -9809,7 +10190,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-001",
@@ -9858,7 +10240,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-002",
@@ -9897,7 +10280,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-003",
@@ -9936,7 +10320,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-004",
@@ -9970,7 +10355,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-005",
@@ -10004,7 +10390,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-001",
@@ -10028,7 +10415,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-002",
@@ -10052,7 +10440,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-003",
@@ -10076,7 +10465,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-004",
@@ -10100,7 +10490,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-005",
@@ -10124,7 +10515,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-006",
@@ -10148,7 +10540,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-007",
@@ -10172,7 +10565,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-008",
@@ -10196,7 +10590,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-011",
@@ -10220,7 +10615,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-012",
@@ -10244,7 +10640,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-013",
@@ -10268,7 +10665,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AGE-001",
@@ -10292,7 +10690,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AGE-002",
@@ -10316,7 +10715,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-010",
@@ -10340,7 +10740,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-011",
@@ -10379,7 +10780,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EXO-001",
@@ -10413,7 +10815,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EXO-002",
@@ -10437,7 +10840,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EXO-003",
@@ -10461,7 +10865,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-011",
@@ -10485,7 +10890,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-012",
@@ -10509,7 +10915,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-013",
@@ -10533,7 +10940,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-014",
@@ -10557,7 +10965,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MET-001",
@@ -10586,7 +10995,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MET-002",
@@ -10610,7 +11020,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MET-003",
@@ -10644,7 +11055,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRO-001",
@@ -10688,7 +11100,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRO-002",
@@ -10712,7 +11125,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRO-003",
@@ -10746,7 +11160,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIP-001",
@@ -10780,7 +11195,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GLY-001",
@@ -10804,7 +11220,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GLY-002",
@@ -10828,7 +11245,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GLY-003",
@@ -10852,7 +11270,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-001",
@@ -10876,7 +11295,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-002",
@@ -10900,7 +11320,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-003",
@@ -10924,7 +11345,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-004",
@@ -10978,7 +11400,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-005",
@@ -11022,7 +11445,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-006",
@@ -11066,7 +11490,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-007",
@@ -11090,7 +11515,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-008",
@@ -11114,7 +11540,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-009",
@@ -11138,7 +11565,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-010",
@@ -11162,7 +11590,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-011",
@@ -11186,7 +11615,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-012",
@@ -11210,7 +11640,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-013",
@@ -11234,7 +11665,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-014",
@@ -11258,7 +11690,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-015",
@@ -11282,7 +11715,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-016",
@@ -11351,7 +11785,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-017",
@@ -11375,7 +11810,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-018",
@@ -11399,7 +11835,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-019",
@@ -11423,7 +11860,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-020",
@@ -11447,7 +11885,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-021",
@@ -11471,7 +11910,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-022",
@@ -11500,7 +11940,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-023",
@@ -11524,7 +11965,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-024",
@@ -11548,7 +11990,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-025",
@@ -11572,7 +12015,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-026",
@@ -11606,7 +12050,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-027",
@@ -11630,7 +12075,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-028",
@@ -11654,7 +12100,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-029",
@@ -11678,7 +12125,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-030",
@@ -11702,7 +12150,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-031",
@@ -11726,7 +12175,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-032",
@@ -11750,7 +12200,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-033",
@@ -11774,7 +12225,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-034",
@@ -11798,7 +12250,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-035",
@@ -11822,7 +12275,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-036",
@@ -11846,7 +12300,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-037",
@@ -11870,7 +12325,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-038",
@@ -11894,7 +12350,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-039",
@@ -11918,7 +12375,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-040",
@@ -11942,7 +12400,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-041",
@@ -11966,7 +12425,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-042",
@@ -11990,7 +12450,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-043",
@@ -12014,7 +12475,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-044",
@@ -12038,7 +12500,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-045",
@@ -12062,7 +12525,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-046",
@@ -12086,7 +12550,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-047",
@@ -12110,7 +12575,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-048",
@@ -12134,7 +12600,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-049",
@@ -12158,7 +12625,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-050",
@@ -12182,7 +12650,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-051",
@@ -12206,7 +12675,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-052",
@@ -12230,7 +12700,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-053",
@@ -12254,7 +12725,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-054",
@@ -12278,7 +12750,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-055",
@@ -12302,7 +12775,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-056",
@@ -12326,7 +12800,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-057",
@@ -12350,7 +12825,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-058",
@@ -12374,7 +12850,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-059",
@@ -12398,7 +12875,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-060",
@@ -12422,7 +12900,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-061",
@@ -12446,7 +12925,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-062",
@@ -12470,7 +12950,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-063",
@@ -12494,7 +12975,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-064",
@@ -12518,7 +13000,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-065",
@@ -12542,7 +13025,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-066",
@@ -12566,7 +13050,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-067",
@@ -12590,7 +13075,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-068",
@@ -12614,7 +13100,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-069",
@@ -12638,7 +13125,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-070",
@@ -12662,7 +13150,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-071",
@@ -12686,7 +13175,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-072",
@@ -12710,7 +13200,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-073",
@@ -12739,7 +13230,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-074",
@@ -12763,7 +13255,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-075",
@@ -12787,7 +13280,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-076",
@@ -12811,7 +13305,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-077",
@@ -12835,7 +13330,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-078",
@@ -12859,7 +13355,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-079",
@@ -12883,7 +13380,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-080",
@@ -12907,7 +13405,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-081",
@@ -12931,7 +13430,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-082",
@@ -12955,7 +13455,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-083",
@@ -12979,7 +13480,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-084",
@@ -13003,7 +13505,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-085",
@@ -13027,7 +13530,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-086",
@@ -13051,7 +13555,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-087",
@@ -13075,7 +13580,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-088",
@@ -13099,7 +13605,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-089",
@@ -13123,7 +13630,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-090",
@@ -13147,7 +13655,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-091",
@@ -13171,7 +13680,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-092",
@@ -13195,7 +13705,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-093",
@@ -13219,7 +13730,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-094",
@@ -13243,7 +13755,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-095",
@@ -13267,7 +13780,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-096",
@@ -13291,7 +13805,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-097",
@@ -13315,7 +13830,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-098",
@@ -13339,7 +13855,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-099",
@@ -13363,7 +13880,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-100",
@@ -13387,7 +13905,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-101",
@@ -13411,7 +13930,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-102",
@@ -13435,7 +13955,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-103",
@@ -13459,7 +13980,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-104",
@@ -13483,7 +14005,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-105",
@@ -13507,7 +14030,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-106",
@@ -13531,7 +14055,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-107",
@@ -13555,7 +14080,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-108",
@@ -13579,7 +14105,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-109",
@@ -13603,7 +14130,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-110",
@@ -13627,7 +14155,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-111",
@@ -13651,7 +14180,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-112",
@@ -13675,7 +14205,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-113",
@@ -13699,7 +14230,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-114",
@@ -13723,7 +14255,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-115",
@@ -13747,7 +14280,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-116",
@@ -13771,7 +14305,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-117",
@@ -13795,7 +14330,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-118",
@@ -13819,7 +14355,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-119",
@@ -13843,7 +14380,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-120",
@@ -13867,7 +14405,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-121",
@@ -13891,7 +14430,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-122",
@@ -13915,7 +14455,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-123",
@@ -13939,7 +14480,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-124",
@@ -13963,7 +14505,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-125",
@@ -13987,7 +14530,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-126",
@@ -14011,7 +14555,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-127",
@@ -14035,7 +14580,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-128",
@@ -14059,7 +14605,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-129",
@@ -14083,7 +14630,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-130",
@@ -14107,7 +14655,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-131",
@@ -14131,7 +14680,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-132",
@@ -14155,7 +14705,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-133",
@@ -14179,7 +14730,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-134",
@@ -14203,7 +14755,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-135",
@@ -14227,7 +14780,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-136",
@@ -14251,7 +14805,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-137",
@@ -14275,7 +14830,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-138",
@@ -14299,7 +14855,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-139",
@@ -14323,7 +14880,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-140",
@@ -14347,7 +14905,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-141",
@@ -14371,7 +14930,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-142",
@@ -14395,7 +14955,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-143",
@@ -14419,7 +14980,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-144",
@@ -14443,7 +15005,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-145",
@@ -14467,7 +15030,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-146",
@@ -14491,7 +15055,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-147",
@@ -14515,7 +15080,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-148",
@@ -14539,7 +15105,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-149",
@@ -14563,7 +15130,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-150",
@@ -14587,7 +15155,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-151",
@@ -14611,7 +15180,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-152",
@@ -14635,7 +15205,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-153",
@@ -14659,7 +15230,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-154",
@@ -14683,7 +15255,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-155",
@@ -14707,7 +15280,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-156",
@@ -14731,7 +15305,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-157",
@@ -14755,7 +15330,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-158",
@@ -14779,7 +15355,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-159",
@@ -14803,7 +15380,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-160",
@@ -14827,7 +15405,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-161",
@@ -14851,7 +15430,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-162",
@@ -14875,7 +15455,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-163",
@@ -14899,7 +15480,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-164",
@@ -14923,7 +15505,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-165",
@@ -14947,7 +15530,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-166",
@@ -14971,7 +15555,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-167",
@@ -14995,7 +15580,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-168",
@@ -15019,7 +15605,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-169",
@@ -15043,7 +15630,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-170",
@@ -15067,7 +15655,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-171",
@@ -15091,7 +15680,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-172",
@@ -15115,7 +15705,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-173",
@@ -15139,7 +15730,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-174",
@@ -15163,7 +15755,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-175",
@@ -15187,7 +15780,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-176",
@@ -15211,7 +15805,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-177",
@@ -15235,7 +15830,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-178",
@@ -15259,7 +15855,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-179",
@@ -15283,7 +15880,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-180",
@@ -15307,7 +15905,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-181",
@@ -15331,7 +15930,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-182",
@@ -15355,7 +15955,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-183",
@@ -15379,7 +15980,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-184",
@@ -15403,7 +16005,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-185",
@@ -15427,7 +16030,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-186",
@@ -15451,7 +16055,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-187",
@@ -15475,7 +16080,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-188",
@@ -15499,7 +16105,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-189",
@@ -15523,7 +16130,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-190",
@@ -15547,7 +16155,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-191",
@@ -15571,7 +16180,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-192",
@@ -15595,7 +16205,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-193",
@@ -15619,7 +16230,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-194",
@@ -15643,7 +16255,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-195",
@@ -15667,7 +16280,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-196",
@@ -15691,7 +16305,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-197",
@@ -15715,7 +16330,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-198",
@@ -15739,7 +16355,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-199",
@@ -15763,7 +16380,8 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-200",
@@ -15787,6 +16405,7 @@
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   }
 ]

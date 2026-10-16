@@ -1,4 +1,4 @@
-// قاعدة بيانات الفحوصات المباشرة للعمل أوفلاين 100%
+// قاعدة بيانات الفحوصات المحدثة بالمعايير
 window.ALL_SYSTEM_TESTS = [
   {
     "code": "HEM-001",
@@ -49,7 +49,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "g/dL",
         "normal": "32 - 36"
       }
-    ]
+    ],
+    "component_count": 8
   },
   {
     "code": "HEM-002",
@@ -65,7 +66,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-003",
@@ -81,7 +83,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-004",
@@ -97,7 +100,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-005",
@@ -113,7 +117,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-006",
@@ -129,7 +134,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-007",
@@ -145,7 +151,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-008",
@@ -161,7 +168,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-009",
@@ -177,7 +185,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HEM-010",
@@ -193,7 +202,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-001",
@@ -224,7 +234,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "mg/dL",
         "normal": "15 - 45"
       }
-    ]
+    ],
+    "component_count": 4
   },
   {
     "code": "CHE-002",
@@ -270,7 +281,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "g/dL",
         "normal": "3.4 - 5.4"
       }
-    ]
+    ],
+    "component_count": 7
   },
   {
     "code": "CHE-003",
@@ -306,7 +318,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "mg/dL",
         "normal": "2 - 30"
       }
-    ]
+    ],
+    "component_count": 5
   },
   {
     "code": "CHE-004",
@@ -322,7 +335,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-005",
@@ -338,7 +352,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-006",
@@ -354,7 +369,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-007",
@@ -370,7 +386,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "mg/dL or %",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "CHE-008",
@@ -386,7 +403,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "mg/dL or %",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MIC-001",
@@ -412,7 +430,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "See Antibiogram"
       }
-    ]
+    ],
+    "component_count": 3
   },
   {
     "code": "MIC-002",
@@ -438,7 +457,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "See Antibiogram"
       }
-    ]
+    ],
+    "component_count": 3
   },
   {
     "code": "MIC-003",
@@ -464,7 +484,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "See Antibiogram"
       }
-    ]
+    ],
+    "component_count": 3
   },
   {
     "code": "MIC-004",
@@ -480,7 +501,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MIC-005",
@@ -496,7 +518,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "PAR-001",
@@ -542,7 +565,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "HPF",
         "normal": "0 - 1"
       }
-    ]
+    ],
+    "component_count": 7
   },
   {
     "code": "PAR-002",
@@ -618,7 +642,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Absent"
       }
-    ]
+    ],
+    "component_count": 13
   },
   {
     "code": "PAR-003",
@@ -694,7 +719,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Absent"
       }
-    ]
+    ],
+    "component_count": 13
   },
   {
     "code": "PAR-004",
@@ -710,7 +736,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-001",
@@ -731,7 +758,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-002",
@@ -752,7 +780,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-003",
@@ -768,7 +797,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-004",
@@ -789,7 +819,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-005",
@@ -810,7 +841,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-006",
@@ -831,7 +863,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-007",
@@ -847,7 +880,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-008",
@@ -863,7 +897,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-009",
@@ -879,7 +914,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-010",
@@ -900,7 +936,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "IMM-011",
@@ -916,7 +953,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "IMM-012",
@@ -937,7 +975,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "< 1.0 (Negative)"
       }
-    ]
+    ],
+    "component_count": 2
   },
   {
     "code": "HIS-001",
@@ -953,7 +992,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HIS-002",
@@ -969,7 +1009,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HIS-003",
@@ -985,7 +1026,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "HIS-004",
@@ -1001,7 +1043,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MOL-001",
@@ -1017,7 +1060,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MOL-002",
@@ -1033,7 +1077,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "code": "MOL-003",
@@ -1059,7 +1104,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "ng/dL",
         "normal": "0.8 - 1.8"
       }
-    ]
+    ],
+    "component_count": 3
   },
   {
     "code": "MOL-004",
@@ -1075,7 +1121,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-011",
@@ -1099,7 +1146,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-012",
@@ -1123,7 +1171,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-013",
@@ -1152,7 +1201,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-014",
@@ -1176,7 +1226,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEM-015",
@@ -1200,7 +1251,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-009",
@@ -1224,7 +1276,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-010",
@@ -1258,7 +1311,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-011",
@@ -1282,7 +1336,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-012",
@@ -1306,7 +1361,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-013",
@@ -1330,7 +1386,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-014",
@@ -1354,7 +1411,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-015",
@@ -1378,7 +1436,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-016",
@@ -1402,7 +1461,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-017",
@@ -1426,7 +1486,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-018",
@@ -1450,7 +1511,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-019",
@@ -1474,7 +1536,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-020",
@@ -1498,7 +1561,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-021",
@@ -1522,7 +1586,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-022",
@@ -1546,7 +1611,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-023",
@@ -1570,7 +1636,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-024",
@@ -1594,7 +1661,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-025",
@@ -1618,7 +1686,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CHE-026",
@@ -1642,7 +1711,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-006",
@@ -1666,7 +1736,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-007",
@@ -1690,7 +1761,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-008",
@@ -1714,7 +1786,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-009",
@@ -1738,7 +1811,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-010",
@@ -1762,7 +1836,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-005",
@@ -1786,7 +1861,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-006",
@@ -1810,7 +1886,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-007",
@@ -1834,7 +1911,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-013",
@@ -1858,7 +1936,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-014",
@@ -1882,7 +1961,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-015",
@@ -1906,7 +1986,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-016",
@@ -1940,7 +2021,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-017",
@@ -1964,7 +2046,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-018",
@@ -1988,7 +2071,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-019",
@@ -2012,7 +2096,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-020",
@@ -2036,7 +2121,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-021",
@@ -2060,7 +2146,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-022",
@@ -2084,7 +2171,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-023",
@@ -2108,7 +2196,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-024",
@@ -2132,7 +2221,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-025",
@@ -2156,7 +2246,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-026",
@@ -2180,7 +2271,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-027",
@@ -2204,7 +2296,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-028",
@@ -2228,7 +2321,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-029",
@@ -2252,7 +2346,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-030",
@@ -2276,7 +2371,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-031",
@@ -2300,7 +2396,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-032",
@@ -2324,7 +2421,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-033",
@@ -2348,7 +2446,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IMM-034",
@@ -2372,7 +2471,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HIS-005",
@@ -2396,7 +2496,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HIS-006",
@@ -2420,7 +2521,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HIS-007",
@@ -2444,7 +2546,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-005",
@@ -2468,7 +2571,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-006",
@@ -2492,7 +2596,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-007",
@@ -2516,7 +2621,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-008",
@@ -2540,7 +2646,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-009",
@@ -2564,7 +2671,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-010",
@@ -2588,7 +2696,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-011",
@@ -2612,7 +2721,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOL-012",
@@ -2636,7 +2746,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOX-001",
@@ -2660,7 +2771,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOX-002",
@@ -2684,7 +2796,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOX-003",
@@ -2708,7 +2821,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOX-004",
@@ -2732,7 +2846,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "URN-001",
@@ -2776,7 +2891,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "URN-002",
@@ -2800,7 +2916,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "URN-003",
@@ -2824,7 +2941,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "URN-004",
@@ -2848,7 +2966,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-001",
@@ -2872,7 +2991,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-002",
@@ -2896,7 +3016,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-003",
@@ -2920,7 +3041,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-004",
@@ -2944,7 +3066,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-005",
@@ -2968,7 +3091,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-006",
@@ -2992,7 +3116,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-007",
@@ -3016,7 +3141,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-008",
@@ -3040,7 +3166,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-009",
@@ -3064,7 +3191,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SER-010",
@@ -3088,7 +3216,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-001",
@@ -3112,7 +3241,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-002",
@@ -3136,7 +3266,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-003",
@@ -3160,7 +3291,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-004",
@@ -3184,7 +3316,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-005",
@@ -3208,7 +3341,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-006",
@@ -3232,7 +3366,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-007",
@@ -3256,7 +3391,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-008",
@@ -3280,7 +3416,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "COA-009",
@@ -3304,7 +3441,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-001",
@@ -3328,7 +3466,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-002",
@@ -3352,7 +3491,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-003",
@@ -3376,7 +3516,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-004",
@@ -3400,7 +3541,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-005",
@@ -3424,7 +3566,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-006",
@@ -3448,7 +3591,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-007",
@@ -3472,7 +3616,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-008",
@@ -3496,7 +3641,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-009",
@@ -3520,7 +3666,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "END-010",
@@ -3544,7 +3691,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ALG-001",
@@ -3568,7 +3716,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ALG-002",
@@ -3637,7 +3786,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ALG-003",
@@ -3696,7 +3846,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-001",
@@ -3720,7 +3871,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-002",
@@ -3744,7 +3896,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-003",
@@ -3768,7 +3921,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-004",
@@ -3792,7 +3946,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-005",
@@ -3816,7 +3971,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-006",
@@ -3840,7 +3996,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-007",
@@ -3864,7 +4021,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-008",
@@ -3888,7 +4046,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-009",
@@ -3912,7 +4071,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-010",
@@ -3936,7 +4096,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIV-001",
@@ -3960,7 +4121,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIV-002",
@@ -3984,7 +4146,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIV-003",
@@ -4008,7 +4171,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIV-004",
@@ -4032,7 +4196,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-001",
@@ -4056,7 +4221,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-002",
@@ -4080,7 +4246,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-003",
@@ -4104,7 +4271,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-004",
@@ -4128,7 +4296,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "REN-005",
@@ -4152,7 +4321,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-001",
@@ -4176,7 +4346,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-002",
@@ -4200,7 +4371,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-003",
@@ -4224,7 +4396,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-004",
@@ -4248,7 +4421,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-005",
@@ -4272,7 +4446,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CAR-006",
@@ -4296,7 +4471,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "THY-001",
@@ -4320,7 +4496,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "THY-002",
@@ -4344,7 +4521,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "THY-003",
@@ -4368,7 +4546,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-001",
@@ -4392,7 +4571,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-002",
@@ -4416,7 +4596,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-003",
@@ -4445,7 +4626,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-004",
@@ -4469,7 +4651,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-005",
@@ -4493,7 +4676,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-006",
@@ -4517,7 +4701,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-007",
@@ -4541,7 +4726,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-008",
@@ -4565,7 +4751,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-009",
@@ -4589,7 +4776,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "INF-010",
@@ -4613,7 +4801,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-001",
@@ -4637,7 +4826,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-002",
@@ -4661,7 +4851,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-003",
@@ -4685,7 +4876,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-004",
@@ -4709,7 +4901,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-005",
@@ -4733,7 +4926,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-006",
@@ -4757,7 +4951,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TMR-007",
@@ -4781,7 +4976,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BON-001",
@@ -4805,7 +5001,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BON-002",
@@ -4829,7 +5026,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BON-003",
@@ -4853,7 +5051,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BON-004",
@@ -4877,7 +5076,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ANE-001",
@@ -4901,7 +5101,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ANE-002",
@@ -4925,7 +5126,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ANE-003",
@@ -4949,7 +5151,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-001",
@@ -4973,7 +5176,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-002",
@@ -4997,7 +5201,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-003",
@@ -5021,7 +5226,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-004",
@@ -5045,7 +5251,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-005",
@@ -5069,7 +5276,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-006",
@@ -5093,7 +5301,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPC-007",
@@ -5117,7 +5326,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-001",
@@ -5151,7 +5361,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-002",
@@ -5175,7 +5386,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-003",
@@ -5199,7 +5411,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-004",
@@ -5223,7 +5436,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-005",
@@ -5247,7 +5461,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-006",
@@ -5271,7 +5486,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-007",
@@ -5295,7 +5511,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "CSF-008",
@@ -5319,7 +5536,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PLF-001",
@@ -5358,7 +5576,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PLF-002",
@@ -5397,7 +5616,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PLF-003",
@@ -5431,7 +5651,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PLF-004",
@@ -5475,7 +5696,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SEM-001",
@@ -5524,7 +5746,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SEM-002",
@@ -5593,7 +5816,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SEM-003",
@@ -5617,7 +5841,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SEM-004",
@@ -5641,7 +5866,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-001",
@@ -5665,7 +5891,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-002",
@@ -5689,7 +5916,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-003",
@@ -5713,7 +5941,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-004",
@@ -5737,7 +5966,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-005",
@@ -5761,7 +5991,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-006",
@@ -5785,7 +6016,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-007",
@@ -5809,7 +6041,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GEN-008",
@@ -5833,7 +6066,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-001",
@@ -5857,7 +6091,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-002",
@@ -5881,7 +6116,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-003",
@@ -5905,7 +6141,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-004",
@@ -5929,7 +6166,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-005",
@@ -5953,7 +6191,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-006",
@@ -5977,7 +6216,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-007",
@@ -6001,7 +6241,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TDM-008",
@@ -6025,7 +6266,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NBS-001",
@@ -6069,7 +6311,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NBS-002",
@@ -6138,7 +6381,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-001",
@@ -6177,7 +6421,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-002",
@@ -6206,7 +6451,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-003",
@@ -6230,7 +6476,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-004",
@@ -6254,7 +6501,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "IG-005",
@@ -6278,7 +6526,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-001",
@@ -6302,7 +6551,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-002",
@@ -6326,7 +6576,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-003",
@@ -6350,7 +6601,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-004",
@@ -6374,7 +6626,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-005",
@@ -6398,7 +6651,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-006",
@@ -6422,7 +6676,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-007",
@@ -6446,7 +6701,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-008",
@@ -6470,7 +6726,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-009",
@@ -6499,7 +6756,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-010",
@@ -6523,7 +6781,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-011",
@@ -6547,7 +6806,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-012",
@@ -6571,7 +6831,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-013",
@@ -6595,7 +6856,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-014",
@@ -6619,7 +6881,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AI-015",
@@ -6643,7 +6906,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NEP-001",
@@ -6667,7 +6931,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NEP-002",
@@ -6691,7 +6956,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NEP-003",
@@ -6715,7 +6981,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-001",
@@ -6739,7 +7006,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-002",
@@ -6763,7 +7031,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-003",
@@ -6787,7 +7056,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-004",
@@ -6811,7 +7081,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-005",
@@ -6840,7 +7111,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-006",
@@ -6864,7 +7136,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GAS-007",
@@ -6888,7 +7161,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEP-001",
@@ -6912,7 +7186,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEP-002",
@@ -6936,7 +7211,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEP-003",
@@ -6960,7 +7236,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HEP-004",
@@ -6984,7 +7261,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOR-001",
@@ -7023,7 +7301,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TOR-002",
@@ -7082,7 +7361,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ARB-001",
@@ -7106,7 +7386,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ARB-002",
@@ -7130,7 +7411,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ARB-003",
@@ -7154,7 +7436,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RCK-001",
@@ -7178,7 +7461,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RCK-002",
@@ -7202,7 +7486,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-001",
@@ -7226,7 +7511,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-002",
@@ -7250,7 +7536,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-003",
@@ -7274,7 +7561,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-004",
@@ -7298,7 +7586,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FUN-005",
@@ -7322,7 +7611,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-008",
@@ -7346,7 +7636,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-009",
@@ -7370,7 +7661,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-010",
@@ -7394,7 +7686,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-011",
@@ -7418,7 +7711,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PAR-012",
@@ -7442,7 +7736,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MYC-001",
@@ -7466,7 +7761,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MYC-002",
@@ -7490,7 +7786,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MYC-003",
@@ -7514,7 +7811,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MYC-004",
@@ -7538,7 +7836,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-001",
@@ -7562,7 +7861,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-002",
@@ -7586,7 +7886,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-003",
@@ -7610,7 +7911,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-004",
@@ -7634,7 +7936,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-005",
@@ -7658,7 +7961,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-006",
@@ -7682,7 +7986,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-007",
@@ -7706,7 +8011,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-008",
@@ -7730,7 +8036,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-009",
@@ -7754,7 +8061,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-010",
@@ -7778,7 +8086,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-011",
@@ -7802,7 +8111,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VIR-012",
@@ -7826,7 +8136,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-001",
@@ -7850,7 +8161,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-002",
@@ -7874,7 +8186,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-003",
@@ -7898,7 +8211,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-004",
@@ -7922,7 +8236,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-005",
@@ -7946,7 +8261,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-006",
@@ -7970,7 +8286,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-007",
@@ -7994,7 +8311,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-008",
@@ -8018,7 +8336,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-009",
@@ -8042,7 +8361,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-010",
@@ -8066,7 +8386,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-011",
@@ -8090,7 +8411,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "BAC-012",
@@ -8114,7 +8436,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MTB-001",
@@ -8138,7 +8461,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MTB-002",
@@ -8162,7 +8486,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MTB-003",
@@ -8186,7 +8511,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MTB-004",
@@ -8210,7 +8536,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HGB-001",
@@ -8259,7 +8586,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "HGB-002",
@@ -8283,7 +8611,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FLO-001",
@@ -8307,7 +8636,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FLO-002",
@@ -8336,7 +8666,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FLO-003",
@@ -8380,7 +8711,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-001",
@@ -8404,7 +8736,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-002",
@@ -8428,7 +8761,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-003",
@@ -8452,7 +8786,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-004",
@@ -8476,7 +8811,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MOH-005",
@@ -8500,7 +8836,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-001",
@@ -8524,7 +8861,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-002",
@@ -8548,7 +8886,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-003",
@@ -8572,7 +8911,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-004",
@@ -8596,7 +8936,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-005",
@@ -8620,7 +8961,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-006",
@@ -8644,7 +8986,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-007",
@@ -8668,7 +9011,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-008",
@@ -8692,7 +9036,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-009",
@@ -8716,7 +9061,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-001",
@@ -8740,7 +9086,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-002",
@@ -8764,7 +9111,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-003",
@@ -8788,7 +9136,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-004",
@@ -8812,7 +9161,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-005",
@@ -8836,7 +9186,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PHG-006",
@@ -8860,7 +9211,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRE-001",
@@ -8894,7 +9246,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRE-002",
@@ -8918,7 +9271,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRE-003",
@@ -8942,7 +9296,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRE-004",
@@ -8966,7 +9321,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-001",
@@ -9000,7 +9356,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-002",
@@ -9034,7 +9391,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-003",
@@ -9058,7 +9416,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-004",
@@ -9082,7 +9441,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-005",
@@ -9106,7 +9466,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "TRP-006",
@@ -9130,7 +9491,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FOR-001",
@@ -9199,7 +9561,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FOR-002",
@@ -9223,7 +9586,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "FOR-003",
@@ -9267,7 +9631,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-001",
@@ -9291,7 +9656,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-002",
@@ -9315,7 +9681,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-003",
@@ -9339,7 +9706,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-004",
@@ -9363,7 +9731,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "OCC-005",
@@ -9387,7 +9756,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPT-001",
@@ -9411,7 +9781,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPT-002",
@@ -9435,7 +9806,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "SPT-003",
@@ -9459,7 +9831,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-001",
@@ -9518,7 +9891,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-002",
@@ -9577,7 +9951,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-003",
@@ -9601,7 +9976,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-004",
@@ -9625,7 +10001,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "VET-005",
@@ -9649,7 +10026,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ENV-001",
@@ -9683,7 +10061,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ENV-002",
@@ -9727,7 +10106,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ENV-003",
@@ -9766,7 +10146,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "ENV-004",
@@ -9810,7 +10191,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-001",
@@ -9859,7 +10241,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-002",
@@ -9898,7 +10281,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-003",
@@ -9937,7 +10321,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-004",
@@ -9971,7 +10356,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "RES-005",
@@ -10005,7 +10391,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-001",
@@ -10029,7 +10416,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-002",
@@ -10053,7 +10441,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-003",
@@ -10077,7 +10466,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-004",
@@ -10101,7 +10491,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-005",
@@ -10125,7 +10516,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-006",
@@ -10149,7 +10541,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-007",
@@ -10173,7 +10566,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EMG-008",
@@ -10197,7 +10591,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-011",
@@ -10221,7 +10616,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-012",
@@ -10245,7 +10641,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "NUT-013",
@@ -10269,7 +10666,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AGE-001",
@@ -10293,7 +10691,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "AGE-002",
@@ -10317,7 +10716,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-010",
@@ -10341,7 +10741,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "STM-011",
@@ -10380,7 +10781,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EXO-001",
@@ -10414,7 +10816,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EXO-002",
@@ -10438,7 +10841,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "EXO-003",
@@ -10462,7 +10866,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-011",
@@ -10486,7 +10891,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-012",
@@ -10510,7 +10916,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-013",
@@ -10534,7 +10941,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MIC-014",
@@ -10558,7 +10966,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MET-001",
@@ -10587,7 +10996,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MET-002",
@@ -10611,7 +11021,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "MET-003",
@@ -10645,7 +11056,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRO-001",
@@ -10689,7 +11101,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRO-002",
@@ -10713,7 +11126,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "PRO-003",
@@ -10747,7 +11161,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "LIP-001",
@@ -10781,7 +11196,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GLY-001",
@@ -10805,7 +11221,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GLY-002",
@@ -10829,7 +11246,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "GLY-003",
@@ -10853,7 +11271,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-001",
@@ -10877,7 +11296,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-002",
@@ -10901,7 +11321,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-003",
@@ -10925,7 +11346,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-004",
@@ -10979,7 +11401,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-005",
@@ -11023,7 +11446,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-006",
@@ -11067,7 +11491,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-007",
@@ -11091,7 +11516,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-008",
@@ -11115,7 +11541,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-009",
@@ -11139,7 +11566,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-010",
@@ -11163,7 +11591,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-011",
@@ -11187,7 +11616,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-012",
@@ -11211,7 +11641,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-013",
@@ -11235,7 +11666,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-014",
@@ -11259,7 +11691,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-015",
@@ -11283,7 +11716,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-016",
@@ -11352,7 +11786,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-017",
@@ -11376,7 +11811,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-018",
@@ -11400,7 +11836,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-019",
@@ -11424,7 +11861,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-020",
@@ -11448,7 +11886,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-021",
@@ -11472,7 +11911,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-022",
@@ -11501,7 +11941,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-023",
@@ -11525,7 +11966,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-024",
@@ -11549,7 +11991,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-025",
@@ -11573,7 +12016,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-026",
@@ -11607,7 +12051,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-027",
@@ -11631,7 +12076,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-028",
@@ -11655,7 +12101,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-029",
@@ -11679,7 +12126,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-030",
@@ -11703,7 +12151,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-031",
@@ -11727,7 +12176,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-032",
@@ -11751,7 +12201,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-033",
@@ -11775,7 +12226,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-034",
@@ -11799,7 +12251,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-035",
@@ -11823,7 +12276,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-036",
@@ -11847,7 +12301,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-037",
@@ -11871,7 +12326,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-038",
@@ -11895,7 +12351,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-039",
@@ -11919,7 +12376,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-040",
@@ -11943,7 +12401,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-041",
@@ -11967,7 +12426,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-042",
@@ -11991,7 +12451,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-043",
@@ -12015,7 +12476,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-044",
@@ -12039,7 +12501,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-045",
@@ -12063,7 +12526,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-046",
@@ -12087,7 +12551,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-047",
@@ -12111,7 +12576,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-048",
@@ -12135,7 +12601,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-049",
@@ -12159,7 +12626,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-050",
@@ -12183,7 +12651,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-051",
@@ -12207,7 +12676,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-052",
@@ -12231,7 +12701,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-053",
@@ -12255,7 +12726,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-054",
@@ -12279,7 +12751,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-055",
@@ -12303,7 +12776,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-056",
@@ -12327,7 +12801,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-057",
@@ -12351,7 +12826,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-058",
@@ -12375,7 +12851,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-059",
@@ -12399,7 +12876,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-060",
@@ -12423,7 +12901,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-061",
@@ -12447,7 +12926,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-062",
@@ -12471,7 +12951,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-063",
@@ -12495,7 +12976,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-064",
@@ -12519,7 +13001,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-065",
@@ -12543,7 +13026,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-066",
@@ -12567,7 +13051,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-067",
@@ -12591,7 +13076,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-068",
@@ -12615,7 +13101,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-069",
@@ -12639,7 +13126,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-070",
@@ -12663,7 +13151,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-071",
@@ -12687,7 +13176,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-072",
@@ -12711,7 +13201,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-073",
@@ -12740,7 +13231,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-074",
@@ -12764,7 +13256,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-075",
@@ -12788,7 +13281,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-076",
@@ -12812,7 +13306,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-077",
@@ -12836,7 +13331,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-078",
@@ -12860,7 +13356,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-079",
@@ -12884,7 +13381,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-080",
@@ -12908,7 +13406,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-081",
@@ -12932,7 +13431,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-082",
@@ -12956,7 +13456,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-083",
@@ -12980,7 +13481,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-084",
@@ -13004,7 +13506,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-085",
@@ -13028,7 +13531,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-086",
@@ -13052,7 +13556,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-087",
@@ -13076,7 +13581,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-088",
@@ -13100,7 +13606,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-089",
@@ -13124,7 +13631,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-090",
@@ -13148,7 +13656,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-091",
@@ -13172,7 +13681,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-092",
@@ -13196,7 +13706,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-093",
@@ -13220,7 +13731,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-094",
@@ -13244,7 +13756,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-095",
@@ -13268,7 +13781,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-096",
@@ -13292,7 +13806,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-097",
@@ -13316,7 +13831,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-098",
@@ -13340,7 +13856,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-099",
@@ -13364,7 +13881,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-100",
@@ -13388,7 +13906,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-101",
@@ -13412,7 +13931,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-102",
@@ -13436,7 +13956,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-103",
@@ -13460,7 +13981,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-104",
@@ -13484,7 +14006,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-105",
@@ -13508,7 +14031,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-106",
@@ -13532,7 +14056,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-107",
@@ -13556,7 +14081,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-108",
@@ -13580,7 +14106,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-109",
@@ -13604,7 +14131,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-110",
@@ -13628,7 +14156,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-111",
@@ -13652,7 +14181,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-112",
@@ -13676,7 +14206,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-113",
@@ -13700,7 +14231,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-114",
@@ -13724,7 +14256,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-115",
@@ -13748,7 +14281,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-116",
@@ -13772,7 +14306,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-117",
@@ -13796,7 +14331,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-118",
@@ -13820,7 +14356,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-119",
@@ -13844,7 +14381,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-120",
@@ -13868,7 +14406,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-121",
@@ -13892,7 +14431,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-122",
@@ -13916,7 +14456,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-123",
@@ -13940,7 +14481,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-124",
@@ -13964,7 +14506,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-125",
@@ -13988,7 +14531,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-126",
@@ -14012,7 +14556,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-127",
@@ -14036,7 +14581,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-128",
@@ -14060,7 +14606,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-129",
@@ -14084,7 +14631,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-130",
@@ -14108,7 +14656,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-131",
@@ -14132,7 +14681,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-132",
@@ -14156,7 +14706,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-133",
@@ -14180,7 +14731,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-134",
@@ -14204,7 +14756,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-135",
@@ -14228,7 +14781,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-136",
@@ -14252,7 +14806,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-137",
@@ -14276,7 +14831,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-138",
@@ -14300,7 +14856,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-139",
@@ -14324,7 +14881,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-140",
@@ -14348,7 +14906,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-141",
@@ -14372,7 +14931,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-142",
@@ -14396,7 +14956,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-143",
@@ -14420,7 +14981,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-144",
@@ -14444,7 +15006,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-145",
@@ -14468,7 +15031,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-146",
@@ -14492,7 +15056,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-147",
@@ -14516,7 +15081,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-148",
@@ -14540,7 +15106,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-149",
@@ -14564,7 +15131,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-150",
@@ -14588,7 +15156,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-151",
@@ -14612,7 +15181,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-152",
@@ -14636,7 +15206,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-153",
@@ -14660,7 +15231,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-154",
@@ -14684,7 +15256,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-155",
@@ -14708,7 +15281,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-156",
@@ -14732,7 +15306,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-157",
@@ -14756,7 +15331,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-158",
@@ -14780,7 +15356,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-159",
@@ -14804,7 +15381,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-160",
@@ -14828,7 +15406,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-161",
@@ -14852,7 +15431,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-162",
@@ -14876,7 +15456,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-163",
@@ -14900,7 +15481,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-164",
@@ -14924,7 +15506,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-165",
@@ -14948,7 +15531,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-166",
@@ -14972,7 +15556,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-167",
@@ -14996,7 +15581,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-168",
@@ -15020,7 +15606,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-169",
@@ -15044,7 +15631,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-170",
@@ -15068,7 +15656,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-171",
@@ -15092,7 +15681,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-172",
@@ -15116,7 +15706,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-173",
@@ -15140,7 +15731,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-174",
@@ -15164,7 +15756,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-175",
@@ -15188,7 +15781,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-176",
@@ -15212,7 +15806,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-177",
@@ -15236,7 +15831,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-178",
@@ -15260,7 +15856,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-179",
@@ -15284,7 +15881,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-180",
@@ -15308,7 +15906,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-181",
@@ -15332,7 +15931,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-182",
@@ -15356,7 +15956,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-183",
@@ -15380,7 +15981,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-184",
@@ -15404,7 +16006,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-185",
@@ -15428,7 +16031,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-186",
@@ -15452,7 +16056,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-187",
@@ -15476,7 +16081,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-188",
@@ -15500,7 +16106,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-189",
@@ -15524,7 +16131,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-190",
@@ -15548,7 +16156,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-191",
@@ -15572,7 +16181,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-192",
@@ -15596,7 +16206,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-193",
@@ -15620,7 +16231,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-194",
@@ -15644,7 +16256,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-195",
@@ -15668,7 +16281,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-196",
@@ -15692,7 +16306,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-197",
@@ -15716,7 +16331,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-198",
@@ -15740,7 +16356,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-199",
@@ -15764,7 +16381,8 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   },
   {
     "Test_Code": "POC-200",
@@ -15788,13 +16406,13 @@ window.ALL_SYSTEM_TESTS = [
         "unit": "",
         "normal": "Normal Range"
       }
-    ]
+    ],
+    "component_count": 1
   }
 ];
 
-console.log('✅ تم تحميل ' + window.ALL_SYSTEM_TESTS.length + ' فحص بنجاح في الذاكرة المحلية!');
+console.log('✅ تم تحديث ' + window.ALL_SYSTEM_TESTS.length + ' فحص مع معاييرها بنجاح!');
 
-// دالة مساعدة عامة لجلب كل التحاليل
 function getAllTestsData() {
     return window.ALL_SYSTEM_TESTS || [];
 }
