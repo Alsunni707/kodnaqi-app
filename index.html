@@ -204,7 +204,7 @@ body {
     <div class="card p-3 mt-3">
       <h6 class="fw-bold mb-3"><i class="bi bi-lightning-charge"></i> إجراءات سريعة</h6>
       <div class="d-grid gap-2">
-        <button class="btn btn-primary text-start" onclick="showPage('patients')">
+        <button class="btn btn-primary text-start" onclick="showAddPatient()">
           <i class="bi bi-person-plus"></i> إضافة مريض جديد
         </button>
         <button class="btn btn-outline-secondary text-start" onclick="showPage('tests')">
@@ -533,7 +533,7 @@ body {
           <i class="bi bi-key-fill"></i> حالة الترخيص
         </button>
         
-        <button onclick="KodNaqiLicense.enableDevMode()" class="btn btn-outline-danger btn-sm mt-2 w-100" id="devModeBtn">
+        <button onclick="KodNaqiLicense.enableDevMode()" class="btn btn-outline-danger btn-sm mt-2 w-100" id="devModeBtn" style="display:none">
           <i class="bi bi-code-slash"></i> تفعيل وضع المطور (دائم)
         </button>
         
@@ -693,6 +693,7 @@ body {
 </div>
 
 <!-- Scripts -->
+<script src="quiet.js?v=1"></script>
 <script src="lib/bootstrap.bundle.min.js"></script>
 <script src="tests.js"></script>
 <script src="import_tests.js"></script>
@@ -702,6 +703,7 @@ body {
 <script src="lib/html-to-image.min.js"></script>
 <script src="db.js"></script>
 <script src="default_tests.js"></script>
+<script src="import_comprehensive_tests.js"></script>
 <script src="visit_system.js"></script>
 <script src="visit_manage.js"></script>
 <script src="reports.js"></script>
@@ -1037,3 +1039,24 @@ async function knRunTest() {
   color: #ef4444;
 }
 </style>
+<script>
+// إظهار زر المطور بالضغط المطول على شعار التطبيق (للك فقط)
+document.addEventListener('DOMContentLoaded', function() {
+  const logo = document.querySelector('.brand-logo, [data-brand="logo"], img[alt*="KodNaqi"]');
+  if (logo) {
+    let pressTimer;
+    logo.addEventListener('touchstart', function() {
+      pressTimer = setTimeout(function() {
+        const btn = document.getElementById('devModeBtn');
+        if (btn) {
+          btn.style.display = 'block';
+          alert('تم إظهار وضع المطور');
+        }
+      }, 3000); // 3 ثوانٍ ضغط مطول
+    });
+    logo.addEventListener('touchend', function() {
+      clearTimeout(pressTimer);
+    });
+  }
+});
+</script>

@@ -1,0 +1,952 @@
+[
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "White Blood Cells (WBC)",
+    "Unit": "x10^3 / uL",
+    "Normal_Range": "4.0 - 11.0",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Red Blood Cells (RBC)",
+    "Unit": "x10^6 / uL",
+    "Normal_Range": "4.5 - 5.9 (Male), 4.1 - 5.1 (Female)",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Hemoglobin (Hb)",
+    "Unit": "g/dL",
+    "Normal_Range": "13.5 - 17.5 (Male), 12.0 - 15.5 (Female)",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Hematocrit (HCT) / PCV",
+    "Unit": "%",
+    "Normal_Range": "41.0 - 50.0 (Male), 36.0 - 46.0 (Female)",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Mean Cell Volume (MCV)",
+    "Unit": "fL",
+    "Normal_Range": "80.0 - 100.0",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Mean Cell Hemoglobin (MCH)",
+    "Unit": "pg",
+    "Normal_Range": "27.0 - 33.0",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Mean Cell Hemoglobin Concentration (MCHC)",
+    "Unit": "g/dL",
+    "Normal_Range": "32.0 - 36.0",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Platelets Count (PLT)",
+    "Unit": "x10^3 / uL",
+    "Normal_Range": "150 - 450",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Neutrophils (%)",
+    "Unit": "%",
+    "Normal_Range": "40.0 - 75.0",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Lymphocytes (%)",
+    "Unit": "%",
+    "Normal_Range": "20.0 - 45.0",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Monocytes (%)",
+    "Unit": "%",
+    "Normal_Range": "2.0 - 10.0",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Eosinophils (%)",
+    "Unit": "%",
+    "Normal_Range": "1.0 - 6.0",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Complete Blood Count (CBC) with Differential",
+    "Parameter": "Basophils (%)",
+    "Unit": "%",
+    "Normal_Range": "0.0 - 1.0",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Routine Hematology",
+    "Test_Name": "Erythrocyte Sedimentation Rate (ESR)",
+    "Parameter": "ESR 1st Hour",
+    "Unit": "mm/hr",
+    "Normal_Range": "0 - 15 (Male), 0 - 20 (Female)",
+    "Sample_Type": "Sodium Citrate Whole Blood",
+    "price": 8000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Special Hematology",
+    "Test_Name": "Reticulocyte Count",
+    "Parameter": "Reticulocytes Percentage",
+    "Unit": "%",
+    "Normal_Range": "0.5 - 2.5",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 20000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Special Hematology",
+    "Test_Name": "Sickling Test",
+    "Parameter": "Sickling Phenotype",
+    "Unit": "Qualitative",
+    "Normal_Range": "Negative",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 25000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Special Hematology",
+    "Test_Name": "Hemoglobin Electrophoresis",
+    "Parameter": "Hb A / Hb A2 / Hb F / Hb S / Hb C",
+    "Unit": "%",
+    "Normal_Range": "Hb A > 95%, Hb A2 < 3.5%, Hb F < 1.0%",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 45000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Special Hematology",
+    "Test_Name": "G6PD Enzyme Activity",
+    "Parameter": "G6PD Level",
+    "Unit": "U/g Hb",
+    "Normal_Range": "7.0 - 20.5",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 45000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Coagulation",
+    "Test_Name": "Prothrombin Time (PT)",
+    "Parameter": "PT Clotting Time",
+    "Unit": "Seconds",
+    "Normal_Range": "11.0 - 13.5",
+    "Sample_Type": "Citrated Plasma",
+    "price": 20000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Coagulation",
+    "Test_Name": "Prothrombin Time (PT)",
+    "Parameter": "International Normalized Ratio (INR)",
+    "Unit": "Ratio",
+    "Normal_Range": "0.8 - 1.2 (Non-anticoagulated)",
+    "Sample_Type": "Citrated Plasma",
+    "price": 15000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Coagulation",
+    "Test_Name": "Activated Partial Thromboplastin Time (APTT)",
+    "Parameter": "APTT Clotting Time",
+    "Unit": "Seconds",
+    "Normal_Range": "25.0 - 35.0",
+    "Sample_Type": "Citrated Plasma",
+    "price": 20000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Coagulation",
+    "Test_Name": "D-Dimer",
+    "Parameter": "D-Dimer Level",
+    "Unit": "ug/mL FEU",
+    "Normal_Range": "< 0.50",
+    "Sample_Type": "Citrated Plasma",
+    "price": 40000
+  },
+  {
+    "Department": "Hematology & Coagulation",
+    "Sub_Department": "Coagulation",
+    "Test_Name": "Fibrinogen Level",
+    "Parameter": "Fibrinogen Concentration",
+    "Unit": "mg/dL",
+    "Normal_Range": "200 - 400",
+    "Sample_Type": "Citrated Plasma",
+    "price": 25000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Renal Function Tests (RFT)",
+    "Test_Name": "Kidney Profile",
+    "Parameter": "Serum Urea",
+    "Unit": "mg/dL",
+    "Normal_Range": "15 - 45",
+    "Sample_Type": "Serum / Plasma",
+    "price": 10000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Renal Function Tests (RFT)",
+    "Test_Name": "Kidney Profile",
+    "Parameter": "Serum Creatinine",
+    "Unit": "mg/dL",
+    "Normal_Range": "0.6 - 1.2 (Male), 0.5 - 1.1 (Female)",
+    "Sample_Type": "Serum / Plasma",
+    "price": 10000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Renal Function Tests (RFT)",
+    "Test_Name": "Kidney Profile",
+    "Parameter": "Serum Uric Acid",
+    "Unit": "mg/dL",
+    "Normal_Range": "3.5 - 7.2 (Male), 2.6 - 6.0 (Female)",
+    "Sample_Type": "Serum / Plasma",
+    "price": 12000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Liver Function Tests (LFT)",
+    "Test_Name": "Liver Profile",
+    "Parameter": "Total Bilirubin",
+    "Unit": "mg/dL",
+    "Normal_Range": "0.2 - 1.2",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Liver Function Tests (LFT)",
+    "Test_Name": "Liver Profile",
+    "Parameter": "Direct Bilirubin",
+    "Unit": "mg/dL",
+    "Normal_Range": "0.0 - 0.3",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Liver Function Tests (LFT)",
+    "Test_Name": "Liver Profile",
+    "Parameter": "Indirect Bilirubin",
+    "Unit": "mg/dL",
+    "Normal_Range": "0.2 - 0.8",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Liver Function Tests (LFT)",
+    "Test_Name": "Liver Profile",
+    "Parameter": "SGOT / AST",
+    "Unit": "U/L",
+    "Normal_Range": "5 - 40",
+    "Sample_Type": "Serum",
+    "price": 12000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Liver Function Tests (LFT)",
+    "Test_Name": "Liver Profile",
+    "Parameter": "SGPT / ALT",
+    "Unit": "U/L",
+    "Normal_Range": "5 - 45",
+    "Sample_Type": "Serum",
+    "price": 12000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Liver Function Tests (LFT)",
+    "Test_Name": "Liver Profile",
+    "Parameter": "Alkaline Phosphatase (ALP)",
+    "Unit": "U/L",
+    "Normal_Range": "40 - 130",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Liver Function Tests (LFT)",
+    "Test_Name": "Liver Profile",
+    "Parameter": "Gamma GT (GGT)",
+    "Unit": "U/L",
+    "Normal_Range": "10 - 60",
+    "Sample_Type": "Serum",
+    "price": 20000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Liver Function Tests (LFT)",
+    "Test_Name": "Liver Profile",
+    "Parameter": "Total Protein",
+    "Unit": "g/dL",
+    "Normal_Range": "6.4 - 8.3",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Liver Function Tests (LFT)",
+    "Test_Name": "Liver Profile",
+    "Parameter": "Serum Albumin",
+    "Unit": "g/dL",
+    "Normal_Range": "3.5 - 5.0",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Lipid Profile",
+    "Test_Name": "Lipid Panel",
+    "Parameter": "Total Cholesterol",
+    "Unit": "mg/dL",
+    "Normal_Range": "< 200",
+    "Sample_Type": "Serum",
+    "price": 18000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Lipid Profile",
+    "Test_Name": "Lipid Panel",
+    "Parameter": "Triglycerides",
+    "Unit": "mg/dL",
+    "Normal_Range": "< 150",
+    "Sample_Type": "Serum",
+    "price": 18000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Lipid Profile",
+    "Test_Name": "Lipid Panel",
+    "Parameter": "HDL Cholesterol",
+    "Unit": "mg/dL",
+    "Normal_Range": "> 40 (Male), > 50 (Female)",
+    "Sample_Type": "Serum",
+    "price": 20000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Lipid Profile",
+    "Test_Name": "Lipid Panel",
+    "Parameter": "LDL Cholesterol",
+    "Unit": "mg/dL",
+    "Normal_Range": "< 100",
+    "Sample_Type": "Serum",
+    "price": 20000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Cardiac Biomarkers",
+    "Test_Name": "Cardiac Profile",
+    "Parameter": "Troponin I (High Sensitivity)",
+    "Unit": "ng/L",
+    "Normal_Range": "< 14",
+    "Sample_Type": "Serum / Plasma",
+    "price": 150000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Cardiac Biomarkers",
+    "Test_Name": "Cardiac Profile",
+    "Parameter": "CK-MB Activity",
+    "Unit": "U/L",
+    "Normal_Range": "< 25",
+    "Sample_Type": "Serum",
+    "price": 120000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Cardiac Biomarkers",
+    "Test_Name": "Cardiac Profile",
+    "Parameter": "NT-proBNP",
+    "Unit": "pg/mL",
+    "Normal_Range": "< 125",
+    "Sample_Type": "Serum",
+    "price": 250000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Electrolytes & Minerals",
+    "Test_Name": "Serum Electrolytes",
+    "Parameter": "Sodium (Na+)",
+    "Unit": "mmol/L",
+    "Normal_Range": "135 - 145",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Electrolytes & Minerals",
+    "Test_Name": "Serum Electrolytes",
+    "Parameter": "Potassium (K+)",
+    "Unit": "mmol/L",
+    "Normal_Range": "3.5 - 5.1",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Electrolytes & Minerals",
+    "Test_Name": "Serum Electrolytes",
+    "Parameter": "Chloride (Cl-)",
+    "Unit": "mmol/L",
+    "Normal_Range": "98 - 107",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Electrolytes & Minerals",
+    "Test_Name": "Total Calcium",
+    "Parameter": "Calcium (Ca++)",
+    "Unit": "mg/dL",
+    "Normal_Range": "8.6 - 10.2",
+    "Sample_Type": "Serum",
+    "price": 15000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Metabolic & Diabetes",
+    "Test_Name": "Fasting Blood Glucose",
+    "Parameter": "Fasting Sugar",
+    "Unit": "mg/dL",
+    "Normal_Range": "70 - 100",
+    "Sample_Type": "Fluoride Plasma",
+    "price": 8000
+  },
+  {
+    "Department": "Clinical Chemistry",
+    "Sub_Department": "Metabolic & Diabetes",
+    "Test_Name": "HbA1c (Glycated Hemoglobin)",
+    "Parameter": "HbA1c",
+    "Unit": "%",
+    "Normal_Range": "< 5.7% (Normal), 5.7-6.4% (Prediabetes)",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 25000
+  },
+  {
+    "Department": "Microbiology",
+    "Sub_Department": "Bacteriology Cultures",
+    "Test_Name": "Blood Culture and Sensitivity",
+    "Parameter": "Incubation Results (7 Days)",
+    "Unit": "Text",
+    "Normal_Range": "No Growth Isolated after 7 Days",
+    "Sample_Type": "Blood Culture Bottle",
+    "price": 100000
+  },
+  {
+    "Department": "Microbiology",
+    "Sub_Department": "Bacteriology Cultures",
+    "Test_Name": "Blood Culture and Sensitivity",
+    "Parameter": "Isolated Organism",
+    "Unit": "Text",
+    "Normal_Range": "None",
+    "Sample_Type": "Blood Culture Bottle",
+    "price": 100000
+  },
+  {
+    "Department": "Microbiology",
+    "Sub_Department": "Bacteriology Cultures",
+    "Test_Name": "Blood Culture and Sensitivity",
+    "Parameter": "Antibiotic Susceptibility Panel",
+    "Unit": "S / I / R",
+    "Normal_Range": "Pending Isolation",
+    "Sample_Type": "Blood Culture Bottle",
+    "price": 100000
+  },
+  {
+    "Department": "Microbiology",
+    "Sub_Department": "Bacteriology Cultures",
+    "Test_Name": "Urine Culture and Sensitivity",
+    "Parameter": "Colony Count",
+    "Unit": "CFU/mL",
+    "Normal_Range": "No Significant Growth (<10^3 CFU/mL)",
+    "Sample_Type": "Mid-stream Urine (Sterile Cup)",
+    "price": 50000
+  },
+  {
+    "Department": "Microbiology",
+    "Sub_Department": "Bacteriology Cultures",
+    "Test_Name": "Wound Swab Culture & Sensitivity",
+    "Parameter": "Gram Stain Result",
+    "Unit": "Text",
+    "Normal_Range": "Pus cells / Epithelial / Microorganisms",
+    "Sample_Type": "Sterile Swab",
+    "price": 40000
+  },
+  {
+    "Department": "Microbiology",
+    "Sub_Department": "Mycobacteriology",
+    "Test_Name": "Sputum for Acid Fast Bacilli (AFB)",
+    "Parameter": "Ziehl-Neelsen (ZN) Stain",
+    "Unit": "Grading (1+ to 3+)",
+    "Normal_Range": "Negative for AFB / No Acid Fast Bacilli Seen",
+    "Sample_Type": "Sputum",
+    "price": 30000
+  },
+  {
+    "Department": "Microbiology",
+    "Sub_Department": "Mycobacteriology",
+    "Test_Name": "GeneXpert Mycobacterium tuberculosis",
+    "Parameter": "MTB Complex DNA",
+    "Unit": "Qualitative",
+    "Normal_Range": "Not Detected",
+    "Sample_Type": "Sputum / CSF / Tissue",
+    "price": 150000
+  },
+  {
+    "Department": "Microbiology",
+    "Sub_Department": "Mycobacteriology",
+    "Test_Name": "GeneXpert Mycobacterium tuberculosis",
+    "Parameter": "Rifampicin Resistance",
+    "Unit": "Qualitative",
+    "Normal_Range": "Not Detected",
+    "Sample_Type": "Sputum / CSF / Tissue",
+    "price": 150000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Stool & Urine Parasites",
+    "Test_Name": "Stool Routine Examination",
+    "Parameter": "Protozoa (Cyst / Trophozoite)",
+    "Unit": "Text",
+    "Normal_Range": "Not Seen (e.g., Entamoeba histolytica, Giardia)",
+    "Sample_Type": "Stool Container",
+    "price": 15000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Stool & Urine Parasites",
+    "Test_Name": "Stool Routine Examination",
+    "Parameter": "Helminths / Worms Eggs",
+    "Unit": "Text",
+    "Normal_Range": "Not Seen (e.g., Schistosoma mansoni, Ascaris)",
+    "Sample_Type": "Stool Container",
+    "price": 15000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Stool & Urine Parasites",
+    "Test_Name": "Urine Routine Examination",
+    "Parameter": "Microscopic Parasites",
+    "Unit": "Text",
+    "Normal_Range": "Not Seen (e.g., Schistosoma haematobium / Trichomonas)",
+    "Sample_Type": "Urine Cup",
+    "price": 15000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Urine & Biochemical Analysis",
+    "Test_Name": "Urine Complete Analysis",
+    "Parameter": "Urine Reaction / pH",
+    "Unit": "pH Unit",
+    "Normal_Range": "5.0 - 7.5",
+    "Sample_Type": "Urine Cup",
+    "price": 15000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Urine & Biochemical Analysis",
+    "Test_Name": "Urine Complete Analysis",
+    "Parameter": "Protein / Albumin",
+    "Unit": "Qualitative / Strips",
+    "Normal_Range": "Nil / Negative",
+    "Sample_Type": "Urine Cup",
+    "price": 15000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Urine & Biochemical Analysis",
+    "Test_Name": "Urine Complete Analysis",
+    "Parameter": "Sugar / Glucose",
+    "Unit": "Qualitative / Strips",
+    "Normal_Range": "Nil / Negative",
+    "Sample_Type": "Urine Cup",
+    "price": 15000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Urine & Biochemical Analysis",
+    "Test_Name": "Urine Complete Analysis",
+    "Parameter": "Pus Cells (WBCs)",
+    "Unit": "/HPF",
+    "Normal_Range": "0 - 5",
+    "Sample_Type": "Urine Cup",
+    "price": 15000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Urine & Biochemical Analysis",
+    "Test_Name": "Urine Complete Analysis",
+    "Parameter": "RBCs",
+    "Unit": "/HPF",
+    "Normal_Range": "0 - 2",
+    "Sample_Type": "Urine Cup",
+    "price": 15000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Urine & Biochemical Analysis",
+    "Test_Name": "Urine Complete Analysis",
+    "Parameter": "Crystals / Casts",
+    "Unit": "Text",
+    "Normal_Range": "Not Seen / Occasional Amorphous",
+    "Sample_Type": "Urine Cup",
+    "price": 15000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Endemic Endoparasites",
+    "Test_Name": "Malaria Microscopy (Thick & Thin Film)",
+    "Parameter": "Malaria Blood Film Result",
+    "Unit": "Text",
+    "Normal_Range": "No Malaria Parasite Seen (NMP)",
+    "Sample_Type": "EDTA Whole Blood / Capillary",
+    "price": 25000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Endemic Endoparasites",
+    "Test_Name": "Malaria Microscopy (Thick & Thin Film)",
+    "Parameter": "Malaria Species Identified",
+    "Unit": "Text",
+    "Normal_Range": "None (P. falciparum, P. vivax, P. malariae)",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 25000
+  },
+  {
+    "Department": "Parasitology",
+    "Sub_Department": "Endemic Endoparasites",
+    "Test_Name": "Malaria Microscopy (Thick & Thin Film)",
+    "Parameter": "Parasite Quantification",
+    "Unit": "+ / ++ / +++ / ++++ or Parasites/uL",
+    "Normal_Range": "Negative",
+    "Sample_Type": "EDTA Whole Blood",
+    "price": 25000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Infectious Serology",
+    "Test_Name": "Widal Agglutination Test (Typhoid)",
+    "Parameter": "Salmonella typhi O Antigen",
+    "Unit": "Titre Ratio",
+    "Normal_Range": "< 1:80",
+    "Sample_Type": "Serum",
+    "price": 30000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Infectious Serology",
+    "Test_Name": "Widal Agglutination Test (Typhoid)",
+    "Parameter": "Salmonella typhi H Antigen",
+    "Unit": "Titre Ratio",
+    "Normal_Range": "< 1:80",
+    "Sample_Type": "Serum",
+    "price": 30000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Infectious Serology",
+    "Test_Name": "Brucella Agglutination Test",
+    "Parameter": "Brucella abortus / melitensis Titres",
+    "Unit": "Titre Ratio",
+    "Normal_Range": "< 1:80",
+    "Sample_Type": "Serum",
+    "price": 35000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Infectious Serology",
+    "Test_Name": "Visceral Leishmaniasis (Kala-azar)",
+    "Parameter": "rK39 Rapid Diagnostic Test",
+    "Unit": "Qualitative",
+    "Normal_Range": "Negative",
+    "Sample_Type": "Serum / Whole Blood",
+    "price": 40000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Viral Screening",
+    "Test_Name": "Hepatitis B Surface Antigen (HBsAg)",
+    "Parameter": "HBsAg Screening",
+    "Unit": "Index / Qualitative",
+    "Normal_Range": "Non-Reactive / Negative",
+    "Sample_Type": "Serum",
+    "price": 30000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Viral Screening",
+    "Test_Name": "Hepatitis C Virus Antibody (HCV Ab)",
+    "Parameter": "Anti-HCV",
+    "Unit": "Index / Qualitative",
+    "Normal_Range": "Non-Reactive / Negative",
+    "Sample_Type": "Serum",
+    "price": 35000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Viral Screening",
+    "Test_Name": "HIV 1 & 2 Antibody / Antigen Combo",
+    "Parameter": "HIV Ab/Ag Result",
+    "Unit": "Qualitative",
+    "Normal_Range": "Non-Reactive",
+    "Sample_Type": "Serum",
+    "price": 40000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Autoimmunity",
+    "Test_Name": "Rheumatoid Factor (RF)",
+    "Parameter": "RF Level",
+    "Unit": "IU/mL",
+    "Normal_Range": "< 14",
+    "Sample_Type": "Serum",
+    "price": 25000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Autoimmunity",
+    "Test_Name": "Antinuclear Antibodies (ANA)",
+    "Parameter": "ANA Screen by IFA",
+    "Unit": "Titre & Pattern",
+    "Normal_Range": "Negative at 1:40 dilution",
+    "Sample_Type": "Serum",
+    "price": 70000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Autoimmunity",
+    "Test_Name": "Anti-double Stranded DNA (anti-dsDNA)",
+    "Parameter": "Anti-dsDNA Antibody",
+    "Unit": "IU/mL",
+    "Normal_Range": "< 25 (Negative)",
+    "Sample_Type": "Serum",
+    "price": 80000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Tumor Markers",
+    "Test_Name": "Prostate Specific Antigen (PSA)",
+    "Parameter": "Total PSA",
+    "Unit": "ng/mL",
+    "Normal_Range": "0.0 - 4.0",
+    "Sample_Type": "Serum",
+    "price": 100000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Tumor Markers",
+    "Test_Name": "Alpha-Fetoprotein (AFP)",
+    "Parameter": "AFP Tumor Marker",
+    "Unit": "IU/mL",
+    "Normal_Range": "0.0 - 8.5",
+    "Sample_Type": "Serum",
+    "price": 120000
+  },
+  {
+    "Department": "Immunology & Serology",
+    "Sub_Department": "Tumor Markers",
+    "Test_Name": "Cancer Antigen 125 (CA-125)",
+    "Parameter": "CA-125 Level",
+    "Unit": "U/mL",
+    "Normal_Range": "< 35",
+    "Sample_Type": "Serum",
+    "price": 150000
+  },
+  {
+    "Department": "Histopathology & Cytology",
+    "Sub_Department": "Surgical Pathology",
+    "Test_Name": "Biopsy / Tissue Histopathology Examination",
+    "Parameter": "Gross Description",
+    "Unit": "Text Narrative",
+    "Normal_Range": "Clinical/Anatomical Context",
+    "Sample_Type": "Tissue Specimen in 10% Formalin",
+    "price": 200000
+  },
+  {
+    "Department": "Histopathology & Cytology",
+    "Sub_Department": "Surgical Pathology",
+    "Test_Name": "Biopsy / Tissue Histopathology Examination",
+    "Parameter": "Microscopic Description",
+    "Unit": "Text Narrative",
+    "Normal_Range": "Normal Architecture / No Malignancy",
+    "Sample_Type": "Tissue Specimen in Formalin",
+    "price": 200000
+  },
+  {
+    "Department": "Histopathology & Cytology",
+    "Sub_Department": "Surgical Pathology",
+    "Test_Name": "Biopsy / Tissue Histopathology Examination",
+    "Parameter": "Final Pathological Diagnosis",
+    "Unit": "Text Narrative",
+    "Normal_Range": "Benign / Malignant Classification",
+    "Sample_Type": "Tissue Specimen in Formalin",
+    "price": 200000
+  },
+  {
+    "Department": "Histopathology & Cytology",
+    "Sub_Department": "Cytopathology",
+    "Test_Name": "Fine Needle Aspiration Cytology (FNAC)",
+    "Parameter": "Aspiration Site & Cytology Assessment",
+    "Unit": "Text Narrative",
+    "Normal_Range": "Benign / Negative for Malignant Cells",
+    "Sample_Type": "Needle Aspirate Smear Slides",
+    "price": 150000
+  },
+  {
+    "Department": "Histopathology & Cytology",
+    "Sub_Department": "Cytopathology",
+    "Test_Name": "Pap Smear (Cervical Cytology)",
+    "Parameter": "Bethesda System Classification",
+    "Unit": "Text Categorization",
+    "Normal_Range": "Negative for Intraepithelial Lesion or Malignancy (NILM)",
+    "Sample_Type": "Cervical Swab / Liquid Cytology",
+    "price": 100000
+  },
+  {
+    "Department": "Histopathology & Cytology",
+    "Sub_Department": "Immunohistochemistry (IHC)",
+    "Test_Name": "Breast Cancer IHC Panel",
+    "Parameter": "Estrogen Receptor (ER) / Progesterone Receptor (PR) / HER2 Neu",
+    "Unit": "Score / Percentage",
+    "Normal_Range": "Therapeutic Assessment Dependent",
+    "Sample_Type": "Paraffin Block (FFPE)",
+    "price": 300000
+  },
+  {
+    "Department": "Molecular & Endocrinology",
+    "Sub_Department": "Molecular Virology (PCR)",
+    "Test_Name": "Hepatitis B Virus DNA Quantification (Viral Load)",
+    "Parameter": "HBV DNA Real-Time PCR",
+    "Unit": "IU/mL",
+    "Normal_Range": "Not Detected (Lower limit < 10 IU/mL)",
+    "Sample_Type": "EDTA Plasma (Separated)",
+    "price": 200000
+  },
+  {
+    "Department": "Molecular & Endocrinology",
+    "Sub_Department": "Molecular Virology (PCR)",
+    "Test_Name": "Hepatitis C Virus RNA Quantification",
+    "Parameter": "HCV RNA Viral Load",
+    "Unit": "IU/mL",
+    "Normal_Range": "Not Detected",
+    "Sample_Type": "EDTA Plasma",
+    "price": 200000
+  },
+  {
+    "Department": "Molecular & Endocrinology",
+    "Sub_Department": "Endocrinology / Hormones",
+    "Test_Name": "Thyroid Function Tests (TFT)",
+    "Parameter": "Thyroid Stimulating Hormone (TSH)",
+    "Unit": "uIU/mL",
+    "Normal_Range": "0.45 - 4.50",
+    "Sample_Type": "Serum",
+    "price": 40000
+  },
+  {
+    "Department": "Molecular & Endocrinology",
+    "Sub_Department": "Endocrinology / Hormones",
+    "Test_Name": "Thyroid Function Tests (TFT)",
+    "Parameter": "Free T4 (Thyroxine)",
+    "Unit": "ng/dL",
+    "Normal_Range": "0.8 - 1.8",
+    "Sample_Type": "Serum",
+    "price": 40000
+  },
+  {
+    "Department": "Molecular & Endocrinology",
+    "Sub_Department": "Endocrinology / Hormones",
+    "Test_Name": "Thyroid Function Tests (TFT)",
+    "Parameter": "Free T3 (Triiodothyronine)",
+    "Unit": "pg/mL",
+    "Normal_Range": "2.0 - 4.4",
+    "Sample_Type": "Serum",
+    "price": 40000
+  },
+  {
+    "Department": "Molecular & Endocrinology",
+    "Sub_Department": "Reproductive Hormones",
+    "Test_Name": "Fertility Panel",
+    "Parameter": "Follicle Stimulating Hormone (FSH)",
+    "Unit": "mIU/mL",
+    "Normal_Range": "Phase Dependent (e.g. Follicular 3.5-12.5)",
+    "Sample_Type": "Serum",
+    "price": 70000
+  },
+  {
+    "Department": "Molecular & Endocrinology",
+    "Sub_Department": "Reproductive Hormones",
+    "Test_Name": "Fertility Panel",
+    "Parameter": "Luteinizing Hormone (LH)",
+    "Unit": "mIU/mL",
+    "Normal_Range": "Phase Dependent",
+    "Sample_Type": "Serum",
+    "price": 70000
+  },
+  {
+    "Department": "Molecular & Endocrinology",
+    "Sub_Department": "Reproductive Hormones",
+    "Test_Name": "Fertility Panel",
+    "Parameter": "Serum Prolactin",
+    "Unit": "ng/mL",
+    "Normal_Range": "4.0 - 23.3 (Female), 4.0 - 15.2 (Male)",
+    "Sample_Type": "Serum",
+    "price": 70000
+  }
+]
