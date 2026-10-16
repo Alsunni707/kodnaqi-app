@@ -25,7 +25,8 @@
   "dependencies": {
     "@capacitor/android": "^8.5.3",
     "@capacitor/core": "^8.5.3",
-    "@thumbmarkjs/thumbmarkjs": "^1.12.0"
+    "@thumbmarkjs/thumbmarkjs": "^1.12.0",
+    "electron-updater": "^6.1.0"
   },
   "devDependencies": {
     "@capacitor/cli": "^8.5.3",
@@ -61,6 +62,13 @@
     },
     "asarUnpack": [
       "main.js"
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Alsunni707",
+        "repo": "kodnaqi-app"
+      }
     ]
   }
 }

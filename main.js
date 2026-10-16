@@ -55,3 +55,52 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
+
+// ═══════════════════════════════════════════════════
+// 🔄 التحديث التلقائي لـ Windows
+// ═══════════════════════════════════════════════════
+const { autoUpdater } = require('electron-updater');
+const { dialog } = require('electron');
+
+// التحقق من التحديثات عند بدء التشغيل
+app.whenReady().then(() => {
+  // التحقق من التحديثات (كل 4 ساعات)
+  setInterval(() => {
+    autoUpdater.checkForUpdates();
+  }, 4 * 60 * 60 * 1000);
+  
+  autoUpdater.checkForUpdates();
+});
+
+// عند وجود تحديث
+autoUpdater.on('update-available', () => {
+  dialog.showMessageBox({
+    type: 'info',
+    title: 'تحديث جديد متاح',
+    message: 'يوجد إصدار جديد من KodNaqi. هل تريد تحميله الآن؟',
+    buttons: ['نعم', 'لاحقاً']
+  }).then(result => {
+    if (result.response === 0) {
+      autoUpdater.downloadUpdate();
+    }
+  });
+});
+
+// عند تحميل التحديث
+autoUpdater.on('update-downloaded', () => {
+  dialog.showMessageBox({
+    type: 'info',
+    title: 'جاهز للتثبيت',
+    message: 'تم تحميل التحديث. هل تريد إعادة تشغيل التطبيق الآن؟',
+    buttons: ['إعادة تشغيل', 'لاحقاً']
+  }).then(result => {
+    if (result.response === 0) {
+      autoUpdater.quitAndInstall();
+    }
+  });
+});
+
+// خطأ في التحديث
+autoUpdater.on('error', (err) => {
+  console.error('Update error:', err);
+});
