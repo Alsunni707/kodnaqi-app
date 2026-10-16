@@ -894,3 +894,55 @@ async function getNextSerial(type) {
   }
   return String(current);
 }
+
+
+async function loadAndRenderTests() {
+    try {
+        const container = document.getElementById('tests-list-container') || document.getElementById('testsContainer');
+        if (!container) return;
+        
+        container.innerHTML = '<div class="loading-spinner">جاري تحميل الفحوصات محلياً...</div>';
+        
+        // جلب التحاليل من قاعدة البيانات المحلية IndexedDB
+        let tests = await dbGetAll('tests');
+        
+        if (!tests || tests.length === 0) {
+            // محاولة انتظار دقيقة لضمان اكتمال الزراعة إن لم تكتمل
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            tests = await dbGetAll('tests');
+        }
+        
+        if (!tests || tests.length === 0) {
+            container.innerHTML = '<p class="text-danger">⚠️ لا توجد فحوصات مخزنة محلياً. يرجى إعادة تشغيل التطبيق.</p>';
+            return;
+        }
+        
+        // بناء وعرض قائمة التحاليل في الواجهة
+        container.innerHTML = '';
+        tests.forEach(test => {
+            container.innerHTML += `
+                <div class="test-card-item" style="padding: 12px; margin-bottom: 8px; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <span style="font-size: 12px; color: #666; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">${test.code || 'LAB'}</span>
+                            <h4 style="margin: 5px 0 0 0; font-size: 15px; color: #333;">${test.name}</h4>
+                            <small style="color: #007bff;">${test.dept || 'General'} / ${test.sub || ''}</small>
+                        </div>
+                        <div style="text-align: left;">
+                            <span style="font-weight: bold; color: #28a745; font-size: 16px;">${test.price} </span>
+                            <small style="color: #666;">سوداني</small>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        console.log('✅ تم عرض ' + tests.length + ' فحص بنجاح أوفلاين!');
+    } catch (err) {
+        console.error('❌ خطأ في عرض التحاليل:', err);
+    }
+}
+
+// تشغيل الدالة عند فتح تبويب التحاليل
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(loadAndRenderTests, 500);
+});
