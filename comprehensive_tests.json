@@ -1,1042 +1,426 @@
 [
   {
-    "Test_Code": "HEM-001",
-    "Test_Name": "Complete Blood Count (CBC) with Differential",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Routine Hematology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 13,
-    "Specimen_Type": "EDTA Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "White Blood Cells (WBC)",
-        "Unit": "x10^3/uL",
-        "Range": "4.0 - 11.0"
-      },
-      {
-        "Analyte": "Red Blood Cells (RBC)",
-        "Unit": "x10^6/uL",
-        "Range": "4.5 - 5.9 (M), 4.1 - 5.1 (F)"
-      },
-      {
-        "Analyte": "Hemoglobin (Hb)",
-        "Unit": "g/dL",
-        "Range": "13.5 - 17.5 (M), 12.0 - 15.5 (F)"
-      },
-      {
-        "Analyte": "Hematocrit (HCT)",
-        "Unit": "%",
-        "Range": "41 - 50 (M), 36 - 46 (F)"
-      },
-      {
-        "Analyte": "MCV",
-        "Unit": "fL",
-        "Range": "80 - 100"
-      },
-      {
-        "Analyte": "MCH",
-        "Unit": "pg",
-        "Range": "27 - 33"
-      },
-      {
-        "Analyte": "MCHC",
-        "Unit": "g/dL",
-        "Range": "32 - 36"
-      },
-      {
-        "Analyte": "Platelets",
-        "Unit": "x10^3/uL",
-        "Range": "150 - 450"
-      },
-      {
-        "Analyte": "Neutrophils",
-        "Unit": "%",
-        "Range": "40 - 75"
-      },
-      {
-        "Analyte": "Lymphocytes",
-        "Unit": "%",
-        "Range": "20 - 45"
-      },
-      {
-        "Analyte": "Monocytes",
-        "Unit": "%",
-        "Range": "2 - 10"
-      },
-      {
-        "Analyte": "Eosinophils",
-        "Unit": "%",
-        "Range": "1 - 6"
-      },
-      {
-        "Analyte": "Basophils",
-        "Unit": "%",
-        "Range": "0 - 1"
-      }
-    ]
+    "code": "HEM-001",
+    "name": "Complete Blood Count (CBC) with Differential",
+    "dept": "Hematology & Coagulation",
+    "sub": "Routine Hematology",
+    "price": 15000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HEM-002",
-    "Test_Name": "Erythrocyte Sedimentation Rate (ESR)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Routine Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Sodium Citrate Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "ESR 1st Hour",
-        "Unit": "mm/hr",
-        "Range": "0 - 15 (M), 0 - 20 (F)"
-      }
-    ]
+    "code": "HEM-002",
+    "name": "Erythrocyte Sedimentation Rate (ESR)",
+    "dept": "Hematology & Coagulation",
+    "sub": "Routine Hematology",
+    "price": 8000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HEM-003",
-    "Test_Name": "Reticulocyte Count",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Special Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Whole Blood",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "Reticulocytes %",
-        "Unit": "%",
-        "Range": "0.5 - 2.5"
-      }
-    ]
+    "code": "HEM-003",
+    "name": "Reticulocyte Count",
+    "dept": "Hematology & Coagulation",
+    "sub": "Special Hematology",
+    "price": 20000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HEM-004",
-    "Test_Name": "Sickling Test",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Special Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Whole Blood",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Sickling",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ]
+    "code": "HEM-004",
+    "name": "Sickling Test",
+    "dept": "Hematology & Coagulation",
+    "sub": "Special Hematology",
+    "price": 25000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HEM-005",
-    "Test_Name": "Hemoglobin Electrophoresis",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Special Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Whole Blood",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Hb A/A2/F/S/C",
-        "Unit": "%",
-        "Range": "Hb A > 95%"
-      }
-    ]
+    "code": "HEM-005",
+    "name": "Hemoglobin Electrophoresis",
+    "dept": "Hematology & Coagulation",
+    "sub": "Special Hematology",
+    "price": 45000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HEM-006",
-    "Test_Name": "G6PD Enzyme Activity",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Special Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Whole Blood",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "G6PD",
-        "Unit": "U/g Hb",
-        "Range": "7.0 - 20.5"
-      }
-    ]
+    "code": "HEM-006",
+    "name": "G6PD Enzyme Activity",
+    "dept": "Hematology & Coagulation",
+    "sub": "Special Hematology",
+    "price": 45000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HEM-007",
-    "Test_Name": "Prothrombin Time (PT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "PT Time",
-        "Unit": "Seconds",
-        "Range": "11.0 - 13.5"
-      },
-      {
-        "Analyte": "INR",
-        "Unit": "Ratio",
-        "Range": "0.8 - 1.2"
-      }
-    ]
+    "code": "HEM-007",
+    "name": "Prothrombin Time (PT)",
+    "dept": "Hematology & Coagulation",
+    "sub": "Coagulation",
+    "price": 20000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HEM-008",
-    "Test_Name": "Activated Partial Thromboplastin Time (APTT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "APTT",
-        "Unit": "Seconds",
-        "Range": "25 - 35"
-      }
-    ]
+    "code": "HEM-008",
+    "name": "Activated Partial Thromboplastin Time (APTT)",
+    "dept": "Hematology & Coagulation",
+    "sub": "Coagulation",
+    "price": 20000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HEM-009",
-    "Test_Name": "D-Dimer",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "D-Dimer",
-        "Unit": "ug/mL",
-        "Range": "< 0.50"
-      }
-    ]
+    "code": "HEM-009",
+    "name": "D-Dimer",
+    "dept": "Hematology & Coagulation",
+    "sub": "Coagulation",
+    "price": 40000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HEM-010",
-    "Test_Name": "Fibrinogen Level",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Fibrinogen",
-        "Unit": "mg/dL",
-        "Range": "200 - 400"
-      }
-    ]
+    "code": "HEM-010",
+    "name": "Fibrinogen Level",
+    "dept": "Hematology & Coagulation",
+    "sub": "Coagulation",
+    "price": 25000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "CHE-001",
-    "Test_Name": "Kidney Profile",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Renal Function Tests",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Serum/Plasma",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Urea",
-        "Unit": "mg/dL",
-        "Range": "15 - 45"
-      },
-      {
-        "Analyte": "Creatinine",
-        "Unit": "mg/dL",
-        "Range": "0.6 - 1.2"
-      },
-      {
-        "Analyte": "Uric Acid",
-        "Unit": "mg/dL",
-        "Range": "3.5 - 7.2"
-      }
-    ]
+    "code": "CHE-001",
+    "name": "Kidney Profile",
+    "dept": "Clinical Chemistry",
+    "sub": "Renal Function Tests (RFT)",
+    "price": 10000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "CHE-002",
-    "Test_Name": "Liver Profile",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Liver Function Tests",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 9,
-    "Specimen_Type": "Serum",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Total Bilirubin",
-        "Unit": "mg/dL",
-        "Range": "0.2 - 1.2"
-      },
-      {
-        "Analyte": "Direct Bilirubin",
-        "Unit": "mg/dL",
-        "Range": "0.0 - 0.3"
-      },
-      {
-        "Analyte": "Indirect Bilirubin",
-        "Unit": "mg/dL",
-        "Range": "0.2 - 0.8"
-      },
-      {
-        "Analyte": "SGOT/AST",
-        "Unit": "U/L",
-        "Range": "5 - 40"
-      },
-      {
-        "Analyte": "SGPT/ALT",
-        "Unit": "U/L",
-        "Range": "5 - 45"
-      },
-      {
-        "Analyte": "ALP",
-        "Unit": "U/L",
-        "Range": "40 - 130"
-      },
-      {
-        "Analyte": "GGT",
-        "Unit": "U/L",
-        "Range": "10 - 60"
-      },
-      {
-        "Analyte": "Total Protein",
-        "Unit": "g/dL",
-        "Range": "6.4 - 8.3"
-      },
-      {
-        "Analyte": "Albumin",
-        "Unit": "g/dL",
-        "Range": "3.5 - 5.0"
-      }
-    ]
+    "code": "CHE-002",
+    "name": "Liver Profile",
+    "dept": "Clinical Chemistry",
+    "sub": "Liver Function Tests (LFT)",
+    "price": 15000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "CHE-003",
-    "Test_Name": "Lipid Panel",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Lipid Profile",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 4,
-    "Specimen_Type": "Serum",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "Total Cholesterol",
-        "Unit": "mg/dL",
-        "Range": "< 200"
-      },
-      {
-        "Analyte": "Triglycerides",
-        "Unit": "mg/dL",
-        "Range": "< 150"
-      },
-      {
-        "Analyte": "HDL",
-        "Unit": "mg/dL",
-        "Range": "> 40"
-      },
-      {
-        "Analyte": "LDL",
-        "Unit": "mg/dL",
-        "Range": "< 100"
-      }
-    ]
+    "code": "CHE-003",
+    "name": "Lipid Panel",
+    "dept": "Clinical Chemistry",
+    "sub": "Lipid Profile",
+    "price": 18000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "CHE-004",
-    "Test_Name": "Cardiac Profile",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Cardiac Biomarkers",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Serum",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "Troponin I",
-        "Unit": "ng/L",
-        "Range": "< 14"
-      },
-      {
-        "Analyte": "CK-MB",
-        "Unit": "U/L",
-        "Range": "< 25"
-      },
-      {
-        "Analyte": "NT-proBNP",
-        "Unit": "pg/mL",
-        "Range": "< 125"
-      }
-    ]
+    "code": "CHE-004",
+    "name": "Cardiac Profile",
+    "dept": "Clinical Chemistry",
+    "sub": "Cardiac Biomarkers",
+    "price": 150000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "CHE-005",
-    "Test_Name": "Serum Electrolytes",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Electrolytes",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Serum",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Sodium",
-        "Unit": "mmol/L",
-        "Range": "135 - 145"
-      },
-      {
-        "Analyte": "Potassium",
-        "Unit": "mmol/L",
-        "Range": "3.5 - 5.1"
-      },
-      {
-        "Analyte": "Chloride",
-        "Unit": "mmol/L",
-        "Range": "98 - 107"
-      }
-    ]
+    "code": "CHE-005",
+    "name": "Serum Electrolytes",
+    "dept": "Clinical Chemistry",
+    "sub": "Electrolytes & Minerals",
+    "price": 15000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "CHE-006",
-    "Test_Name": "Total Calcium",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Electrolytes",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Calcium",
-        "Unit": "mg/dL",
-        "Range": "8.6 - 10.2"
-      }
-    ]
+    "code": "CHE-006",
+    "name": "Total Calcium",
+    "dept": "Clinical Chemistry",
+    "sub": "Electrolytes & Minerals",
+    "price": 15000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "CHE-007",
-    "Test_Name": "Fasting Blood Glucose",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Metabolic",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Fluoride Plasma",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Glucose",
-        "Unit": "mg/dL",
-        "Range": "70 - 100"
-      }
-    ]
+    "code": "CHE-007",
+    "name": "Fasting Blood Glucose",
+    "dept": "Clinical Chemistry",
+    "sub": "Metabolic & Diabetes",
+    "price": 8000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "CHE-008",
-    "Test_Name": "HbA1c",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Metabolic",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "HbA1c",
-        "Unit": "%",
-        "Range": "< 5.7%"
-      }
-    ]
+    "code": "CHE-008",
+    "name": "HbA1c (Glycated Hemoglobin)",
+    "dept": "Clinical Chemistry",
+    "sub": "Metabolic & Diabetes",
+    "price": 25000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "MIC-001",
-    "Test_Name": "Blood Culture & Sensitivity",
-    "Department": "Microbiology",
-    "Sub_Department": "Bacteriology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Blood Culture Bottle",
-    "Price": 100000,
-    "Components": [
-      {
-        "Analyte": "Growth",
-        "Unit": "Text",
-        "Range": "No Growth"
-      },
-      {
-        "Analyte": "Organism",
-        "Unit": "Text",
-        "Range": "None"
-      },
-      {
-        "Analyte": "Sensitivity",
-        "Unit": "S/I/R",
-        "Range": "Pending"
-      }
-    ]
+    "code": "MIC-001",
+    "name": "Blood Culture and Sensitivity",
+    "dept": "Microbiology",
+    "sub": "Bacteriology Cultures",
+    "price": 100000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "MIC-002",
-    "Test_Name": "Urine Culture & Sensitivity",
-    "Department": "Microbiology",
-    "Sub_Department": "Bacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Colony Count",
-        "Unit": "CFU/mL",
-        "Range": "< 10^3"
-      }
-    ]
+    "code": "MIC-002",
+    "name": "Urine Culture and Sensitivity",
+    "dept": "Microbiology",
+    "sub": "Bacteriology Cultures",
+    "price": 50000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "MIC-003",
-    "Test_Name": "Wound Swab Culture",
-    "Department": "Microbiology",
-    "Sub_Department": "Bacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Swab",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Gram Stain",
-        "Unit": "Text",
-        "Range": "Pus/Epithelial"
-      }
-    ]
+    "code": "MIC-003",
+    "name": "Wound Swab Culture & Sensitivity",
+    "dept": "Microbiology",
+    "sub": "Bacteriology Cultures",
+    "price": 40000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "MIC-004",
-    "Test_Name": "Sputum AFB",
-    "Department": "Microbiology",
-    "Sub_Department": "Mycobacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Sputum",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "ZN Stain",
-        "Unit": "Grading",
-        "Range": "Negative"
-      }
-    ]
+    "code": "MIC-004",
+    "name": "Sputum for Acid Fast Bacilli (AFB)",
+    "dept": "Microbiology",
+    "sub": "Mycobacteriology",
+    "price": 30000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "MIC-005",
-    "Test_Name": "GeneXpert MTB",
-    "Department": "Microbiology",
-    "Sub_Department": "Mycobacteriology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Sputum/CSF",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "MTB DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      },
-      {
-        "Analyte": "Rifampicin",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ]
+    "code": "MIC-005",
+    "name": "GeneXpert Mycobacterium tuberculosis",
+    "dept": "Microbiology",
+    "sub": "Mycobacteriology",
+    "price": 150000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "PAR-001",
-    "Test_Name": "Stool Routine",
-    "Department": "Parasitology",
-    "Sub_Department": "Stool Parasites",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Stool",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Protozoa",
-        "Unit": "Text",
-        "Range": "Not Seen"
-      },
-      {
-        "Analyte": "Helminths",
-        "Unit": "Text",
-        "Range": "Not Seen"
-      }
-    ]
+    "code": "PAR-001",
+    "name": "Stool Routine Examination",
+    "dept": "Parasitology",
+    "sub": "Stool & Urine Parasites",
+    "price": 15000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "PAR-002",
-    "Test_Name": "Urine Routine",
-    "Department": "Parasitology",
-    "Sub_Department": "Urine Parasites",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Microscopic",
-        "Unit": "Text",
-        "Range": "Not Seen"
-      }
-    ]
+    "code": "PAR-002",
+    "name": "Urine Routine Examination",
+    "dept": "Parasitology",
+    "sub": "Stool & Urine Parasites",
+    "price": 15000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "PAR-003",
-    "Test_Name": "Urine Complete Analysis",
-    "Department": "Parasitology",
-    "Sub_Department": "Urine Analysis",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 6,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "5.0 - 7.5"
-      },
-      {
-        "Analyte": "Protein",
-        "Unit": "Qual",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Glucose",
-        "Unit": "Qual",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Pus Cells",
-        "Unit": "/HPF",
-        "Range": "0 - 5"
-      },
-      {
-        "Analyte": "RBCs",
-        "Unit": "/HPF",
-        "Range": "0 - 2"
-      },
-      {
-        "Analyte": "Crystals",
-        "Unit": "Text",
-        "Range": "Not Seen"
-      }
-    ]
+    "code": "PAR-003",
+    "name": "Urine Complete Analysis",
+    "dept": "Parasitology",
+    "sub": "Urine & Biochemical Analysis",
+    "price": 15000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "PAR-004",
-    "Test_Name": "Malaria Microscopy",
-    "Department": "Parasitology",
-    "Sub_Department": "Blood Parasites",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Blood Film",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Result",
-        "Unit": "Text",
-        "Range": "NMP"
-      },
-      {
-        "Analyte": "Species",
-        "Unit": "Text",
-        "Range": "None"
-      },
-      {
-        "Analyte": "Quantification",
-        "Unit": "+/+",
-        "Range": "Negative"
-      }
-    ]
+    "code": "PAR-004",
+    "name": "Malaria Microscopy (Thick & Thin Film)",
+    "dept": "Parasitology",
+    "sub": "Endemic Endoparasites",
+    "price": 25000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-001",
-    "Test_Name": "Widal Test (Typhoid)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Infectious Serology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Serum",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "S. typhi O",
-        "Unit": "Titre",
-        "Range": "< 1:80"
-      },
-      {
-        "Analyte": "S. typhi H",
-        "Unit": "Titre",
-        "Range": "< 1:80"
-      }
-    ]
+    "code": "IMM-001",
+    "name": "Widal Agglutination Test (Typhoid)",
+    "dept": "Immunology & Serology",
+    "sub": "Infectious Serology",
+    "price": 30000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-002",
-    "Test_Name": "Brucella Agglutination",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Infectious Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Brucella",
-        "Unit": "Titre",
-        "Range": "< 1:80"
-      }
-    ]
+    "code": "IMM-002",
+    "name": "Brucella Agglutination Test",
+    "dept": "Immunology & Serology",
+    "sub": "Infectious Serology",
+    "price": 35000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-003",
-    "Test_Name": "Visceral Leishmaniasis",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Infectious Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum/Blood",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "rK39",
-        "Unit": "Qual",
-        "Range": "Negative"
-      }
-    ]
+    "code": "IMM-003",
+    "name": "Visceral Leishmaniasis (Kala-azar)",
+    "dept": "Immunology & Serology",
+    "sub": "Infectious Serology",
+    "price": 40000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-004",
-    "Test_Name": "HBsAg",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "HBsAg",
-        "Unit": "Qual",
-        "Range": "Negative"
-      }
-    ]
+    "code": "IMM-004",
+    "name": "Hepatitis B Surface Antigen (HBsAg)",
+    "dept": "Immunology & Serology",
+    "sub": "Viral Screening",
+    "price": 30000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-005",
-    "Test_Name": "Anti-HCV",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Anti-HCV",
-        "Unit": "Qual",
-        "Range": "Negative"
-      }
-    ]
+    "code": "IMM-005",
+    "name": "Hepatitis C Virus Antibody (HCV Ab)",
+    "dept": "Immunology & Serology",
+    "sub": "Viral Screening",
+    "price": 35000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-006",
-    "Test_Name": "HIV 1&2",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "HIV",
-        "Unit": "Qual",
-        "Range": "Negative"
-      }
-    ]
+    "code": "IMM-006",
+    "name": "HIV 1 & 2 Antibody / Antigen Combo",
+    "dept": "Immunology & Serology",
+    "sub": "Viral Screening",
+    "price": 40000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-007",
-    "Test_Name": "Rheumatoid Factor",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "RF",
-        "Unit": "IU/mL",
-        "Range": "< 14"
-      }
-    ]
+    "code": "IMM-007",
+    "name": "Rheumatoid Factor (RF)",
+    "dept": "Immunology & Serology",
+    "sub": "Autoimmunity",
+    "price": 25000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-008",
-    "Test_Name": "ANA",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "ANA",
-        "Unit": "Titre",
-        "Range": "Negative"
-      }
-    ]
+    "code": "IMM-008",
+    "name": "Antinuclear Antibodies (ANA)",
+    "dept": "Immunology & Serology",
+    "sub": "Autoimmunity",
+    "price": 70000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-009",
-    "Test_Name": "Anti-dsDNA",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "Anti-dsDNA",
-        "Unit": "IU/mL",
-        "Range": "< 25"
-      }
-    ]
+    "code": "IMM-009",
+    "name": "Anti-double Stranded DNA (anti-dsDNA)",
+    "dept": "Immunology & Serology",
+    "sub": "Autoimmunity",
+    "price": 80000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-010",
-    "Test_Name": "PSA",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 100000,
-    "Components": [
-      {
-        "Analyte": "PSA",
-        "Unit": "ng/mL",
-        "Range": "0 - 4"
-      }
-    ]
+    "code": "IMM-010",
+    "name": "Prostate Specific Antigen (PSA)",
+    "dept": "Immunology & Serology",
+    "sub": "Tumor Markers",
+    "price": 100000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-011",
-    "Test_Name": "AFP",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "AFP",
-        "Unit": "IU/mL",
-        "Range": "0 - 8.5"
-      }
-    ]
+    "code": "IMM-011",
+    "name": "Alpha-Fetoprotein (AFP)",
+    "dept": "Immunology & Serology",
+    "sub": "Tumor Markers",
+    "price": 120000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "IMM-012",
-    "Test_Name": "CA-125",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "CA-125",
-        "Unit": "U/mL",
-        "Range": "< 35"
-      }
-    ]
+    "code": "IMM-012",
+    "name": "Cancer Antigen 125 (CA-125)",
+    "dept": "Immunology & Serology",
+    "sub": "Tumor Markers",
+    "price": 150000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HIS-001",
-    "Test_Name": "Biopsy Histopathology",
-    "Department": "Histopathology",
-    "Sub_Department": "Surgical Pathology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Formalin Tissue",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "Gross",
-        "Unit": "Text",
-        "Range": "Clinical"
-      },
-      {
-        "Analyte": "Microscopic",
-        "Unit": "Text",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Diagnosis",
-        "Unit": "Text",
-        "Range": "Benign/Malignant"
-      }
-    ]
+    "code": "HIS-001",
+    "name": "Biopsy / Tissue Histopathology Examination",
+    "dept": "Histopathology & Cytology",
+    "sub": "Surgical Pathology",
+    "price": 200000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HIS-002",
-    "Test_Name": "FNAC",
-    "Department": "Histopathology",
-    "Sub_Department": "Cytopathology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Smear",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "Cytology",
-        "Unit": "Text",
-        "Range": "Benign"
-      }
-    ]
+    "code": "HIS-002",
+    "name": "Fine Needle Aspiration Cytology (FNAC)",
+    "dept": "Histopathology & Cytology",
+    "sub": "Cytopathology",
+    "price": 150000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HIS-003",
-    "Test_Name": "Pap Smear",
-    "Department": "Histopathology",
-    "Sub_Department": "Cytopathology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Cervical Swab",
-    "Price": 100000,
-    "Components": [
-      {
-        "Analyte": "Bethesda",
-        "Unit": "Text",
-        "Range": "NILM"
-      }
-    ]
+    "code": "HIS-003",
+    "name": "Pap Smear (Cervical Cytology)",
+    "dept": "Histopathology & Cytology",
+    "sub": "Cytopathology",
+    "price": 100000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "HIS-004",
-    "Test_Name": "Breast IHC Panel",
-    "Department": "Histopathology",
-    "Sub_Department": "IHC",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE",
-    "Price": 300000,
-    "Components": [
-      {
-        "Analyte": "ER/PR/HER2",
-        "Unit": "Score",
-        "Range": "Dependent"
-      }
-    ]
+    "code": "HIS-004",
+    "name": "Breast Cancer IHC Panel",
+    "dept": "Histopathology & Cytology",
+    "sub": "Immunohistochemistry (IHC)",
+    "price": 300000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "MOL-001",
-    "Test_Name": "HBV DNA Viral Load",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Plasma",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "HBV DNA",
-        "Unit": "IU/mL",
-        "Range": "Not Detected"
-      }
-    ]
+    "code": "MOL-001",
+    "name": "Hepatitis B Virus DNA Quantification (Viral Load)",
+    "dept": "Molecular & Endocrinology",
+    "sub": "Molecular Virology (PCR)",
+    "price": 200000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "MOL-002",
-    "Test_Name": "HCV RNA Viral Load",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Plasma",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "HCV RNA",
-        "Unit": "IU/mL",
-        "Range": "Not Detected"
-      }
-    ]
+    "code": "MOL-002",
+    "name": "Hepatitis C Virus RNA Quantification",
+    "dept": "Molecular & Endocrinology",
+    "sub": "Molecular Virology (PCR)",
+    "price": 200000,
+    "type": "single",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "MOL-003",
-    "Test_Name": "Thyroid Function Tests",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "TSH",
-        "Unit": "uIU/mL",
-        "Range": "0.45 - 4.50"
-      },
-      {
-        "Analyte": "Free T4",
-        "Unit": "ng/dL",
-        "Range": "0.8 - 1.8"
-      },
-      {
-        "Analyte": "Free T3",
-        "Unit": "pg/mL",
-        "Range": "2.0 - 4.4"
-      }
-    ]
+    "code": "MOL-003",
+    "name": "Thyroid Function Tests (TFT)",
+    "dept": "Molecular & Endocrinology",
+    "sub": "Endocrinology / Hormones",
+    "price": 40000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
-    "Test_Code": "MOL-004",
-    "Test_Name": "Fertility Panel",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "FSH",
-        "Unit": "mIU/mL",
-        "Range": "Phase Dependent"
-      },
-      {
-        "Analyte": "LH",
-        "Unit": "mIU/mL",
-        "Range": "Phase Dependent"
-      },
-      {
-        "Analyte": "Prolactin",
-        "Unit": "ng/mL",
-        "Range": "4 - 23"
-      }
-    ]
+    "code": "MOL-004",
+    "name": "Fertility Panel",
+    "dept": "Molecular & Endocrinology",
+    "sub": "Reproductive Hormones",
+    "price": 70000,
+    "type": "panel",
+    "Component_Count": 1
   },
   {
     "Test_Code": "HEM-011",

@@ -4,7 +4,7 @@
 // تخزين كل البيانات داخل الهاتف — بدون سيرفر، بدون إنترنت
 
 // ═══ تشفير البيانات الحساسة (AES-GCM) — مفتاح مشتق من الترخيص + الجهاز ═══
-const ENCRYPTED_STORES = ['expenses', 'results', 'patients', 'visits'];
+const ENCRYPTED_STORES = []; // التشفير متوقف مؤقتاً
 const ENC_PREFIX = 'ENC:v1:';
 
 async function getEncryptionKey() {
@@ -47,39 +47,38 @@ async function getEncryptionKey() {
 async function encryptData(storeName, data) {
   if (ENCRYPTED_STORES.indexOf(storeName) === -1) return data;
   const key = await getEncryptionKey();
-  if (!key) return data; // لا يوجد ترخيص، لا نشفر (لن يُقرأ عند التشغيل الطبيعي)
-  const enc = new TextEncoder();
+  if (!key) return data;
+
+  const copy = Object.assign({}, data);
+  const originalId = copy.id;
+  delete copy.id;
+
   const iv = crypto.getRandomValues(new Uint8Array(12));
-  const plaintext = enc.encode(JSON.stringify(data));
-  const ciphertext = await crypto.subtle.encrypt(
-    { name: 'AES-GCM', iv },
-    key,
-    plaintext
-  );
-  // تخزين: IV + البيانات المشفرة (base64)
-  const ivB64 = btoa(String.fromCharCode.apply(null, iv));
-  const ctB64 = btoa(String.fromCharCode.apply(null, new Uint8Array(ciphertext)));
-  return ENC_PREFIX + ivB64 + ':' + ctB64;
+  const plaintext = new TextEncoder().encode(JSON.stringify(copy));
+  const ciphertext = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, plaintext);
+
+  const out = {
+    _encrypted: true,
+    _iv: Array.from(iv),
+    _data: Array.from(new Uint8Array(ciphertext))
+  };
+  if (originalId !== undefined && originalId !== null) out.id = originalId;
+  return out;
 }
 
 async function decryptData(storeName, data) {
   if (ENCRYPTED_STORES.indexOf(storeName) === -1) return data;
-  if (typeof data !== 'string' || data.indexOf(ENC_PREFIX) !== 0) return data;
+  if (!data || !data._encrypted) return data;
   const key = await getEncryptionKey();
   if (!key) throw new Error('لا يوجد ترخيص صالح لفك التشفير');
-  const parts = data.split(':');
-  if (parts.length < 3) return data;
-  const ivB64 = parts[1];
-  const ctB64 = parts.slice(2).join(':');
-  const iv = Uint8Array.from(atob(ivB64), c => c.charCodeAt(0));
-  const ct = Uint8Array.from(atob(ctB64), c => c.charCodeAt(0));
   const decrypted = await crypto.subtle.decrypt(
-    { name: 'AES-GCM', iv },
+    { name: 'AES-GCM', iv: new Uint8Array(data._iv) },
     key,
-    ct
+    new Uint8Array(data._data)
   );
-  const dec = new TextDecoder();
-  return JSON.parse(dec.decode(decrypted));
+  const obj = JSON.parse(new TextDecoder().decode(decrypted));
+  if (data.id !== undefined) obj.id = data.id;
+  return obj;
 }
 
 const DB_NAME = 'kodnaqi_standalone';
@@ -89,6 +88,7 @@ let db = null;
 
 // فتح/إنشاء قاعدة البيانات
 function openDB() {
+  if (db) return Promise.resolve(db);
   return new Promise((resolve, reject) => {
     const req = indexedDB.open(DB_NAME, DB_VERSION);
 
@@ -123,7 +123,7 @@ function openDB() {
         s.createIndex('date', 'date', { unique: false });
       }
 
-      // تحاليل الزيارات (المفقود سابقاً!)
+      // تحاليل الزيارات
       if (!database.objectStoreNames.contains('visit_tests')) {
         const s = database.createObjectStore('visit_tests', { keyPath: 'id', autoIncrement: true });
         s.createIndex('visit_id', 'visit_id', { unique: false });
@@ -153,12 +153,12 @@ function openDB() {
         database.createObjectStore('counters', { keyPath: 'name' });
       }
 
-      // المستخدمون (نسخة IndexedDB للنسخ الاحتياطي)
+      // المستخدمون
       if (!database.objectStoreNames.contains('users_store')) {
         const s = database.createObjectStore('users_store', { keyPath: 'username' });
       }
 
-      // الإشعارات المُرسلة
+      // الإشعارات
       if (!database.objectStoreNames.contains('notifications')) {
         const s = database.createObjectStore('notifications', { keyPath: 'id', autoIncrement: true });
         s.createIndex('visit_id', 'visit_id', { unique: false });
@@ -175,6 +175,7 @@ function openDB() {
 
     req.onsuccess = (e) => {
       db = e.target.result;
+      db.onversionchange = () => { db.close(); db = null; };
       console.log('✅ قاعدة البيانات جاهزة');
       resolve(db);
     };
@@ -187,26 +188,35 @@ function openDB() {
 }
 
 // ============ عمليات عامة ============
+function cleanId(obj) {
+  if (obj && typeof obj === 'object' && 'id' in obj && (obj.id === undefined || obj.id === null || obj.id === '')) {
+    delete obj.id;
+  }
+  return obj;
+}
+
 function dbAdd(store, data) {
   return openDB().then(async db => {
-    const finalData = await encryptData(store, data);
-    const tx = db.transaction(store, 'readwrite');
-    const req = tx.objectStore(store).add(finalData);
+    const finalData = cleanId(await encryptData(store, Object.assign({}, data)));
     return new Promise((resolve, reject) => {
+      const tx = db.transaction(store, 'readwrite');
+      const req = tx.objectStore(store).add(finalData);
       req.onsuccess = () => resolve(req.result);
       req.onerror = () => reject(req.error);
+      tx.onabort = () => reject(tx.error);
     });
   });
 }
 
 function dbPut(store, data) {
   return openDB().then(async db => {
-    const finalData = await encryptData(store, data);
-    const tx = db.transaction(store, 'readwrite');
-    const req = tx.objectStore(store).put(finalData);
+    const finalData = cleanId(await encryptData(store, Object.assign({}, data)));
     return new Promise((resolve, reject) => {
+      const tx = db.transaction(store, 'readwrite');
+      const req = tx.objectStore(store).put(finalData);
       req.onsuccess = () => resolve(req.result);
       req.onerror = () => reject(req.error);
+      tx.onabort = () => reject(tx.error);
     });
   });
 }
@@ -252,56 +262,52 @@ function dbGetAll(store) {
 }
 
 function dbDelete(store, id) {
-  return new Promise((resolve, reject) => {
+  return openDB().then(db => new Promise((resolve, reject) => {
     const tx = db.transaction(store, 'readwrite');
     const req = tx.objectStore(store).delete(id);
     req.onsuccess = () => resolve();
     req.onerror = () => reject(req.error);
-  });
+  }));
 }
 
 function dbClear(store) {
-  return new Promise((resolve, reject) => {
+  return openDB().then(db => new Promise((resolve, reject) => {
     const tx = db.transaction(store, 'readwrite');
     const req = tx.objectStore(store).clear();
     req.onsuccess = () => resolve();
     req.onerror = () => reject(req.error);
-  });
+  }));
 }
 
 function dbCount(store) {
-  return new Promise((resolve, reject) => {
+  return openDB().then(db => new Promise((resolve, reject) => {
     const tx = db.transaction(store, 'readonly');
     const req = tx.objectStore(store).count();
     req.onsuccess = () => resolve(req.result);
     req.onerror = () => reject(req.error);
-  });
+  }));
 }
 
 // الحصول على عناصر بالفهرس
 function dbGetByIndex(store, indexName, value) {
-  return new Promise((resolve, reject) => {
+  return openDB().then(db => new Promise((resolve, reject) => {
     const tx = db.transaction(store, 'readonly');
-    const idx = tx.objectStore(store).index(indexName);
-    const req = idx.getAll(value);
+    const req = tx.objectStore(store).index(indexName).getAll(value);
     req.onsuccess = () => resolve(req.result || []);
     req.onerror = () => reject(req.error);
-  });
+  }));
 }
 
 // ============ العداد التسلسلي ============
 async function getNextSerial(type) {
   const year = new Date().getFullYear();
-  const counterName = `${type}_${year}`;
-  const counter = await dbGet('counters', counterName);
-  let nextNum = counter ? counter.value + 1 : 1;
-
-  await dbPut('counters', { name: counterName, value: nextNum });
-
-  if (type === 'patient') {
-    return `KN-P-${year}-${String(nextNum).padStart(6, '0')}`;
-  } else if (type === 'visit') {
-    return `KN-${year}-${String(nextNum).padStart(6, '0')}`;
-  }
-  return String(nextNum);
+  const key = 'kodnaqi_serial_' + type + '_' + year;
+  let current = parseInt(localStorage.getItem(key) || '0', 10);
+  if (isNaN(current)) current = 0;
+  current++;
+  localStorage.setItem(key, String(current));
+  const num = String(current).padStart(6, '0');
+  if (type === 'patient') return 'KN-P-' + year + '-' + num;
+  if (type === 'visit') return 'KN-' + year + '-' + num;
+  return String(current);
 }
