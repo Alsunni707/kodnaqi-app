@@ -737,38 +737,46 @@ function showActivationSuccess(payload) {
   const tierName = tierNames[payload.tier] || payload.tier;
   const daysLeft = payload.expires ? Math.ceil((payload.expires - Date.now()) / 86400000) : 'دائم';
   
-  // إنشاء نافذة جميلة
-  const overlay = document.createElement('div');
-  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:999999;padding:20px;direction:rtl;';
+  // إنشاء التنبيه الجميل
+  const toast = document.createElement('div');
+  toast.id = 'kodnaqi-toast';
+  toast.className = 'toast-card';
   
-  overlay.innerHTML = `
-    <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:24px;padding:40px;max-width:420px;width:100%;text-align:center;box-shadow:0 25px 80px rgba(0,0,0,0.5);color:white;">
-      <div style="font-size:5rem;margin-bottom:20px;">🎉</div>
-      <h2 style="margin:0 0 10px;font-size:1.8rem;font-weight:800;">تم التفعيل بنجاح!</h2>
-      <p style="margin:0 0 25px;opacity:0.9;font-size:1.1rem;">مرحباً بك في نظام KodNaqi</p>
-      
-      <div style="background:rgba(255,255,255,0.2);border-radius:16px;padding:20px;margin-bottom:25px;">
-        <div style="font-size:0.9rem;opacity:0.8;margin-bottom:5px;">الباقة المفعلة</div>
-        <div style="font-size:1.5rem;font-weight:800;margin-bottom:15px;">${tierName}</div>
-        
-        <div style="font-size:0.9rem;opacity:0.8;margin-bottom:5px;">مدة الاشتراك</div>
-        <div style="font-size:1.3rem;font-weight:700;">${daysLeft === 'دائم' ? 'دائم' : daysLeft + ' يوم'}</div>
-      </div>
-      
-      <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:15px;margin-bottom:25px;font-size:0.9rem;line-height:1.6;">
-        ✨ يمكنك الآن استخدام جميع ميزات النظام<br>
-        📊 إدارة المرضى والفحوصات<br>
-        🖨️ طباعة التقارير الاحترافية<br>
-        💾 النسخ الاحتياطي الآمن
-      </div>
-      
-      <button onclick="this.closest('div').parentElement.remove();localStorage.setItem('kodnaqi_activation_shown','true');" style="width:100%;padding:16px;background:white;color:#667eea;border:none;border-radius:12px;font-size:1.1rem;font-weight:800;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.2);">
-        🚀 ابدأ العمل الآن
-      </button>
+  toast.innerHTML = `
+    <div class="toast-icon-wrapper">
+      <span class="toast-emoji">🎊</span>
     </div>
+    <div class="toast-body">
+      <h4 class="toast-headline">مرحى! تم تفعيل باقة ${tierName} بنجاح</h4>
+      <p class="toast-subtext">مدة الاشتراك: ${daysLeft === 'دائم' ? 'دائم' : daysLeft + ' يوم'} — نتمنى لك رحلة ممتعة معنا، وشكراً لانضمامك إلى أسرتنا <span class="brand-highlight">KodNaqi Diagnostics</span></p>
+    </div>
+    <button class="toast-close-x" onclick="closeKodNaqiToast()">×</button>
   `;
   
-  document.body.appendChild(overlay);
+  document.body.appendChild(toast);
+  
+  // إظهار التنبيه بعد لحظة
+  setTimeout(() => {
+    toast.classList.add('show');
+  }, 100);
+  
+  // إخفاء تلقائي بعد 5 ثوانٍ
+  setTimeout(() => {
+    closeKodNaqiToast();
+  }, 5000);
+  
+  // حفظ أنه تم الإظهار
+  localStorage.setItem('kodnaqi_activation_shown', 'true');
+}
+
+function closeKodNaqiToast() {
+  const toast = document.getElementById('kodnaqi-toast');
+  if (toast) {
+    toast.classList.remove('show');
+    setTimeout(() => {
+      if (toast.parentNode) toast.parentNode.removeChild(toast);
+    }, 400);
+  }
 }
 
 // تصدير للاستخدام

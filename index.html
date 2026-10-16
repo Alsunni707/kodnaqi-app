@@ -533,6 +533,10 @@ body {
           <i class="bi bi-key-fill"></i> حالة الترخيص
         </button>
         
+        <button onclick="KodNaqiLicense.enableDevMode()" class="btn btn-outline-danger btn-sm mt-2 w-100" id="devModeBtn">
+          <i class="bi bi-code-slash"></i> تفعيل وضع المطور (دائم)
+        </button>
+        
         <button onclick="resetDefaultTests()" class="btn btn-outline-warning btn-sm mt-2 w-100">
           <i class="bi bi-arrow-clockwise"></i> إعادة تعيين الفحوصات الافتراضية
         </button>
@@ -927,3 +931,107 @@ async function knRunTest() {
 
 </body>
 </html>
+
+<style>
+/* تحديد الألوان الافتراضية (الوضع المضيء) */
+:root {
+  --toast-bg: #ffffff;
+  --toast-border: #38bdf8;
+  --toast-icon-bg: rgba(56, 189, 248, 0.1);
+  --toast-text-main: #0f172a;
+  --toast-text-sub: #475569;
+  --toast-brand: #0284c7;
+  --toast-shadow: rgba(0, 0, 0, 0.08);
+  --toast-close: #94a3b8;
+}
+
+/* الوضع الليلي */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --toast-bg: #1e293b;
+    --toast-border: #0ea5e9;
+    --toast-icon-bg: rgba(14, 165, 233, 0.15);
+    --toast-text-main: #f8fafc;
+    --toast-text-sub: #cbd5e1;
+    --toast-brand: #38bdf8;
+    --toast-shadow: rgba(0, 0, 0, 0.3);
+    --toast-close: #64748b;
+  }
+}
+
+/* تصميم بطاقة التنبيه */
+.toast-card {
+  position: fixed;
+  bottom: 24px;
+  right: -500px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--toast-bg);
+  border-right: 5px solid var(--toast-border);
+  box-shadow: 0 12px 30px var(--toast-shadow);
+  padding: 18px 24px;
+  border-radius: 14px;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  max-width: 460px;
+  z-index: 9999;
+  transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s, color 0.3s;
+}
+
+.toast-card.show {
+  right: 24px;
+}
+
+.toast-icon-wrapper {
+  background: var(--toast-icon-bg);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.toast-emoji {
+  font-size: 24px;
+}
+
+.toast-body {
+  flex-grow: 1;
+}
+
+.toast-headline {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--toast-text-main);
+}
+
+.toast-subtext {
+  margin: 0;
+  font-size: 13px;
+  color: var(--toast-text-sub);
+  line-height: 1.5;
+}
+
+.brand-highlight {
+  color: var(--toast-brand);
+  font-weight: 700;
+}
+
+.toast-close-x {
+  background: none;
+  border: none;
+  color: var(--toast-close);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.2s;
+}
+
+.toast-close-x:hover {
+  color: #ef4444;
+}
+</style>
