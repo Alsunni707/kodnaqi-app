@@ -159,11 +159,17 @@
   // ═══════════════════════════════════════════════════
   
   function addScannerButton() {
-    // البحث عن حقل البحث في صفحة المرضى
-    const searchInput = document.querySelector('input[placeholder*="بحث"], input[placeholder*="اسم"], input[type="search"]');
+    // البحث عن حقل البحث في صفحة المرضى فقط (ليس في نموذج إضافة مريض)
+    const searchInput = document.querySelector('input[placeholder*="بحث بالاسم"], input[placeholder*="الهاتف"], input[placeholder*="التسلسلي"]');
     if (!searchInput) {
-      // إذا لم نجد حقل بحث، نضيف الزر في الترويسة
-      addScannerButtonToHeader();
+      // إذا لم نجد حقل بحث، لا نضيف الزر (تجنب التداخل)
+      console.log('[Barcode] Search input not found, skipping button');
+      return;
+    }
+    
+    // التحقق من أننا لسنا في نموذج إضافة مريض
+    if (document.querySelector('#patientModal, #addPatientModal, [id*="patient"], [id*="addPatient"]')) {
+      console.log('[Barcode] In patient form, skipping button');
       return;
     }
     
