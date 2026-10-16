@@ -49,15 +49,15 @@
         "nsis",
         "portable"
       ],
-      "icon": "www/logo.png"
+      "icon": "build/icons/win/icon.ico"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "installerIcon": "www/logo.png",
-      "uninstallerIcon": "www/logo.png",
+      "installerIcon": "build/icons/win/icon.ico",
+      "uninstallerIcon": "build/icons/win/icon.ico",
       "installerHeaderIcon": "www/logo.png"
     },
     "asarUnpack": [
