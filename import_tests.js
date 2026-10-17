@@ -61,3 +61,53 @@ async function importTestsToDB() {
 
 window.importTestsToDB = importTestsToDB;
 console.log('[import_tests.js] محمّل — جاهز للاستيراد الصارم');
+
+
+// ═══════════════════════════════════════════════════════
+// نظام الترقية التلقائي (Migration): يضمن إضافة الفحوصات الجديدة للنسخ القديمة
+// ═══════════════════════════════════════════════════════
+async function runMigrations() {
+  console.log('🔄 جاري فحص تحديثات قاعدة البيانات...');
+  const existingTests = await dbGetAll('tests');
+  const existingNames = existingTests.map(t => t.name);
+
+  // قائمة الفحوصات التي نضمن وجودها (يمكنك إضافة المزيد مستقبلاً)
+  const requiredTests = [
+    'Peripheral Blood Film (PBF)',
+    'Manual WBC Differential (100 cells)'
+  ];
+
+  let added = 0;
+  for (const reqName of requiredTests) {
+    if (!existingNames.includes(reqName)) {
+      // ابحث عن الفحص في ملف tests.js الأساسي
+      const testData = window.ALL_SYSTEM_TESTS.find(t => t.name === reqName);
+      if (testData) {
+        const testId = await dbAdd('tests', {
+          code: testData.code, name: testData.name, name_ar: testData.name_ar,
+          category: testData.dept, category_ar: testData.dept_ar,
+          sub_category: testData.sub, price: testData.price, active: true
+        });
+        for (let i = 0; i < testData.components.length; i++) {
+          const c = testData.components[i];
+          await dbAdd('parameters', {
+            test_id: testId, name: c.name, name_ar: c.name_ar, unit: c.unit,
+            ref_min: c.ref_min, ref_max: c.ref_max, ref_text: c.ref_text,
+            result_type: c.result_type, options: c.options, order: i
+          });
+        }
+        console.log('✅ تم ترقية قاعدة البيانات وإضافة:', reqName);
+        added++;
+      }
+    }
+  }
+  if (added === 0) console.log('✅ قاعدة البيانات محدثة، لا توجد فحوصات ناقصة.');
+  else console.log(`✅ تمت إضافة ${added} فحص جديد عبر الترقية التلقائية.`);
+}
+
+// تشغيل الترقية عند التحميل
+if (typeof window !== 'undefined') {
+  window.runMigrations = runMigrations;
+  // استدعاء الترقية بعد تحميل ملف tests.js
+  setTimeout(() => { if (typeof db !== 'undefined') runMigrations(); }, 2000);
+}
