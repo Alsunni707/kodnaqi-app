@@ -3314,9 +3314,132 @@ window.ALL_SYSTEM_TESTS = [
         "order": 0
       }
     ]
+  },
+  {
+    "code": "HEM-010",
+    "name": "Peripheral Blood Film (PBF)",
+    "name_ar": "فيلم الدم المحيطي (تقييم نسيجي)",
+    "dept": "Hematology",
+    "dept_ar": "أمراض الدم",
+    "sub": "Special Hematology",
+    "price": 15000,
+    "component_count": 4,
+    "components": [
+      {
+        "name": "RBC Morphology",
+        "name_ar": "شكل كريات الدم الحمراء",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Normocytic Normochromic",
+        "result_type": "select",
+        "options": "Normocytic Normochromic|Microcytic Hypochromic|Microcytic Normochromic|Macrocytic Normochromic|Macrocytic Hypochromic|Mixed Picture|Sickle Cells|Target Cells|Others",
+        "order": 0
+      },
+      {
+        "name": "WBC Morphology",
+        "name_ar": "شكل كريات الدم البيضاء",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Normal",
+        "result_type": "select",
+        "options": "Normal|Toxic Granulation|Left Shift|Hypersegmented|Blast Cells Seen|Atypical Lymphocytes|Others",
+        "order": 1
+      },
+      {
+        "name": "Platelets Morphology",
+        "name_ar": "شكل الصفائح الدموية",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Adequate",
+        "result_type": "select",
+        "options": "Adequate|Decreased|Increased|Giant Platelets|Clumped|Others",
+        "order": 2
+      },
+      {
+        "name": "Overall Impression / Comment",
+        "name_ar": "التعليق العام / الاستنتاج",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": null,
+        "result_type": "text",
+        "options": null,
+        "order": 3
+      }
+    ]
+  },
+  {
+    "code": "HEM-011",
+    "name": "Manual WBC Differential (100 cells)",
+    "name_ar": "العد اليدوي لكريات الدم البيضاء (100 خلية)",
+    "dept": "Hematology",
+    "dept_ar": "أمراض الدم",
+    "sub": "Special Hematology",
+    "price": 10000,
+    "component_count": 5,
+    "components": [
+      {
+        "name": "Neutrophils",
+        "name_ar": "الخلايا المتعادلة",
+        "unit": "%",
+        "ref_min": 40,
+        "ref_max": 75,
+        "ref_text": "40 - 75",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      },
+      {
+        "name": "Lymphocytes",
+        "name_ar": "الخلايا اللمفاوية",
+        "unit": "%",
+        "ref_min": 20,
+        "ref_max": 45,
+        "ref_text": "20 - 45",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Monocytes",
+        "name_ar": "الخلايا الوحيدة",
+        "unit": "%",
+        "ref_min": 2,
+        "ref_max": 10,
+        "ref_text": "2 - 10",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
+      },
+      {
+        "name": "Eosinophils",
+        "name_ar": "الخلايا الحامضية",
+        "unit": "%",
+        "ref_min": 1,
+        "ref_max": 6,
+        "ref_text": "1 - 6",
+        "result_type": "numeric",
+        "options": null,
+        "order": 3
+      },
+      {
+        "name": "Basophils",
+        "name_ar": "الخلايا القاعدية",
+        "unit": "%",
+        "ref_min": 0,
+        "ref_max": 1,
+        "ref_text": "0 - 1",
+        "result_type": "numeric",
+        "options": null,
+        "order": 4
+      }
+    ]
   }
 ];
 
-console.log('✅ تم تحميل 92 فحصاً');
+console.log('✅ تم تحميل 94 فحصاً');
 
 function getAllTestsData() { return window.ALL_SYSTEM_TESTS || []; }

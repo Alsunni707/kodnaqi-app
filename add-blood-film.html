@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><title>إضافة فحوصات الدم التخصصية</title>
+<style>body{font-family:system-ui;padding:20px;background:#0d3b66;color:#fff;text-align:center;}
+button{padding:15px 30px;font-size:1.2rem;background:#198754;color:#fff;border:none;border-radius:8px;cursor:pointer;margin-top:20px;}
+#log{margin-top:20px;font-family:monospace;background:#fff;color:#000;padding:15px;border-radius:8px;text-align:right;display:none;white-space:pre-wrap;}</style>
+</head>
+<body>
+<h2>🩸 إضافة فحص PBF والعد اليدوي</h2>
+<button id="btn" onclick="run()">🚀 بدء الإضافة للتطبيق الحالي</button>
+<div id="log"></div>
+<script src="db.js"></script>
+<script>
+async function run() {
+  const btn = document.getElementById('btn');
+  const log = document.getElementById('log');
+  btn.disabled = true; btn.innerText = '⏳ جاري الإضافة...';
+  log.style.display = 'block'; log.innerText = '';
+  function print(x){ log.innerText += x+'\n'; }
+
+  try {
+    const tests = await dbGetAll('tests');
+    
+    // 1. إضافة PBF
+    if (!tests.find(t => t.name === 'Peripheral Blood Film (PBF)')) {
+      const pbfId = await dbAdd('tests', { code: 'HEM-010', name: 'Peripheral Blood Film (PBF)', name_ar: 'فيلم الدم المحيطي', category: 'Hematology', sub_category: 'Special', price: 15000, active: true });
+      await dbAdd('parameters', { test_id: pbfId, name: 'RBC Morphology', name_ar: 'شكل كريات الدم الحمراء', result_type: 'select', options: 'Normocytic Normochromic|Microcytic Hypochromic|Microcytic Normochromic|Macrocytic Normochromic|Macrocytic Hypochromic|Mixed Picture|Sickle Cells|Target Cells|Others', ref_text: 'Normocytic Normochromic', order: 0 });
+      await dbAdd('parameters', { test_id: pbfId, name: 'WBC Morphology', name_ar: 'شكل كريات الدم البيضاء', result_type: 'select', options: 'Normal|Toxic Granulation|Left Shift|Hypersegmented|Blast Cells Seen|Atypical Lymphocytes|Others', ref_text: 'Normal', order: 1 });
+      await dbAdd('parameters', { test_id: pbfId, name: 'Platelets Morphology', name_ar: 'شكل الصفائح الدموية', result_type: 'select', options: 'Adequate|Decreased|Increased|Giant Platelets|Clumped|Others', ref_text: 'Adequate', order: 2 });
+      await dbAdd('parameters', { test_id: pbfId, name: 'Comment', name_ar: 'التعليق العام', result_type: 'text', ref_text: '', order: 3 });
+      print('✅ تم إضافة فحص PBF');
+    } else { print('ℹ️ فحص PBF موجود مسبقاً'); }
+
+    // 2. إضافة Manual Diff
+    if (!tests.find(t => t.name === 'Manual WBC Differential')) {
+      const mdId = await dbAdd('tests', { code: 'HEM-011', name: 'Manual WBC Differential (100 cells)', name_ar: 'العد اليدوي لكريات الدم البيضاء', category: 'Hematology', sub_category: 'Special', price: 10000, active: true });
+      await dbAdd('parameters', { test_id: mdId, name: 'Neutrophils', name_ar: 'الخلايا المتعادلة', result_type: 'numeric', ref_min: 40, ref_max: 75, unit: '%', order: 0 });
+      await dbAdd('parameters', { test_id: mdId, name: 'Lymphocytes', name_ar: 'الخلايا اللمفاوية', result_type: 'numeric', ref_min: 20, ref_max: 45, unit: '%', order: 1 });
+      await dbAdd('parameters', { test_id: mdId, name: 'Monocytes', name_ar: 'الخلايا الوحيدة', result_type: 'numeric', ref_min: 2, ref_max: 10, unit: '%', order: 2 });
+      await dbAdd('parameters', { test_id: mdId, name: 'Eosinophils', name_ar: 'الخلايا الحامضية', result_type: 'numeric', ref_min: 1, ref_max: 6, unit: '%', order: 3 });
+      await dbAdd('parameters', { test_id: mdId, name: 'Basophils', name_ar: 'الخلايا القاعدية', result_type: 'numeric', ref_min: 0, ref_max: 1, unit: '%', order: 4 });
+      print('✅ تم إضافة فحص العد اليدوي');
+    } else { print('ℹ️ فحص العد اليدوي موجود مسبقاً'); }
+
+    print('\n✨ اكتمل بنجاح. اذهب لزيارة مريض، واضغط "إضافة تحاليل" وستجد الفحصين الجديدين.');
+    btn.innerText = '✅ تم';
+  } catch(e) {
+    print('❌ خطأ: ' + e.message);
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>

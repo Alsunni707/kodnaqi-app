@@ -270,7 +270,7 @@ table tr:nth-child(even) td { background: #fafbfd; }
 <div class="report">
   <div class="report-header">
     <div class="header-left">
-      <div class="header-logo"><img src="${logoBase64}" alt="KodNaqi"></div>
+      <div class="header-logo"><img data-brand="logo" src="${logoBase64}" alt="KodNaqi"></div>
       <div class="header-text">
         <h1>${LAB_INFO.name_en}</h1>
         <div class="en">${LAB_INFO.tagline_en}</div>
@@ -341,14 +341,21 @@ table tr:nth-child(even) td { background: #fafbfd; }
     html += `<div class="signatures">
       <div class="sig-block">
         ${techSigBase64 ? `<img src="${techSigBase64}" class="sig-image" alt="Tech">` : '<div class="sig-space"></div>'}
-        <div class="sig-line">TECHNICIAN SIGNATURE</div>
+        <div style="text-align:center; padding-bottom: 10px;">
+          <img data-brand="stamp" style="display:none; max-height:80px; margin-bottom:10px;" alt="Stamp">
+          <img data-brand="tech-signature" style="display:none; max-height:60px; margin-bottom:5px;" alt="Tech Sig">
+          <div class="sig-line">TECHNICIAN SIGNATURE</div>
+        </div>
       </div>
       <div class="stamp-block">
         ${stampBase64 ? `<img src="${stampBase64}" class="real-stamp" alt="Stamp">` : ''}
       </div>
       <div class="sig-block">
         ${doctorSigBase64 ? `<img src="${doctorSigBase64}" class="sig-image" alt="Doctor">` : '<div class="sig-space"></div>'}
-        <div class="sig-line">DOCTOR / MANAGER SIGNATURE</div>
+        <div style="text-align:center; padding-bottom: 10px;">
+          <img data-brand="doctor-signature" style="display:none; max-height:60px; margin-bottom:5px;" alt="Doctor Sig">
+          <div class="sig-line">DOCTOR / MANAGER SIGNATURE</div>
+        </div>
       </div>
     </div>`;
 
@@ -557,7 +564,7 @@ body { font-family: system-ui, Tahoma, sans-serif; background: #eee; padding: 10
   <button onclick="knSafeClose()">✖ إغلاق</button>
 </div>
 <div class="receipt">
-  <div class="logo-wrap"><img src="${logoBase64}" alt="KodNaqi"></div>
+  <div class="logo-wrap"><img data-brand="logo" src="${logoBase64}" alt="KodNaqi"></div>
   <div class="lab-title">${LAB_INFO.name_en}</div>
   <div class="lab-sub">${LAB_INFO.tagline_en}</div>
   <div class="lab-tag">${LAB_INFO.tagline_ar}</div>
