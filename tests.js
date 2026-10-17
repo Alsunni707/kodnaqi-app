@@ -2797,7 +2797,7 @@ window.ALL_SYSTEM_TESTS = [
     "dept_ar": "تحليل البول",
     "sub": "Routine",
     "price": 5000,
-    "component_count": 14,
+    "component_count": 21,
     "components": [
       {
         "name": "Color",
@@ -2952,6 +2952,83 @@ window.ALL_SYSTEM_TESTS = [
         "result_type": "text",
         "options": null,
         "order": 13
+      },
+      {
+        "name": "Epithelial Cells",
+        "name_ar": "خلايا ظهارية",
+        "unit": "/HPF",
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "0 - 5",
+        "result_type": "text",
+        "options": null,
+        "order": 14
+      },
+      {
+        "name": "Casts",
+        "name_ar": "أسطوانات",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Hyaline|Granular|RBC Casts|WBC Casts",
+        "order": 15
+      },
+      {
+        "name": "Crystals",
+        "name_ar": "بلورات",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Uric Acid|Calcium Oxalate|Triple Phosphate|Others",
+        "order": 16
+      },
+      {
+        "name": "Bacteria",
+        "name_ar": "بكتيريا",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Few|Moderate|Many",
+        "order": 17
+      },
+      {
+        "name": "Fungi / Yeast",
+        "name_ar": "فطريات / خمائر",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Few|Moderate|Many",
+        "order": 18
+      },
+      {
+        "name": "Trichomonas",
+        "name_ar": "ترايكوموناس",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Seen",
+        "order": 19
+      },
+      {
+        "name": "Schistosoma haematobium Ova",
+        "name_ar": "بيوض البلهارسيا البولية",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Seen",
+        "order": 20
       }
     ]
   },
@@ -2986,7 +3063,7 @@ window.ALL_SYSTEM_TESTS = [
     "dept_ar": "تحليل البراز",
     "sub": "Routine",
     "price": 5000,
-    "component_count": 6,
+    "component_count": 10,
     "components": [
       {
         "name": "Color",
@@ -3053,6 +3130,50 @@ window.ALL_SYSTEM_TESTS = [
         "result_type": "text",
         "options": null,
         "order": 5
+      },
+      {
+        "name": "Ova",
+        "name_ar": "بيوض",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Ascaris|Hookworm|Taenia|H. nana|Schistosoma",
+        "order": 6
+      },
+      {
+        "name": "Cysts",
+        "name_ar": "أكياس",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Entamoeba histolytica|Giardia lamblia",
+        "order": 7
+      },
+      {
+        "name": "Bacteria",
+        "name_ar": "بكتيريا",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Normal Flora",
+        "result_type": "select",
+        "options": "Normal Flora|Abnormal|Not Seen",
+        "order": 8
+      },
+      {
+        "name": "Fungi / Yeast",
+        "name_ar": "فطريات / خمائر",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Seen",
+        "order": 9
       }
     ]
   },

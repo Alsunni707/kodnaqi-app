@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><title>إضافة معايير البول والبراز</title>
+<style>body{font-family:system-ui;padding:20px;background:#0d3b66;color:#fff;text-align:center;}
+button{padding:15px 30px;font-size:1.2rem;background:#198754;color:#fff;border:none;border-radius:8px;cursor:pointer;margin-top:20px;}
+#log{margin-top:20px;font-family:monospace;background:#fff;color:#000;padding:15px;border-radius:8px;text-align:right;display:none;white-space:pre-wrap;}</style>
+</head>
+<body>
+<h2>🧪 إضافة معايير البول والبراز</h2>
+<button id="btn" onclick="run()">🚀 بدء التحديث</button>
+<div id="log"></div>
+<script src="db.js"></script>
+<script>
+async function run() {
+  const btn = document.getElementById('btn');
+  const log = document.getElementById('log');
+  btn.disabled = true; btn.innerText = '⏳ جاري التحديث...';
+  log.style.display = 'block'; log.innerText = '';
+  function print(x){ log.innerText += x+'\n'; }
+
+  try {
+    const tests = await dbGetAll('tests');
+    const params = await dbGetAll('parameters');
+    
+    // 1. تحديث فحص البول
+    const urineTest = tests.find(t => /urine analysis|urine general|تحليل البول/i.test(t.name));
+    if (urineTest) {
+      const uParams = params.filter(p => p.test_id === urineTest.id);
+      const newUrine = [
+        { name: 'Epithelial Cells', name_ar: 'خلايا ظهارية', unit: '/HPF', ref_text: '0 - 5', result_type: 'text' },
+        { name: 'Casts', name_ar: 'أسطوانات', unit: null, ref_text: 'Not Seen', result_type: 'select', options: 'Not Seen|Hyaline|Granular|RBC Casts|WBC Casts' },
+        { name: 'Crystals', name_ar: 'بلورات', unit: null, ref_text: 'Not Seen', result_type: 'select', options: 'Not Seen|Uric Acid|Calcium Oxalate|Triple Phosphate|Others' },
+        { name: 'Bacteria', name_ar: 'بكتيريا', unit: null, ref_text: 'Not Seen', result_type: 'select', options: 'Not Seen|Few|Moderate|Many' },
+        { name: 'Fungi / Yeast', name_ar: 'فطريات / خمائر', unit: null, ref_text: 'Not Seen', result_type: 'select', options: 'Not Seen|Few|Moderate|Many' },
+        { name: 'Trichomonas', name_ar: 'ترايكوموناس', unit: null, ref_text: 'Not Seen', result_type: 'select', options: 'Not Seen|Seen' },
+        { name: 'Schistosoma haematobium Ova', name_ar: 'بيوض البلهارسيا البولية', unit: null, ref_text: 'Not Seen', result_type: 'select', options: 'Not Seen|Seen' }
+      ];
+      let count = 0;
+      for (const np of newUrine) {
+        if (!uParams.some(p => p.name.toLowerCase() === np.name.toLowerCase())) {
+          await dbAdd('parameters', { ...np, test_id: urineTest.id, order: uParams.length + count });
+          count++;
+        }
+      }
+      print(`✅ تم إضافة ${count} معيار لفحص البول.`);
+    }
+
+    // 2. تحديث فحص البراز
+    const stoolTest = tests.find(t => /stool analysis|تحليل البراز/i.test(t.name));
+    if (stoolTest) {
+      const sParams = params.filter(p => p.test_id === stoolTest.id);
+      const newStool = [
+        { name: 'Ova', name_ar: 'بيوض', unit: null, ref_text: 'Not Seen', result_type: 'select', options: 'Not Seen|Ascaris|Hookworm|Taenia|H. nana|Schistosoma' },
+        { name: 'Cysts', name_ar: 'أكياس', unit: null, ref_text: 'Not Seen', result_type: 'select', options: 'Not Seen|Entamoeba histolytica|Giardia lamblia' },
+        { name: 'Bacteria', name_ar: 'بكتيريا', unit: null, ref_text: 'Normal Flora', result_type: 'select', options: 'Normal Flora|Abnormal|Not Seen' },
+        { name: 'Fungi / Yeast', name_ar: 'فطريات / خمائر', unit: null, ref_text: 'Not Seen', result_type: 'select', options: 'Not Seen|Seen' },
+        { name: 'Pus Cells', name_ar: 'خلايا صديدية', unit: '/HPF', ref_text: '0 - 2', result_type: 'text' },
+        { name: 'RBCs', name_ar: 'كريات حمراء', unit: '/HPF', ref_text: '0 - 1', result_type: 'text' }
+      ];
+      let count = 0;
+      for (const ns of newStool) {
+        if (!sParams.some(p => p.name.toLowerCase() === ns.name.toLowerCase())) {
+          await dbAdd('parameters', { ...ns, test_id: stoolTest.id, order: sParams.length + count });
+          count++;
+        }
+      }
+      print(`✅ تم إضافة ${count} معيار لفحص البراز.`);
+    }
+    
+    print('\n✨ اكتمل بنجاح. ارجع للتطبيق وافتح إدخال النتائج.');
+    btn.innerText = '✅ تم';
+  } catch(e) {
+    print('❌ خطأ: ' + e.message);
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>

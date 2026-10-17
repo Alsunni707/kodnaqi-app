@@ -360,6 +360,60 @@ table tr:nth-child(even) td { background: #fafbfd; }
     <span>✉️ ${LAB_INFO.email}</span>
   </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+function knSafePrint(btn) {
+  // 1. محاولة الطباعة الأصلية أولاً (تعمل ممتازة في متصفح الجوال وتعطي خيار PDF بحجم A4)
+  try {
+    window.print();
+    return;
+  } catch(e) {
+    console.log('Native print blocked, trying fallback...', e);
+  }
+  
+  // 2. بديل احتياطي (يُستخدم فقط إذا رفض تطبيق APK فتح الطباعة الأصلية)
+  if (typeof html2pdf === 'undefined') {
+    alert('جاري تحميل أداة الطباعة... انتظر 3 ثوانٍ وأعد المحاولة.');
+    return;
+  }
+  
+  let originalText = '';
+  if (btn) {
+    originalText = btn.innerHTML;
+    btn.innerHTML = '⏳ جاري التجهيز...';
+    btn.disabled = true;
+  }
+
+  var el = document.querySelector('.report') || document.querySelector('.receipt') || document.body;
+  var isReceipt = document.querySelector('.receipt') !== null;
+  var opt = {
+    margin: isReceipt ? 0 : [10, 10, 10, 10],
+    filename: (isReceipt ? 'Receipt_' : 'Report_') + Date.now() + '.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true },
+    jsPDF: isReceipt ? { unit: 'mm', format: [58, 250] } : { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+  
+  // فتح الملف في تبويب جديد لمعاينته قبل الحفظ
+  html2pdf().set(opt).from(el).toPdf().get('pdf').then(function(pdf) {
+    var url = pdf.output('bloburl');
+    window.open(url, '_blank');
+    if (btn) { btn.innerHTML = originalText; btn.disabled = false; }
+  }).catch(function(e) {
+    alert('فشل إنشاء PDF: ' + e.message);
+    if (btn) { btn.innerHTML = originalText; btn.disabled = false; }
+  });
+}
+
+function knSafeClose() {
+  try { window.close(); } catch(e) {}
+  setTimeout(function() {
+    if (window.history.length > 1) window.history.back();
+    else window.location.href = '/';
+  }, 200);
+}
+</script>
 </body>
 </html>`;
 
@@ -519,6 +573,60 @@ body { font-family: system-ui, Tahoma, sans-serif; background: #eee; padding: 10
   <div class="hr"></div>
   <div class="footer">📞 ${LAB_INFO.phone}<br>📍 ${LAB_INFO.address}<br>✉️ ${LAB_INFO.email}<br><span style="margin-top:3px;display:block">Thank you 🌟</span></div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+function knSafePrint(btn) {
+  // 1. محاولة الطباعة الأصلية أولاً (تعمل ممتازة في متصفح الجوال وتعطي خيار PDF بحجم A4)
+  try {
+    window.print();
+    return;
+  } catch(e) {
+    console.log('Native print blocked, trying fallback...', e);
+  }
+  
+  // 2. بديل احتياطي (يُستخدم فقط إذا رفض تطبيق APK فتح الطباعة الأصلية)
+  if (typeof html2pdf === 'undefined') {
+    alert('جاري تحميل أداة الطباعة... انتظر 3 ثوانٍ وأعد المحاولة.');
+    return;
+  }
+  
+  let originalText = '';
+  if (btn) {
+    originalText = btn.innerHTML;
+    btn.innerHTML = '⏳ جاري التجهيز...';
+    btn.disabled = true;
+  }
+
+  var el = document.querySelector('.report') || document.querySelector('.receipt') || document.body;
+  var isReceipt = document.querySelector('.receipt') !== null;
+  var opt = {
+    margin: isReceipt ? 0 : [10, 10, 10, 10],
+    filename: (isReceipt ? 'Receipt_' : 'Report_') + Date.now() + '.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true },
+    jsPDF: isReceipt ? { unit: 'mm', format: [58, 250] } : { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+  
+  // فتح الملف في تبويب جديد لمعاينته قبل الحفظ
+  html2pdf().set(opt).from(el).toPdf().get('pdf').then(function(pdf) {
+    var url = pdf.output('bloburl');
+    window.open(url, '_blank');
+    if (btn) { btn.innerHTML = originalText; btn.disabled = false; }
+  }).catch(function(e) {
+    alert('فشل إنشاء PDF: ' + e.message);
+    if (btn) { btn.innerHTML = originalText; btn.disabled = false; }
+  });
+}
+
+function knSafeClose() {
+  try { window.close(); } catch(e) {}
+  setTimeout(function() {
+    if (window.history.length > 1) window.history.back();
+    else window.location.href = '/';
+  }, 200);
+}
+</script>
 </body>
 </html>`;
 
