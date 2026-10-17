@@ -93,17 +93,20 @@
   };
 
   // ═══ البيانات ═══
-  let _licenses = [];
+  window._licenses = [];
 
   window.licRefresh = async function() {
     const data = await licFetch('');
-    _licenses = [];
+    window._licenses = [];
     if (data && typeof data === 'object') {
       Object.keys(data).forEach(function(k) {
-        _licenses.push(Object.assign({ _id: k }, data[k]));
+        window._licenses.push(Object.assign({ _id: k }, data[k]));
       });
     }
     licRender();
+    if (typeof window.updateDashboard === 'function') {
+      window.updateDashboard();
+    }
   };
 
   function licStatusOf(lic) {
@@ -172,6 +175,7 @@
     document.getElementById('licActive').textContent = active;
     document.getElementById('licRevoked').textContent = revoked;
     document.getElementById('licExpired').textContent = expired;
+    if (typeof window.updateDashboard === 'function') window.updateDashboard();
   };
 
   window.licRevoke = async function(id) {
@@ -880,6 +884,125 @@
       + '<button onclick="licPrintInvoice(\'' + licenseId + '\')" style="padding:6px 12px;background:#0891b2;color:#fff;border:none;border-radius:6px;font-size:0.8rem;font-weight:700;cursor:pointer;">🧾 فاتورة</button>'
       + '<button onclick="licSendWhatsApp(\'' + licenseId + '\')" style="padding:6px 12px;background:#25d366;color:#fff;border:none;border-radius:6px;font-size:0.8rem;font-weight:700;cursor:pointer;">💬 واتساب</button>'
       + '</div>';
+  };
+
+
+  // ═══ لوحة التحكم الشاملة ═══
+  let _dashFilter = 'ALL';
+  const TIER_PRICES = { 'B': 1500000, 'S': 2500000, 'A': 4000000, 'E': 6000000, 'TRIAL': 0 };
+
+  window.initAndLoadDashboard = function() {
+    if (getSecret() && (!window._licenses || window._licenses.length === 0)) {
+      if (typeof window.licRefresh === 'function') {
+        window.licRefresh().then(function() {
+           window.updateDashboard();
+        }).catch(function(){});
+      }
+    } else {
+      window.updateDashboard();
+    }
+  };
+
+  window.setDashFilter = function(pkg) {
+    _dashFilter = pkg;
+    document.querySelectorAll('#dashFilters .btn').forEach(b => b.classList.remove('btn-primary'));
+    document.querySelectorAll('#dashFilters .btn').forEach(b => b.classList.add('btn-outline-primary'));
+    const btn = document.querySelector(`#dashFilters button[onclick*="'${pkg}'"]`);
+    if(btn) { btn.classList.remove('btn-outline-primary'); btn.classList.add('btn-primary'); }
+    window.updateDashboard();
+  };
+
+  window.updateDashboard = function() {
+    const content = document.getElementById('dashContent');
+    if (!content) return;
+
+    // إذا كانت الواجهة غير مبنية بعد، نبنيها
+    if (!document.getElementById('dashFilters')) {
+      content.innerHTML = `
+        <div id="dashFilters" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:10px; margin-bottom:15px;">
+          <button class="btn btn-sm btn-primary" onclick="setDashFilter('ALL')">الكل</button>
+          <button class="btn btn-sm btn-outline-primary" onclick="setDashFilter('B')">🥉 أساسية</button>
+          <button class="btn btn-sm btn-outline-primary" onclick="setDashFilter('S')">🥈 قياسية</button>
+          <button class="btn btn-sm btn-outline-primary" onclick="setDashFilter('A')">🥇 متقدمة</button>
+          <button class="btn btn-sm btn-outline-primary" onclick="setDashFilter('E')">🏢 مؤسسية</button>
+          <button class="btn btn-sm btn-outline-primary" onclick="setDashFilter('TRIAL')">🎁 تجريبية</button>
+        </div>
+        <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 15px;">
+          <div class="stat-card" style="background:#0d6efd; color:white;"><div class="stat-value" id="dashTotalActive">0</div><div class="stat-label">عملاء نشطون</div></div>
+          <div class="stat-card" style="background:#198754; color:white;"><div class="stat-value" id="dashTotalDevices">0</div><div class="stat-label">أجهزة نشطة</div></div>
+          <div class="stat-card" style="background:#fd7e14; color:white;"><div class="stat-value" id="dashExpiring">0</div><div class="stat-label">ينتهي خلال 30 يوم</div></div>
+          <div class="stat-card" style="background:#6f42c1; color:white;"><div class="stat-value" id="dashRevenue">0</div><div class="stat-label">الأرباح (ج.س)</div></div>
+        </div>
+        <div id="dashExpiringBox" style="display:none; background:#fff3cd; border-radius:8px; padding:12px; margin-bottom:15px;">
+          <h6 style="color:#856404; font-weight:800; margin:0 0 10px 0;">⚠️ تنبيهات التجديد</h6>
+          <div id="dashExpiringList" style="display:flex; flex-direction:column; gap:8px;"></div>
+        </div>
+        <div id="dashLicensesList" style="display:flex; flex-direction:column; gap:10px;"></div>
+      `;
+    }
+
+    let activeCount = 0, totalDevices = 0, expiringCount = 0, revenue = 0;
+    let expiringList = [], filteredList = [];
+    const now = Date.now();
+    const thirtyDays = 30 * 24 * 60 * 60 * 1000;
+    const licenses = window._licenses || [];
+
+    licenses.forEach(lic => {
+      const st = licStatusOf(lic);
+      if (st.key === 'active') {
+        activeCount++;
+        totalDevices += (lic.devices || []).length;
+        revenue += (TIER_PRICES[lic.tier] || 0);
+        if (lic.expires) {
+          const timeLeft = lic.expires - now;
+          if (timeLeft > 0 && timeLeft < thirtyDays) { expiringCount++; expiringList.push(lic); }
+        }
+      }
+      if (_dashFilter === 'ALL' || lic.tier === _dashFilter) filteredList.push(lic);
+    });
+
+    document.getElementById('dashTotalActive').textContent = activeCount;
+    document.getElementById('dashTotalDevices').textContent = totalDevices;
+    document.getElementById('dashExpiring').textContent = expiringCount;
+    document.getElementById('dashRevenue').textContent = revenue.toLocaleString('en');
+
+    const expBox = document.getElementById('dashExpiringBox');
+    if (expiringList.length > 0) {
+      expBox.style.display = 'block';
+      document.getElementById('dashExpiringList').innerHTML = expiringList.map(lic => {
+        const days = Math.ceil((lic.expires - now) / 86400000);
+        return `<div style="display:flex; justify-content:space-between; background:#fff; padding:8px; border-radius:6px;">
+          <div><strong>${lic.customer}</strong> - متبقي ${days} يوم</div>
+          <button onclick="licWhatsAppReminder('${lic.customer}', ${lic.expires})" class="btn btn-sm btn-success" style="font-size:0.75rem;">💬 تذكير</button>
+        </div>`;
+      }).join('');
+    } else expBox.style.display = 'none';
+
+    const listEl = document.getElementById('dashLicensesList');
+    if (filteredList.length === 0) {
+      listEl.innerHTML = '<div style="text-align:center;color:#94a3b8;padding:20px;">لا توجد تراخيص</div>';
+    } else {
+      filteredList.sort((a, b) => (b.expires || 0) - (a.expires || 0));
+      listEl.innerHTML = filteredList.map(lic => {
+        const st = licStatusOf(lic);
+        const days = lic.expires ? Math.ceil((lic.expires - now) / 86400000) : '∞';
+        return `<div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:12px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <strong style="color:#0d3b66;">${lic.customer}</strong>
+            <span style="background:${st.color}22;color:${st.color};padding:3px 8px;border-radius:6px;font-size:0.75rem;">${st.label}</span>
+          </div>
+          <div style="display:flex;gap:10px;font-size:0.8rem;color:#334155;">
+            <span>🎯 ${lic.tier}</span> <span>📱 ${(lic.devices||[]).length}</span> <span>📅 متبقي ${days} يوم</span>
+          </div>
+        </div>`;
+      }).join('');
+    }
+  };
+
+  window.licWhatsAppReminder = function(customer, expiry) {
+    const days = Math.ceil((expiry - Date.now()) / 86400000);
+    const msg = `مرحباً ${customer}،\n\nنود تذكيركم بأن اشتراككم ينتهي خلال ${days} يوم.\nللتجديد: +249 111 729 111`;
+    window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
   };
 
   console.log('[License Dashboard] loaded');
