@@ -1,16418 +1,3201 @@
-// قاعدة بيانات الفحوصات المحدثة بالمعايير
+// قاعدة بيانات الفحوصات الطبية — معايير CLSI
 window.ALL_SYSTEM_TESTS = [
   {
     "code": "HEM-001",
-    "name": "Complete Blood Count (CBC) with Differential",
-    "dept": "Hematology & Coagulation",
-    "sub": "Routine Hematology",
+    "name": "Complete Blood Count (CBC)",
+    "name_ar": "صورة الدم الكاملة",
+    "dept": "Hematology",
+    "dept_ar": "أمراض الدم",
+    "sub": "Routine",
     "price": 15000,
-    "type": "panel",
-    "Component_Count": 1,
+    "component_count": 15,
     "components": [
       {
+        "name": "WBC",
+        "name_ar": "كريات الدم البيضاء",
+        "unit": "10^3/µL",
+        "ref_min": 4.5,
+        "ref_max": 11.0,
+        "ref_text": "4.5 - 11.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      },
+      {
+        "name": "RBC",
+        "name_ar": "كريات الدم الحمراء",
+        "unit": "10^6/µL",
+        "ref_min": 4.5,
+        "ref_max": 5.9,
+        "ref_text": "4.5 - 5.9 (M) | 4.1 - 5.1 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
+      },
+      {
         "name": "Hemoglobin (Hb)",
+        "name_ar": "الهيموجلوبين",
         "unit": "g/dL",
-        "normal": "13.5 - 17.5"
-      },
-      {
-        "name": "Total WBCs",
-        "unit": "10^3/uL",
-        "normal": "4.0 - 11.0"
-      },
-      {
-        "name": "RBCs",
-        "unit": "10^6/uL",
-        "normal": "4.5 - 5.9"
-      },
-      {
-        "name": "Platelets (PLT)",
-        "unit": "10^3/uL",
-        "normal": "150 - 450"
+        "ref_min": 13.5,
+        "ref_max": 17.5,
+        "ref_text": "13.5 - 17.5 (M) | 12.0 - 15.5 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
       },
       {
         "name": "Hematocrit (Hct)",
+        "name_ar": "الهيماتوكريت",
         "unit": "%",
-        "normal": "41 - 53"
+        "ref_min": 41,
+        "ref_max": 50,
+        "ref_text": "41 - 50 (M) | 36 - 48 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 3
       },
       {
         "name": "MCV",
+        "name_ar": "متوسط حجم الكرية",
         "unit": "fL",
-        "normal": "80 - 100"
+        "ref_min": 80,
+        "ref_max": 100,
+        "ref_text": "80 - 100",
+        "result_type": "numeric",
+        "options": null,
+        "order": 4
       },
       {
         "name": "MCH",
+        "name_ar": "متوسط هيموغلوبين الكرية",
         "unit": "pg",
-        "normal": "27 - 33"
+        "ref_min": 27,
+        "ref_max": 33,
+        "ref_text": "27 - 33",
+        "result_type": "numeric",
+        "options": null,
+        "order": 5
       },
       {
         "name": "MCHC",
+        "name_ar": "تركيز هيموغلوبين الكرية",
         "unit": "g/dL",
-        "normal": "32 - 36"
+        "ref_min": 32,
+        "ref_max": 36,
+        "ref_text": "32 - 36",
+        "result_type": "numeric",
+        "options": null,
+        "order": 6
+      },
+      {
+        "name": "RDW",
+        "name_ar": "عرض توزيع الحمراء",
+        "unit": "%",
+        "ref_min": 11.5,
+        "ref_max": 14.5,
+        "ref_text": "11.5 - 14.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 7
+      },
+      {
+        "name": "Platelets",
+        "name_ar": "الصفائح الدموية",
+        "unit": "10^3/µL",
+        "ref_min": 150,
+        "ref_max": 450,
+        "ref_text": "150 - 450",
+        "result_type": "numeric",
+        "options": null,
+        "order": 8
+      },
+      {
+        "name": "MPV",
+        "name_ar": "حجم الصفائح المتوسط",
+        "unit": "fL",
+        "ref_min": 7.5,
+        "ref_max": 11.5,
+        "ref_text": "7.5 - 11.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 9
+      },
+      {
+        "name": "Neutrophils",
+        "name_ar": "الخلايا المتعادلة",
+        "unit": "%",
+        "ref_min": 40,
+        "ref_max": 60,
+        "ref_text": "40 - 60",
+        "result_type": "numeric",
+        "options": null,
+        "order": 10
+      },
+      {
+        "name": "Lymphocytes",
+        "name_ar": "الخلايا اللمفاوية",
+        "unit": "%",
+        "ref_min": 20,
+        "ref_max": 40,
+        "ref_text": "20 - 40",
+        "result_type": "numeric",
+        "options": null,
+        "order": 11
+      },
+      {
+        "name": "Monocytes",
+        "name_ar": "الخلايا الوحيدة",
+        "unit": "%",
+        "ref_min": 2,
+        "ref_max": 8,
+        "ref_text": "2 - 8",
+        "result_type": "numeric",
+        "options": null,
+        "order": 12
+      },
+      {
+        "name": "Eosinophils",
+        "name_ar": "الخلايا الحامضية",
+        "unit": "%",
+        "ref_min": 1,
+        "ref_max": 4,
+        "ref_text": "1 - 4",
+        "result_type": "numeric",
+        "options": null,
+        "order": 13
+      },
+      {
+        "name": "Basophils",
+        "name_ar": "الخلايا القاعدية",
+        "unit": "%",
+        "ref_min": 0.5,
+        "ref_max": 1.0,
+        "ref_text": "0.5 - 1.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 14
       }
-    ],
-    "component_count": 8
+    ]
   },
   {
     "code": "HEM-002",
-    "name": "Erythrocyte Sedimentation Rate (ESR)",
-    "dept": "Hematology & Coagulation",
-    "sub": "Routine Hematology",
-    "price": 8000,
-    "type": "single",
-    "Component_Count": 1,
+    "name": "ESR",
+    "name_ar": "سرعة ترسيب الدم",
+    "dept": "Hematology",
+    "dept_ar": "أمراض الدم",
+    "sub": "Routine",
+    "price": 7000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Erythrocyte Sedimentation Rate (ESR)",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "ESR (1 hr)",
+        "name_ar": "سرعة الترسيب",
+        "unit": "mm/hr",
+        "ref_min": null,
+        "ref_max": 15,
+        "ref_text": "< 15 (M) | < 20 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "HEM-003",
     "name": "Reticulocyte Count",
-    "dept": "Hematology & Coagulation",
-    "sub": "Special Hematology",
-    "price": 20000,
-    "type": "single",
-    "Component_Count": 1,
+    "name_ar": "عدد الخلايا الشبكية",
+    "dept": "Hematology",
+    "dept_ar": "أمراض الدم",
+    "sub": "Routine",
+    "price": 10000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Reticulocyte Count",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Reticulocytes",
+        "name_ar": "الخلايا الشبكية",
+        "unit": "%",
+        "ref_min": 0.5,
+        "ref_max": 2.5,
+        "ref_text": "0.5 - 2.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "HEM-004",
     "name": "Sickling Test",
-    "dept": "Hematology & Coagulation",
-    "sub": "Special Hematology",
+    "name_ar": "اختبار الأنيميا المنجلية",
+    "dept": "Hematology",
+    "dept_ar": "أمراض الدم",
+    "sub": "Special",
     "price": 25000,
-    "type": "single",
-    "Component_Count": 1,
+    "component_count": 1,
     "components": [
       {
-        "name": "Sickling Test",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "HEM-005",
-    "name": "Hemoglobin Electrophoresis",
-    "dept": "Hematology & Coagulation",
-    "sub": "Special Hematology",
-    "price": 45000,
-    "type": "single",
-    "Component_Count": 1,
+    "name": "Hb Electrophoresis",
+    "name_ar": "رحلان الهيموغلوبين",
+    "dept": "Hematology",
+    "dept_ar": "أمراض الدم",
+    "sub": "Special",
+    "price": 60000,
+    "component_count": 5,
     "components": [
       {
-        "name": "Hemoglobin Electrophoresis",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Hb A",
+        "name_ar": "هيموغلوبين A",
+        "unit": "%",
+        "ref_min": 95,
+        "ref_max": 100,
+        "ref_text": "95 - 100",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      },
+      {
+        "name": "Hb A2",
+        "name_ar": "هيموغلوبين A2",
+        "unit": "%",
+        "ref_min": 0,
+        "ref_max": 3.5,
+        "ref_text": "0 - 3.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Hb F",
+        "name_ar": "هيموغلوبين F",
+        "unit": "%",
+        "ref_min": 0,
+        "ref_max": 1.0,
+        "ref_text": "0 - 1.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
+      },
+      {
+        "name": "Hb S",
+        "name_ar": "هيموغلوبين S",
+        "unit": "%",
+        "ref_min": 0,
+        "ref_max": 0,
+        "ref_text": "0 - 0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 3
+      },
+      {
+        "name": "Hb C",
+        "name_ar": "هيموغلوبين C",
+        "unit": "%",
+        "ref_min": 0,
+        "ref_max": 0,
+        "ref_text": "0 - 0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 4
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "HEM-006",
-    "name": "G6PD Enzyme Activity",
-    "dept": "Hematology & Coagulation",
-    "sub": "Special Hematology",
-    "price": 45000,
-    "type": "single",
-    "Component_Count": 1,
+    "name": "G6PD",
+    "name_ar": "إنزيم G6PD",
+    "dept": "Hematology",
+    "dept_ar": "أمراض الدم",
+    "sub": "Special",
+    "price": 40000,
+    "component_count": 1,
     "components": [
       {
-        "name": "G6PD Enzyme Activity",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "G6PD Level",
+        "name_ar": "مستوى G6PD",
+        "unit": "U/g Hb",
+        "ref_min": 7.0,
+        "ref_max": 20.5,
+        "ref_text": "7.0 - 20.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "HEM-007",
-    "name": "Prothrombin Time (PT)",
-    "dept": "Hematology & Coagulation",
-    "sub": "Coagulation",
-    "price": 20000,
-    "type": "panel",
-    "Component_Count": 1,
+    "name": "HbA1c",
+    "name_ar": "الهيموغلوبين السكري",
+    "dept": "Hematology",
+    "dept_ar": "أمراض الدم",
+    "sub": "Special",
+    "price": 30000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Prothrombin Time (PT)",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "HbA1c",
+        "name_ar": "الهيموغلوبين السكري",
+        "unit": "%",
+        "ref_min": null,
+        "ref_max": 5.7,
+        "ref_text": "< 5.7% (Normal) | 5.7-6.4% (Pre-DM)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
-    "code": "HEM-008",
-    "name": "Activated Partial Thromboplastin Time (APTT)",
-    "dept": "Hematology & Coagulation",
-    "sub": "Coagulation",
-    "price": 20000,
-    "type": "single",
-    "Component_Count": 1,
+    "code": "BLD-001",
+    "name": "Blood Group & Rh",
+    "name_ar": "فصيلة الدم وعامل Rh",
+    "dept": "Blood Bank",
+    "dept_ar": "بنك الدم",
+    "sub": "Immunohematology",
+    "price": 5000,
+    "component_count": 2,
     "components": [
       {
-        "name": "Activated Partial Thromboplastin Time (APTT)",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "ABO Group",
+        "name_ar": "فصيلة ABO",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "O",
+        "result_type": "select",
+        "options": "A|B|AB|O",
+        "order": 0
+      },
+      {
+        "name": "Rh Factor",
+        "name_ar": "عامل Rh",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Positive",
+        "result_type": "select",
+        "options": "Positive|Negative",
+        "order": 1
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
-    "code": "HEM-009",
-    "name": "D-Dimer",
-    "dept": "Hematology & Coagulation",
-    "sub": "Coagulation",
+    "code": "BLD-002",
+    "name": "Direct Coombs (DAT)",
+    "name_ar": "كوماتس مباشر",
+    "dept": "Blood Bank",
+    "dept_ar": "بنك الدم",
+    "sub": "Immunohematology",
+    "price": 20000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "BLD-003",
+    "name": "Indirect Coombs (IAT)",
+    "name_ar": "كوماتس غير مباشر",
+    "dept": "Blood Bank",
+    "dept_ar": "بنك الدم",
+    "sub": "Immunohematology",
+    "price": 20000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "BLD-004",
+    "name": "Crossmatch",
+    "name_ar": "مطابقة الدم",
+    "dept": "Blood Bank",
+    "dept_ar": "بنك الدم",
+    "sub": "Immunohematology",
+    "price": 25000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Compatible",
+        "result_type": "select",
+        "options": "Compatible|Incompatible",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "COA-001",
+    "name": "PT/INR",
+    "name_ar": "زمن البروثرومبين",
+    "dept": "Coagulation",
+    "dept_ar": "سيولة الدم",
+    "sub": "Routine",
     "price": 40000,
-    "type": "single",
-    "Component_Count": 1,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "PT",
+        "name_ar": "زمن البروثرومبين",
+        "unit": "sec",
+        "ref_min": 11,
+        "ref_max": 13.5,
+        "ref_text": "11 - 13.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      },
+      {
+        "name": "INR",
+        "name_ar": "النسبة المعيارية",
+        "unit": "Ratio",
+        "ref_min": 0.8,
+        "ref_max": 1.1,
+        "ref_text": "0.8 - 1.1",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "COA-002",
+    "name": "APTT",
+    "name_ar": "زمن الثرومبوبلاستين الجزئي",
+    "dept": "Coagulation",
+    "dept_ar": "سيولة الدم",
+    "sub": "Routine",
+    "price": 60000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "APTT",
+        "name_ar": "زمن APTT",
+        "unit": "sec",
+        "ref_min": 30,
+        "ref_max": 40,
+        "ref_text": "30 - 40",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "COA-003",
+    "name": "D-Dimer",
+    "name_ar": "دي ديمر",
+    "dept": "Coagulation",
+    "dept_ar": "سيولة الدم",
+    "sub": "Special",
+    "price": 45000,
+    "component_count": 1,
     "components": [
       {
         "name": "D-Dimer",
-        "unit": "",
-        "normal": "Normal Range"
+        "name_ar": "دي ديمر",
+        "unit": "µg/mL FEU",
+        "ref_min": null,
+        "ref_max": 0.5,
+        "ref_text": "< 0.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
-    "code": "HEM-010",
-    "name": "Fibrinogen Level",
-    "dept": "Hematology & Coagulation",
-    "sub": "Coagulation",
-    "price": 25000,
-    "type": "single",
-    "Component_Count": 1,
+    "code": "COA-004",
+    "name": "Fibrinogen",
+    "name_ar": "الفيبرينوجين",
+    "dept": "Coagulation",
+    "dept_ar": "سيولة الدم",
+    "sub": "Special",
+    "price": 35000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Fibrinogen Level",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Fibrinogen",
+        "name_ar": "الفيبرينوجين",
+        "unit": "mg/dL",
+        "ref_min": 200,
+        "ref_max": 400,
+        "ref_text": "200 - 400",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "CHE-001",
-    "name": "Kidney Profile",
+    "name": "Kidney Function (RFT)",
+    "name_ar": "وظائف الكلى",
     "dept": "Clinical Chemistry",
-    "sub": "Renal Function Tests (RFT)",
-    "price": 10000,
-    "type": "panel",
-    "Component_Count": 1,
+    "dept_ar": "الكيمياء السريرية",
+    "sub": "RFT",
+    "price": 60000,
+    "component_count": 7,
     "components": [
       {
-        "name": "Serum Creatinine",
+        "name": "Urea",
+        "name_ar": "اليوريا",
         "unit": "mg/dL",
-        "normal": "0.6 - 1.2"
+        "ref_min": 7,
+        "ref_max": 20,
+        "ref_text": "7 - 20",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       },
       {
-        "name": "Blood Urea Nitrogen (BUN)",
+        "name": "Creatinine",
+        "name_ar": "الكرياتينين",
         "unit": "mg/dL",
-        "normal": "7 - 20"
+        "ref_min": 0.7,
+        "ref_max": 1.3,
+        "ref_text": "0.7 - 1.3 (M) | 0.6 - 1.1 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
       },
       {
         "name": "Uric Acid",
+        "name_ar": "حمض اليوريك",
         "unit": "mg/dL",
-        "normal": "3.5 - 7.2"
+        "ref_min": 3.5,
+        "ref_max": 7.2,
+        "ref_text": "3.5 - 7.2 (M) | 2.6 - 6.0 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
       },
       {
-        "name": "Serum Urea",
-        "unit": "mg/dL",
-        "normal": "15 - 45"
+        "name": "eGFR",
+        "name_ar": "معدل الترشيح",
+        "unit": "mL/min/1.73m²",
+        "ref_min": 90,
+        "ref_max": null,
+        "ref_text": "> 90",
+        "result_type": "numeric",
+        "options": null,
+        "order": 3
+      },
+      {
+        "name": "Sodium",
+        "name_ar": "الصوديوم",
+        "unit": "mmol/L",
+        "ref_min": 135,
+        "ref_max": 145,
+        "ref_text": "135 - 145",
+        "result_type": "numeric",
+        "options": null,
+        "order": 4
+      },
+      {
+        "name": "Potassium",
+        "name_ar": "البوتاسيوم",
+        "unit": "mmol/L",
+        "ref_min": 3.5,
+        "ref_max": 5.2,
+        "ref_text": "3.5 - 5.2",
+        "result_type": "numeric",
+        "options": null,
+        "order": 5
+      },
+      {
+        "name": "Chloride",
+        "name_ar": "الكلوريد",
+        "unit": "mmol/L",
+        "ref_min": 96,
+        "ref_max": 106,
+        "ref_text": "96 - 106",
+        "result_type": "numeric",
+        "options": null,
+        "order": 6
       }
-    ],
-    "component_count": 4
+    ]
   },
   {
     "code": "CHE-002",
-    "name": "Liver Profile",
+    "name": "Liver Function (LFT)",
+    "name_ar": "وظائف الكبد",
     "dept": "Clinical Chemistry",
-    "sub": "Liver Function Tests (LFT)",
-    "price": 15000,
-    "type": "panel",
-    "Component_Count": 1,
+    "dept_ar": "الكيمياء السريرية",
+    "sub": "LFT",
+    "price": 60000,
+    "component_count": 9,
     "components": [
       {
         "name": "ALT (SGPT)",
+        "name_ar": "إنزيم ALT",
         "unit": "U/L",
-        "normal": "7 - 56"
+        "ref_min": 7,
+        "ref_max": 56,
+        "ref_text": "7 - 56",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       },
       {
         "name": "AST (SGOT)",
+        "name_ar": "إنزيم AST",
         "unit": "U/L",
-        "normal": "10 - 40"
+        "ref_min": 10,
+        "ref_max": 40,
+        "ref_text": "10 - 40",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
       },
       {
-        "name": "Alkaline Phosphatase (ALP)",
+        "name": "ALP",
+        "name_ar": "الفوسفاتيز القلوي",
         "unit": "U/L",
-        "normal": "44 - 147"
+        "ref_min": 44,
+        "ref_max": 147,
+        "ref_text": "44 - 147",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
+      },
+      {
+        "name": "GGT",
+        "name_ar": "ناقلة غاما غلوتاميل",
+        "unit": "U/L",
+        "ref_min": 9,
+        "ref_max": 48,
+        "ref_text": "9 - 48",
+        "result_type": "numeric",
+        "options": null,
+        "order": 3
       },
       {
         "name": "Total Bilirubin",
+        "name_ar": "البيليروبين الكلي",
         "unit": "mg/dL",
-        "normal": "0.2 - 1.2"
+        "ref_min": 0.3,
+        "ref_max": 1.2,
+        "ref_text": "0.3 - 1.2",
+        "result_type": "numeric",
+        "options": null,
+        "order": 4
       },
       {
         "name": "Direct Bilirubin",
+        "name_ar": "البيليروبين المباشر",
         "unit": "mg/dL",
-        "normal": "0.0 - 0.3"
+        "ref_min": null,
+        "ref_max": 0.3,
+        "ref_text": "< 0.3",
+        "result_type": "numeric",
+        "options": null,
+        "order": 5
       },
       {
         "name": "Total Protein",
+        "name_ar": "البروتين الكلي",
         "unit": "g/dL",
-        "normal": "6.0 - 8.3"
+        "ref_min": 6.0,
+        "ref_max": 8.3,
+        "ref_text": "6.0 - 8.3",
+        "result_type": "numeric",
+        "options": null,
+        "order": 6
       },
       {
         "name": "Albumin",
+        "name_ar": "الألبومين",
         "unit": "g/dL",
-        "normal": "3.4 - 5.4"
+        "ref_min": 3.4,
+        "ref_max": 5.4,
+        "ref_text": "3.4 - 5.4",
+        "result_type": "numeric",
+        "options": null,
+        "order": 7
+      },
+      {
+        "name": "Globulin",
+        "name_ar": "الجلوبيولين",
+        "unit": "g/dL",
+        "ref_min": 2.0,
+        "ref_max": 3.5,
+        "ref_text": "2.0 - 3.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 8
       }
-    ],
-    "component_count": 7
+    ]
   },
   {
     "code": "CHE-003",
-    "name": "Lipid Panel",
+    "name": "Lipid Profile",
+    "name_ar": "صورة الدهون",
     "dept": "Clinical Chemistry",
-    "sub": "Lipid Profile",
-    "price": 18000,
-    "type": "panel",
-    "Component_Count": 1,
+    "dept_ar": "الكيمياء السريرية",
+    "sub": "Lipids",
+    "price": 100000,
+    "component_count": 5,
     "components": [
       {
         "name": "Total Cholesterol",
+        "name_ar": "الكوليسترول الكلي",
         "unit": "mg/dL",
-        "normal": "< 200"
+        "ref_min": null,
+        "ref_max": 200,
+        "ref_text": "< 200",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       },
       {
         "name": "Triglycerides",
+        "name_ar": "الدهون الثلاثية",
         "unit": "mg/dL",
-        "normal": "< 150"
+        "ref_min": null,
+        "ref_max": 150,
+        "ref_text": "< 150",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
       },
       {
-        "name": "HDL Cholesterol",
+        "name": "HDL",
+        "name_ar": "الكوليسترول النافع",
         "unit": "mg/dL",
-        "normal": "> 40"
+        "ref_min": 40,
+        "ref_max": null,
+        "ref_text": "> 40 (M) | > 50 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
       },
       {
-        "name": "LDL Cholesterol",
+        "name": "LDL",
+        "name_ar": "الكوليسترول الضار",
         "unit": "mg/dL",
-        "normal": "< 130"
+        "ref_min": null,
+        "ref_max": 100,
+        "ref_text": "< 100",
+        "result_type": "numeric",
+        "options": null,
+        "order": 3
       },
       {
-        "name": "VLDL Cholesterol",
+        "name": "VLDL",
+        "name_ar": "الكوليسترول VLDL",
         "unit": "mg/dL",
-        "normal": "2 - 30"
+        "ref_min": 5,
+        "ref_max": 40,
+        "ref_text": "5 - 40",
+        "result_type": "numeric",
+        "options": null,
+        "order": 4
       }
-    ],
-    "component_count": 5
+    ]
   },
   {
     "code": "CHE-004",
     "name": "Cardiac Profile",
+    "name_ar": "ملف القلب",
     "dept": "Clinical Chemistry",
-    "sub": "Cardiac Biomarkers",
-    "price": 150000,
-    "type": "panel",
-    "Component_Count": 1,
+    "dept_ar": "الكيمياء السريرية",
+    "sub": "Cardiac",
+    "price": 120000,
+    "component_count": 3,
     "components": [
       {
-        "name": "Cardiac Profile",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Troponin I",
+        "name_ar": "التروبونين I",
+        "unit": "ng/mL",
+        "ref_min": null,
+        "ref_max": 0.04,
+        "ref_text": "< 0.04",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      },
+      {
+        "name": "CK-MB",
+        "name_ar": "إنزيم CK-MB",
+        "unit": "U/L",
+        "ref_min": null,
+        "ref_max": 25,
+        "ref_text": "< 25",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "NT-proBNP",
+        "name_ar": "NT-proBNP",
+        "unit": "pg/mL",
+        "ref_min": null,
+        "ref_max": 125,
+        "ref_text": "< 125",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "CHE-005",
-    "name": "Serum Electrolytes",
+    "name": "Electrolytes (Na, K, Cl)",
+    "name_ar": "الكهارل",
     "dept": "Clinical Chemistry",
-    "sub": "Electrolytes & Minerals",
-    "price": 15000,
-    "type": "panel",
-    "Component_Count": 1,
+    "dept_ar": "الكيمياء السريرية",
+    "sub": "Electrolytes",
+    "price": 20000,
+    "component_count": 3,
     "components": [
       {
-        "name": "Serum Electrolytes",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Sodium",
+        "name_ar": "الصوديوم",
+        "unit": "mmol/L",
+        "ref_min": 135,
+        "ref_max": 145,
+        "ref_text": "135 - 145",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      },
+      {
+        "name": "Potassium",
+        "name_ar": "البوتاسيوم",
+        "unit": "mmol/L",
+        "ref_min": 3.5,
+        "ref_max": 5.2,
+        "ref_text": "3.5 - 5.2",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Chloride",
+        "name_ar": "الكلوريد",
+        "unit": "mmol/L",
+        "ref_min": 96,
+        "ref_max": 106,
+        "ref_text": "96 - 106",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "CHE-006",
-    "name": "Total Calcium",
+    "name": "Calcium & Phosphorus",
+    "name_ar": "الكالسيوم والفوسفور",
     "dept": "Clinical Chemistry",
-    "sub": "Electrolytes & Minerals",
-    "price": 15000,
-    "type": "single",
-    "Component_Count": 1,
+    "dept_ar": "الكيمياء السريرية",
+    "sub": "Minerals",
+    "price": 40000,
+    "component_count": 2,
     "components": [
       {
-        "name": "Total Calcium",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Calcium",
+        "name_ar": "الكالسيوم",
+        "unit": "mg/dL",
+        "ref_min": 8.5,
+        "ref_max": 10.2,
+        "ref_text": "8.5 - 10.2",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      },
+      {
+        "name": "Phosphorus",
+        "name_ar": "الفوسفور",
+        "unit": "mg/dL",
+        "ref_min": 2.5,
+        "ref_max": 4.5,
+        "ref_text": "2.5 - 4.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "CHE-007",
-    "name": "Fasting Blood Glucose",
+    "name": "Serum Magnesium",
+    "name_ar": "المغنيسيوم",
     "dept": "Clinical Chemistry",
-    "sub": "Metabolic & Diabetes",
-    "price": 8000,
-    "type": "single",
-    "Component_Count": 1,
+    "dept_ar": "الكيمياء السريرية",
+    "sub": "Minerals",
+    "price": 20000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Result Value",
-        "unit": "mg/dL or %",
-        "normal": "Normal Range"
+        "name": "Magnesium",
+        "name_ar": "المغنيسيوم",
+        "unit": "mg/dL",
+        "ref_min": 1.7,
+        "ref_max": 2.2,
+        "ref_text": "1.7 - 2.2",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
     "code": "CHE-008",
-    "name": "HbA1c (Glycated Hemoglobin)",
+    "name": "Amylase & Lipase",
+    "name_ar": "إنزيمات البنكرياس",
     "dept": "Clinical Chemistry",
-    "sub": "Metabolic & Diabetes",
-    "price": 25000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Result Value",
-        "unit": "mg/dL or %",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "MIC-001",
-    "name": "Blood Culture and Sensitivity",
-    "dept": "Microbiology",
-    "sub": "Bacteriology Cultures",
-    "price": 100000,
-    "type": "panel",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Growth Status",
-        "unit": "",
-        "normal": "No Growth after 48 hours"
-      },
-      {
-        "name": "Isolated Organism",
-        "unit": "",
-        "normal": "None"
-      },
-      {
-        "name": "Sensitivity Report",
-        "unit": "",
-        "normal": "See Antibiogram"
-      }
-    ],
-    "component_count": 3
-  },
-  {
-    "code": "MIC-002",
-    "name": "Urine Culture and Sensitivity",
-    "dept": "Microbiology",
-    "sub": "Bacteriology Cultures",
-    "price": 50000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Growth Status",
-        "unit": "",
-        "normal": "No Growth after 48 hours"
-      },
-      {
-        "name": "Isolated Organism",
-        "unit": "",
-        "normal": "None"
-      },
-      {
-        "name": "Sensitivity Report",
-        "unit": "",
-        "normal": "See Antibiogram"
-      }
-    ],
-    "component_count": 3
-  },
-  {
-    "code": "MIC-003",
-    "name": "Wound Swab Culture & Sensitivity",
-    "dept": "Microbiology",
-    "sub": "Bacteriology Cultures",
-    "price": 40000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Growth Status",
-        "unit": "",
-        "normal": "No Growth after 48 hours"
-      },
-      {
-        "name": "Isolated Organism",
-        "unit": "",
-        "normal": "None"
-      },
-      {
-        "name": "Sensitivity Report",
-        "unit": "",
-        "normal": "See Antibiogram"
-      }
-    ],
-    "component_count": 3
-  },
-  {
-    "code": "MIC-004",
-    "name": "Sputum for Acid Fast Bacilli (AFB)",
-    "dept": "Microbiology",
-    "sub": "Mycobacteriology",
-    "price": 30000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Sputum for Acid Fast Bacilli (AFB)",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "MIC-005",
-    "name": "GeneXpert Mycobacterium tuberculosis",
-    "dept": "Microbiology",
-    "sub": "Mycobacteriology",
-    "price": 150000,
-    "type": "panel",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "GeneXpert Mycobacterium tuberculosis",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "PAR-001",
-    "name": "Stool Routine Examination",
-    "dept": "Parasitology",
-    "sub": "Stool & Urine Parasites",
-    "price": 15000,
-    "type": "panel",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Color",
-        "unit": "",
-        "normal": "Brown"
-      },
-      {
-        "name": "Consistency",
-        "unit": "",
-        "normal": "Formed"
-      },
-      {
-        "name": "Mucus",
-        "unit": "",
-        "normal": "Absent"
-      },
-      {
-        "name": "Blood",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "Ova & Cysts",
-        "unit": "",
-        "normal": "No Parasites Seen"
-      },
-      {
-        "name": "Pus Cells",
-        "unit": "HPF",
-        "normal": "0 - 2"
-      },
-      {
-        "name": "RBCs",
-        "unit": "HPF",
-        "normal": "0 - 1"
-      }
-    ],
-    "component_count": 7
-  },
-  {
-    "code": "PAR-002",
-    "name": "Urine Routine Examination",
-    "dept": "Parasitology",
-    "sub": "Stool & Urine Parasites",
-    "price": 15000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Color",
-        "unit": "",
-        "normal": "Yellow / Clear"
-      },
-      {
-        "name": "Appearance",
-        "unit": "",
-        "normal": "Clear"
-      },
-      {
-        "name": "Specific Gravity",
-        "unit": "",
-        "normal": "1.005 - 1.030"
-      },
-      {
-        "name": "pH",
-        "unit": "",
-        "normal": "4.5 - 8.0"
-      },
-      {
-        "name": "Protein",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "Glucose",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "Ketones",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "Bilirubin",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "Blood",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "WBCs",
-        "unit": "HPF",
-        "normal": "0 - 5"
-      },
-      {
-        "name": "RBCs",
-        "unit": "HPF",
-        "normal": "0 - 2"
-      },
-      {
-        "name": "Epithelial Cells",
-        "unit": "HPF",
-        "normal": "Few"
-      },
-      {
-        "name": "Bacteria",
-        "unit": "",
-        "normal": "Absent"
-      }
-    ],
-    "component_count": 13
-  },
-  {
-    "code": "PAR-003",
-    "name": "Urine Complete Analysis",
-    "dept": "Parasitology",
-    "sub": "Urine & Biochemical Analysis",
-    "price": 15000,
-    "type": "panel",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Color",
-        "unit": "",
-        "normal": "Yellow / Clear"
-      },
-      {
-        "name": "Appearance",
-        "unit": "",
-        "normal": "Clear"
-      },
-      {
-        "name": "Specific Gravity",
-        "unit": "",
-        "normal": "1.005 - 1.030"
-      },
-      {
-        "name": "pH",
-        "unit": "",
-        "normal": "4.5 - 8.0"
-      },
-      {
-        "name": "Protein",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "Glucose",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "Ketones",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "Bilirubin",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "Blood",
-        "unit": "",
-        "normal": "Negative"
-      },
-      {
-        "name": "WBCs",
-        "unit": "HPF",
-        "normal": "0 - 5"
-      },
-      {
-        "name": "RBCs",
-        "unit": "HPF",
-        "normal": "0 - 2"
-      },
-      {
-        "name": "Epithelial Cells",
-        "unit": "HPF",
-        "normal": "Few"
-      },
-      {
-        "name": "Bacteria",
-        "unit": "",
-        "normal": "Absent"
-      }
-    ],
-    "component_count": 13
-  },
-  {
-    "code": "PAR-004",
-    "name": "Malaria Microscopy (Thick & Thin Film)",
-    "dept": "Parasitology",
-    "sub": "Endemic Endoparasites",
-    "price": 25000,
-    "type": "panel",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Malaria Microscopy (Thick & Thin Film)",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "IMM-001",
-    "name": "Widal Agglutination Test (Typhoid)",
-    "dept": "Immunology & Serology",
-    "sub": "Infectious Serology",
-    "price": 30000,
-    "type": "panel",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Test Result",
-        "unit": "",
-        "normal": "Negative / Non-Reactive"
-      },
-      {
-        "name": "Titer / Index",
-        "unit": "",
-        "normal": "< 1.0 (Negative)"
-      }
-    ],
-    "component_count": 2
-  },
-  {
-    "code": "IMM-002",
-    "name": "Brucella Agglutination Test",
-    "dept": "Immunology & Serology",
-    "sub": "Infectious Serology",
-    "price": 35000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Test Result",
-        "unit": "",
-        "normal": "Negative / Non-Reactive"
-      },
-      {
-        "name": "Titer / Index",
-        "unit": "",
-        "normal": "< 1.0 (Negative)"
-      }
-    ],
-    "component_count": 2
-  },
-  {
-    "code": "IMM-003",
-    "name": "Visceral Leishmaniasis (Kala-azar)",
-    "dept": "Immunology & Serology",
-    "sub": "Infectious Serology",
-    "price": 40000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Visceral Leishmaniasis (Kala-azar)",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "IMM-004",
-    "name": "Hepatitis B Surface Antigen (HBsAg)",
-    "dept": "Immunology & Serology",
-    "sub": "Viral Screening",
-    "price": 30000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Test Result",
-        "unit": "",
-        "normal": "Negative / Non-Reactive"
-      },
-      {
-        "name": "Titer / Index",
-        "unit": "",
-        "normal": "< 1.0 (Negative)"
-      }
-    ],
-    "component_count": 2
-  },
-  {
-    "code": "IMM-005",
-    "name": "Hepatitis C Virus Antibody (HCV Ab)",
-    "dept": "Immunology & Serology",
-    "sub": "Viral Screening",
-    "price": 35000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Test Result",
-        "unit": "",
-        "normal": "Negative / Non-Reactive"
-      },
-      {
-        "name": "Titer / Index",
-        "unit": "",
-        "normal": "< 1.0 (Negative)"
-      }
-    ],
-    "component_count": 2
-  },
-  {
-    "code": "IMM-006",
-    "name": "HIV 1 & 2 Antibody / Antigen Combo",
-    "dept": "Immunology & Serology",
-    "sub": "Viral Screening",
-    "price": 40000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Test Result",
-        "unit": "",
-        "normal": "Negative / Non-Reactive"
-      },
-      {
-        "name": "Titer / Index",
-        "unit": "",
-        "normal": "< 1.0 (Negative)"
-      }
-    ],
-    "component_count": 2
-  },
-  {
-    "code": "IMM-007",
-    "name": "Rheumatoid Factor (RF)",
-    "dept": "Immunology & Serology",
-    "sub": "Autoimmunity",
-    "price": 25000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Rheumatoid Factor (RF)",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "IMM-008",
-    "name": "Antinuclear Antibodies (ANA)",
-    "dept": "Immunology & Serology",
-    "sub": "Autoimmunity",
+    "dept_ar": "الكيمياء السريرية",
+    "sub": "Pancreas",
     "price": 70000,
-    "type": "single",
-    "Component_Count": 1,
+    "component_count": 2,
     "components": [
       {
-        "name": "Antinuclear Antibodies (ANA)",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "IMM-009",
-    "name": "Anti-double Stranded DNA (anti-dsDNA)",
-    "dept": "Immunology & Serology",
-    "sub": "Autoimmunity",
-    "price": 80000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Anti-double Stranded DNA (anti-dsDNA)",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "IMM-010",
-    "name": "Prostate Specific Antigen (PSA)",
-    "dept": "Immunology & Serology",
-    "sub": "Tumor Markers",
-    "price": 100000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Test Result",
-        "unit": "",
-        "normal": "Negative / Non-Reactive"
+        "name": "Amylase",
+        "name_ar": "الأميليز",
+        "unit": "U/L",
+        "ref_min": 30,
+        "ref_max": 110,
+        "ref_text": "30 - 110",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       },
       {
-        "name": "Titer / Index",
-        "unit": "",
-        "normal": "< 1.0 (Negative)"
+        "name": "Lipase",
+        "name_ar": "الليباز",
+        "unit": "U/L",
+        "ref_min": 0,
+        "ref_max": 160,
+        "ref_text": "0 - 160",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
       }
-    ],
-    "component_count": 2
+    ]
   },
   {
-    "code": "IMM-011",
-    "name": "Alpha-Fetoprotein (AFP)",
-    "dept": "Immunology & Serology",
-    "sub": "Tumor Markers",
-    "price": 120000,
-    "type": "single",
-    "Component_Count": 1,
+    "code": "CHE-009",
+    "name": "Total Protein & Albumin",
+    "name_ar": "البروتين والألبومين",
+    "dept": "Clinical Chemistry",
+    "dept_ar": "الكيمياء السريرية",
+    "sub": "Proteins",
+    "price": 50000,
+    "component_count": 4,
     "components": [
       {
-        "name": "Alpha-Fetoprotein (AFP)",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "IMM-012",
-    "name": "Cancer Antigen 125 (CA-125)",
-    "dept": "Immunology & Serology",
-    "sub": "Tumor Markers",
-    "price": 150000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Test Result",
-        "unit": "",
-        "normal": "Negative / Non-Reactive"
+        "name": "Total Protein",
+        "name_ar": "البروتين الكلي",
+        "unit": "g/dL",
+        "ref_min": 6.0,
+        "ref_max": 8.3,
+        "ref_text": "6.0 - 8.3",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       },
       {
-        "name": "Titer / Index",
-        "unit": "",
-        "normal": "< 1.0 (Negative)"
+        "name": "Albumin",
+        "name_ar": "الألبومين",
+        "unit": "g/dL",
+        "ref_min": 3.4,
+        "ref_max": 5.4,
+        "ref_text": "3.4 - 5.4",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Globulin",
+        "name_ar": "الجلوبيولين",
+        "unit": "g/dL",
+        "ref_min": 2.0,
+        "ref_max": 3.5,
+        "ref_text": "2.0 - 3.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
+      },
+      {
+        "name": "A/G Ratio",
+        "name_ar": "نسبة A/G",
+        "unit": null,
+        "ref_min": 1.1,
+        "ref_max": 2.5,
+        "ref_text": "1.1 - 2.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 3
       }
-    ],
-    "component_count": 2
+    ]
   },
   {
-    "code": "HIS-001",
-    "name": "Biopsy / Tissue Histopathology Examination",
-    "dept": "Histopathology & Cytology",
-    "sub": "Surgical Pathology",
-    "price": 200000,
-    "type": "panel",
-    "Component_Count": 1,
+    "code": "DIA-001",
+    "name": "Fasting Blood Sugar (FBS)",
+    "name_ar": "سكر الدم صائم",
+    "dept": "Diabetes",
+    "dept_ar": "السكر والأيض",
+    "sub": "Glucose",
+    "price": 7000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Biopsy / Tissue Histopathology Examination",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Fasting Glucose",
+        "name_ar": "الجلوكوز صائم",
+        "unit": "mg/dL",
+        "ref_min": 70,
+        "ref_max": 100,
+        "ref_text": "70 - 100",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
-    "code": "HIS-002",
-    "name": "Fine Needle Aspiration Cytology (FNAC)",
-    "dept": "Histopathology & Cytology",
-    "sub": "Cytopathology",
-    "price": 150000,
-    "type": "single",
-    "Component_Count": 1,
+    "code": "DIA-002",
+    "name": "Random Blood Sugar (RBS)",
+    "name_ar": "سكر الدم عشوائي",
+    "dept": "Diabetes",
+    "dept_ar": "السكر والأيض",
+    "sub": "Glucose",
+    "price": 7000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Fine Needle Aspiration Cytology (FNAC)",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Random Glucose",
+        "name_ar": "الجلوكوز عشوائي",
+        "unit": "mg/dL",
+        "ref_min": 70,
+        "ref_max": 145,
+        "ref_text": "70 - 145",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
-    "code": "HIS-003",
-    "name": "Pap Smear (Cervical Cytology)",
-    "dept": "Histopathology & Cytology",
-    "sub": "Cytopathology",
-    "price": 100000,
-    "type": "single",
-    "Component_Count": 1,
+    "code": "DIA-003",
+    "name": "2-Hour Postprandial",
+    "name_ar": "سكر الدم بعد الأكل",
+    "dept": "Diabetes",
+    "dept_ar": "السكر والأيض",
+    "sub": "Glucose",
+    "price": 8000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Pap Smear (Cervical Cytology)",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "2h PP Glucose",
+        "name_ar": "الجلوكوز بعد ساعتين",
+        "unit": "mg/dL",
+        "ref_min": null,
+        "ref_max": 140,
+        "ref_text": "< 140",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
-    "code": "HIS-004",
-    "name": "Breast Cancer IHC Panel",
-    "dept": "Histopathology & Cytology",
-    "sub": "Immunohistochemistry (IHC)",
-    "price": 300000,
-    "type": "single",
-    "Component_Count": 1,
+    "code": "DIA-004",
+    "name": "Fasting Insulin",
+    "name_ar": "الأنسولين الصائم",
+    "dept": "Diabetes",
+    "dept_ar": "السكر والأيض",
+    "sub": "Hormones",
+    "price": 45000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Breast Cancer IHC Panel",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "Fasting Insulin",
+        "name_ar": "الأنسولين الصائم",
+        "unit": "µIU/mL",
+        "ref_min": 2.6,
+        "ref_max": 24.9,
+        "ref_text": "2.6 - 24.9",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
-    "code": "MOL-001",
-    "name": "Hepatitis B Virus DNA Quantification (Viral Load)",
-    "dept": "Molecular & Endocrinology",
-    "sub": "Molecular Virology (PCR)",
-    "price": 200000,
-    "type": "single",
-    "Component_Count": 1,
+    "code": "DIA-005",
+    "name": "C-Peptide",
+    "name_ar": "الببتيد ج",
+    "dept": "Diabetes",
+    "dept_ar": "السكر والأيض",
+    "sub": "Hormones",
+    "price": 50000,
+    "component_count": 1,
     "components": [
       {
-        "name": "Hepatitis B Virus DNA Quantification (Viral Load)",
-        "unit": "",
-        "normal": "Normal Range"
+        "name": "C-Peptide",
+        "name_ar": "الببتيد ج",
+        "unit": "ng/mL",
+        "ref_min": 0.78,
+        "ref_max": 1.89,
+        "ref_text": "0.78 - 1.89",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       }
-    ],
-    "component_count": 1
+    ]
   },
   {
-    "code": "MOL-002",
-    "name": "Hepatitis C Virus RNA Quantification",
-    "dept": "Molecular & Endocrinology",
-    "sub": "Molecular Virology (PCR)",
-    "price": 200000,
-    "type": "single",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Hepatitis C Virus RNA Quantification",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "code": "MOL-003",
-    "name": "Thyroid Function Tests (TFT)",
-    "dept": "Molecular & Endocrinology",
-    "sub": "Endocrinology / Hormones",
-    "price": 40000,
-    "type": "panel",
-    "Component_Count": 1,
+    "code": "HOR-001",
+    "name": "Thyroid Profile (TFT)",
+    "name_ar": "وظائف الغدة الدرقية",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Thyroid",
+    "price": 90000,
+    "component_count": 3,
     "components": [
       {
         "name": "TSH",
-        "unit": "uIU/mL",
-        "normal": "0.4 - 4.0"
-      },
-      {
-        "name": "Free T3",
-        "unit": "pg/mL",
-        "normal": "2.3 - 4.2"
+        "name_ar": "هرمون TSH",
+        "unit": "µIU/mL",
+        "ref_min": 0.4,
+        "ref_max": 4.0,
+        "ref_text": "0.4 - 4.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
       },
       {
         "name": "Free T4",
+        "name_ar": "T4 الحر",
         "unit": "ng/dL",
-        "normal": "0.8 - 1.8"
+        "ref_min": 0.9,
+        "ref_max": 1.7,
+        "ref_text": "0.9 - 1.7",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Free T3",
+        "name_ar": "T3 الحر",
+        "unit": "pg/mL",
+        "ref_min": 2.3,
+        "ref_max": 4.2,
+        "ref_text": "2.3 - 4.2",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
       }
-    ],
-    "component_count": 3
+    ]
   },
   {
-    "code": "MOL-004",
-    "name": "Fertility Panel",
-    "dept": "Molecular & Endocrinology",
-    "sub": "Reproductive Hormones",
+    "code": "HOR-002",
+    "name": "TSH",
+    "name_ar": "هرمون TSH",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Thyroid",
+    "price": 25000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "TSH",
+        "name_ar": "هرمون TSH",
+        "unit": "µIU/mL",
+        "ref_min": 0.4,
+        "ref_max": 4.0,
+        "ref_text": "0.4 - 4.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-003",
+    "name": "Free T4",
+    "name_ar": "T4 الحر",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Thyroid",
+    "price": 25000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Free T4",
+        "name_ar": "T4 الحر",
+        "unit": "ng/dL",
+        "ref_min": 0.9,
+        "ref_max": 1.7,
+        "ref_text": "0.9 - 1.7",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-004",
+    "name": "Free T3",
+    "name_ar": "T3 الحر",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Thyroid",
+    "price": 25000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Free T3",
+        "name_ar": "T3 الحر",
+        "unit": "pg/mL",
+        "ref_min": 2.3,
+        "ref_max": 4.2,
+        "ref_text": "2.3 - 4.2",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-005",
+    "name": "Prolactin",
+    "name_ar": "هرمون الحليب",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Reproductive",
+    "price": 25000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Prolactin",
+        "name_ar": "البرولاكتين",
+        "unit": "ng/mL",
+        "ref_min": null,
+        "ref_max": 20,
+        "ref_text": "< 20 (M) | < 25 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-006",
+    "name": "FSH",
+    "name_ar": "الهرمون المنبه للجريب",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Reproductive",
+    "price": 30000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "FSH",
+        "name_ar": "الهرمون المنبه للجريب",
+        "unit": "U/L",
+        "ref_min": 1.5,
+        "ref_max": 12.4,
+        "ref_text": "1.5 - 12.4 (M) | Varies by cycle (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-007",
+    "name": "LH",
+    "name_ar": "الهرمون اللوتيني",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Reproductive",
+    "price": 30000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "LH",
+        "name_ar": "الهرمون اللوتيني",
+        "unit": "U/L",
+        "ref_min": 1.7,
+        "ref_max": 8.6,
+        "ref_text": "1.7 - 8.6 (M) | Varies by cycle (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-008",
+    "name": "Total Testosterone",
+    "name_ar": "التستوستيرون الكلي",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Reproductive",
+    "price": 50000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Total Testosterone",
+        "name_ar": "التستوستيرون",
+        "unit": "ng/dL",
+        "ref_min": 300,
+        "ref_max": 1000,
+        "ref_text": "300 - 1000 (M)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-009",
+    "name": "Estradiol (E2)",
+    "name_ar": "الإستراديول",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Reproductive",
+    "price": 40000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Estradiol",
+        "name_ar": "الإستراديول",
+        "unit": "pg/mL",
+        "ref_min": 12,
+        "ref_max": 48,
+        "ref_text": "Follicular: 12 - 48",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-010",
+    "name": "Progesterone",
+    "name_ar": "البروجسترون",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Reproductive",
+    "price": 40000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Progesterone",
+        "name_ar": "البروجسترون",
+        "unit": "ng/mL",
+        "ref_min": null,
+        "ref_max": 1.5,
+        "ref_text": "Follicular: < 1.5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-011",
+    "name": "Cortisol (AM)",
+    "name_ar": "الكورتيزول صباحاً",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Adrenal",
+    "price": 40000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Cortisol AM",
+        "name_ar": "الكورتيزول صباحاً",
+        "unit": "µg/dL",
+        "ref_min": 6,
+        "ref_max": 23,
+        "ref_text": "6 - 23",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "HOR-012",
+    "name": "Beta HCG (Quantitative)",
+    "name_ar": "هرمون الحمل الكمي",
+    "dept": "Hormones",
+    "dept_ar": "الهرمونات",
+    "sub": "Reproductive",
+    "price": 50000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Beta HCG",
+        "name_ar": "هرمون الحمل",
+        "unit": "mIU/mL",
+        "ref_min": null,
+        "ref_max": 5,
+        "ref_text": "Non-pregnant: < 5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "VIT-001",
+    "name": "Vitamin B12",
+    "name_ar": "فيتامين B12",
+    "dept": "Vitamins",
+    "dept_ar": "الفيتامينات والمعادن",
+    "sub": "Vitamins",
+    "price": 20000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Vitamin B12",
+        "name_ar": "فيتامين B12",
+        "unit": "pg/mL",
+        "ref_min": 200,
+        "ref_max": 900,
+        "ref_text": "200 - 900",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "VIT-002",
+    "name": "Vitamin D (25-OH)",
+    "name_ar": "فيتامين د",
+    "dept": "Vitamins",
+    "dept_ar": "الفيتامينات والمعادن",
+    "sub": "Vitamins",
+    "price": 20000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "25-OH Vitamin D",
+        "name_ar": "فيتامين د",
+        "unit": "ng/mL",
+        "ref_min": 30,
+        "ref_max": 100,
+        "ref_text": "30 - 100",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "VIT-003",
+    "name": "Folate (Folic Acid)",
+    "name_ar": "حمض الفوليك",
+    "dept": "Vitamins",
+    "dept_ar": "الفيتامينات والمعادن",
+    "sub": "Vitamins",
+    "price": 25000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Folate",
+        "name_ar": "حمض الفوليك",
+        "unit": "ng/mL",
+        "ref_min": 2.7,
+        "ref_max": 17.0,
+        "ref_text": "2.7 - 17.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "VIT-004",
+    "name": "Zinc",
+    "name_ar": "الزنك",
+    "dept": "Vitamins",
+    "dept_ar": "الفيتامينات والمعادن",
+    "sub": "Minerals",
+    "price": 30000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Zinc",
+        "name_ar": "الزنك",
+        "unit": "µg/dL",
+        "ref_min": 60,
+        "ref_max": 120,
+        "ref_text": "60 - 120",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "IRO-001",
+    "name": "Iron Studies",
+    "name_ar": "دراسة الحديد",
+    "dept": "Iron Studies",
+    "dept_ar": "دراسة الحديد",
+    "sub": "Iron",
+    "price": 50000,
+    "component_count": 4,
+    "components": [
+      {
+        "name": "Serum Iron",
+        "name_ar": "الحديد في المصل",
+        "unit": "µg/dL",
+        "ref_min": 65,
+        "ref_max": 175,
+        "ref_text": "65 - 175 (M) | 50 - 170 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      },
+      {
+        "name": "Ferritin",
+        "name_ar": "الفيريتين",
+        "unit": "ng/mL",
+        "ref_min": 24,
+        "ref_max": 336,
+        "ref_text": "24 - 336 (M) | 11 - 307 (F)",
+        "result_type": "numeric",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "TIBC",
+        "name_ar": "السعة الكلية لربط الحديد",
+        "unit": "µg/dL",
+        "ref_min": 240,
+        "ref_max": 450,
+        "ref_text": "240 - 450",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
+      },
+      {
+        "name": "Transferrin Saturation",
+        "name_ar": "تشبع الترانسفيرين",
+        "unit": "%",
+        "ref_min": 20,
+        "ref_max": 50,
+        "ref_text": "20 - 50",
+        "result_type": "numeric",
+        "options": null,
+        "order": 3
+      }
+    ]
+  },
+  {
+    "code": "SER-001",
+    "name": "HBsAg",
+    "name_ar": "فيروس الكبد B",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Viral",
+    "price": 15000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "HBsAg",
+        "name_ar": "HBsAg",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "SER-002",
+    "name": "Anti-HCV",
+    "name_ar": "فيروس الكبد C",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Viral",
+    "price": 15000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Anti-HCV",
+        "name_ar": "Anti-HCV",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "SER-003",
+    "name": "HIV Ab/Ag Combo",
+    "name_ar": "فحص الإيدز",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Viral",
+    "price": 15000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "HIV Ag/Ab",
+        "name_ar": "HIV Ag/Ab",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "SER-004",
+    "name": "VDRL / RPR",
+    "name_ar": "فحص الزهري",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Viral",
+    "price": 10000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "SER-005",
+    "name": "Widal Agglutination Test",
+    "name_ar": "اختبار ويدال (تيفويد)",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Bacterial",
+    "price": 7000,
+    "component_count": 5,
+    "components": [
+      {
+        "name": "S. typhi O",
+        "name_ar": "تيفويد O",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|1:20|1:40|1:80|1:160|1:320|1:640",
+        "order": 0
+      },
+      {
+        "name": "S. typhi H",
+        "name_ar": "تيفويد H",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|1:20|1:40|1:80|1:160|1:320|1:640",
+        "order": 1
+      },
+      {
+        "name": "S. paratyphi AH",
+        "name_ar": "باراتيفويد AH",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|1:20|1:40|1:80|1:160|1:320|1:640",
+        "order": 2
+      },
+      {
+        "name": "S. paratyphi BH",
+        "name_ar": "باراتيفويد BH",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|1:20|1:40|1:80|1:160|1:320|1:640",
+        "order": 3
+      },
+      {
+        "name": "S. paratyphi CH",
+        "name_ar": "باراتيفويد CH",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|1:20|1:40|1:80|1:160|1:320|1:640",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "code": "SER-006",
+    "name": "Brucella Agglutination",
+    "name_ar": "البروسيلا (تلزن)",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Bacterial",
+    "price": 8000,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "B. abortus",
+        "name_ar": "بروسيلا أبورتس",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|1:20|1:40|1:80|1:160|1:320|1:640",
+        "order": 0
+      },
+      {
+        "name": "B. melitensis",
+        "name_ar": "بروسيلا مليتنسس",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|1:20|1:40|1:80|1:160|1:320|1:640",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "SER-007",
+    "name": "Brucella ICT",
+    "name_ar": "البروسيلا (سريع)",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Bacterial",
+    "price": 8000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "SER-008",
+    "name": "Typhoid ICT",
+    "name_ar": "التيفويد (سريع)",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Bacterial",
+    "price": 7500,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "SER-009",
+    "name": "Toxoplasma IgG/IgM",
+    "name_ar": "التوكسوبلازما",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Parasitic",
+    "price": 12000,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "IgG",
+        "name_ar": "IgG",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive|Equivocal",
+        "order": 0
+      },
+      {
+        "name": "IgM",
+        "name_ar": "IgM",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive|Equivocal",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "SER-010",
+    "name": "Rubella IgG/IgM",
+    "name_ar": "الحصبة الألمانية",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Viral",
+    "price": 12000,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "IgG",
+        "name_ar": "IgG",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive|Equivocal",
+        "order": 0
+      },
+      {
+        "name": "IgM",
+        "name_ar": "IgM",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive|Equivocal",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "SER-011",
+    "name": "CMV IgG/IgM",
+    "name_ar": "الفيروس المضخم للخلايا",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Viral",
+    "price": 12000,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "IgG",
+        "name_ar": "IgG",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive|Equivocal",
+        "order": 0
+      },
+      {
+        "name": "IgM",
+        "name_ar": "IgM",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive|Equivocal",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "SER-012",
+    "name": "H. pylori Ab",
+    "name_ar": "جرثومة المعدة - أجسام مضادة",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Bacterial",
+    "price": 10000,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "IgG",
+        "name_ar": "IgG",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive",
+        "order": 0
+      },
+      {
+        "name": "IgM",
+        "name_ar": "IgM",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Non-Reactive",
+        "result_type": "select",
+        "options": "Non-Reactive|Reactive",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "SER-013",
+    "name": "Dengue Profile",
+    "name_ar": "حمى الضنك",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Viral",
+    "price": 30000,
+    "component_count": 3,
+    "components": [
+      {
+        "name": "NS1 Antigen",
+        "name_ar": "أنتيجين NS1",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 0
+      },
+      {
+        "name": "IgG",
+        "name_ar": "IgG",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 1
+      },
+      {
+        "name": "IgM",
+        "name_ar": "IgM",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "code": "SER-014",
+    "name": "Pregnancy Test (HCG)",
+    "name_ar": "اختبار الحمل",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Hormone",
+    "price": 7000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "HCG Urine",
+        "name_ar": "HCG البولي",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "SER-015",
+    "name": "COVID-19 Antigen",
+    "name_ar": "كوفيد-19",
+    "dept": "Serology",
+    "dept_ar": "المصليات",
+    "sub": "Viral",
+    "price": 15000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive|Invalid",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "INF-001",
+    "name": "CRP",
+    "name_ar": "بروتين سي التفاعلي",
+    "dept": "Inflammatory",
+    "dept_ar": "الالتهابات والمناعة الذاتية",
+    "sub": "Acute Phase",
+    "price": 10000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "CRP",
+        "name_ar": "CRP",
+        "unit": "mg/L",
+        "ref_min": null,
+        "ref_max": 5,
+        "ref_text": "< 5",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "INF-002",
+    "name": "hs-CRP",
+    "name_ar": "CRP عالي الحساسية",
+    "dept": "Inflammatory",
+    "dept_ar": "الالتهابات والمناعة الذاتية",
+    "sub": "Cardiac Risk",
+    "price": 20000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "hs-CRP",
+        "name_ar": "hs-CRP",
+        "unit": "mg/L",
+        "ref_min": null,
+        "ref_max": 1.0,
+        "ref_text": "< 1.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "INF-003",
+    "name": "ASO",
+    "name_ar": "الأنتيستربتوليسين O",
+    "dept": "Inflammatory",
+    "dept_ar": "الالتهابات والمناعة الذاتية",
+    "sub": "Bacterial",
+    "price": 10000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "ASO",
+        "name_ar": "ASO",
+        "unit": "IU/mL",
+        "ref_min": null,
+        "ref_max": 200,
+        "ref_text": "< 200",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "INF-004",
+    "name": "RF",
+    "name_ar": "العامل الروماتويدي",
+    "dept": "Inflammatory",
+    "dept_ar": "الالتهابات والمناعة الذاتية",
+    "sub": "Autoimmune",
+    "price": 15000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "RF",
+        "name_ar": "RF",
+        "unit": "IU/mL",
+        "ref_min": null,
+        "ref_max": 14,
+        "ref_text": "< 14",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "INF-005",
+    "name": "ANA",
+    "name_ar": "الأجسام المضادة للنواة",
+    "dept": "Inflammatory",
+    "dept_ar": "الالتهابات والمناعة الذاتية",
+    "sub": "Autoimmune",
+    "price": 100000,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 0
+      },
+      {
+        "name": "Pattern",
+        "name_ar": "النمط",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Applicable",
+        "result_type": "text",
+        "options": null,
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "INF-006",
+    "name": "Anti-CCP",
+    "name_ar": "الببتيد الحلقي المضاد",
+    "dept": "Inflammatory",
+    "dept_ar": "الالتهابات والمناعة الذاتية",
+    "sub": "Autoimmune",
+    "price": 50000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Anti-CCP",
+        "name_ar": "Anti-CCP",
+        "unit": "U/mL",
+        "ref_min": null,
+        "ref_max": 17,
+        "ref_text": "< 17",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "INF-007",
+    "name": "Anti-dsDNA",
+    "name_ar": "الحمض النووي مزدوج الشريط",
+    "dept": "Inflammatory",
+    "dept_ar": "الالتهابات والمناعة الذاتية",
+    "sub": "Autoimmune",
+    "price": 50000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Anti-dsDNA",
+        "name_ar": "Anti-dsDNA",
+        "unit": "IU/mL",
+        "ref_min": null,
+        "ref_max": 30,
+        "ref_text": "< 30",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "MIC-001",
+    "name": "Blood Culture",
+    "name_ar": "مزرعة الدم",
+    "dept": "Microbiology",
+    "dept_ar": "الميكروبيولوجي",
+    "sub": "Culture",
+    "price": 25000,
+    "component_count": 3,
+    "components": [
+      {
+        "name": "Growth",
+        "name_ar": "النمو",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "No Growth",
+        "result_type": "select",
+        "options": "No Growth|Normal Flora|Pathogenic Growth",
+        "order": 0
+      },
+      {
+        "name": "Organism",
+        "name_ar": "الكائن المسبب",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Isolated",
+        "result_type": "text",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Sensitivity",
+        "name_ar": "الحساسية",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Sensitive",
+        "result_type": "select",
+        "options": "Sensitive|Intermediate|Resistant",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "code": "MIC-002",
+    "name": "Urine Culture",
+    "name_ar": "مزرعة البول",
+    "dept": "Microbiology",
+    "dept_ar": "الميكروبيولوجي",
+    "sub": "Culture",
+    "price": 15000,
+    "component_count": 3,
+    "components": [
+      {
+        "name": "Growth",
+        "name_ar": "النمو",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "No Growth",
+        "result_type": "select",
+        "options": "No Growth|Normal Flora|Pathogenic Growth",
+        "order": 0
+      },
+      {
+        "name": "Organism",
+        "name_ar": "الكائن المسبب",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Isolated",
+        "result_type": "text",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Sensitivity",
+        "name_ar": "الحساسية",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Sensitive",
+        "result_type": "select",
+        "options": "Sensitive|Intermediate|Resistant",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "code": "MIC-003",
+    "name": "Stool Culture",
+    "name_ar": "مزرعة البراز",
+    "dept": "Microbiology",
+    "dept_ar": "الميكروبيولوجي",
+    "sub": "Culture",
+    "price": 60000,
+    "component_count": 3,
+    "components": [
+      {
+        "name": "Growth",
+        "name_ar": "النمو",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Normal Flora",
+        "result_type": "select",
+        "options": "No Growth|Normal Flora|Pathogenic Growth",
+        "order": 0
+      },
+      {
+        "name": "Organism",
+        "name_ar": "الكائن المسبب",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Isolated",
+        "result_type": "text",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Sensitivity",
+        "name_ar": "الحساسية",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Sensitive",
+        "result_type": "select",
+        "options": "Sensitive|Intermediate|Resistant",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "code": "MIC-004",
+    "name": "Wound Swab Culture",
+    "name_ar": "مزرعة مسحة الجرح",
+    "dept": "Microbiology",
+    "dept_ar": "الميكروبيولوجي",
+    "sub": "Culture",
+    "price": 20000,
+    "component_count": 3,
+    "components": [
+      {
+        "name": "Growth",
+        "name_ar": "النمو",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "No Growth",
+        "result_type": "select",
+        "options": "No Growth|Normal Flora|Pathogenic Growth",
+        "order": 0
+      },
+      {
+        "name": "Organism",
+        "name_ar": "الكائن المسبب",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Isolated",
+        "result_type": "text",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Sensitivity",
+        "name_ar": "الحساسية",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Sensitive",
+        "result_type": "select",
+        "options": "Sensitive|Intermediate|Resistant",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "code": "MIC-005",
+    "name": "Throat Swab Culture",
+    "name_ar": "مزرعة مسحة الحلق",
+    "dept": "Microbiology",
+    "dept_ar": "الميكروبيولوجي",
+    "sub": "Culture",
+    "price": 20000,
+    "component_count": 3,
+    "components": [
+      {
+        "name": "Growth",
+        "name_ar": "النمو",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Normal Flora",
+        "result_type": "select",
+        "options": "No Growth|Normal Flora|Pathogenic Growth",
+        "order": 0
+      },
+      {
+        "name": "Organism",
+        "name_ar": "الكائن المسبب",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Isolated",
+        "result_type": "text",
+        "options": null,
+        "order": 1
+      },
+      {
+        "name": "Sensitivity",
+        "name_ar": "الحساسية",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Sensitive",
+        "result_type": "select",
+        "options": "Sensitive|Intermediate|Resistant",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "code": "MIC-006",
+    "name": "Gram Stain",
+    "name_ar": "صبغة جرام",
+    "dept": "Microbiology",
+    "dept_ar": "الميكروبيولوجي",
+    "sub": "Stain",
+    "price": 8000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "No Organism Seen",
+        "result_type": "select",
+        "options": "No Organism Seen|Gram Positive Cocci|Gram Positive Bacilli|Gram Negative Cocci|Gram Negative Bacilli|Mixed Flora",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "MIC-007",
+    "name": "AFB Stain (Ziehl-Neelsen)",
+    "name_ar": "صبغة الزيل نلسن (الدرن)",
+    "dept": "Microbiology",
+    "dept_ar": "الميكروبيولوجي",
+    "sub": "Stain",
+    "price": 8000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive Scanty|Positive 1+|Positive 2+|Positive 3+",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "MIC-008",
+    "name": "GeneXpert MTB/RIF",
+    "name_ar": "جين إكسبرت للدرن",
+    "dept": "Microbiology",
+    "dept_ar": "الميكروبيولوجي",
+    "sub": "Molecular",
+    "price": 80000,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "MTB DNA",
+        "name_ar": "DNA الدرن",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Detected",
+        "result_type": "select",
+        "options": "Not Detected|Detected",
+        "order": 0
+      },
+      {
+        "name": "Rifampicin Resistance",
+        "name_ar": "مقاومة الريفامبيسين",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Detected",
+        "result_type": "select",
+        "options": "Not Detected|Detected",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "MIC-009",
+    "name": "Fungal Culture",
+    "name_ar": "مزرعة الفطريات",
+    "dept": "Microbiology",
+    "dept_ar": "الميكروبيولوجي",
+    "sub": "Culture",
+    "price": 30000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Growth",
+        "name_ar": "النمو",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "No Growth",
+        "result_type": "select",
+        "options": "No Growth|Yeast Cells Seen|Hyphae Seen|Both",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "PAR-001",
+    "name": "Malaria Microscopy (BFFM)",
+    "name_ar": "الملاريا - الفيلم المجهري",
+    "dept": "Parasitology",
+    "dept_ar": "الطفيليات",
+    "sub": "Malaria",
+    "price": 25000,
+    "component_count": 4,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "No Malaria Parasite Seen",
+        "result_type": "select",
+        "options": "No Malaria Parasite Seen|Malaria Parasite Seen",
+        "order": 0
+      },
+      {
+        "name": "Species",
+        "name_ar": "النوع",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Applicable",
+        "result_type": "select",
+        "options": "Not Applicable|P. falciparum|P. vivax|P. malariae|P. ovale|Mixed",
+        "order": 1
+      },
+      {
+        "name": "Stage",
+        "name_ar": "الطور",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Applicable",
+        "result_type": "select",
+        "options": "Not Applicable|Ring|Trophozoite|Schizont|Gametocyte|Multiple",
+        "order": 2
+      },
+      {
+        "name": "Density",
+        "name_ar": "الكثافة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Applicable",
+        "result_type": "select",
+        "options": "Not Applicable|Scanty|+|++|+++|++++",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "code": "PAR-002",
+    "name": "Malaria ICT",
+    "name_ar": "الملاريا - اختبار سريع",
+    "dept": "Parasitology",
+    "dept_ar": "الطفيليات",
+    "sub": "Malaria",
+    "price": 10000,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive Reactive P. falciparum|Positive Reactive P. vivax|Positive Reactive P. ovale|Positive Reactive P. malariae|Positive Reactive Mixed",
+        "order": 0
+      },
+      {
+        "name": "Species",
+        "name_ar": "النوع",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Applicable",
+        "result_type": "select",
+        "options": "Not Applicable|P. falciparum|P. vivax|P. ovale|P. malariae|Mixed",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "PAR-003",
+    "name": "Stool Ova & Parasites",
+    "name_ar": "بيوض وطفيليات البراز",
+    "dept": "Parasitology",
+    "dept_ar": "الطفيليات",
+    "sub": "Stool",
+    "price": 10000,
+    "component_count": 2,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Ascaris lumbricoides|Hookworm|Giardia lamblia|Entamoeba histolytica|Hymenolepis nana|Taenia spp|Schistosoma mansoni|Trichuris trichiura|Enterobius vermicularis|Mixed",
+        "order": 0
+      },
+      {
+        "name": "Quantity",
+        "name_ar": "الكمية",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Applicable",
+        "result_type": "select",
+        "options": "Not Applicable|Scanty|Few|Moderate|Many",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "code": "PAR-004",
+    "name": "Stool Occult Blood",
+    "name_ar": "الدم الخفي بالبراز",
+    "dept": "Parasitology",
+    "dept_ar": "الطفيليات",
+    "sub": "Stool",
+    "price": 25000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive|Trace",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "PAR-005",
+    "name": "Giardia Antigen",
+    "name_ar": "أنتيجين الجيارديا",
+    "dept": "Parasitology",
+    "dept_ar": "الطفيليات",
+    "sub": "Stool",
+    "price": 15000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "PAR-006",
+    "name": "Entamoeba Antigen",
+    "name_ar": "أنتيجين الأميبا",
+    "dept": "Parasitology",
+    "dept_ar": "الطفيليات",
+    "sub": "Stool",
+    "price": 15000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Result",
+        "name_ar": "النتيجة",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "URN-001",
+    "name": "Urine Analysis (UG)",
+    "name_ar": "تحليل البول العام",
+    "dept": "Urine Analysis",
+    "dept_ar": "تحليل البول",
+    "sub": "Routine",
+    "price": 5000,
+    "component_count": 14,
+    "components": [
+      {
+        "name": "Color",
+        "name_ar": "اللون",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Pale Yellow",
+        "result_type": "select",
+        "options": "Colorless|Pale Yellow|Yellow|Dark Yellow|Amber|Red|Brown|Orange",
+        "order": 0
+      },
+      {
+        "name": "Appearance",
+        "name_ar": "المظهر",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Clear",
+        "result_type": "select",
+        "options": "Clear|Slightly Cloudy|Cloudy|Turbid",
+        "order": 1
+      },
+      {
+        "name": "pH",
+        "name_ar": "الأس الهيدروجيني",
+        "unit": null,
+        "ref_min": 4.6,
+        "ref_max": 8.0,
+        "ref_text": "4.6 - 8.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 2
+      },
+      {
+        "name": "Specific Gravity",
+        "name_ar": "الكثافة النوعية",
+        "unit": null,
+        "ref_min": 1.005,
+        "ref_max": 1.03,
+        "ref_text": "1.005 - 1.03",
+        "result_type": "numeric",
+        "options": null,
+        "order": 3
+      },
+      {
+        "name": "Protein",
+        "name_ar": "البروتين",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Trace|1+|2+|3+|4+",
+        "order": 4
+      },
+      {
+        "name": "Glucose",
+        "name_ar": "الجلوكوز",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Trace|1+|2+|3+|4+",
+        "order": 5
+      },
+      {
+        "name": "Ketones",
+        "name_ar": "الكيتونات",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Trace|1+|2+|3+|4+",
+        "order": 6
+      },
+      {
+        "name": "Blood",
+        "name_ar": "الدم",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Trace|1+|2+|3+|4+",
+        "order": 7
+      },
+      {
+        "name": "Nitrite",
+        "name_ar": "النيتريت",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 8
+      },
+      {
+        "name": "Leukocyte Esterase",
+        "name_ar": "استريز الكريات",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Trace|1+|2+|3+",
+        "order": 9
+      },
+      {
+        "name": "Bilirubin",
+        "name_ar": "البيليروبين",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 10
+      },
+      {
+        "name": "Urobilinogen",
+        "name_ar": "اليوروبيلينوجين",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Normal",
+        "result_type": "select",
+        "options": "Normal|Increased",
+        "order": 11
+      },
+      {
+        "name": "WBC Microscopy",
+        "name_ar": "كريات بيضاء (مجهري)",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "0 - 5 /HPF",
+        "result_type": "text",
+        "options": null,
+        "order": 12
+      },
+      {
+        "name": "RBC Microscopy",
+        "name_ar": "كريات حمراء (مجهري)",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "0 - 2 /HPF",
+        "result_type": "text",
+        "options": null,
+        "order": 13
+      }
+    ]
+  },
+  {
+    "code": "URN-002",
+    "name": "Microalbumin (Urine)",
+    "name_ar": "الألبومين الدقيق",
+    "dept": "Urine Analysis",
+    "dept_ar": "تحليل البول",
+    "sub": "Proteins",
+    "price": 7000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Microalbumin",
+        "name_ar": "الألبومين الدقيق",
+        "unit": "mg/L",
+        "ref_min": null,
+        "ref_max": 30,
+        "ref_text": "< 30",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "STL-001",
+    "name": "Stool Analysis",
+    "name_ar": "تحليل البراز العام",
+    "dept": "Stool Analysis",
+    "dept_ar": "تحليل البراز",
+    "sub": "Routine",
+    "price": 5000,
+    "component_count": 6,
+    "components": [
+      {
+        "name": "Color",
+        "name_ar": "اللون",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Brown",
+        "result_type": "select",
+        "options": "Brown|Yellow|Green|Black|Red|Pale",
+        "order": 0
+      },
+      {
+        "name": "Consistency",
+        "name_ar": "القوام",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Formed",
+        "result_type": "select",
+        "options": "Formed|Semi-formed|Loose|Watery|Hard",
+        "order": 1
+      },
+      {
+        "name": "Ova & Parasites",
+        "name_ar": "البيوض والطفيليات",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Not Seen",
+        "result_type": "select",
+        "options": "Not Seen|Ascaris|Hookworm|Giardia|Entamoeba|H. nana|Taenia|Schistosoma|Other",
+        "order": 2
+      },
+      {
+        "name": "Occult Blood",
+        "name_ar": "الدم الخفي",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "Negative",
+        "result_type": "select",
+        "options": "Negative|Positive",
+        "order": 3
+      },
+      {
+        "name": "Pus Cells",
+        "name_ar": "الخلايا الصديدية",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "0 - 2 /HPF",
+        "result_type": "text",
+        "options": null,
+        "order": 4
+      },
+      {
+        "name": "RBCs",
+        "name_ar": "كريات حمراء",
+        "unit": null,
+        "ref_min": null,
+        "ref_max": null,
+        "ref_text": "0 - 1 /HPF",
+        "result_type": "text",
+        "options": null,
+        "order": 5
+      }
+    ]
+  },
+  {
+    "code": "TMR-001",
+    "name": "PSA Total",
+    "name_ar": "مؤشر البروستاتا",
+    "dept": "Tumor Markers",
+    "dept_ar": "مؤشرات الأورام",
+    "sub": "Prostate",
+    "price": 120000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "Total PSA",
+        "name_ar": "PSA الكلي",
+        "unit": "ng/mL",
+        "ref_min": null,
+        "ref_max": 4.0,
+        "ref_text": "< 4.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "TMR-002",
+    "name": "CEA",
+    "name_ar": "المستضد السرطاني المضغي",
+    "dept": "Tumor Markers",
+    "dept_ar": "مؤشرات الأورام",
+    "sub": "Colorectal",
+    "price": 60000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "CEA",
+        "name_ar": "CEA",
+        "unit": "ng/mL",
+        "ref_min": null,
+        "ref_max": 3.0,
+        "ref_text": "< 3.0",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "TMR-003",
+    "name": "AFP",
+    "name_ar": "ألفا فيتو بروتين",
+    "dept": "Tumor Markers",
+    "dept_ar": "مؤشرات الأورام",
+    "sub": "Liver",
+    "price": 20000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "AFP",
+        "name_ar": "AFP",
+        "unit": "ng/mL",
+        "ref_min": null,
+        "ref_max": 10,
+        "ref_text": "< 10",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "TMR-004",
+    "name": "CA-125",
+    "name_ar": "مؤشر سرطان المبيض",
+    "dept": "Tumor Markers",
+    "dept_ar": "مؤشرات الأورام",
+    "sub": "Ovary",
     "price": 70000,
-    "type": "panel",
-    "Component_Count": 1,
-    "components": [
-      {
-        "name": "Fertility Panel",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HEM-011",
-    "Test_Name": "Bleeding Time (BT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Bleeding Time",
-        "Unit": "Minutes",
-        "Range": "2 - 7"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HEM-012",
-    "Test_Name": "Clotting Time (CT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Clotting Time",
-        "Unit": "Minutes",
-        "Range": "5 - 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HEM-013",
-    "Test_Name": "Blood Group & Rh Typing",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Immunohematology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "EDTA Whole Blood",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "ABO Group",
-        "Unit": "Type",
-        "Range": "A/B/AB/O"
-      },
-      {
-        "Analyte": "Rh Factor",
-        "Unit": "Type",
-        "Range": "Positive/Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HEM-014",
-    "Test_Name": "Direct Coombs Test (DAT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Immunohematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Whole Blood",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "DAT",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HEM-015",
-    "Test_Name": "Indirect Coombs Test (IAT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Immunohematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "IAT",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-009",
-    "Test_Name": "Random Blood Glucose",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Metabolic",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Fluoride Plasma",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Glucose",
-        "Unit": "mg/dL",
-        "Range": "80 - 140"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-010",
-    "Test_Name": "Oral Glucose Tolerance Test (OGTT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Metabolic",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Fluoride Plasma",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Fasting Glucose",
-        "Unit": "mg/dL",
-        "Range": "70 - 100"
-      },
-      {
-        "Analyte": "1-Hour Glucose",
-        "Unit": "mg/dL",
-        "Range": "< 180"
-      },
-      {
-        "Analyte": "2-Hour Glucose",
-        "Unit": "mg/dL",
-        "Range": "< 140"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-011",
-    "Test_Name": "Serum Amylase",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Pancreatic Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "Amylase",
-        "Unit": "U/L",
-        "Range": "30 - 110"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-012",
-    "Test_Name": "Serum Lipase",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Pancreatic Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Lipase",
-        "Unit": "U/L",
-        "Range": "10 - 60"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-013",
-    "Test_Name": "Serum Iron",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Trace Elements",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "Iron",
-        "Unit": "ug/dL",
-        "Range": "60 - 170"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-014",
-    "Test_Name": "Total Iron Binding Capacity (TIBC)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Trace Elements",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "TIBC",
-        "Unit": "ug/dL",
-        "Range": "250 - 450"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-015",
-    "Test_Name": "Serum Ferritin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Trace Elements",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Ferritin",
-        "Unit": "ng/mL",
-        "Range": "15 - 200"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-016",
-    "Test_Name": "Serum Magnesium",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Electrolytes",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "Magnesium",
-        "Unit": "mg/dL",
-        "Range": "1.7 - 2.2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-017",
-    "Test_Name": "Serum Phosphorus",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Electrolytes",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Phosphorus",
-        "Unit": "mg/dL",
-        "Range": "2.5 - 4.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-018",
-    "Test_Name": "Serum LDH",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Enzymes",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "LDH",
-        "Unit": "U/L",
-        "Range": "140 - 280"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-019",
-    "Test_Name": "Serum Creatine Kinase (CK)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Enzymes",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "CK",
-        "Unit": "U/L",
-        "Range": "30 - 200"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-020",
-    "Test_Name": "C-Reactive Protein (CRP)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Inflammatory Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "CRP",
-        "Unit": "mg/L",
-        "Range": "< 6"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-021",
-    "Test_Name": "High Sensitivity CRP (hs-CRP)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Inflammatory Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "hs-CRP",
-        "Unit": "mg/L",
-        "Range": "< 1.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-022",
-    "Test_Name": "Procalcitonin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Inflammatory Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "Procalcitonin",
-        "Unit": "ng/mL",
-        "Range": "< 0.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-023",
-    "Test_Name": "Homocysteine",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Cardiac Risk",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "Homocysteine",
-        "Unit": "umol/L",
-        "Range": "5 - 15"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-024",
-    "Test_Name": "Vitamin B12",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Vitamins",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Vitamin B12",
-        "Unit": "pg/mL",
-        "Range": "200 - 900"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-025",
-    "Test_Name": "Folic Acid",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Vitamins",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Folic Acid",
-        "Unit": "ng/mL",
-        "Range": "4 - 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CHE-026",
-    "Test_Name": "Vitamin D (25-OH)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Vitamins",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "Vitamin D",
-        "Unit": "ng/mL",
-        "Range": "30 - 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MIC-006",
-    "Test_Name": "Stool Culture & Sensitivity",
-    "Department": "Microbiology",
-    "Sub_Department": "Bacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Culture",
-        "Unit": "Text",
-        "Range": "No Growth"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MIC-007",
-    "Test_Name": "Throat Swab Culture",
-    "Department": "Microbiology",
-    "Sub_Department": "Bacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Swab",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Culture",
-        "Unit": "Text",
-        "Range": "Normal Flora"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MIC-008",
-    "Test_Name": "H. pylori Antigen (Stool)",
-    "Department": "Microbiology",
-    "Sub_Department": "Bacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "H. pylori",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MIC-009",
-    "Test_Name": "Fungal Culture",
-    "Department": "Microbiology",
-    "Sub_Department": "Mycology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Skin/Nails",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Fungus",
-        "Unit": "Text",
-        "Range": "No Growth"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MIC-010",
-    "Test_Name": "Cryptococcal Antigen (CRAG)",
-    "Department": "Microbiology",
-    "Sub_Department": "Mycology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum/CSF",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "CRAG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PAR-005",
-    "Test_Name": "Occult Blood (FOB)",
-    "Department": "Parasitology",
-    "Sub_Department": "Stool Analysis",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Occult Blood",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PAR-006",
-    "Test_Name": "Kato-Katz (Schistosoma)",
-    "Department": "Parasitology",
-    "Sub_Department": "Stool Parasites",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "Schistosoma Eggs",
-        "Unit": "Count",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PAR-007",
-    "Test_Name": "Microfilaria (Blood Film)",
-    "Department": "Parasitology",
-    "Sub_Department": "Blood Parasites",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Blood Film",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "Microfilaria",
-        "Unit": "Text",
-        "Range": "Not Seen"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-013",
-    "Test_Name": "Dengue NS1 Antigen",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Dengue NS1",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-014",
-    "Test_Name": "Dengue IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Dengue IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-015",
-    "Test_Name": "Dengue IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Dengue IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-016",
-    "Test_Name": "Dengue Duo (NS1 + IgM/IgG)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "NS1",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-017",
-    "Test_Name": "Chikungunya IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Chikungunya IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-018",
-    "Test_Name": "Leptospira IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Leptospira IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-019",
-    "Test_Name": "Rickettsia IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Rickettsia IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-020",
-    "Test_Name": "Toxoplasma IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Parasitic Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Toxoplasma IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-021",
-    "Test_Name": "Toxoplasma IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Parasitic Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Toxoplasma IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-022",
-    "Test_Name": "Rubella IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "Rubella IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-023",
-    "Test_Name": "Rubella IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "Rubella IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-024",
-    "Test_Name": "CMV IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "CMV IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-025",
-    "Test_Name": "CMV IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "CMV IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-026",
-    "Test_Name": "HSV-2 IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "HSV-2 IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-027",
-    "Test_Name": "TPHA (Syphilis Confirmatory)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "TPHA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-028",
-    "Test_Name": "Anti-CCP (Rheumatoid Arthritis)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 100000,
-    "Components": [
-      {
-        "Analyte": "Anti-CCP",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-029",
-    "Test_Name": "Anti-TPO (Thyroid Peroxidase)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Anti-TPO",
-        "Unit": "IU/mL",
-        "Range": "< 34"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-030",
-    "Test_Name": "Anti-Thyroglobulin",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Anti-TG",
-        "Unit": "IU/mL",
-        "Range": "< 40"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-031",
-    "Test_Name": "Carcinoembryonic Antigen (CEA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "CEA",
-        "Unit": "ng/mL",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-032",
-    "Test_Name": "CA 19-9 (Pancreatic Cancer)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "CA 19-9",
-        "Unit": "U/mL",
-        "Range": "< 37"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-033",
-    "Test_Name": "Beta-hCG (Pregnancy Test)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum/Urine",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Beta-hCG",
-        "Unit": "mIU/mL",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IMM-034",
-    "Test_Name": "ASO Titer (Anti-Streptolysin O)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "ASO",
-        "Unit": "IU/mL",
-        "Range": "< 200"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HIS-005",
-    "Test_Name": "Cell Block (Cytology)",
-    "Department": "Histopathology",
-    "Sub_Department": "Cytopathology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Fluid",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "Cell Block",
-        "Unit": "Text",
-        "Range": "Benign"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HIS-006",
-    "Test_Name": "Bone Marrow Aspiration",
-    "Department": "Histopathology",
-    "Sub_Department": "Hematopathology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Bone Marrow",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "Marrow",
-        "Unit": "Text",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HIS-007",
-    "Test_Name": "Bone Marrow Biopsy",
-    "Department": "Histopathology",
-    "Sub_Department": "Hematopathology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Bone Marrow Core",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "Biopsy",
-        "Unit": "Text",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOL-005",
-    "Test_Name": "HIV Viral Load (RNA PCR)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Plasma",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "HIV RNA",
-        "Unit": "copies/mL",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOL-006",
-    "Test_Name": "HIV DNA PCR (Early Infant Diagnosis)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Dried Blood Spot",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "HIV DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOL-007",
-    "Test_Name": "HPV DNA (Cervical Cancer Screening)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Cervical Swab",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "HPV DNA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOL-008",
-    "Test_Name": "Cortisol (AM)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Cortisol",
-        "Unit": "ug/dL",
-        "Range": "6 - 23"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOL-009",
-    "Test_Name": "Testosterone (Total)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Testosterone",
-        "Unit": "ng/dL",
-        "Range": "300 - 1000"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOL-010",
-    "Test_Name": "Estradiol (E2)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Estradiol",
-        "Unit": "pg/mL",
-        "Range": "12 - 498"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOL-011",
-    "Test_Name": "Progesterone",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Progesterone",
-        "Unit": "ng/mL",
-        "Range": "0.2 - 25"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOL-012",
-    "Test_Name": "Growth Hormone (GH)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "GH",
-        "Unit": "ng/mL",
-        "Range": "0.1 - 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TOX-001",
-    "Test_Name": "Serum Paracetamol",
-    "Department": "Toxicology",
-    "Sub_Department": "Drug Monitoring",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Paracetamol",
-        "Unit": "ug/mL",
-        "Range": "10 - 30"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TOX-002",
-    "Test_Name": "Serum Salicylate",
-    "Department": "Toxicology",
-    "Sub_Department": "Drug Monitoring",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Salicylate",
-        "Unit": "mg/dL",
-        "Range": "2 - 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TOX-003",
-    "Test_Name": "Blood Alcohol Level",
-    "Department": "Toxicology",
-    "Sub_Department": "Toxic Substances",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Alcohol",
-        "Unit": "mg/dL",
-        "Range": "0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TOX-004",
-    "Test_Name": "Carboxyhemoglobin",
-    "Department": "Toxicology",
-    "Sub_Department": "Toxic Substances",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "COHb",
-        "Unit": "%",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "URN-001",
-    "Test_Name": "Urine Drug Screen (5-Panel)",
-    "Department": "Toxicology",
-    "Sub_Department": "Drug Screening",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "Urine",
-    "Price": 100000,
-    "Components": [
-      {
-        "Analyte": "Amphetamines",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Cannabinoids",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Cocaine",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Opiates",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Phencyclidine",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "URN-002",
-    "Test_Name": "Urine Pregnancy Test (Qualitative)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "hCG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "URN-003",
-    "Test_Name": "24-Hour Urine Protein",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Renal Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "24h Urine",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "Protein",
-        "Unit": "mg/24h",
-        "Range": "< 150"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "URN-004",
-    "Test_Name": "Urine Microalbumin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Renal Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Microalbumin",
-        "Unit": "mg/L",
-        "Range": "< 30"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-001",
-    "Test_Name": "VDRL (Syphilis Screening)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "VDRL",
-        "Unit": "Qualitative",
-        "Range": "Non-Reactive"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-002",
-    "Test_Name": "HIV Rapid Test",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "HIV",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-003",
-    "Test_Name": "Hepatitis B Core Antibody (Anti-HBc)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Anti-HBc",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-004",
-    "Test_Name": "Hepatitis B e Antigen (HBeAg)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "HBeAg",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-005",
-    "Test_Name": "Hepatitis A IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "HAV IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-006",
-    "Test_Name": "Hepatitis A IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "HAV IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-007",
-    "Test_Name": "Epstein-Barr Virus (EBV) IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "EBV IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-008",
-    "Test_Name": "Mycoplasma pneumoniae IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Mycoplasma IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-009",
-    "Test_Name": "Q Fever (Coxiella) IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Q Fever IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SER-010",
-    "Test_Name": "Echinococcus (Hydatid) Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Parasitic Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Echinococcus Ab",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "COA-001",
-    "Test_Name": "Thrombin Time (TT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Thrombin Time",
-        "Unit": "Seconds",
-        "Range": "14 - 21"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "COA-002",
-    "Test_Name": "Anti-Xa Activity (Heparin Level)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "Anti-Xa",
-        "Unit": "IU/mL",
-        "Range": "0.3 - 0.7"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "COA-003",
-    "Test_Name": "Protein C Activity",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Protein C",
-        "Unit": "%",
-        "Range": "70 - 130"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "COA-004",
-    "Test_Name": "Protein S Activity",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Protein S",
-        "Unit": "%",
-        "Range": "65 - 140"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "COA-005",
-    "Test_Name": "Antithrombin III",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 85000,
-    "Components": [
-      {
-        "Analyte": "AT III",
-        "Unit": "%",
-        "Range": "80 - 120"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "COA-006",
-    "Test_Name": "Lupus Anticoagulant",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 100000,
-    "Components": [
-      {
-        "Analyte": "LA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "COA-007",
-    "Test_Name": "Factor VIII Assay",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation Factors",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "Factor VIII",
-        "Unit": "%",
-        "Range": "50 - 150"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "COA-008",
-    "Test_Name": "Factor IX Assay",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation Factors",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "Factor IX",
-        "Unit": "%",
-        "Range": "60 - 140"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "COA-009",
-    "Test_Name": "Von Willebrand Factor Antigen",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Coagulation Factors",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Citrated Plasma",
-    "Price": 130000,
-    "Components": [
-      {
-        "Analyte": "vWF Ag",
-        "Unit": "%",
-        "Range": "50 - 150"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-001",
-    "Test_Name": "Insulin (Fasting)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Insulin",
-        "Unit": "uIU/mL",
-        "Range": "2 - 25"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-002",
-    "Test_Name": "C-Peptide",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "C-Peptide",
-        "Unit": "ng/mL",
-        "Range": "0.5 - 2.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-003",
-    "Test_Name": "Parathyroid Hormone (PTH)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "PTH",
-        "Unit": "pg/mL",
-        "Range": "15 - 65"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-004",
-    "Test_Name": "Aldosterone",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Aldosterone",
-        "Unit": "ng/dL",
-        "Range": "3 - 16"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-005",
-    "Test_Name": "Renin Activity",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Plasma",
-    "Price": 95000,
-    "Components": [
-      {
-        "Analyte": "Renin",
-        "Unit": "ng/mL/hr",
-        "Range": "0.6 - 4.3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-006",
-    "Test_Name": "DHEA-S",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "DHEA-S",
-        "Unit": "ug/dL",
-        "Range": "35 - 430"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-007",
-    "Test_Name": "17-OH Progesterone",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "17-OHP",
-        "Unit": "ng/mL",
-        "Range": "0.2 - 1.3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-008",
-    "Test_Name": "Sex Hormone Binding Globulin (SHBG)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "SHBG",
-        "Unit": "nmol/L",
-        "Range": "10 - 80"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-009",
-    "Test_Name": "Free Testosterone",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "Free Testosterone",
-        "Unit": "pg/mL",
-        "Range": "9 - 30"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "END-010",
-    "Test_Name": "Anti-Mullerian Hormone (AMH)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 100000,
-    "Components": [
-      {
-        "Analyte": "AMH",
-        "Unit": "ng/mL",
-        "Range": "0.7 - 8.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ALG-001",
-    "Test_Name": "Total IgE",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Allergy",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Total IgE",
-        "Unit": "IU/mL",
-        "Range": "< 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ALG-002",
-    "Test_Name": "Allergen Screen (Food Panel)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Allergy",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 10,
-    "Specimen_Type": "Serum",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "Milk",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Egg White",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Peanut",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Soybean",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Wheat",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Fish",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Shellfish",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Tree Nuts",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Sesame",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Corn",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ALG-003",
-    "Test_Name": "Allergen Screen (Inhalant Panel)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Allergy",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 8,
-    "Specimen_Type": "Serum",
-    "Price": 130000,
-    "Components": [
-      {
-        "Analyte": "Dust Mite",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Cat Dander",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Dog Dander",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Grass Pollen",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Tree Pollen",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Ragweed",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Mold",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      },
-      {
-        "Analyte": "Cockroach",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-001",
-    "Test_Name": "Zinc (Serum)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Trace Elements",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Zinc",
-        "Unit": "ug/dL",
-        "Range": "70 - 150"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-002",
-    "Test_Name": "Copper (Serum)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Trace Elements",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Copper",
-        "Unit": "ug/dL",
-        "Range": "70 - 140"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-003",
-    "Test_Name": "Selenium",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Trace Elements",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Selenium",
-        "Unit": "ug/L",
-        "Range": "70 - 150"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-004",
-    "Test_Name": "Manganese",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Trace Elements",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Manganese",
-        "Unit": "ug/L",
-        "Range": "4 - 15"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-005",
-    "Test_Name": "Vitamin A (Retinol)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Vitamins",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Vitamin A",
-        "Unit": "ug/dL",
-        "Range": "30 - 80"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-006",
-    "Test_Name": "Vitamin E (Alpha-Tocopherol)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Vitamins",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Vitamin E",
-        "Unit": "mg/L",
-        "Range": "5 - 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-007",
-    "Test_Name": "Vitamin K1",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Vitamins",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "Vitamin K1",
-        "Unit": "ng/mL",
-        "Range": "0.2 - 3.2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-008",
-    "Test_Name": "Vitamin C (Ascorbic Acid)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Vitamins",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Plasma",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Vitamin C",
-        "Unit": "mg/L",
-        "Range": "4 - 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-009",
-    "Test_Name": "Vitamin B1 (Thiamine)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Vitamins",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Vitamin B1",
-        "Unit": "nmol/L",
-        "Range": "70 - 180"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-010",
-    "Test_Name": "Vitamin B6 (Pyridoxine)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Vitamins",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Plasma",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Vitamin B6",
-        "Unit": "nmol/L",
-        "Range": "20 - 125"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "LIV-001",
-    "Test_Name": "Alpha-Fetoprotein (AFP) for Hepatoma",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "AFP",
-        "Unit": "IU/mL",
-        "Range": "< 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "LIV-002",
-    "Test_Name": "Des-Gamma-Carboxy Prothrombin (DCP)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "DCP",
-        "Unit": "mAU/mL",
-        "Range": "< 40"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "LIV-003",
-    "Test_Name": "Ceruloplasmin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Liver Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Ceruloplasmin",
-        "Unit": "mg/dL",
-        "Range": "20 - 60"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "LIV-004",
-    "Test_Name": "Alpha-1 Antitrypsin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Liver Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "A1AT",
-        "Unit": "mg/dL",
-        "Range": "90 - 200"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "REN-001",
-    "Test_Name": "Cystatin C",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Renal Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Cystatin C",
-        "Unit": "mg/L",
-        "Range": "0.5 - 1.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "REN-002",
-    "Test_Name": "Beta-2 Microglobulin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Renal Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "B2M",
-        "Unit": "mg/L",
-        "Range": "0.7 - 1.8"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "REN-003",
-    "Test_Name": "Urine Osmolality",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Renal Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "Osmolality",
-        "Unit": "mOsm/kg",
-        "Range": "300 - 900"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "REN-004",
-    "Test_Name": "Serum Osmolality",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Renal Function",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Osmolality",
-        "Unit": "mOsm/kg",
-        "Range": "275 - 295"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "REN-005",
-    "Test_Name": "Anion Gap",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Electrolytes",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "Anion Gap",
-        "Unit": "mmol/L",
-        "Range": "8 - 12"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CAR-001",
-    "Test_Name": "Myoglobin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Cardiac Biomarkers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Myoglobin",
-        "Unit": "ng/mL",
-        "Range": "< 90"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CAR-002",
-    "Test_Name": "Troponin T (High Sensitivity)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Cardiac Biomarkers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "Troponin T",
-        "Unit": "ng/L",
-        "Range": "< 14"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CAR-003",
-    "Test_Name": "BNP (B-type Natriuretic Peptide)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Cardiac Biomarkers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Plasma",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "BNP",
-        "Unit": "pg/mL",
-        "Range": "< 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CAR-004",
-    "Test_Name": "Lipoprotein(a) - Lp(a)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Lipid Profile",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "Lp(a)",
-        "Unit": "mg/dL",
-        "Range": "< 30"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CAR-005",
-    "Test_Name": "Apolipoprotein A1",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Lipid Profile",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Apo A1",
-        "Unit": "mg/dL",
-        "Range": "120 - 180"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CAR-006",
-    "Test_Name": "Apolipoprotein B",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Lipid Profile",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Apo B",
-        "Unit": "mg/dL",
-        "Range": "60 - 120"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "THY-001",
-    "Test_Name": "Reverse T3",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Reverse T3",
-        "Unit": "ng/dL",
-        "Range": "10 - 24"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "THY-002",
-    "Test_Name": "Thyroid Binding Globulin (TBG)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "TBG",
-        "Unit": "ug/mL",
-        "Range": "13 - 39"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "THY-003",
-    "Test_Name": "Thyroglobulin",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hormones",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "Thyroglobulin",
-        "Unit": "ng/mL",
-        "Range": "< 40"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-001",
-    "Test_Name": "COVID-19 PCR (SARS-CoV-2)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasopharyngeal Swab",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "SARS-CoV-2 RNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-002",
-    "Test_Name": "COVID-19 Rapid Antigen",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasopharyngeal Swab",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "SARS-CoV-2 Ag",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-003",
-    "Test_Name": "Influenza A/B Rapid Test",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Nasopharyngeal Swab",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Influenza A",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Influenza B",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-004",
-    "Test_Name": "RSV (Respiratory Syncytial Virus)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasopharyngeal Swab",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "RSV",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-005",
-    "Test_Name": "Adenovirus Antigen",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasopharyngeal Swab",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Adenovirus",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-006",
-    "Test_Name": "Rotavirus Antigen (Stool)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Rotavirus",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-007",
-    "Test_Name": "Norovirus Antigen",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Norovirus",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-008",
-    "Test_Name": "Malaria Rapid Diagnostic Test (RDT)",
-    "Department": "Parasitology",
-    "Sub_Department": "Blood Parasites",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "Malaria RDT",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-009",
-    "Test_Name": "Typhoid IgM (Rapid Test)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum/Whole Blood",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Typhoid IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "INF-010",
-    "Test_Name": "Brucella IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Brucella IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TMR-001",
-    "Test_Name": "CA 15-3 (Breast Cancer)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 130000,
-    "Components": [
-      {
-        "Analyte": "CA 15-3",
-        "Unit": "U/mL",
-        "Range": "< 30"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TMR-002",
-    "Test_Name": "CA 72-4 (Gastric Cancer)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 140000,
-    "Components": [
-      {
-        "Analyte": "CA 72-4",
-        "Unit": "U/mL",
-        "Range": "< 6.9"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TMR-003",
-    "Test_Name": "SCC (Squamous Cell Carcinoma Antigen)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "SCC",
-        "Unit": "ng/mL",
-        "Range": "< 1.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TMR-004",
-    "Test_Name": "NSE (Neuron-Specific Enolase)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 110000,
-    "Components": [
-      {
-        "Analyte": "NSE",
-        "Unit": "ng/mL",
-        "Range": "< 16"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TMR-005",
-    "Test_Name": "Beta-2 Microglobulin (Tumor Marker)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "B2M",
-        "Unit": "mg/L",
-        "Range": "< 3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TMR-006",
-    "Test_Name": "HE4 (Ovarian Cancer)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 160000,
-    "Components": [
-      {
-        "Analyte": "HE4",
-        "Unit": "pmol/L",
-        "Range": "< 140"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TMR-007",
-    "Test_Name": "Chromogranin A",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Tumor Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 130000,
-    "Components": [
-      {
-        "Analyte": "Chromogranin A",
-        "Unit": "ng/mL",
-        "Range": "< 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BON-001",
-    "Test_Name": "Bone Alkaline Phosphatase",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Bone Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "BAP",
-        "Unit": "U/L",
-        "Range": "10 - 40"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BON-002",
-    "Test_Name": "Osteocalcin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Bone Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Osteocalcin",
-        "Unit": "ng/mL",
-        "Range": "5 - 30"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BON-003",
-    "Test_Name": "C-Terminal Telopeptide (CTX)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Bone Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "CTX",
-        "Unit": "ng/mL",
-        "Range": "< 0.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BON-004",
-    "Test_Name": "N-Terminal Propeptide (P1NP)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Bone Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "P1NP",
-        "Unit": "ng/mL",
-        "Range": "20 - 80"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ANE-001",
-    "Test_Name": "Soluble Transferrin Receptor (sTfR)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Anemia Workup",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "sTfR",
-        "Unit": "mg/L",
-        "Range": "0.8 - 3.3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ANE-002",
-    "Test_Name": "Haptoglobin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Anemia Workup",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Haptoglobin",
-        "Unit": "mg/dL",
-        "Range": "30 - 200"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ANE-003",
-    "Test_Name": "Bilirubin (Neonatal)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Neonatal",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Bilirubin",
-        "Unit": "mg/dL",
-        "Range": "< 12"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPC-001",
-    "Test_Name": "G6PD (Qualitative)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Special Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "G6PD Screen",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPC-002",
-    "Test_Name": "Methemoglobin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Special Chemistry",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "MetHb",
-        "Unit": "%",
-        "Range": "< 2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPC-003",
-    "Test_Name": "Sulfhemoglobin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Special Chemistry",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "SulfHb",
-        "Unit": "%",
-        "Range": "< 1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPC-004",
-    "Test_Name": "Oxygen Saturation (Pulse Oximetry)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Special Chemistry",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "SpO2",
-        "Unit": "%",
-        "Range": "95 - 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPC-005",
-    "Test_Name": "Lactate (Blood)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Special Chemistry",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Lactate",
-        "Unit": "mmol/L",
-        "Range": "0.5 - 2.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPC-006",
-    "Test_Name": "Ammonia",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Special Chemistry",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Plasma",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Ammonia",
-        "Unit": "umol/L",
-        "Range": "15 - 45"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPC-007",
-    "Test_Name": "Ketones (Blood)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Special Chemistry",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Ketones",
-        "Unit": "mmol/L",
-        "Range": "< 0.6"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CSF-001",
-    "Test_Name": "CSF Cell Count",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "CSF Analysis",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "CSF",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "RBC",
-        "Unit": "/uL",
-        "Range": "0"
-      },
-      {
-        "Analyte": "WBC",
-        "Unit": "/uL",
-        "Range": "0 - 5"
-      },
-      {
-        "Analyte": "Differential",
-        "Unit": "%",
-        "Range": "Lymphocytes"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CSF-002",
-    "Test_Name": "CSF Protein",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "CSF Analysis",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Protein",
-        "Unit": "mg/dL",
-        "Range": "15 - 45"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CSF-003",
-    "Test_Name": "CSF Glucose",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "CSF Analysis",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "Glucose",
-        "Unit": "mg/dL",
-        "Range": "50 - 80"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CSF-004",
-    "Test_Name": "CSF Chloride",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "CSF Analysis",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "Chloride",
-        "Unit": "mmol/L",
-        "Range": "110 - 130"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CSF-005",
-    "Test_Name": "CSF Gram Stain",
-    "Department": "Microbiology",
-    "Sub_Department": "CSF Analysis",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Gram Stain",
-        "Unit": "Text",
-        "Range": "No Organisms"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CSF-006",
-    "Test_Name": "CSF Culture & Sensitivity",
-    "Department": "Microbiology",
-    "Sub_Department": "CSF Analysis",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "Culture",
-        "Unit": "Text",
-        "Range": "No Growth"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CSF-007",
-    "Test_Name": "CSF India Ink (Cryptococcus)",
-    "Department": "Microbiology",
-    "Sub_Department": "CSF Analysis",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "India Ink",
-        "Unit": "Text",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "CSF-008",
-    "Test_Name": "CSF Oligoclonal Bands",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "CSF Analysis",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Oligoclonal Bands",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PLF-001",
-    "Test_Name": "Pleural Fluid Analysis",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Body Fluid Analysis",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 4,
-    "Specimen_Type": "Pleural Fluid",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "RBC",
-        "Unit": "/uL",
-        "Range": "< 1000"
-      },
-      {
-        "Analyte": "WBC",
-        "Unit": "/uL",
-        "Range": "< 1000"
-      },
-      {
-        "Analyte": "Protein",
-        "Unit": "g/dL",
-        "Range": "< 3"
-      },
-      {
-        "Analyte": "LDH",
-        "Unit": "U/L",
-        "Range": "< 200"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PLF-002",
-    "Test_Name": "Ascitic Fluid Analysis",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Body Fluid Analysis",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 4,
-    "Specimen_Type": "Ascitic Fluid",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "RBC",
-        "Unit": "/uL",
-        "Range": "< 1000"
-      },
-      {
-        "Analyte": "WBC",
-        "Unit": "/uL",
-        "Range": "< 500"
-      },
-      {
-        "Analyte": "Protein",
-        "Unit": "g/dL",
-        "Range": "< 2.5"
-      },
-      {
-        "Analyte": "Albumin",
-        "Unit": "g/dL",
-        "Range": "Serum-Ascites Gradient"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PLF-003",
-    "Test_Name": "Pericardial Fluid Analysis",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Body Fluid Analysis",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Pericardial Fluid",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "RBC",
-        "Unit": "/uL",
-        "Range": "< 1000"
-      },
-      {
-        "Analyte": "WBC",
-        "Unit": "/uL",
-        "Range": "< 1000"
-      },
-      {
-        "Analyte": "Culture",
-        "Unit": "Text",
-        "Range": "No Growth"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PLF-004",
-    "Test_Name": "Synovial Fluid Analysis (Joint Fluid)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Body Fluid Analysis",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "Synovial Fluid",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "RBC",
-        "Unit": "/uL",
-        "Range": "< 2000"
-      },
-      {
-        "Analyte": "WBC",
-        "Unit": "/uL",
-        "Range": "< 200"
-      },
-      {
-        "Analyte": "PMN%",
-        "Unit": "%",
-        "Range": "< 25"
-      },
-      {
-        "Analyte": "Crystals",
-        "Unit": "Text",
-        "Range": "None"
-      },
-      {
-        "Analyte": "Culture",
-        "Unit": "Text",
-        "Range": "No Growth"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SEM-001",
-    "Test_Name": "Semen Analysis (Basic)",
-    "Department": "Andrology",
-    "Sub_Department": "Semen Analysis",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 6,
-    "Specimen_Type": "Semen",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Volume",
-        "Unit": "mL",
-        "Range": "1.5 - 5"
-      },
-      {
-        "Analyte": "Concentration",
-        "Unit": "M/mL",
-        "Range": "> 15"
-      },
-      {
-        "Analyte": "Motility",
-        "Unit": "%",
-        "Range": "> 40"
-      },
-      {
-        "Analyte": "Progressive Motility",
-        "Unit": "%",
-        "Range": "> 32"
-      },
-      {
-        "Analyte": "Morphology",
-        "Unit": "%",
-        "Range": "> 4"
-      },
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "7.2 - 8.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SEM-002",
-    "Test_Name": "Semen Analysis (Extended)",
-    "Department": "Andrology",
-    "Sub_Department": "Semen Analysis",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 10,
-    "Specimen_Type": "Semen",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Volume",
-        "Unit": "mL",
-        "Range": "1.5 - 5"
-      },
-      {
-        "Analyte": "Concentration",
-        "Unit": "M/mL",
-        "Range": "> 15"
-      },
-      {
-        "Analyte": "Total Count",
-        "Unit": "M",
-        "Range": "> 39"
-      },
-      {
-        "Analyte": "Motility",
-        "Unit": "%",
-        "Range": "> 40"
-      },
-      {
-        "Analyte": "Progressive Motility",
-        "Unit": "%",
-        "Range": "> 32"
-      },
-      {
-        "Analyte": "Non-Progressive",
-        "Unit": "%",
-        "Range": "< 20"
-      },
-      {
-        "Analyte": "Immotile",
-        "Unit": "%",
-        "Range": "< 40"
-      },
-      {
-        "Analyte": "Morphology",
-        "Unit": "%",
-        "Range": "> 4"
-      },
-      {
-        "Analyte": "Vitality",
-        "Unit": "%",
-        "Range": "> 58"
-      },
-      {
-        "Analyte": "WBC",
-        "Unit": "M/mL",
-        "Range": "< 1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SEM-003",
-    "Test_Name": "Sperm Antibodies (MAR Test)",
-    "Department": "Andrology",
-    "Sub_Department": "Immunology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Semen",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "MAR",
-        "Unit": "%",
-        "Range": "< 50"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SEM-004",
-    "Test_Name": "Sperm DNA Fragmentation",
-    "Department": "Andrology",
-    "Sub_Department": "Advanced Semen",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Semen",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "DNA Fragmentation",
-        "Unit": "%",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GEN-001",
-    "Test_Name": "Factor V Leiden Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Genetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "Factor V Leiden",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GEN-002",
-    "Test_Name": "Prothrombin G20210A Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Genetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "Prothrombin Mutation",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GEN-003",
-    "Test_Name": "MTHFR Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Genetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 160000,
-    "Components": [
-      {
-        "Analyte": "MTHFR",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GEN-004",
-    "Test_Name": "Sickle Cell Mutation (HbS)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Genetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "HbS",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GEN-005",
-    "Test_Name": "Cystic Fibrosis Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Genetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "CFTR",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GEN-006",
-    "Test_Name": "Alpha-Thalassemia Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Genetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "Alpha-Globin",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GEN-007",
-    "Test_Name": "Beta-Thalassemia Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Genetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "Beta-Globin",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GEN-008",
-    "Test_Name": "Glucose-6-PD Deficiency (Molecular)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Genetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 170000,
-    "Components": [
-      {
-        "Analyte": "G6PD Gene",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TDM-001",
-    "Test_Name": "Digoxin Level",
-    "Department": "Toxicology",
-    "Sub_Department": "TDM",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Digoxin",
-        "Unit": "ng/mL",
-        "Range": "0.5 - 2.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TDM-002",
-    "Test_Name": "Lithium Level",
-    "Department": "Toxicology",
-    "Sub_Department": "TDM",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Lithium",
-        "Unit": "mmol/L",
-        "Range": "0.6 - 1.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TDM-003",
-    "Test_Name": "Valproic Acid Level",
-    "Department": "Toxicology",
-    "Sub_Department": "TDM",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Valproate",
-        "Unit": "ug/mL",
-        "Range": "50 - 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TDM-004",
-    "Test_Name": "Carbamazepine Level",
-    "Department": "Toxicology",
-    "Sub_Department": "TDM",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Carbamazepine",
-        "Unit": "ug/mL",
-        "Range": "4 - 12"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TDM-005",
-    "Test_Name": "Phenytoin Level",
-    "Department": "Toxicology",
-    "Sub_Department": "TDM",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Phenytoin",
-        "Unit": "ug/mL",
-        "Range": "10 - 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TDM-006",
-    "Test_Name": "Theophylline Level",
-    "Department": "Toxicology",
-    "Sub_Department": "TDM",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Theophylline",
-        "Unit": "ug/mL",
-        "Range": "10 - 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TDM-007",
-    "Test_Name": "Gentamicin Level",
-    "Department": "Toxicology",
-    "Sub_Department": "TDM",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Gentamicin",
-        "Unit": "ug/mL",
-        "Range": "5 - 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TDM-008",
-    "Test_Name": "Vancomycin Level",
-    "Department": "Toxicology",
-    "Sub_Department": "TDM",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Vancomycin",
-        "Unit": "ug/mL",
-        "Range": "10 - 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NBS-001",
-    "Test_Name": "Newborn Screening (Basic Panel)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Newborn Screening",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "Dried Blood Spot",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "TSH",
-        "Unit": "mIU/L",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "17-OHP",
-        "Unit": "ng/mL",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Phenylalanine",
-        "Unit": "mg/dL",
-        "Range": "< 2"
-      },
-      {
-        "Analyte": "Galactose",
-        "Unit": "mg/dL",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "G6PD",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NBS-002",
-    "Test_Name": "Newborn Screening (Extended)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Newborn Screening",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 10,
-    "Specimen_Type": "Dried Blood Spot",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "TSH",
-        "Unit": "mIU/L",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "T4",
-        "Unit": "ug/dL",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "17-OHP",
-        "Unit": "ng/mL",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Phenylalanine",
-        "Unit": "mg/dL",
-        "Range": "< 2"
-      },
-      {
-        "Analyte": "Galactose",
-        "Unit": "mg/dL",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "G6PD",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Biotinidase",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Carnitine",
-        "Unit": "umol/L",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Methionine",
-        "Unit": "umol/L",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Succinylacetone",
-        "Unit": "umol/L",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IG-001",
-    "Test_Name": "IgG Subclasses",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Immunoglobulins",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 4,
-    "Specimen_Type": "Serum",
-    "Price": 110000,
-    "Components": [
-      {
-        "Analyte": "IgG1",
-        "Unit": "mg/dL",
-        "Range": "380 - 930"
-      },
-      {
-        "Analyte": "IgG2",
-        "Unit": "mg/dL",
-        "Range": "240 - 700"
-      },
-      {
-        "Analyte": "IgG3",
-        "Unit": "mg/dL",
-        "Range": "20 - 110"
-      },
-      {
-        "Analyte": "IgG4",
-        "Unit": "mg/dL",
-        "Range": "10 - 120"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IG-002",
-    "Test_Name": "IgA Subclasses",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Immunoglobulins",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Serum",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "IgA1",
-        "Unit": "mg/dL",
-        "Range": "50 - 300"
-      },
-      {
-        "Analyte": "IgA2",
-        "Unit": "mg/dL",
-        "Range": "10 - 90"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IG-003",
-    "Test_Name": "Complement C3",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Complement",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "C3",
-        "Unit": "mg/dL",
-        "Range": "90 - 180"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IG-004",
-    "Test_Name": "Complement C4",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Complement",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "C4",
-        "Unit": "mg/dL",
-        "Range": "10 - 40"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "IG-005",
-    "Test_Name": "CH50 (Total Complement)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Complement",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "CH50",
-        "Unit": "U/mL",
-        "Range": "30 - 75"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-001",
-    "Test_Name": "Anti-Smith (Sm) Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 75000,
-    "Components": [
-      {
-        "Analyte": "Anti-Sm",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-002",
-    "Test_Name": "Anti-RNP Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "Anti-RNP",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-003",
-    "Test_Name": "Anti-SSA/Ro Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "Anti-SSA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-004",
-    "Test_Name": "Anti-SSB/La Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "Anti-SSB",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-005",
-    "Test_Name": "Anti-Scl-70 Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 75000,
-    "Components": [
-      {
-        "Analyte": "Anti-Scl-70",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-006",
-    "Test_Name": "Anti-Jo-1 Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "Anti-Jo-1",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-007",
-    "Test_Name": "Anti-Centromere Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 75000,
-    "Components": [
-      {
-        "Analyte": "Anti-Centromere",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-008",
-    "Test_Name": "Anti-Glomerular Basement Membrane (GBM)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 85000,
-    "Components": [
-      {
-        "Analyte": "Anti-GBM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-009",
-    "Test_Name": "Anti-Neutrophil Cytoplasmic Ab (ANCA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Serum",
-    "Price": 95000,
-    "Components": [
-      {
-        "Analyte": "c-ANCA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "p-ANCA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-010",
-    "Test_Name": "Anti-Mitochondrial Antibody (AMA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "AMA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-011",
-    "Test_Name": "Anti-Smooth Muscle Antibody (ASMA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "ASMA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-012",
-    "Test_Name": "Anti-Insulin Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 75000,
-    "Components": [
-      {
-        "Analyte": "Anti-Insulin",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-013",
-    "Test_Name": "Anti-GAD Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Anti-GAD",
-        "Unit": "U/mL",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-014",
-    "Test_Name": "Anti-IA2 Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Anti-IA2",
-        "Unit": "U/mL",
-        "Range": "< 0.8"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AI-015",
-    "Test_Name": "Islet Cell Antibody (ICA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Autoimmunity",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 85000,
-    "Components": [
-      {
-        "Analyte": "ICA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NEP-001",
-    "Test_Name": "Anti-Phospholipase A2 Receptor (PLA2R)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Nephrology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "Anti-PLA2R",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NEP-002",
-    "Test_Name": "Anti-Neutrophil Cytoplasmic Ab (MPO)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Nephrology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "Anti-MPO",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NEP-003",
-    "Test_Name": "Anti-Proteinase 3 (PR3)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Nephrology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "Anti-PR3",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GAS-001",
-    "Test_Name": "Tissue Transglutaminase IgA (tTG-IgA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Gastroenterology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "tTG-IgA",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GAS-002",
-    "Test_Name": "Endomysial Antibody (EMA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Gastroenterology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "EMA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GAS-003",
-    "Test_Name": "Gliadin IgA",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Gastroenterology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Gliadin IgA",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GAS-004",
-    "Test_Name": "Gliadin IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Gastroenterology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Gliadin IgG",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GAS-005",
-    "Test_Name": "Saccharomyces cerevisiae Ab (ASCA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Gastroenterology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Serum",
-    "Price": 85000,
-    "Components": [
-      {
-        "Analyte": "ASCA IgA",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      },
-      {
-        "Analyte": "ASCA IgG",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GAS-006",
-    "Test_Name": "Lactoferrin (Stool)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Gastroenterology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Lactoferrin",
-        "Unit": "ug/g",
-        "Range": "< 7.3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GAS-007",
-    "Test_Name": "Calprotectin (Stool)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Gastroenterology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Calprotectin",
-        "Unit": "ug/g",
-        "Range": "< 50"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HEP-001",
-    "Test_Name": "Hepatitis D Virus (HDV) Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Anti-HDV",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HEP-002",
-    "Test_Name": "Hepatitis E Virus IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "HEV IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HEP-003",
-    "Test_Name": "Hepatitis E Virus IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "HEV IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HEP-004",
-    "Test_Name": "Hepatitis B Surface Antibody (Anti-HBs)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Screening",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Anti-HBs",
-        "Unit": "mIU/mL",
-        "Range": "> 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TOR-001",
-    "Test_Name": "TORCH Panel (Basic)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "TORCH",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 4,
-    "Specimen_Type": "Serum",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "Toxoplasma IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Rubella IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "CMV IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "HSV IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TOR-002",
-    "Test_Name": "TORCH Panel (Extended)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "TORCH",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 8,
-    "Specimen_Type": "Serum",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "Toxoplasma IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Toxoplasma IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Rubella IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Rubella IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "CMV IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "CMV IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "HSV-1 IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "HSV-2 IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ARB-001",
-    "Test_Name": "West Nile Virus IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum/CSF",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "WNV IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ARB-002",
-    "Test_Name": "Yellow Fever IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "YFV IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ARB-003",
-    "Test_Name": "Zika Virus IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 75000,
-    "Components": [
-      {
-        "Analyte": "Zika IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "RCK-001",
-    "Test_Name": "Scrub Typhus IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Scrub Typhus IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "RCK-002",
-    "Test_Name": "Typhus IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Typhus IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FUN-001",
-    "Test_Name": "Aspergillus Antigen (Galactomannan)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Fungal Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum/BAL",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Galactomannan",
-        "Unit": "Index",
-        "Range": "< 0.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FUN-002",
-    "Test_Name": "Beta-D-Glucan",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Fungal Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 85000,
-    "Components": [
-      {
-        "Analyte": "Beta-D-Glucan",
-        "Unit": "pg/mL",
-        "Range": "< 80"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FUN-003",
-    "Test_Name": "Histoplasma Antigen",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Fungal Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine/Serum",
-    "Price": 95000,
-    "Components": [
-      {
-        "Analyte": "Histoplasma Ag",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FUN-004",
-    "Test_Name": "Coccidioides Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Fungal Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Coccidioides Ab",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FUN-005",
-    "Test_Name": "Blastomyces Antigen",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Fungal Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine/Serum",
-    "Price": 95000,
-    "Components": [
-      {
-        "Analyte": "Blastomyces Ag",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PAR-008",
-    "Test_Name": "Strongyloides Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Parasitic Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Strongyloides Ab",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PAR-009",
-    "Test_Name": "Trichinella Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Parasitic Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Trichinella Ab",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PAR-010",
-    "Test_Name": "Filaria Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Parasitic Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Filaria Ab",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PAR-011",
-    "Test_Name": "Schistosoma Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Parasitic Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Schistosoma Ab",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PAR-012",
-    "Test_Name": "Taenia solium Antibody (Cysticercosis)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Parasitic Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Cysticercosis Ab",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MYC-001",
-    "Test_Name": "Dermatophyte Culture",
-    "Department": "Microbiology",
-    "Sub_Department": "Mycology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Skin/Nails/Hair",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Dermatophyte",
-        "Unit": "Text",
-        "Range": "No Growth"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MYC-002",
-    "Test_Name": "Candida Antigen",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Fungal Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Candida Ag",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MYC-003",
-    "Test_Name": "Mannan Antigen (Candida)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Fungal Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Mannan",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MYC-004",
-    "Test_Name": "Anti-Mannan Antibody",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Fungal Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Anti-Mannan",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-001",
-    "Test_Name": "Parvovirus B19 IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Parvovirus IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-002",
-    "Test_Name": "Parvovirus B19 IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Parvovirus IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-003",
-    "Test_Name": "Mumps IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Mumps IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-004",
-    "Test_Name": "Measles IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Measles IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-005",
-    "Test_Name": "Varicella-Zoster IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "VZV IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-006",
-    "Test_Name": "Varicella-Zoster IgG",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "VZV IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-007",
-    "Test_Name": "Enterovirus PCR (CSF)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 130000,
-    "Components": [
-      {
-        "Analyte": "Enterovirus RNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-008",
-    "Test_Name": "HSV PCR (CSF)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 140000,
-    "Components": [
-      {
-        "Analyte": "HSV DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-009",
-    "Test_Name": "VZV PCR (CSF)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CSF",
-    "Price": 140000,
-    "Components": [
-      {
-        "Analyte": "VZV DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-010",
-    "Test_Name": "CMV PCR (Quantitative)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Plasma",
-    "Price": 160000,
-    "Components": [
-      {
-        "Analyte": "CMV DNA",
-        "Unit": "IU/mL",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-011",
-    "Test_Name": "EBV PCR (Quantitative)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Plasma",
-    "Price": 160000,
-    "Components": [
-      {
-        "Analyte": "EBV DNA",
-        "Unit": "IU/mL",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VIR-012",
-    "Test_Name": "BK Virus PCR (Quantitative)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine/Plasma",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "BK Virus DNA",
-        "Unit": "copies/mL",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-001",
-    "Test_Name": "Legionella Urinary Antigen",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Legionella Ag",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-002",
-    "Test_Name": "Streptococcus pneumoniae Urinary Antigen",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Bacterial Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Pneumococcal Ag",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-003",
-    "Test_Name": "Clostridioides difficile Toxin A/B",
-    "Department": "Microbiology",
-    "Sub_Department": "Bacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "C. difficile Toxin",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-004",
-    "Test_Name": "Clostridioides difficile GDH",
-    "Department": "Microbiology",
-    "Sub_Department": "Bacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "GDH",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-005",
-    "Test_Name": "MRSA PCR (Nasal)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasal Swab",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "MRSA DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-006",
-    "Test_Name": "VRE PCR (Rectal)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Rectal Swab",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "VRE DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-007",
-    "Test_Name": "Bordetella pertussis PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasopharyngeal Swab",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "B. pertussis DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-008",
-    "Test_Name": "Chlamydia trachomatis PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine/Swab",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "C. trachomatis DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-009",
-    "Test_Name": "Neisseria gonorrhoeae PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine/Swab",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "N. gonorrhoeae DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-010",
-    "Test_Name": "Trichomonas vaginalis PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Swab",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "T. vaginalis DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-011",
-    "Test_Name": "Mycoplasma genitalium PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Swab/Urine",
-    "Price": 75000,
-    "Components": [
-      {
-        "Analyte": "M. genitalium DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "BAC-012",
-    "Test_Name": "Ureaplasma PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Swab/Urine",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "Ureaplasma DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MTB-001",
-    "Test_Name": "TB Culture (Liquid)",
-    "Department": "Microbiology",
-    "Sub_Department": "Mycobacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Sputum/Tissue",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "TB Culture",
-        "Unit": "Text",
-        "Range": "No Growth"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MTB-002",
-    "Test_Name": "TB Drug Sensitivity (First Line)",
-    "Department": "Microbiology",
-    "Sub_Department": "Mycobacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Culture Isolate",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "DST",
-        "Unit": "S/R",
-        "Range": "Sensitive"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MTB-003",
-    "Test_Name": "TB Drug Sensitivity (Second Line)",
-    "Department": "Microbiology",
-    "Sub_Department": "Mycobacteriology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Culture Isolate",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "DST 2nd Line",
-        "Unit": "S/R",
-        "Range": "Sensitive"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MTB-004",
-    "Test_Name": "Line Probe Assay (LPA) for TB",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Sputum/Culture",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "LPA",
-        "Unit": "Qualitative",
-        "Range": "Sensitive"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HGB-001",
-    "Test_Name": "HPLC for Hemoglobinopathies",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Special Hematology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 6,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "Hb A",
-        "Unit": "%",
-        "Range": "> 95"
-      },
-      {
-        "Analyte": "Hb A2",
-        "Unit": "%",
-        "Range": "< 3.5"
-      },
-      {
-        "Analyte": "Hb F",
-        "Unit": "%",
-        "Range": "< 1"
-      },
-      {
-        "Analyte": "Hb S",
-        "Unit": "%",
-        "Range": "0"
-      },
-      {
-        "Analyte": "Hb C",
-        "Unit": "%",
-        "Range": "0"
-      },
-      {
-        "Analyte": "Hb D",
-        "Unit": "%",
-        "Range": "0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "HGB-002",
-    "Test_Name": "Kleihauer-Betke Test",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "Special Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Fetal Cells",
-        "Unit": "%",
-        "Range": "0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FLO-001",
-    "Test_Name": "CD4 Count (Absolute)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Flow Cytometry",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "CD4",
-        "Unit": "cells/uL",
-        "Range": "500 - 1500"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FLO-002",
-    "Test_Name": "CD4/CD8 Ratio",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Flow Cytometry",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "CD4",
-        "Unit": "cells/uL",
-        "Range": "500 - 1500"
-      },
-      {
-        "Analyte": "CD8",
-        "Unit": "cells/uL",
-        "Range": "200 - 800"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FLO-003",
-    "Test_Name": "Lymphocyte Subsets",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Flow Cytometry",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "CD3",
-        "Unit": "%",
-        "Range": "60 - 85"
-      },
-      {
-        "Analyte": "CD4",
-        "Unit": "%",
-        "Range": "30 - 55"
-      },
-      {
-        "Analyte": "CD8",
-        "Unit": "%",
-        "Range": "15 - 35"
-      },
-      {
-        "Analyte": "CD19",
-        "Unit": "%",
-        "Range": "5 - 15"
-      },
-      {
-        "Analyte": "CD16/56",
-        "Unit": "%",
-        "Range": "5 - 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOH-001",
-    "Test_Name": "JAK2 V617F Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 220000,
-    "Components": [
-      {
-        "Analyte": "JAK2",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOH-002",
-    "Test_Name": "BCR-ABL (Quantitative)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "BCR-ABL",
-        "Unit": "IS %",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOH-003",
-    "Test_Name": "PML-RARA (Acute Promyelocytic Leukemia)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood/Bone Marrow",
-    "Price": 280000,
-    "Components": [
-      {
-        "Analyte": "PML-RARA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOH-004",
-    "Test_Name": "FLT3 Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood/Bone Marrow",
-    "Price": 260000,
-    "Components": [
-      {
-        "Analyte": "FLT3",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MOH-005",
-    "Test_Name": "NPM1 Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Hematology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood/Bone Marrow",
-    "Price": 240000,
-    "Components": [
-      {
-        "Analyte": "NPM1",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-001",
-    "Test_Name": "EGFR Mutation (Lung Cancer)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Oncology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE Tissue",
-    "Price": 300000,
-    "Components": [
-      {
-        "Analyte": "EGFR",
-        "Unit": "Qualitative",
-        "Range": "Wild Type"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-002",
-    "Test_Name": "KRAS Mutation (Colorectal Cancer)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Oncology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE Tissue",
-    "Price": 280000,
-    "Components": [
-      {
-        "Analyte": "KRAS",
-        "Unit": "Qualitative",
-        "Range": "Wild Type"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-003",
-    "Test_Name": "NRAS Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Oncology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE Tissue",
-    "Price": 280000,
-    "Components": [
-      {
-        "Analyte": "NRAS",
-        "Unit": "Qualitative",
-        "Range": "Wild Type"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-004",
-    "Test_Name": "BRAF V600E Mutation",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Oncology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE Tissue",
-    "Price": 260000,
-    "Components": [
-      {
-        "Analyte": "BRAF",
-        "Unit": "Qualitative",
-        "Range": "Wild Type"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-005",
-    "Test_Name": "ALK Rearrangement",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Oncology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE Tissue",
-    "Price": 320000,
-    "Components": [
-      {
-        "Analyte": "ALK",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-006",
-    "Test_Name": "ROS1 Rearrangement",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Oncology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE Tissue",
-    "Price": 320000,
-    "Components": [
-      {
-        "Analyte": "ROS1",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-007",
-    "Test_Name": "PD-L1 Expression",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Oncology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE Tissue",
-    "Price": 280000,
-    "Components": [
-      {
-        "Analyte": "PD-L1",
-        "Unit": "TPS %",
-        "Range": "< 1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-008",
-    "Test_Name": "Microsatellite Instability (MSI)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Oncology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE Tissue",
-    "Price": 350000,
-    "Components": [
-      {
-        "Analyte": "MSI",
-        "Unit": "Qualitative",
-        "Range": "Stable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-009",
-    "Test_Name": "Tumor Mutational Burden (TMB)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Oncology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "FFPE Tissue",
-    "Price": 450000,
-    "Components": [
-      {
-        "Analyte": "TMB",
-        "Unit": "mut/Mb",
-        "Range": "< 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PHG-001",
-    "Test_Name": "CYP2C19 Genotyping",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Pharmacogenetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "CYP2C19",
-        "Unit": "Genotype",
-        "Range": "*1/*1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PHG-002",
-    "Test_Name": "CYP2D6 Genotyping",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Pharmacogenetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "CYP2D6",
-        "Unit": "Genotype",
-        "Range": "*1/*1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PHG-003",
-    "Test_Name": "CYP2C9 Genotyping",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Pharmacogenetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "CYP2C9",
-        "Unit": "Genotype",
-        "Range": "*1/*1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PHG-004",
-    "Test_Name": "VKORC1 Genotyping (Warfarin)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Pharmacogenetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 160000,
-    "Components": [
-      {
-        "Analyte": "VKORC1",
-        "Unit": "Genotype",
-        "Range": "GG"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PHG-005",
-    "Test_Name": "HLA-B*57:01 (Abacavir Hypersensitivity)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Pharmacogenetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 220000,
-    "Components": [
-      {
-        "Analyte": "HLA-B*57:01",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PHG-006",
-    "Test_Name": "HLA-B*15:02 (Carbamazepine)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Pharmacogenetics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 220000,
-    "Components": [
-      {
-        "Analyte": "HLA-B*15:02",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PRE-001",
-    "Test_Name": "NIPT (Non-Invasive Prenatal Testing)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Prenatal",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Maternal Blood",
-    "Price": 500000,
-    "Components": [
-      {
-        "Analyte": "Trisomy 21",
-        "Unit": "Risk",
-        "Range": "Low"
-      },
-      {
-        "Analyte": "Trisomy 18",
-        "Unit": "Risk",
-        "Range": "Low"
-      },
-      {
-        "Analyte": "Trisomy 13",
-        "Unit": "Risk",
-        "Range": "Low"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PRE-002",
-    "Test_Name": "Amniocentesis (Karyotyping)",
-    "Department": "Cytogenetics",
-    "Sub_Department": "Prenatal",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Amniotic Fluid",
-    "Price": 400000,
-    "Components": [
-      {
-        "Analyte": "Karyotype",
-        "Unit": "Text",
-        "Range": "46,XX/46,XY"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PRE-003",
-    "Test_Name": "Chorionic Villus Sampling (CVS)",
-    "Department": "Cytogenetics",
-    "Sub_Department": "Prenatal",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "CVS",
-    "Price": 400000,
-    "Components": [
-      {
-        "Analyte": "Karyotype",
-        "Unit": "Text",
-        "Range": "46,XX/46,XY"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PRE-004",
-    "Test_Name": "Fetal Fibronectin",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Prenatal",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Cervical Swab",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "fFN",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TRP-001",
-    "Test_Name": "HLA Typing (Class I)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Transplant",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 350000,
-    "Components": [
-      {
-        "Analyte": "HLA-A",
-        "Unit": "Type",
-        "Range": "Typed"
-      },
-      {
-        "Analyte": "HLA-B",
-        "Unit": "Type",
-        "Range": "Typed"
-      },
-      {
-        "Analyte": "HLA-C",
-        "Unit": "Type",
-        "Range": "Typed"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TRP-002",
-    "Test_Name": "HLA Typing (Class II)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Transplant",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 350000,
-    "Components": [
-      {
-        "Analyte": "HLA-DR",
-        "Unit": "Type",
-        "Range": "Typed"
-      },
-      {
-        "Analyte": "HLA-DQ",
-        "Unit": "Type",
-        "Range": "Typed"
-      },
-      {
-        "Analyte": "HLA-DP",
-        "Unit": "Type",
-        "Range": "Typed"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TRP-003",
-    "Test_Name": "Panel Reactive Antibody (PRA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Transplant",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 280000,
-    "Components": [
-      {
-        "Analyte": "PRA",
-        "Unit": "%",
-        "Range": "< 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TRP-004",
-    "Test_Name": "Complement-Dependent Cytotoxicity (CDC) Crossmatch",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Transplant",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "CDC",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TRP-005",
-    "Test_Name": "Flow Cytometry Crossmatch",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Transplant",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 300000,
-    "Components": [
-      {
-        "Analyte": "FCXM",
-        "Unit": "MFI",
-        "Range": "< 1000"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "TRP-006",
-    "Test_Name": "Donor-Specific Antibody (DSA)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Transplant",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 350000,
-    "Components": [
-      {
-        "Analyte": "DSA",
-        "Unit": "MFI",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FOR-001",
-    "Test_Name": "Forensic Drug Screen (10-Panel)",
-    "Department": "Toxicology",
-    "Sub_Department": "Forensic",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 10,
-    "Specimen_Type": "Urine",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "Amphetamines",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Barbiturates",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Benzodiazepines",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Cannabinoids",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Cocaine",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Methadone",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Opiates",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Phencyclidine",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Propoxyphene",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Tricyclics",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FOR-002",
-    "Test_Name": "Ethyl Glucuronide (EtG)",
-    "Department": "Toxicology",
-    "Sub_Department": "Forensic",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "EtG",
-        "Unit": "ng/mL",
-        "Range": "< 500"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "FOR-003",
-    "Test_Name": "Hair Drug Test",
-    "Department": "Toxicology",
-    "Sub_Department": "Forensic",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "Hair",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "Cocaine",
-        "Unit": "pg/mg",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Amphetamines",
-        "Unit": "pg/mg",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Cannabinoids",
-        "Unit": "pg/mg",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Opiates",
-        "Unit": "pg/mg",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "PCP",
-        "Unit": "pg/mg",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "OCC-001",
-    "Test_Name": "Lead (Blood)",
-    "Department": "Toxicology",
-    "Sub_Department": "Occupational",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 55000,
-    "Components": [
-      {
-        "Analyte": "Lead",
-        "Unit": "ug/dL",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "OCC-002",
-    "Test_Name": "Mercury (Urine)",
-    "Department": "Toxicology",
-    "Sub_Department": "Occupational",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Mercury",
-        "Unit": "ug/L",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "OCC-003",
-    "Test_Name": "Arsenic (Urine)",
-    "Department": "Toxicology",
-    "Sub_Department": "Occupational",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Arsenic",
-        "Unit": "ug/L",
-        "Range": "< 50"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "OCC-004",
-    "Test_Name": "Cadmium (Urine)",
-    "Department": "Toxicology",
-    "Sub_Department": "Occupational",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Cadmium",
-        "Unit": "ug/L",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "OCC-005",
-    "Test_Name": "Cholinesterase (RBC)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Occupational",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Cholinesterase",
-        "Unit": "U/mL",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPT-001",
-    "Test_Name": "Erythropoietin (EPO)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Sports",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 150000,
-    "Components": [
-      {
-        "Analyte": "EPO",
-        "Unit": "mIU/mL",
-        "Range": "2.6 - 18.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPT-002",
-    "Test_Name": "Testosterone/Epitestosterone Ratio",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Sports",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "T/E Ratio",
-        "Unit": "Ratio",
-        "Range": "< 4"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "SPT-003",
-    "Test_Name": "Growth Hormone (hGH) Isoform Test",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Sports",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "hGH",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VET-001",
-    "Test_Name": "Canine CBC",
-    "Department": "Veterinary",
-    "Sub_Department": "Hematology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 8,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "WBC",
-        "Unit": "x10^3/uL",
-        "Range": "6 - 17"
-      },
-      {
-        "Analyte": "RBC",
-        "Unit": "x10^6/uL",
-        "Range": "5.5 - 8.5"
-      },
-      {
-        "Analyte": "Hb",
-        "Unit": "g/dL",
-        "Range": "12 - 18"
-      },
-      {
-        "Analyte": "HCT",
-        "Unit": "%",
-        "Range": "37 - 55"
-      },
-      {
-        "Analyte": "Platelets",
-        "Unit": "x10^3/uL",
-        "Range": "200 - 500"
-      },
-      {
-        "Analyte": "Neutrophils",
-        "Unit": "%",
-        "Range": "60 - 77"
-      },
-      {
-        "Analyte": "Lymphocytes",
-        "Unit": "%",
-        "Range": "12 - 30"
-      },
-      {
-        "Analyte": "Monocytes",
-        "Unit": "%",
-        "Range": "3 - 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VET-002",
-    "Test_Name": "Feline CBC",
-    "Department": "Veterinary",
-    "Sub_Department": "Hematology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 8,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "WBC",
-        "Unit": "x10^3/uL",
-        "Range": "5.5 - 19.5"
-      },
-      {
-        "Analyte": "RBC",
-        "Unit": "x10^6/uL",
-        "Range": "5 - 10"
-      },
-      {
-        "Analyte": "Hb",
-        "Unit": "g/dL",
-        "Range": "8 - 15"
-      },
-      {
-        "Analyte": "HCT",
-        "Unit": "%",
-        "Range": "24 - 45"
-      },
-      {
-        "Analyte": "Platelets",
-        "Unit": "x10^3/uL",
-        "Range": "300 - 700"
-      },
-      {
-        "Analyte": "Neutrophils",
-        "Unit": "%",
-        "Range": "35 - 75"
-      },
-      {
-        "Analyte": "Lymphocytes",
-        "Unit": "%",
-        "Range": "20 - 55"
-      },
-      {
-        "Analyte": "Monocytes",
-        "Unit": "%",
-        "Range": "1 - 4"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VET-003",
-    "Test_Name": "Canine Heartworm Antigen",
-    "Department": "Veterinary",
-    "Sub_Department": "Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "Heartworm",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VET-004",
-    "Test_Name": "Feline Leukemia Virus (FeLV)",
-    "Department": "Veterinary",
-    "Sub_Department": "Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "FeLV",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "VET-005",
-    "Test_Name": "Feline Immunodeficiency Virus (FIV)",
-    "Department": "Veterinary",
-    "Sub_Department": "Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "FIV",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ENV-001",
-    "Test_Name": "Water Bacteriological Analysis",
-    "Department": "Environmental",
-    "Sub_Department": "Water Quality",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Water",
-    "Price": 80000,
-    "Components": [
-      {
-        "Analyte": "Total Coliform",
-        "Unit": "CFU/100mL",
-        "Range": "0"
-      },
-      {
-        "Analyte": "E. coli",
-        "Unit": "CFU/100mL",
-        "Range": "0"
-      },
-      {
-        "Analyte": "Heterotrophic Plate",
-        "Unit": "CFU/mL",
-        "Range": "< 500"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ENV-002",
-    "Test_Name": "Water Chemical Analysis",
-    "Department": "Environmental",
-    "Sub_Department": "Water Quality",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "Water",
-    "Price": 120000,
-    "Components": [
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "6.5 - 8.5"
-      },
-      {
-        "Analyte": "Turbidity",
-        "Unit": "NTU",
-        "Range": "< 5"
-      },
-      {
-        "Analyte": "Chlorine",
-        "Unit": "mg/L",
-        "Range": "0.2 - 2"
-      },
-      {
-        "Analyte": "Nitrate",
-        "Unit": "mg/L",
-        "Range": "< 10"
-      },
-      {
-        "Analyte": "Fluoride",
-        "Unit": "mg/L",
-        "Range": "0.5 - 1.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ENV-003",
-    "Test_Name": "Food Microbiological Analysis",
-    "Department": "Environmental",
-    "Sub_Department": "Food Safety",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 4,
-    "Specimen_Type": "Food Sample",
-    "Price": 100000,
-    "Components": [
-      {
-        "Analyte": "Total Plate Count",
-        "Unit": "CFU/g",
-        "Range": "< 10^5"
-      },
-      {
-        "Analyte": "Coliforms",
-        "Unit": "CFU/g",
-        "Range": "< 10"
-      },
-      {
-        "Analyte": "E. coli",
-        "Unit": "CFU/g",
-        "Range": "0"
-      },
-      {
-        "Analyte": "Salmonella",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "ENV-004",
-    "Test_Name": "Milk Quality Analysis",
-    "Department": "Environmental",
-    "Sub_Department": "Food Safety",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "Milk",
-    "Price": 60000,
-    "Components": [
-      {
-        "Analyte": "Fat",
-        "Unit": "%",
-        "Range": "> 3"
-      },
-      {
-        "Analyte": "Protein",
-        "Unit": "%",
-        "Range": "> 3"
-      },
-      {
-        "Analyte": "Lactose",
-        "Unit": "%",
-        "Range": "> 4"
-      },
-      {
-        "Analyte": "SNF",
-        "Unit": "%",
-        "Range": "> 8"
-      },
-      {
-        "Analyte": "Adulteration",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "RES-001",
-    "Test_Name": "Cytokine Panel (6-plex)",
-    "Department": "Research",
-    "Sub_Department": "Immunology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 6,
-    "Specimen_Type": "Serum/Plasma",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "IL-1β",
-        "Unit": "pg/mL",
-        "Range": "< 5"
-      },
-      {
-        "Analyte": "IL-6",
-        "Unit": "pg/mL",
-        "Range": "< 5"
-      },
-      {
-        "Analyte": "IL-8",
-        "Unit": "pg/mL",
-        "Range": "< 10"
-      },
-      {
-        "Analyte": "IL-10",
-        "Unit": "pg/mL",
-        "Range": "< 5"
-      },
-      {
-        "Analyte": "TNF-α",
-        "Unit": "pg/mL",
-        "Range": "< 8"
-      },
-      {
-        "Analyte": "IFN-γ",
-        "Unit": "pg/mL",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "RES-002",
-    "Test_Name": "Chemokine Panel",
-    "Department": "Research",
-    "Sub_Department": "Immunology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 4,
-    "Specimen_Type": "Serum/Plasma",
-    "Price": 200000,
-    "Components": [
-      {
-        "Analyte": "CCL2/MCP-1",
-        "Unit": "pg/mL",
-        "Range": "< 50"
-      },
-      {
-        "Analyte": "CCL5/RANTES",
-        "Unit": "pg/mL",
-        "Range": "< 100"
-      },
-      {
-        "Analyte": "CXCL8/IL-8",
-        "Unit": "pg/mL",
-        "Range": "< 10"
-      },
-      {
-        "Analyte": "CXCL10/IP-10",
-        "Unit": "pg/mL",
-        "Range": "< 50"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "RES-003",
-    "Test_Name": "Growth Factor Panel",
-    "Department": "Research",
-    "Sub_Department": "Cell Biology",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 4,
-    "Specimen_Type": "Serum/Plasma",
-    "Price": 220000,
-    "Components": [
-      {
-        "Analyte": "VEGF",
-        "Unit": "pg/mL",
-        "Range": "< 100"
-      },
-      {
-        "Analyte": "EGF",
-        "Unit": "pg/mL",
-        "Range": "< 50"
-      },
-      {
-        "Analyte": "FGF",
-        "Unit": "pg/mL",
-        "Range": "< 20"
-      },
-      {
-        "Analyte": "PDGF",
-        "Unit": "pg/mL",
-        "Range": "< 50"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "RES-004",
-    "Test_Name": "Adipokine Panel",
-    "Department": "Research",
-    "Sub_Department": "Metabolism",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Serum/Plasma",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "Adiponectin",
-        "Unit": "ug/mL",
-        "Range": "5 - 30"
-      },
-      {
-        "Analyte": "Leptin",
-        "Unit": "ng/mL",
-        "Range": "2 - 20"
-      },
-      {
-        "Analyte": "Resistin",
-        "Unit": "ng/mL",
-        "Range": "5 - 50"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "RES-005",
-    "Test_Name": "Oxidative Stress Panel",
-    "Department": "Research",
-    "Sub_Department": "Biochemistry",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Serum/Plasma",
-    "Price": 160000,
-    "Components": [
-      {
-        "Analyte": "MDA",
-        "Unit": "nmol/mL",
-        "Range": "< 2"
-      },
-      {
-        "Analyte": "SOD",
-        "Unit": "U/mL",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "GPx",
-        "Unit": "U/mL",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EMG-001",
-    "Test_Name": "Mpox (Monkeypox) PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Lesion Swab",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "Mpox DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EMG-002",
-    "Test_Name": "Ebola Virus PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "Ebola RNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EMG-003",
-    "Test_Name": "Marburg Virus PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "Marburg RNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EMG-004",
-    "Test_Name": "Lassa Fever PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 220000,
-    "Components": [
-      {
-        "Analyte": "Lassa RNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EMG-005",
-    "Test_Name": "Rift Valley Fever IgM",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Viral Serology",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 70000,
-    "Components": [
-      {
-        "Analyte": "RVF IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EMG-006",
-    "Test_Name": "Crimean-Congo Hemorrhagic Fever (CCHF) PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 240000,
-    "Components": [
-      {
-        "Analyte": "CCHF RNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EMG-007",
-    "Test_Name": "Nipah Virus PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Throat Swab/CSF",
-    "Price": 260000,
-    "Components": [
-      {
-        "Analyte": "Nipah RNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EMG-008",
-    "Test_Name": "Hendra Virus PCR",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "PCR",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Throat Swab/CSF",
-    "Price": 260000,
-    "Components": [
-      {
-        "Analyte": "Hendra RNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-011",
-    "Test_Name": "Prealbumin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Nutritional Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Prealbumin",
-        "Unit": "mg/dL",
-        "Range": "20 - 40"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-012",
-    "Test_Name": "Transferrin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Nutritional Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "Transferrin",
-        "Unit": "mg/dL",
-        "Range": "200 - 360"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "NUT-013",
-    "Test_Name": "Retinol Binding Protein",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Nutritional Markers",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "RBP",
-        "Unit": "mg/dL",
-        "Range": "3 - 6"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AGE-001",
-    "Test_Name": "Telomere Length",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Aging",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 400000,
-    "Components": [
-      {
-        "Analyte": "Telomere",
-        "Unit": "kb",
-        "Range": "Age-dependent"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "AGE-002",
-    "Test_Name": "Epigenetic Age (DNA Methylation)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Aging",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood",
-    "Price": 500000,
-    "Components": [
-      {
-        "Analyte": "Epigenetic Age",
-        "Unit": "Years",
-        "Range": "Chronological"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-010",
-    "Test_Name": "CD34+ Stem Cell Count",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Flow Cytometry",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "EDTA Blood/Bone Marrow",
-    "Price": 180000,
-    "Components": [
-      {
-        "Analyte": "CD34+",
-        "Unit": "cells/uL",
-        "Range": "Variable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "STM-011",
-    "Test_Name": "Mesenchymal Stem Cell Markers",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Flow Cytometry",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 4,
-    "Specimen_Type": "Bone Marrow",
-    "Price": 220000,
-    "Components": [
-      {
-        "Analyte": "CD73",
-        "Unit": "%",
-        "Range": "> 95"
-      },
-      {
-        "Analyte": "CD90",
-        "Unit": "%",
-        "Range": "> 95"
-      },
-      {
-        "Analyte": "CD105",
-        "Unit": "%",
-        "Range": "> 95"
-      },
-      {
-        "Analyte": "CD45",
-        "Unit": "%",
-        "Range": "< 2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EXO-001",
-    "Test_Name": "Exosome Isolation & Characterization",
-    "Department": "Research",
-    "Sub_Department": "Liquid Biopsy",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Plasma/Serum",
-    "Price": 350000,
-    "Components": [
-      {
-        "Analyte": "Exosome Count",
-        "Unit": "particles/mL",
-        "Range": "Variable"
-      },
-      {
-        "Analyte": "CD63",
-        "Unit": "Qualitative",
-        "Range": "Positive"
-      },
-      {
-        "Analyte": "CD81",
-        "Unit": "Qualitative",
-        "Range": "Positive"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EXO-002",
-    "Test_Name": "Circulating Tumor DNA (ctDNA)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Liquid Biopsy",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Plasma",
-    "Price": 400000,
-    "Components": [
-      {
-        "Analyte": "ctDNA",
-        "Unit": "ng/mL",
-        "Range": "Variable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "EXO-003",
-    "Test_Name": "Circulating Tumor Cells (CTC)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "Liquid Biopsy",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Blood",
-    "Price": 450000,
-    "Components": [
-      {
-        "Analyte": "CTC",
-        "Unit": "cells/mL",
-        "Range": "0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MIC-011",
-    "Test_Name": "Gut Microbiome Analysis (16S rRNA)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Microbiome",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 350000,
-    "Components": [
-      {
-        "Analyte": "Microbiome",
-        "Unit": "Composition",
-        "Range": "Diverse"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MIC-012",
-    "Test_Name": "Gut Microbiome Analysis (Shotgun)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Microbiome",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 500000,
-    "Components": [
-      {
-        "Analyte": "Microbiome",
-        "Unit": "Species",
-        "Range": "Complete"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MIC-013",
-    "Test_Name": "Oral Microbiome Analysis",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Microbiome",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Oral Swab",
-    "Price": 300000,
-    "Components": [
-      {
-        "Analyte": "Oral Microbiome",
-        "Unit": "Composition",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MIC-014",
-    "Test_Name": "Skin Microbiome Analysis",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "Microbiome",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Skin Swab",
-    "Price": 300000,
-    "Components": [
-      {
-        "Analyte": "Skin Microbiome",
-        "Unit": "Composition",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MET-001",
-    "Test_Name": "Amino Acid Profile",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Metabolomics",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 20,
-    "Specimen_Type": "Plasma",
-    "Price": 280000,
-    "Components": [
-      {
-        "Analyte": "Essential AAs",
-        "Unit": "umol/L",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Non-essential AAs",
-        "Unit": "umol/L",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MET-002",
-    "Test_Name": "Organic Acids Profile",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Metabolomics",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 30,
-    "Specimen_Type": "Urine",
-    "Price": 320000,
-    "Components": [
-      {
-        "Analyte": "Organic Acids",
-        "Unit": "mmol/mol",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "MET-003",
-    "Test_Name": "Fatty Acid Profile",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Metabolomics",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 15,
-    "Specimen_Type": "Plasma",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "Omega-3",
-        "Unit": "%",
-        "Range": "> 4"
-      },
-      {
-        "Analyte": "Omega-6",
-        "Unit": "%",
-        "Range": "< 10"
-      },
-      {
-        "Analyte": "Saturated",
-        "Unit": "%",
-        "Range": "< 40"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PRO-001",
-    "Test_Name": "Protein Electrophoresis (SPEP)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Proteomics",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "Serum",
-    "Price": 65000,
-    "Components": [
-      {
-        "Analyte": "Albumin",
-        "Unit": "%",
-        "Range": "55 - 65"
-      },
-      {
-        "Analyte": "Alpha-1",
-        "Unit": "%",
-        "Range": "2 - 5"
-      },
-      {
-        "Analyte": "Alpha-2",
-        "Unit": "%",
-        "Range": "7 - 13"
-      },
-      {
-        "Analyte": "Beta",
-        "Unit": "%",
-        "Range": "8 - 14"
-      },
-      {
-        "Analyte": "Gamma",
-        "Unit": "%",
-        "Range": "12 - 22"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PRO-002",
-    "Test_Name": "Immunofixation Electrophoresis",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Proteomics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum/Urine",
-    "Price": 90000,
-    "Components": [
-      {
-        "Analyte": "Monoclonal Protein",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "PRO-003",
-    "Test_Name": "Free Light Chains (Kappa/Lambda)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Proteomics",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Serum",
-    "Price": 110000,
-    "Components": [
-      {
-        "Analyte": "Kappa",
-        "Unit": "mg/L",
-        "Range": "3 - 19"
-      },
-      {
-        "Analyte": "Lambda",
-        "Unit": "mg/L",
-        "Range": "5 - 26"
-      },
-      {
-        "Analyte": "K/L Ratio",
-        "Unit": "Ratio",
-        "Range": "0.26 - 1.65"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "LIP-001",
-    "Test_Name": "Lipidomics Profile",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Lipidomics",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 10,
-    "Specimen_Type": "Plasma",
-    "Price": 300000,
-    "Components": [
-      {
-        "Analyte": "Phospholipids",
-        "Unit": "%",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Sphingolipids",
-        "Unit": "%",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Glycerolipids",
-        "Unit": "%",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GLY-001",
-    "Test_Name": "HbA1c (Point of Care)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Glycomics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "HbA1c",
-        "Unit": "%",
-        "Range": "< 5.7"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GLY-002",
-    "Test_Name": "Glycated Albumin",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Glycomics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 45000,
-    "Components": [
-      {
-        "Analyte": "Glycated Albumin",
-        "Unit": "%",
-        "Range": "11 - 16"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "GLY-003",
-    "Test_Name": "1,5-Anhydroglucitol",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "Glycomics",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "1,5-AG",
-        "Unit": "ug/mL",
-        "Range": "> 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-001",
-    "Test_Name": "Blood Glucose (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Glucose",
-        "Unit": "mg/dL",
-        "Range": "70 - 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-002",
-    "Test_Name": "Blood Ketones (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Ketones",
-        "Unit": "mmol/L",
-        "Range": "< 0.6"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-003",
-    "Test_Name": "Blood Lactate (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Lactate",
-        "Unit": "mmol/L",
-        "Range": "0.5 - 2.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-004",
-    "Test_Name": "Blood Gas (ABG)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 7,
-    "Specimen_Type": "Arterial Blood",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "7.35 - 7.45"
-      },
-      {
-        "Analyte": "pCO2",
-        "Unit": "mmHg",
-        "Range": "35 - 45"
-      },
-      {
-        "Analyte": "pO2",
-        "Unit": "mmHg",
-        "Range": "80 - 100"
-      },
-      {
-        "Analyte": "HCO3",
-        "Unit": "mmol/L",
-        "Range": "22 - 26"
-      },
-      {
-        "Analyte": "Base Excess",
-        "Unit": "mmol/L",
-        "Range": "-2 to +2"
-      },
-      {
-        "Analyte": "O2 Saturation",
-        "Unit": "%",
-        "Range": "95 - 100"
-      },
-      {
-        "Analyte": "Lactate",
-        "Unit": "mmol/L",
-        "Range": "0.5 - 2.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-005",
-    "Test_Name": "Venous Blood Gas (VBG)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "Venous Blood",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "7.32 - 7.43"
-      },
-      {
-        "Analyte": "pCO2",
-        "Unit": "mmHg",
-        "Range": "41 - 51"
-      },
-      {
-        "Analyte": "HCO3",
-        "Unit": "mmol/L",
-        "Range": "22 - 29"
-      },
-      {
-        "Analyte": "Base Excess",
-        "Unit": "mmol/L",
-        "Range": "-2 to +2"
-      },
-      {
-        "Analyte": "Lactate",
-        "Unit": "mmol/L",
-        "Range": "0.5 - 2.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-006",
-    "Test_Name": "Capillary Blood Gas (CBG)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 5,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "7.35 - 7.45"
-      },
-      {
-        "Analyte": "pCO2",
-        "Unit": "mmHg",
-        "Range": "35 - 45"
-      },
-      {
-        "Analyte": "HCO3",
-        "Unit": "mmol/L",
-        "Range": "22 - 26"
-      },
-      {
-        "Analyte": "Base Excess",
-        "Unit": "mmol/L",
-        "Range": "-2 to +2"
-      },
-      {
-        "Analyte": "Lactate",
-        "Unit": "mmol/L",
-        "Range": "0.5 - 2.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-007",
-    "Test_Name": "INR (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "INR",
-        "Unit": "Ratio",
-        "Range": "0.8 - 1.2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-008",
-    "Test_Name": "D-Dimer (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "D-Dimer",
-        "Unit": "ug/mL",
-        "Range": "< 0.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-009",
-    "Test_Name": "Troponin I (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "Troponin I",
-        "Unit": "ng/mL",
-        "Range": "< 0.04"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-010",
-    "Test_Name": "BNP (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "BNP",
-        "Unit": "pg/mL",
-        "Range": "< 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-011",
-    "Test_Name": "Malaria RDT (POCT)",
-    "Department": "Parasitology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Malaria",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-012",
-    "Test_Name": "HIV Rapid (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Fingerstick Blood",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "HIV",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-013",
-    "Test_Name": "HCV Rapid (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Fingerstick Blood",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "HCV",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-014",
-    "Test_Name": "HBsAg Rapid (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Fingerstick Blood",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "HBsAg",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-015",
-    "Test_Name": "Syphilis Rapid (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Fingerstick Blood",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Syphilis",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-016",
-    "Test_Name": "Urine Dipstick (POCT)",
-    "Department": "Parasitology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 10,
-    "Specimen_Type": "Urine",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "5 - 7.5"
-      },
-      {
-        "Analyte": "Protein",
-        "Unit": "Qual",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Glucose",
-        "Unit": "Qual",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Ketones",
-        "Unit": "Qual",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Bilirubin",
-        "Unit": "Qual",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Urobilinogen",
-        "Unit": "Qual",
-        "Range": "Normal"
-      },
-      {
-        "Analyte": "Nitrite",
-        "Unit": "Qual",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Leukocytes",
-        "Unit": "Qual",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Blood",
-        "Unit": "Qual",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Specific Gravity",
-        "Unit": "SG",
-        "Range": "1.005 - 1.030"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-017",
-    "Test_Name": "Urine Pregnancy (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "hCG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-018",
-    "Test_Name": "Stool Occult Blood (POCT)",
-    "Department": "Parasitology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Occult Blood",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-019",
-    "Test_Name": "Stool Rotavirus (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Rotavirus",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-020",
-    "Test_Name": "Stool Adenovirus (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Adenovirus",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-021",
-    "Test_Name": "Strep A Rapid (POCT)",
-    "Department": "Microbiology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Throat Swab",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Strep A",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-022",
-    "Test_Name": "Influenza A/B (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Nasal Swab",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Influenza A",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Influenza B",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-023",
-    "Test_Name": "COVID-19 Antigen (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasal Swab",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "SARS-CoV-2 Ag",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-024",
-    "Test_Name": "RSV (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasal Swab",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "RSV",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-025",
-    "Test_Name": "COVID-19 PCR (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasal Swab",
-    "Price": 40000,
-    "Components": [
-      {
-        "Analyte": "SARS-CoV-2 RNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-026",
-    "Test_Name": "Flu A/B + COVID (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 3,
-    "Specimen_Type": "Nasal Swab",
-    "Price": 50000,
-    "Components": [
-      {
-        "Analyte": "Influenza A",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      },
-      {
-        "Analyte": "Influenza B",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      },
-      {
-        "Analyte": "SARS-CoV-2",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-027",
-    "Test_Name": "MRSA PCR (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Nasal Swab",
-    "Price": 30000,
-    "Components": [
-      {
-        "Analyte": "MRSA DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-028",
-    "Test_Name": "C. difficile PCR (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Stool",
-    "Price": 35000,
-    "Components": [
-      {
-        "Analyte": "C. difficile DNA",
-        "Unit": "Qualitative",
-        "Range": "Not Detected"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-029",
-    "Test_Name": "Hemoglobin (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Hemoglobin",
-        "Unit": "g/dL",
-        "Range": "12 - 17"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-030",
-    "Test_Name": "Hematocrit (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Hematocrit",
-        "Unit": "%",
-        "Range": "36 - 52"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-031",
-    "Test_Name": "WBC Count (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "WBC",
-        "Unit": "x10^3/uL",
-        "Range": "4 - 11"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-032",
-    "Test_Name": "Platelet Count (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Platelets",
-        "Unit": "x10^3/uL",
-        "Range": "150 - 450"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-033",
-    "Test_Name": "Sodium (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 6000,
-    "Components": [
-      {
-        "Analyte": "Sodium",
-        "Unit": "mmol/L",
-        "Range": "135 - 145"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-034",
-    "Test_Name": "Potassium (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 6000,
-    "Components": [
-      {
-        "Analyte": "Potassium",
-        "Unit": "mmol/L",
-        "Range": "3.5 - 5.1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-035",
-    "Test_Name": "Chloride (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 6000,
-    "Components": [
-      {
-        "Analyte": "Chloride",
-        "Unit": "mmol/L",
-        "Range": "98 - 107"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-036",
-    "Test_Name": "Ionized Calcium (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "iCa",
-        "Unit": "mmol/L",
-        "Range": "1.12 - 1.32"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-037",
-    "Test_Name": "Magnesium (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Magnesium",
-        "Unit": "mmol/L",
-        "Range": "0.7 - 1.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-038",
-    "Test_Name": "Bilirubin (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Bilirubin",
-        "Unit": "mg/dL",
-        "Range": "0.2 - 1.2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-039",
-    "Test_Name": "ALT (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "ALT",
-        "Unit": "U/L",
-        "Range": "5 - 45"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-040",
-    "Test_Name": "AST (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "AST",
-        "Unit": "U/L",
-        "Range": "5 - 40"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-041",
-    "Test_Name": "ALP (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "ALP",
-        "Unit": "U/L",
-        "Range": "40 - 130"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-042",
-    "Test_Name": "GGT (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "GGT",
-        "Unit": "U/L",
-        "Range": "10 - 60"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-043",
-    "Test_Name": "Albumin (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Albumin",
-        "Unit": "g/dL",
-        "Range": "3.5 - 5.0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-044",
-    "Test_Name": "Total Protein (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Total Protein",
-        "Unit": "g/dL",
-        "Range": "6.4 - 8.3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-045",
-    "Test_Name": "Creatinine (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Creatinine",
-        "Unit": "mg/dL",
-        "Range": "0.6 - 1.2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-046",
-    "Test_Name": "BUN (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "BUN",
-        "Unit": "mg/dL",
-        "Range": "15 - 45"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-047",
-    "Test_Name": "Uric Acid (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Uric Acid",
-        "Unit": "mg/dL",
-        "Range": "3.5 - 7.2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-048",
-    "Test_Name": "Total Cholesterol (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Cholesterol",
-        "Unit": "mg/dL",
-        "Range": "< 200"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-049",
-    "Test_Name": "HDL (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "HDL",
-        "Unit": "mg/dL",
-        "Range": "> 40"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-050",
-    "Test_Name": "Triglycerides (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Triglycerides",
-        "Unit": "mg/dL",
-        "Range": "< 150"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-051",
-    "Test_Name": "LDL (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Calculated",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "LDL",
-        "Unit": "mg/dL",
-        "Range": "< 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-052",
-    "Test_Name": "Glucose (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Glucose",
-        "Unit": "mg/dL",
-        "Range": "70 - 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-053",
-    "Test_Name": "HbA1c (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "HbA1c",
-        "Unit": "%",
-        "Range": "< 5.7"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-054",
-    "Test_Name": "TSH (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "TSH",
-        "Unit": "uIU/mL",
-        "Range": "0.45 - 4.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-055",
-    "Test_Name": "Free T4 (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Free T4",
-        "Unit": "ng/dL",
-        "Range": "0.8 - 1.8"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-056",
-    "Test_Name": "Free T3 (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Free T3",
-        "Unit": "pg/mL",
-        "Range": "2.0 - 4.4"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-057",
-    "Test_Name": "CK-MB (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "CK-MB",
-        "Unit": "ng/mL",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-058",
-    "Test_Name": "Myoglobin (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Myoglobin",
-        "Unit": "ng/mL",
-        "Range": "< 90"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-059",
-    "Test_Name": "D-Dimer (POCT) - High Sensitivity",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "D-Dimer",
-        "Unit": "ng/mL",
-        "Range": "< 500"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-060",
-    "Test_Name": "CRP (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Capillary Blood",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "CRP",
-        "Unit": "mg/L",
-        "Range": "< 6"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-061",
-    "Test_Name": "Procalcitonin (POCT)",
-    "Department": "Clinical Chemistry",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Procalcitonin",
-        "Unit": "ng/mL",
-        "Range": "< 0.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-062",
-    "Test_Name": "LH Surge (Ovulation Test)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "LH",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-063",
-    "Test_Name": "FSH (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "FSH",
-        "Unit": "Qualitative",
-        "Range": "Normal"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-064",
-    "Test_Name": "TB LAM Ag (Urine)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "TB LAM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-065",
-    "Test_Name": "Cryptococcal Antigen (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Serum/Plasma",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "CRAG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-066",
-    "Test_Name": "Histoplasma Antigen (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "Histoplasma Ag",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-067",
-    "Test_Name": "Reticulocyte Count (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Reticulocytes",
-        "Unit": "%",
-        "Range": "0.5 - 2.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-068",
-    "Test_Name": "ESR (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "ESR",
-        "Unit": "mm/hr",
-        "Range": "0 - 15"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-069",
-    "Test_Name": "PT (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "PT",
-        "Unit": "Seconds",
-        "Range": "11 - 13"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-070",
-    "Test_Name": "APTT (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "APTT",
-        "Unit": "Seconds",
-        "Range": "25 - 35"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-071",
-    "Test_Name": "Fibrinogen (POCT)",
-    "Department": "Hematology & Coagulation",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Fibrinogen",
-        "Unit": "mg/dL",
-        "Range": "200 - 400"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-072",
-    "Test_Name": "Dengue NS1 (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Dengue NS1",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-073",
-    "Test_Name": "Dengue IgM/IgG (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "MULTI_COMPONENT",
-    "Component_Count": 2,
-    "Specimen_Type": "Whole Blood",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "Dengue IgM",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      },
-      {
-        "Analyte": "Dengue IgG",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-074",
-    "Test_Name": "Chikungunya (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Chikungunya",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-075",
-    "Test_Name": "Zika (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "Zika",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-076",
-    "Test_Name": "PSA (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "PSA",
-        "Unit": "ng/mL",
-        "Range": "< 4"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-077",
-    "Test_Name": "AFP (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "AFP",
-        "Unit": "ng/mL",
-        "Range": "< 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-078",
-    "Test_Name": "CEA (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "CEA",
-        "Unit": "ng/mL",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-079",
-    "Test_Name": "CA-125 (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "CA-125",
-        "Unit": "U/mL",
-        "Range": "< 35"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-080",
-    "Test_Name": "RF (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "RF",
-        "Unit": "IU/mL",
-        "Range": "< 14"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-081",
-    "Test_Name": "Anti-CCP (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "Anti-CCP",
-        "Unit": "U/mL",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-082",
-    "Test_Name": "ANA (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "ANA",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-083",
-    "Test_Name": "Anti-dsDNA (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "Anti-dsDNA",
-        "Unit": "IU/mL",
-        "Range": "< 25"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-084",
-    "Test_Name": "Total IgE (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Total IgE",
-        "Unit": "IU/mL",
-        "Range": "< 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-085",
-    "Test_Name": "Specific IgE (POCT)",
-    "Department": "Immunology & Serology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Whole Blood",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Specific IgE",
-        "Unit": "kU/L",
-        "Range": "< 0.35"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-086",
-    "Test_Name": "Salbutamol (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Salbutamol",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-087",
-    "Test_Name": "Morphine (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Morphine",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-088",
-    "Test_Name": "Cocaine (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Cocaine",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-089",
-    "Test_Name": "Amphetamine (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Amphetamine",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-090",
-    "Test_Name": "Cannabinoids (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "THC",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-091",
-    "Test_Name": "Benzodiazepines (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Benzodiazepines",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-092",
-    "Test_Name": "Barbiturates (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Barbiturates",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-093",
-    "Test_Name": "Phencyclidine (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "PCP",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-094",
-    "Test_Name": "Methadone (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Methadone",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-095",
-    "Test_Name": "Propoxyphene (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Propoxyphene",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-096",
-    "Test_Name": "Tricyclic Antidepressants (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "TCA",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-097",
-    "Test_Name": "Oxycodone (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Oxycodone",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-098",
-    "Test_Name": "Hydrocodone (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Hydrocodone",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-099",
-    "Test_Name": "Fentanyl (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "Fentanyl",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-100",
-    "Test_Name": "Buprenorphine (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Urine",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "Buprenorphine",
-        "Unit": "ng/mL",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-101",
-    "Test_Name": "Breath Alcohol (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Breath",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Alcohol",
-        "Unit": "mg/L",
-        "Range": "0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-102",
-    "Test_Name": "Saliva Alcohol (POCT)",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Saliva",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Alcohol",
-        "Unit": "mg/L",
-        "Range": "0"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-103",
-    "Test_Name": "Sweat Alcohol Patch",
-    "Department": "Toxicology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Sweat",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Alcohol",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-104",
-    "Test_Name": "DNA Paternity Test (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Buccal Swab",
-    "Price": 250000,
-    "Components": [
-      {
-        "Analyte": "Paternity",
-        "Unit": "Probability",
-        "Range": "> 99.9"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-105",
-    "Test_Name": "Ancestry DNA (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Saliva",
-    "Price": 300000,
-    "Components": [
-      {
-        "Analyte": "Ancestry",
-        "Unit": "%",
-        "Range": "Report"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-106",
-    "Test_Name": "Pharmacogenomics (POCT)",
-    "Department": "Molecular & Endocrinology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Buccal Swab",
-    "Price": 350000,
-    "Components": [
-      {
-        "Analyte": "PGx",
-        "Unit": "Genotype",
-        "Range": "Report"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-107",
-    "Test_Name": "Wound pH (POCT)",
-    "Department": "Microbiology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Wound",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "4 - 6"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-108",
-    "Test_Name": "Wound Infection (POCT)",
-    "Department": "Microbiology",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Wound Swab",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Infection",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-109",
-    "Test_Name": "Radon (Home Test)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 20000,
-    "Components": [
-      {
-        "Analyte": "Radon",
-        "Unit": "pCi/L",
-        "Range": "< 4"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-110",
-    "Test_Name": "Carbon Monoxide (Home Test)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "CO",
-        "Unit": "ppm",
-        "Range": "< 9"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-111",
-    "Test_Name": "Mold (Home Test)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air/Surface",
-    "Price": 18000,
-    "Components": [
-      {
-        "Analyte": "Mold",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-112",
-    "Test_Name": "Lead (Home Test)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Surface",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Lead",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-113",
-    "Test_Name": "Asbestos (Home Test)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Material",
-    "Price": 25000,
-    "Components": [
-      {
-        "Analyte": "Asbestos",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-114",
-    "Test_Name": "Food Allergen (Peanut) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Peanut",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-115",
-    "Test_Name": "Food Allergen (Gluten) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Gluten",
-        "Unit": "ppm",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-116",
-    "Test_Name": "Food Allergen (Milk) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Milk",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-117",
-    "Test_Name": "Food Allergen (Egg) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Egg",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-118",
-    "Test_Name": "Food Allergen (Soy) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Soy",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-119",
-    "Test_Name": "Food Allergen (Fish) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Fish",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-120",
-    "Test_Name": "Food Allergen (Shellfish) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Shellfish",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-121",
-    "Test_Name": "Food Allergen (Tree Nuts) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Tree Nuts",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-122",
-    "Test_Name": "Food Allergen (Sesame) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Sesame",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-123",
-    "Test_Name": "Food Allergen (Mustard) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Mustard",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-124",
-    "Test_Name": "Food Allergen (Celery) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Celery",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-125",
-    "Test_Name": "Food Allergen (Lupin) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Lupin",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-126",
-    "Test_Name": "Food Allergen (Molluscs) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Molluscs",
-        "Unit": "ppm",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-127",
-    "Test_Name": "Food Allergen (Sulphites) - POCT",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 12000,
-    "Components": [
-      {
-        "Analyte": "Sulphites",
-        "Unit": "ppm",
-        "Range": "< 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-128",
-    "Test_Name": "Food Allergen (Gluten) - Quantitative",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Food",
-    "Price": 15000,
-    "Components": [
-      {
-        "Analyte": "Gluten",
-        "Unit": "ppm",
-        "Range": "< 20"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-129",
-    "Test_Name": "Water pH (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "6.5 - 8.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-130",
-    "Test_Name": "Water Chlorine (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Chlorine",
-        "Unit": "mg/L",
-        "Range": "0.2 - 2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-131",
-    "Test_Name": "Water Hardness (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Hardness",
-        "Unit": "mg/L",
-        "Range": "< 180"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-132",
-    "Test_Name": "Water Nitrate (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Nitrate",
-        "Unit": "mg/L",
-        "Range": "< 10"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-133",
-    "Test_Name": "Water Nitrite (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Nitrite",
-        "Unit": "mg/L",
-        "Range": "< 1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-134",
-    "Test_Name": "Water Fluoride (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Fluoride",
-        "Unit": "mg/L",
-        "Range": "0.5 - 1.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-135",
-    "Test_Name": "Water Iron (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Iron",
-        "Unit": "mg/L",
-        "Range": "< 0.3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-136",
-    "Test_Name": "Water Copper (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Copper",
-        "Unit": "mg/L",
-        "Range": "< 1.3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-137",
-    "Test_Name": "Water Lead (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Lead",
-        "Unit": "mg/L",
-        "Range": "< 0.015"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-138",
-    "Test_Name": "Water Arsenic (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Arsenic",
-        "Unit": "mg/L",
-        "Range": "< 0.01"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-139",
-    "Test_Name": "Water Bacteria (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Bacteria",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-140",
-    "Test_Name": "Water E. coli (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "E. coli",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-141",
-    "Test_Name": "Water Coliforms (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Coliforms",
-        "Unit": "Qualitative",
-        "Range": "Negative"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-142",
-    "Test_Name": "Water Total Plate Count (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "TPC",
-        "Unit": "CFU/mL",
-        "Range": "< 500"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-143",
-    "Test_Name": "Water Turbidity (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Turbidity",
-        "Unit": "NTU",
-        "Range": "< 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-144",
-    "Test_Name": "Water Dissolved Oxygen (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "DO",
-        "Unit": "mg/L",
-        "Range": "> 5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-145",
-    "Test_Name": "Water Conductivity (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Conductivity",
-        "Unit": "uS/cm",
-        "Range": "< 1500"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-146",
-    "Test_Name": "Water TDS (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "TDS",
-        "Unit": "mg/L",
-        "Range": "< 1000"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-147",
-    "Test_Name": "Water Temperature (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Temperature",
-        "Unit": "°C",
-        "Range": "Variable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-148",
-    "Test_Name": "Water ORP (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "ORP",
-        "Unit": "mV",
-        "Range": "> 650"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-149",
-    "Test_Name": "Water Ammonia (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Ammonia",
-        "Unit": "mg/L",
-        "Range": "< 0.5"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-150",
-    "Test_Name": "Water Phosphate (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Water",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Phosphate",
-        "Unit": "mg/L",
-        "Range": "< 0.1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-151",
-    "Test_Name": "Soil pH (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "pH",
-        "Unit": "pH",
-        "Range": "6 - 7"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-152",
-    "Test_Name": "Soil Nitrogen (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Nitrogen",
-        "Unit": "mg/kg",
-        "Range": "Variable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-153",
-    "Test_Name": "Soil Phosphorus (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Phosphorus",
-        "Unit": "mg/kg",
-        "Range": "Variable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-154",
-    "Test_Name": "Soil Potassium (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Potassium",
-        "Unit": "mg/kg",
-        "Range": "Variable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-155",
-    "Test_Name": "Soil Organic Matter (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Organic Matter",
-        "Unit": "%",
-        "Range": "> 3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-156",
-    "Test_Name": "Soil Moisture (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Moisture",
-        "Unit": "%",
-        "Range": "Variable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-157",
-    "Test_Name": "Soil Temperature (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Temperature",
-        "Unit": "°C",
-        "Range": "Variable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-158",
-    "Test_Name": "Soil EC (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "EC",
-        "Unit": "dS/m",
-        "Range": "< 4"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-159",
-    "Test_Name": "Soil Salinity (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Salinity",
-        "Unit": "dS/m",
-        "Range": "< 4"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-160",
-    "Test_Name": "Soil Texture (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Soil",
-    "Price": 5000,
-    "Components": [
-      {
-        "Analyte": "Texture",
-        "Unit": "Class",
-        "Range": "Variable"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-161",
-    "Test_Name": "Air PM2.5 (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "PM2.5",
-        "Unit": "ug/m3",
-        "Range": "< 35"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-162",
-    "Test_Name": "Air PM10 (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "PM10",
-        "Unit": "ug/m3",
-        "Range": "< 150"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-163",
-    "Test_Name": "Air CO2 (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "CO2",
-        "Unit": "ppm",
-        "Range": "< 1000"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-164",
-    "Test_Name": "Air CO (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "CO",
-        "Unit": "ppm",
-        "Range": "< 9"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-165",
-    "Test_Name": "Air Ozone (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "Ozone",
-        "Unit": "ppb",
-        "Range": "< 70"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-166",
-    "Test_Name": "Air NO2 (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "NO2",
-        "Unit": "ppb",
-        "Range": "< 100"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-167",
-    "Test_Name": "Air SO2 (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 8000,
-    "Components": [
-      {
-        "Analyte": "SO2",
-        "Unit": "ppb",
-        "Range": "< 75"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-168",
-    "Test_Name": "Air VOCs (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "VOCs",
-        "Unit": "mg/m3",
-        "Range": "< 0.3"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-169",
-    "Test_Name": "Air Formaldehyde (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Formaldehyde",
-        "Unit": "mg/m3",
-        "Range": "< 0.1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-170",
-    "Test_Name": "Air Benzene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Benzene",
-        "Unit": "mg/m3",
-        "Range": "< 0.005"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-171",
-    "Test_Name": "Air Toluene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Toluene",
-        "Unit": "mg/m3",
-        "Range": "< 0.2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-172",
-    "Test_Name": "Air Xylene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Xylene",
-        "Unit": "mg/m3",
-        "Range": "< 0.2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-173",
-    "Test_Name": "Air Ethylbenzene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Ethylbenzene",
-        "Unit": "mg/m3",
-        "Range": "< 0.1"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-174",
-    "Test_Name": "Air Styrene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Styrene",
-        "Unit": "mg/m3",
-        "Range": "< 0.07"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-175",
-    "Test_Name": "Air Naphthalene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Naphthalene",
-        "Unit": "mg/m3",
-        "Range": "< 0.01"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-176",
-    "Test_Name": "Air Acetaldehyde (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Acetaldehyde",
-        "Unit": "mg/m3",
-        "Range": "< 0.2"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-177",
-    "Test_Name": "Air Acrolein (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Acrolein",
-        "Unit": "mg/m3",
-        "Range": "< 0.002"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-178",
-    "Test_Name": "Air Acrylonitrile (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Acrylonitrile",
-        "Unit": "mg/m3",
-        "Range": "< 0.002"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-179",
-    "Test_Name": "Air 1,3-Butadiene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "1,3-Butadiene",
-        "Unit": "mg/m3",
-        "Range": "< 0.002"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-180",
-    "Test_Name": "Air Vinyl Chloride (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Vinyl Chloride",
-        "Unit": "mg/m3",
-        "Range": "< 0.001"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-181",
-    "Test_Name": "Air Carbon Tetrachloride (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "CCl4",
-        "Unit": "mg/m3",
-        "Range": "< 0.005"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-182",
-    "Test_Name": "Air Chloroform (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Chloroform",
-        "Unit": "mg/m3",
-        "Range": "< 0.05"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-183",
-    "Test_Name": "Air Dichloromethane (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "DCM",
-        "Unit": "mg/m3",
-        "Range": "< 0.05"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-184",
-    "Test_Name": "Air Trichloroethylene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "TCE",
-        "Unit": "mg/m3",
-        "Range": "< 0.005"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-185",
-    "Test_Name": "Air Tetrachloroethylene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "PCE",
-        "Unit": "mg/m3",
-        "Range": "< 0.005"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-186",
-    "Test_Name": "Air 1,1,1-Trichloroethane (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "1,1,1-TCA",
-        "Unit": "mg/m3",
-        "Range": "< 0.05"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-187",
-    "Test_Name": "Air 1,1,2-Trichloroethane (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "1,1,2-TCA",
-        "Unit": "mg/m3",
-        "Range": "< 0.005"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-188",
-    "Test_Name": "Air 1,2-Dichloroethane (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "1,2-DCA",
-        "Unit": "mg/m3",
-        "Range": "< 0.005"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-189",
-    "Test_Name": "Air 1,2-Dichloropropane (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "1,2-DCP",
-        "Unit": "mg/m3",
-        "Range": "< 0.005"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-190",
-    "Test_Name": "Air 1,4-Dioxane (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "1,4-Dioxane",
-        "Unit": "mg/m3",
-        "Range": "< 0.005"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-191",
-    "Test_Name": "Air Ethylene Oxide (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "EtO",
-        "Unit": "mg/m3",
-        "Range": "< 0.001"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-192",
-    "Test_Name": "Air Propylene Oxide (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "PO",
-        "Unit": "mg/m3",
-        "Range": "< 0.005"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-193",
-    "Test_Name": "Air Acrylamide (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Acrylamide",
-        "Unit": "mg/m3",
-        "Range": "< 0.0003"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-194",
-    "Test_Name": "Air Epichlorohydrin (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "ECH",
-        "Unit": "mg/m3",
-        "Range": "< 0.001"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-195",
-    "Test_Name": "Air Ethylene Dibromide (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "EDB",
-        "Unit": "mg/m3",
-        "Range": "< 0.0001"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-196",
-    "Test_Name": "Air Ethylene Dichloride (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "EDC",
-        "Unit": "mg/m3",
-        "Range": "< 0.001"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-197",
-    "Test_Name": "Air Hexachlorobutadiene (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "HCBD",
-        "Unit": "mg/m3",
-        "Range": "< 0.0001"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-198",
-    "Test_Name": "Air Hexachloroethane (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "HCE",
-        "Unit": "mg/m3",
-        "Range": "< 0.001"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-199",
-    "Test_Name": "Air Methyl Chloride (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Methyl Chloride",
-        "Unit": "mg/m3",
-        "Range": "< 0.05"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
-  },
-  {
-    "Test_Code": "POC-200",
-    "Test_Name": "Air Methylene Chloride (POCT)",
-    "Department": "Environmental",
-    "Sub_Department": "POCT",
-    "Catalog_Item_Type": "SINGLE_COMPONENT",
-    "Component_Count": 1,
-    "Specimen_Type": "Air",
-    "Price": 10000,
-    "Components": [
-      {
-        "Analyte": "Methylene Chloride",
-        "Unit": "mg/m3",
-        "Range": "< 0.05"
-      }
-    ],
-    "components": [
-      {
-        "name": "Result Parameter",
-        "unit": "",
-        "normal": "Normal Range"
-      }
-    ],
-    "component_count": 1
+    "component_count": 1,
+    "components": [
+      {
+        "name": "CA-125",
+        "name_ar": "CA-125",
+        "unit": "U/mL",
+        "ref_min": null,
+        "ref_max": 35,
+        "ref_text": "< 35",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "TMR-005",
+    "name": "CA 15-3",
+    "name_ar": "مؤشر سرطان الثدي",
+    "dept": "Tumor Markers",
+    "dept_ar": "مؤشرات الأورام",
+    "sub": "Breast",
+    "price": 70000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "CA 15-3",
+        "name_ar": "CA 15-3",
+        "unit": "U/mL",
+        "ref_min": null,
+        "ref_max": 30,
+        "ref_text": "< 30",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
+  },
+  {
+    "code": "TMR-006",
+    "name": "CA 19-9",
+    "name_ar": "مؤشر سرطان البنكرياس",
+    "dept": "Tumor Markers",
+    "dept_ar": "مؤشرات الأورام",
+    "sub": "Pancreas",
+    "price": 70000,
+    "component_count": 1,
+    "components": [
+      {
+        "name": "CA 19-9",
+        "name_ar": "CA 19-9",
+        "unit": "U/mL",
+        "ref_min": null,
+        "ref_max": 37,
+        "ref_text": "< 37",
+        "result_type": "numeric",
+        "options": null,
+        "order": 0
+      }
+    ]
   }
 ];
 
-console.log('✅ تم تحديث ' + window.ALL_SYSTEM_TESTS.length + ' فحص مع معاييرها بنجاح!');
+console.log('✅ تم تحميل 92 فحصاً');
 
-function getAllTestsData() {
-    return window.ALL_SYSTEM_TESTS || [];
-}
+function getAllTestsData() { return window.ALL_SYSTEM_TESTS || []; }
