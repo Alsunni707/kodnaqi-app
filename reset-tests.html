@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><title>إعادة تعيين الفحوصات</title>
+<style>body{font-family:system-ui;padding:20px;background:#0d3b66;color:#fff;text-align:center;min-height:100vh;}
+button{padding:15px 30px;font-size:1.2rem;background:#dc3545;color:#fff;border:none;border-radius:8px;cursor:pointer;margin-top:20px;font-weight:bold;}
+#status{margin-top:20px;font-weight:bold;padding:15px;border-radius:8px;background:#fff;color:#0d3b66;}</style>
+</head>
+<body>
+<h2>🗑️ مسح الفحوصات لإعادة استيرادها</h2>
+<p>سيتم مسح الفحصين الحاليين، ليعيد التطبيق استيراد الـ 94 فحصاً كاملة.</p>
+<button id="btn" onclick="reset()">ابدأ المسح</button>
+<div id="status" style="display:none;"></div>
+<script src="db.js"></script>
+<script>
+async function reset() {
+  const btn = document.getElementById('btn');
+  const status = document.getElementById('status');
+  btn.disabled = true; btn.innerText = 'جاري المسح...';
+  status.style.display = 'block'; status.innerText = 'الرجاء الانتظار...';
+  try {
+    await dbClear('tests');
+    await dbClear('parameters');
+    localStorage.removeItem('kodnaqi_tests_imported');
+    status.innerHTML = '✅ تم المسح بنجاح.<br><br><a href="/" style="background:#198754;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;font-weight:bold;">اضغط هنا للعودة للتطبيق (سيتم الاستيراد تلقائياً)</a>';
+    btn.innerText = 'تم المسح';
+  } catch(e) {
+    status.innerText = '❌ خطأ: ' + e.message;
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
