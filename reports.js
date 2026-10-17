@@ -264,8 +264,8 @@ table tr:nth-child(even) td { background: #fafbfd; }
 </head>
 <body>
 <div class="no-print">
-  <button onclick="window.print()">🖨️ Print / Save PDF</button>
-  <button onclick="window.close()">✖ Close</button>
+  <button onclick="knSafePrint()">🖨️ Print / Save PDF</button>
+  <button onclick="knSafeClose()">✖ Close</button>
 </div>
 <div class="report">
   <div class="report-header">
@@ -484,8 +484,8 @@ body { font-family: system-ui, Tahoma, sans-serif; background: #eee; padding: 10
 </head>
 <body>
 <div class="no-print">
-  <button onclick="window.print()">🖨️ طباعة</button>
-  <button onclick="window.close()">✖ إغلاق</button>
+  <button onclick="knSafePrint()">🖨️ طباعة</button>
+  <button onclick="knSafeClose()">✖ إغلاق</button>
 </div>
 <div class="receipt">
   <div class="logo-wrap"><img src="${logoBase64}" alt="KodNaqi"></div>
@@ -706,3 +706,18 @@ window.generateInvoice = generateInvoice;
 window.sendWhatsApp = sendWhatsApp;
 window.printViaBluetooth = printViaBluetooth;
 window.LAB_INFO = LAB_INFO;
+
+
+// ═══ دوال الطباعة والإغلاق الآمنة (متوافقة مع APK/WebView) ═══
+window.knSafePrint = function() {
+  try { window.print(); } 
+  catch(e) { alert('تعذر فتح الطباعة. يمكنك حفظ الصفحة كـ PDF من قائمة المتصفح.'); }
+};
+
+window.knSafeClose = function() {
+  try { window.close(); } catch(e) {}
+  setTimeout(function() {
+    if (window.history.length > 1) window.history.back();
+    else window.location.href = '/';
+  }, 150);
+};

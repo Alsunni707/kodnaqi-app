@@ -11,13 +11,13 @@
   const SESSION_KEY = 'kodnaqi_admin_secret';
 
   function getSecret() {
-    try { return sessionStorage.getItem(SESSION_KEY) || ''; } catch (e) { return ''; }
+    try { return localStorage.getItem(SESSION_KEY) || ''; } catch (e) { return ''; }
   }
   function setSecret(s) {
-    try { sessionStorage.setItem(SESSION_KEY, s); } catch (e) {}
+    try { localStorage.setItem(SESSION_KEY, s); } catch (e) {}
   }
   function clearSecret() {
-    try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+    try { localStorage.removeItem(SESSION_KEY); } catch (e) {}
   }
 
   function toast(msg, type) {
@@ -159,7 +159,8 @@
         +   '<div style="display:flex;gap:6px;flex-wrap:wrap;">'
         +     (st.key === 'active'
               ? '<button onclick="licRevoke(\'' + lic._id + '\')" style="padding:6px 12px;background:#dc3545;color:#fff;border:none;border-radius:6px;font-size:0.8rem;font-weight:700;cursor:pointer;">⛔ إلغاء</button>'
-              : '<button onclick="licReactivate(\'' + lic._id + '\')" style="padding:6px 12px;background:#198754;color:#fff;border:none;border-radius:6px;font-size:0.8rem;font-weight:700;cursor:pointer;">✅ إعادة تفعيل</button>')
+              : '<button onclick="licReactivate(\'' + lic._id + '\')" style="padding:6px 12px;background:#198754;color:#fff;border:none;border-radius:6px;font-size:0.8rem;font-weight:700;cursor:pointer;">✅ إعادة تفعيل</button>'
+                + '<button onclick="licDelete(\'' + lic._id + '\')" style="padding:6px 12px;background:#b91c1c;color:#fff;border:none;border-radius:6px;font-size:0.8rem;font-weight:700;cursor:pointer;">🗑️ حذف نهائي</button>')
         +     (st.key === 'active' ? window.licAddDeviceButtonHTML(lic._id) : '')
         +     '<button onclick="licCopyId(\'' + lic._id + '\')" style="padding:6px 12px;background:#e2e8f0;color:#334155;border:none;border-radius:6px;font-size:0.8rem;font-weight:700;cursor:pointer;">📋 نسخ المعرّف</button>'
         +   '</div>'
@@ -220,6 +221,20 @@
     const el = document.getElementById('licNewError');
     if (el) { el.textContent = msg; el.style.color = color || '#dc3545'; }
   }
+
+
+  window.licDelete = async function(id) {
+    if (!confirm('⚠️ هل أنت متأكد من الحذف النهائي للترخيص ' + id + '؟\nلا يمكن التراجع عن هذه العملية!')) return;
+    try {
+      const secret = getSecret();
+      const cfg = window.KODNAQI_FIREBASE;
+      const url = cfg.url + '/' + cfg.licensesPath + '/' + encodeURIComponent(id) + '.json?auth=' + encodeURIComponent(secret);
+      const r = await fetch(url, { method: 'DELETE' });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      toast('✅ تم الحذف نهائياً');
+      licRefresh();
+    } catch (e) { toast('❌ ' + e.message, 'error'); }
+  };
 
   // ═══ إدارة حقول الأجهزة الديناميكية ═══
   let _licDeviceCount = 0;

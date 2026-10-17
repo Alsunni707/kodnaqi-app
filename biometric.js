@@ -378,3 +378,21 @@
 
   console.log('🔒 KodNaqi Biometric System loaded');
 })();
+
+
+// ═══ التحقق من دعم البصمة في المتصفح/الجهاز ═══
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    // إذا كان الجهاز لا يدعم WebAuthn (مثل معظم تطبيقات APK)
+    if (!window.PublicKeyCredential) {
+      const bioBtn = document.querySelector('[onclick*="biometric"], [id*="biometric"], button:has(> .bi-fingerprint)');
+      if (bioBtn) {
+        bioBtn.style.display = 'none';
+        console.log('[Biometric] Device does not support WebAuthn. Button hidden.');
+      }
+      // إخفاء النص التحذيري إن وجد
+      const msg = document.querySelector('[data-biometric-warning]');
+      if (msg) msg.style.display = 'none';
+    }
+  }, 1000);
+});
