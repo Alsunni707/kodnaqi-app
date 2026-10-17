@@ -889,7 +889,7 @@
 
   // ═══ لوحة التحكم الشاملة ═══
   let _dashFilter = 'ALL';
-  const TIER_PRICES = { 'B': 1500000, 'S': 2500000, 'A': 4000000, 'E': 6000000, 'TRIAL': 0 };
+  const TIER_PRICES = { 'B': 150, 'S': 300, 'A': 500, 'E': 1000, 'TRIAL': 0 };
 
   window.initAndLoadDashboard = function() {
     if (getSecret() && (!window._licenses || window._licenses.length === 0)) {
@@ -931,7 +931,7 @@
           <div class="stat-card" style="background:#0d6efd; color:white;"><div class="stat-value" id="dashTotalActive">0</div><div class="stat-label">عملاء نشطون</div></div>
           <div class="stat-card" style="background:#198754; color:white;"><div class="stat-value" id="dashTotalDevices">0</div><div class="stat-label">أجهزة نشطة</div></div>
           <div class="stat-card" style="background:#fd7e14; color:white;"><div class="stat-value" id="dashExpiring">0</div><div class="stat-label">ينتهي خلال 30 يوم</div></div>
-          <div class="stat-card" style="background:#6f42c1; color:white;"><div class="stat-value" id="dashRevenue">0</div><div class="stat-label">الأرباح (ج.س)</div></div>
+          <div class="stat-card" style="background:#6f42c1; color:white;"><div class="stat-value" id="dashRevenue">0</div><div class="stat-label">الأرباح ($)</div></div>
         </div>
         <div id="dashExpiringBox" style="display:none; background:#fff3cd; border-radius:8px; padding:12px; margin-bottom:15px;">
           <h6 style="color:#856404; font-weight:800; margin:0 0 10px 0;">⚠️ تنبيهات التجديد</h6>
