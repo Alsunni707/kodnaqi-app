@@ -234,6 +234,7 @@
           <img src="./logo.png" style="width: 90px; height: 90px; object-fit: contain; border: 3px solid #c9a227; border-radius: 12px; padding: 4px; background: white; display: block; margin: 0 auto;" alt="Logo">
           <h2 style="color: #0d3b66; font-weight: 900; margin: 15px 0 5px;">مرحبًا بك</h2>
           <p style="color: #666; font-size: 0.9rem;">أدخل بيانات معملك لتفعيل التطبيق</p>
+          <p style="color: #c9a227; font-size: 0.75rem; font-weight: 700; margin-top: 5px;">Powered by KodNaqi Diagnostics</p>
         </div>
 
         <!-- كود الجهاز -->
