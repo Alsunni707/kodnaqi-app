@@ -365,43 +365,48 @@ table tr:nth-child(even) td { background: #fafbfd; }
 <script>
 function knSafePrint(btn) {
   if (typeof html2pdf === 'undefined') {
-    alert('جاري تحميل أداة PDF... انتظر 3 ثوانٍ وأعد المحاولة.');
+    alert('أداة PDF لم تُحمّل. انتظر 3 ثوانٍ.');
     return;
   }
-  
   let originalText = '';
-  if (btn) {
-    originalText = btn.innerHTML;
-    btn.innerHTML = '⏳ جاري التجهيز...';
-    btn.disabled = true;
-  }
+  if (btn) { originalText = btn.innerHTML; btn.innerHTML = '⏳ جاري التجهيز...'; btn.disabled = true; }
 
   var el = document.querySelector('.report') || document.querySelector('.receipt') || document.body;
   var isReceipt = document.querySelector('.receipt') !== null;
-  
   var opt = {
-    margin: isReceipt ? 0 : [10, 10, 10, 10],
+    margin: isReceipt ? 0 : 10,
     filename: (isReceipt ? 'Receipt_' : 'Report_') + Date.now() + '.pdf',
     image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-    jsPDF: isReceipt ? { unit: 'mm', format: [58, 250] } : { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    html2canvas: { scale: 2, useCORS: true },
+    jsPDF: isReceipt ? { unit: 'mm', format: [58, 250] } : { unit: 'mm', format: 'a4' }
   };
-  
-  // توليد الـ PDF كـ Blob وفتحه في نافذة جديدة (تتيح الحفظ والطباعة)
+
   html2pdf().set(opt).from(el).toPdf().get('pdf').then(function(pdf) {
-    var blob = pdf.output('blob');
-    var url = URL.createObjectURL(blob);
-    window.open(url, '_blank');
+    var base64 = pdf.output('datauristring');
+    var fileName = opt.filename;
+    
+    // إذا كنا داخل تطبيق الأندرويد، استخدم الجسر الأصلي لفتح الملف
+    if (window.AndroidBridge && typeof window.AndroidBridge.savePDF === 'function') {
+      window.AndroidBridge.savePDF(base64, fileName);
+    } else {
+      // في المتصفح العادي، افتح النافذة الجديدة
+      var blob = pdf.output('blob');
+      var url = URL.createObjectURL(blob);
+      window.open(url, '_blank');
+    }
     if (btn) { btn.innerHTML = originalText; btn.disabled = false; }
   }).catch(function(e) {
-    alert('فشل إنشاء PDF: ' + e.message);
+    alert('فشل التجهيز: ' + e.message);
     if (btn) { btn.innerHTML = originalText; btn.disabled = false; }
   });
 }
 
 function knSafeClose() {
-  // إجبار التطبيق على العودة للصفحة الرئيسية بدلاً من إغلاق التطبيق
-  window.location.href = '/';
+  if (window.AndroidBridge && typeof window.AndroidBridge.closeReport === 'function') {
+    window.AndroidBridge.closeReport();
+  } else {
+    window.location.href = '/';
+  }
 }
 </script>
 </body>
@@ -568,43 +573,48 @@ body { font-family: system-ui, Tahoma, sans-serif; background: #eee; padding: 10
 <script>
 function knSafePrint(btn) {
   if (typeof html2pdf === 'undefined') {
-    alert('جاري تحميل أداة PDF... انتظر 3 ثوانٍ وأعد المحاولة.');
+    alert('أداة PDF لم تُحمّل. انتظر 3 ثوانٍ.');
     return;
   }
-  
   let originalText = '';
-  if (btn) {
-    originalText = btn.innerHTML;
-    btn.innerHTML = '⏳ جاري التجهيز...';
-    btn.disabled = true;
-  }
+  if (btn) { originalText = btn.innerHTML; btn.innerHTML = '⏳ جاري التجهيز...'; btn.disabled = true; }
 
   var el = document.querySelector('.report') || document.querySelector('.receipt') || document.body;
   var isReceipt = document.querySelector('.receipt') !== null;
-  
   var opt = {
-    margin: isReceipt ? 0 : [10, 10, 10, 10],
+    margin: isReceipt ? 0 : 10,
     filename: (isReceipt ? 'Receipt_' : 'Report_') + Date.now() + '.pdf',
     image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-    jsPDF: isReceipt ? { unit: 'mm', format: [58, 250] } : { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    html2canvas: { scale: 2, useCORS: true },
+    jsPDF: isReceipt ? { unit: 'mm', format: [58, 250] } : { unit: 'mm', format: 'a4' }
   };
-  
-  // توليد الـ PDF كـ Blob وفتحه في نافذة جديدة (تتيح الحفظ والطباعة)
+
   html2pdf().set(opt).from(el).toPdf().get('pdf').then(function(pdf) {
-    var blob = pdf.output('blob');
-    var url = URL.createObjectURL(blob);
-    window.open(url, '_blank');
+    var base64 = pdf.output('datauristring');
+    var fileName = opt.filename;
+    
+    // إذا كنا داخل تطبيق الأندرويد، استخدم الجسر الأصلي لفتح الملف
+    if (window.AndroidBridge && typeof window.AndroidBridge.savePDF === 'function') {
+      window.AndroidBridge.savePDF(base64, fileName);
+    } else {
+      // في المتصفح العادي، افتح النافذة الجديدة
+      var blob = pdf.output('blob');
+      var url = URL.createObjectURL(blob);
+      window.open(url, '_blank');
+    }
     if (btn) { btn.innerHTML = originalText; btn.disabled = false; }
   }).catch(function(e) {
-    alert('فشل إنشاء PDF: ' + e.message);
+    alert('فشل التجهيز: ' + e.message);
     if (btn) { btn.innerHTML = originalText; btn.disabled = false; }
   });
 }
 
 function knSafeClose() {
-  // إجبار التطبيق على العودة للصفحة الرئيسية بدلاً من إغلاق التطبيق
-  window.location.href = '/';
+  if (window.AndroidBridge && typeof window.AndroidBridge.closeReport === 'function') {
+    window.AndroidBridge.closeReport();
+  } else {
+    window.location.href = '/';
+  }
 }
 </script>
 </body>
@@ -808,4 +818,14 @@ window.knSafeClose = function() {
     if (window.history.length > 1) window.history.back();
     else window.location.href = '/';
   }, 150);
+};
+
+
+window.knHandleBack = function() {
+  var reportContainer = document.getElementById('report-container') || document.querySelector('.report');
+  if (reportContainer && reportContainer.offsetParent !== null) {
+    knSafeClose();
+    return 'HANDLED';
+  }
+  return 'NOT_HANDLED';
 };
