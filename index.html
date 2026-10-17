@@ -934,6 +934,19 @@ async function knRunTest() {
 </script>
 
 <script src="offline-intercept.js"></script>
+
+<script>
+window.knHandleBack = function() {
+  // البحث عن التقرير المفتوح (له خلفية معتمة أو كلاس report)
+  var reportOverlay = document.querySelector('.report') || document.getElementById('reportModal');
+  if (reportOverlay && reportOverlay.offsetParent !== null) {
+    if (typeof knSafeClose === 'function') knSafeClose();
+    return 'HANDLED';
+  }
+  // إذا لم يكن هناك تقرير مفتوح، اترك التطبيق يغلق بشكل طبيعي
+  return 'NOT_HANDLED';
+};
+</script>
 </body>
 </html>
 

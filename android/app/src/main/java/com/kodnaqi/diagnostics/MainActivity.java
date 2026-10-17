@@ -16,7 +16,6 @@ public class MainActivity extends BridgeActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         WebView webView = getBridge().getWebView();
-        // ربط جسر الجافاسكريبت بالكود الأصلي
         webView.addJavascriptInterface(new WebAppInterface(), "AndroidBridge");
     }
 
@@ -27,30 +26,24 @@ public class MainActivity extends BridgeActivity {
                 try {
                     String base64 = base64Data.substring(base64Data.indexOf(",") + 1);
                     byte[] decodedBytes = Base64.decode(base64, Base64.DEFAULT);
-
                     File file = new File(getCacheDir(), fileName);
                     try (FileOutputStream fos = new FileOutputStream(file)) {
                         fos.write(decodedBytes);
                     }
-
-                    // استخدام مزود الملفات الخاص بـ Capacitor لفتح ملف الـ PDF
-                    Uri uri = FileProvider.getUriForFile(MainActivity.this,
-                            getPackageName() + ".fileprovider", file);
-                    
+                    Uri uri = FileProvider.getUriForFile(MainActivity.this, getPackageName() + ".fileprovider", file);
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setDataAndType(uri, "application/pdf");
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                     startActivity(intent);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                } catch (Exception e) { e.printStackTrace(); }
             });
         }
         
         @JavascriptInterface
         public void closeReport() {
             runOnUiThread(() -> {
-                getBridge().getWebView().evaluateJavascript("window.location.href = '/'", null);
+                // العودة للصفحة السابقة داخل التطبيق
+                getBridge().getWebView().evaluateJavascript("window.history.back();", null);
             });
         }
     }
@@ -58,12 +51,12 @@ public class MainActivity extends BridgeActivity {
     @Override
     public void onBackPressed() {
         WebView webView = getBridge().getWebView();
-        // إرسال إشارة للجافاسكريبت لمعرفة ما إذا كان هناك شيء مفتوح (مثل التقرير)
-        webView.evaluateJavascript("(function() { if (typeof window.knHandleBack === 'function') { return window.knHandleBack(); } return 'NOT_HANDLED'; })()", value -> {
+        // نتحقق من الجافاسكريبت إذا كان هناك شيء يجب إغلاقه
+        webView.evaluateJavascript("(function() { if (window.knHandleBack) { return window.knHandleBack(); } return 'NOT_HANDLED'; })()", value -> {
             if (value != null && value.contains("HANDLED")) {
                 // الجافاسكريبت تعاملت مع الأمر (أغلقت التقرير)
             } else {
-                // سلوك الرجوع الافتراضي
+                // إذا لم يكن هناك شيء للإغلاق، أغلق التطبيق
                 super.onBackPressed();
             }
         });
