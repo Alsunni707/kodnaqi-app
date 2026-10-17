@@ -593,7 +593,11 @@ body { font-family: system-ui, Tahoma, sans-serif; background: #eee; padding: 10
     <div style="font-size:7px;color:#666;margin-top:2px">Scan to verify</div>
   </div>
   <div class="hr"></div>
-  <div class="footer">📞 ${LAB_INFO.phone}<br>📍 ${LAB_INFO.address}<br>✉️ ${LAB_INFO.email}<br><span style="margin-top:3px;display:block">Thank you 🌟</span></div>
+  
+        <div class="developer-stamp" style="text-align:center; font-size:9px; color:#888; margin-top:15px; border-top:1px dashed #ccc; padding-top:5px; direction:rtl;">
+          تم إنشاء هذا التقرير بواسطة نظام <strong>KodNaqi Diagnostics</strong> — لطلب نظامك الخاص تواصل معنا: +249111729111
+        </div>
+<div class="footer">📞 ${LAB_INFO.phone}<br>📍 ${LAB_INFO.address}<br>✉️ ${LAB_INFO.email}<br><span style="margin-top:3px;display:block">Thank you 🌟</span></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
